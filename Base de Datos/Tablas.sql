@@ -9,7 +9,6 @@
 -- -- -- -- Ciudades (3 * cada depto)
 -- -- -- -- Sexo
 -- -- -- -- Categoria (Empleado - Cliente)
--- -- -- -- Membresía
 -- Inventario
 -- { Campos: ID, TITULO, ANIO, GENERO, DURACION, FORMATO, ESTADO, DESCRIP, IDIOMA, CANTIDAD, PRECIO, CLASIFICACION }
 -- -- -- -- Genero
@@ -24,4 +23,5 @@
 -- -- -- -- Método de Pago
 -- -- -- -- Transacción
 -- Usuarios
+-- { Campos: USUARIO, CONTRASEÑA, ID_DG, ID_ROL}
 -- Roles
