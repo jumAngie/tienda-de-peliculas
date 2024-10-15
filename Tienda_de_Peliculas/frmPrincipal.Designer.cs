@@ -28,20 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblMensajeBienvenida = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblClientesRegistrados = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblVentasSemanales = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblAlquileresSemanales = new System.Windows.Forms.Label();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -54,21 +60,17 @@
             this.registrarVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarAlquilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.pcbFoto = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -76,6 +78,7 @@
             this.menuStrip1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
             this.registroToolStripMenuItem,
             this.inventarioToolStripMenuItem,
             this.facturaToolStripMenuItem,
@@ -86,74 +89,74 @@
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // label3
+            // lblMensajeBienvenida
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nobile", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(17, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(328, 36);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "¡Bienvenido Angie!";
+            this.lblMensajeBienvenida.AutoSize = true;
+            this.lblMensajeBienvenida.Font = new System.Drawing.Font("Nobile", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensajeBienvenida.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblMensajeBienvenida.Location = new System.Drawing.Point(17, 17);
+            this.lblMensajeBienvenida.Name = "lblMensajeBienvenida";
+            this.lblMensajeBienvenida.Size = new System.Drawing.Size(328, 36);
+            this.lblMensajeBienvenida.TabIndex = 5;
+            this.lblMensajeBienvenida.Text = "¡Bienvenido Angie!";
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblMensajeBienvenida);
+            this.panel1.Controls.Add(this.lblHora);
+            this.panel1.Controls.Add(this.lblFecha);
+            this.panel1.Controls.Add(this.pcbFoto);
+            this.panel1.Controls.Add(this.lblRol);
+            this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Location = new System.Drawing.Point(108, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(672, 89);
             this.panel1.TabIndex = 6;
             // 
-            // label2
+            // lblRol
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(456, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Administrador";
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblRol.Location = new System.Drawing.Point(456, 41);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(96, 15);
+            this.lblRol.TabIndex = 3;
+            this.lblRol.Text = "Administrador";
             // 
-            // label1
+            // lblNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nobile", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(438, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Angie Campos";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Nobile", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblNombre.Location = new System.Drawing.Point(438, 22);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(129, 19);
+            this.lblNombre.TabIndex = 2;
+            this.lblNombre.Text = "Angie Campos";
             // 
-            // label4
+            // lblFecha
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(20, 53);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 15);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "15 de Octubre del 2025";
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblFecha.Location = new System.Drawing.Point(20, 53);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(145, 15);
+            this.lblFecha.TabIndex = 4;
+            this.lblFecha.Text = "15 de Octubre del 2025";
             // 
-            // label5
+            // lblHora
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(257, 53);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 15);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "12:20 p.m.";
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblHora.Location = new System.Drawing.Point(257, 53);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(67, 15);
+            this.lblHora.TabIndex = 5;
+            this.lblHora.Text = "12:20 p.m.";
             // 
             // panel2
             // 
@@ -161,22 +164,22 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.lblClientesRegistrados);
             this.panel2.Location = new System.Drawing.Point(142, 135);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(155, 75);
             this.panel2.TabIndex = 7;
             // 
-            // label6
+            // lblClientesRegistrados
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Nobile", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label6.Location = new System.Drawing.Point(66, 5);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 48);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "30";
+            this.lblClientesRegistrados.AutoSize = true;
+            this.lblClientesRegistrados.Font = new System.Drawing.Font("Nobile", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientesRegistrados.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.lblClientesRegistrados.Location = new System.Drawing.Point(66, 5);
+            this.lblClientesRegistrados.Name = "lblClientesRegistrados";
+            this.lblClientesRegistrados.Size = new System.Drawing.Size(78, 48);
+            this.lblClientesRegistrados.TabIndex = 0;
+            this.lblClientesRegistrados.Text = "30";
             // 
             // label7
             // 
@@ -195,7 +198,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.lblVentasSemanales);
             this.panel3.Location = new System.Drawing.Point(359, 135);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(164, 75);
@@ -212,16 +215,16 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "Ventas Semanales";
             // 
-            // label9
+            // lblVentasSemanales
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Nobile", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.MistyRose;
-            this.label9.Location = new System.Drawing.Point(57, 5);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 48);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "350";
+            this.lblVentasSemanales.AutoSize = true;
+            this.lblVentasSemanales.Font = new System.Drawing.Font("Nobile", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVentasSemanales.ForeColor = System.Drawing.Color.MistyRose;
+            this.lblVentasSemanales.Location = new System.Drawing.Point(57, 5);
+            this.lblVentasSemanales.Name = "lblVentasSemanales";
+            this.lblVentasSemanales.Size = new System.Drawing.Size(104, 48);
+            this.lblVentasSemanales.TabIndex = 0;
+            this.lblVentasSemanales.Text = "350";
             // 
             // label11
             // 
@@ -234,6 +237,62 @@
             this.label11.Size = new System.Drawing.Size(131, 24);
             this.label11.TabIndex = 9;
             this.label11.Text = "Dashboard";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Teal;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.pictureBox5);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.lblAlquileresSemanales);
+            this.panel4.Location = new System.Drawing.Point(600, 135);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(164, 75);
+            this.panel4.TabIndex = 10;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.LightCyan;
+            this.label10.Location = new System.Drawing.Point(9, 53);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(142, 15);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Alquileres Semanales";
+            // 
+            // lblAlquileresSemanales
+            // 
+            this.lblAlquileresSemanales.AutoSize = true;
+            this.lblAlquileresSemanales.Font = new System.Drawing.Font("Nobile", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlquileresSemanales.ForeColor = System.Drawing.Color.LightCyan;
+            this.lblAlquileresSemanales.Location = new System.Drawing.Point(57, 5);
+            this.lblAlquileresSemanales.Name = "lblAlquileresSemanales";
+            this.lblAlquileresSemanales.Size = new System.Drawing.Size(104, 48);
+            this.lblAlquileresSemanales.TabIndex = 0;
+            this.lblAlquileresSemanales.Text = "550";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.Info;
+            this.toolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripMenuItem1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(112, 19);
+            this.toolStripMenuItem1.Text = "   Principal";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox5.Image = global::Tienda_de_Peliculas.Properties.Resources.pelicula__2_;
+            this.pictureBox5.Location = new System.Drawing.Point(12, 5);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(42, 45);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 6;
+            this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -361,61 +420,16 @@
             this.reporteToolStripMenuItem.Text = "  Reporte";
             this.reporteToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox1
+            // pcbFoto
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::Tienda_de_Peliculas.Properties.Resources.pelicula;
-            this.pictureBox1.Location = new System.Drawing.Point(573, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(82, 81);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Teal;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.pictureBox5);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Location = new System.Drawing.Point(600, 135);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(164, 75);
-            this.panel4.TabIndex = 10;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox5.Image = global::Tienda_de_Peliculas.Properties.Resources.pelicula__2_;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 5);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(42, 45);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 6;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.LightCyan;
-            this.label10.Location = new System.Drawing.Point(9, 53);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(142, 15);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Alquileres Semanales";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Nobile", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.LightCyan;
-            this.label12.Location = new System.Drawing.Point(57, 5);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(104, 48);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "550";
+            this.pcbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pcbFoto.Image = global::Tienda_de_Peliculas.Properties.Resources.pelicula;
+            this.pcbFoto.Location = new System.Drawing.Point(573, 3);
+            this.pcbFoto.Name = "pcbFoto";
+            this.pcbFoto.Size = new System.Drawing.Size(82, 81);
+            this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbFoto.TabIndex = 0;
+            this.pcbFoto.TabStop = false;
             // 
             // frmPrincipal
             // 
@@ -431,6 +445,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
@@ -442,13 +457,13 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,9 +471,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pcbFoto;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarClientesToolStripMenuItem;
@@ -469,24 +484,25 @@
         private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarVentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarAlquilerToolStripMenuItem;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblMensajeBienvenida;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblClientesRegistrados;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblVentasSemanales;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblAlquileresSemanales;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 
