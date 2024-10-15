@@ -1,0 +1,19 @@
+-- Tablas
+
+-- Datos generales / Personas
+-- -- -- Membresias
+-- -- -- Estados Civiles
+-- -- -- Departamentos
+-- -- -- Municipios
+-- Inventario
+-- -- -- Genero
+-- -- -- Formato
+-- -- -- Estado
+-- -- -- Clasificacion
+-- -- -- Idioma
+-- -- -- Director
+-- Factura
+-- -- -- Método de Pago
+-- Factura Detalle
+-- Usuarios
+-- Roles
