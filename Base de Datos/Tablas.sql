@@ -1,19 +1,27 @@
 -- Tablas
 
 -- Datos generales / Personas
--- -- -- Membresias
--- -- -- Estados Civiles
--- -- -- Departamentos
--- -- -- Municipios
+-- { Campos: ID, NOMBRE, DNI, TEL, EMAIL, DIRECCIÓN, FECHA NACIMIENTO, SEXO, CATEGORIA, ESTADO }
+-- -- -- -- Membresias
+-- -- -- -- Estados Civiles
+-- -- -- -- País
+-- -- -- -- Departamentos (18)
+-- -- -- -- Ciudades (3 * cada depto)
+-- -- -- -- Sexo
+-- -- -- -- Categoria (Empleado - Cliente)
+-- -- -- -- Membresía
 -- Inventario
--- -- -- Genero
--- -- -- Formato
--- -- -- Estado
--- -- -- Clasificacion
--- -- -- Idioma
--- -- -- Director
+-- { Campos: ID, TITULO, ANIO, GENERO, DURACION, FORMATO, ESTADO, DESCRIP, IDIOMA, CANTIDAD, PRECIO, CLASIFICACION }
+-- -- -- -- Genero
+-- -- -- -- Tipo de Transacción
+-- -- -- -- Formato
+-- -- -- -- Estado
+-- -- -- -- Clasificacion
+-- -- -- -- Idioma
+-- -- -- -- Director
 -- Factura
--- -- -- Método de Pago
--- Factura Detalle
+-- { Campos: ID, MEOTODO PAGO, CLIENTE, #FACTURA, FECHA FACT, TIPO DE TRANSACCION, IMPUESTO, DESCUENTO, SUBTOTAL, ID_PELI, FECHA_DEVOLUCION, TOTAL }
+-- -- -- -- Método de Pago
+-- -- -- -- Transacción
 -- Usuarios
 -- Roles
