@@ -15,6 +15,17 @@ namespace Tienda_de_Peliculas
         public frmPrincipal()
         {
             InitializeComponent();
+            tHora.Enabled = true;
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void tHora_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:mm:tt");
         }
     }
 }
