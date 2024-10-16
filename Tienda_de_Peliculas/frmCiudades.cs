@@ -27,6 +27,21 @@ namespace Tienda_de_Peliculas
         {
             dgCiudades.DataSource = CiudadesDAL.ListarCiudades();
         }
+
+        public void Insertar_Ciudades()
+        {
+            Ciudades nuevaCiudad = new Ciudades
+            {
+                ciud_Descripcion = txtNombreCiudad.Text,
+                dept_Id = Convert.ToInt32(cboDepartamentos.SelectedValue),
+                usua_UsuarioCreacion = 1, // acá se debe de cambiar cuando se haga el LogIn
+                ciud_FechaCreacion = DateTime.Now
+            };
+
+            string resultado = CiudadesDAL.InsertarCiudades(nuevaCiudad);
+
+            MessageBox.Show(resultado, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
         #endregion
 
         #region Llenado de ComboBoxs
@@ -45,6 +60,50 @@ namespace Tienda_de_Peliculas
         }
         #endregion
 
+        #region Validaciones y Limpieza de Campos
+        public void LimpiarCampos()
+        {
+            cboDepartamentos.SelectedIndex = 0;
+            cboPaises.SelectedIndex = 0;
+            txtNombreCiudad.Clear();
+        }
+
+        public bool ValidarVacio()
+        {
+            bool esValido = false;
+            // Que aparezca el panel que indica error
+            if(cboPaises.SelectedIndex == 0){ pnlPais.Visible = true; }
+            if (cboDepartamentos.SelectedIndex == -1 || cboDepartamentos.SelectedIndex == 0) { pnlDepartamento.Visible = true; }
+            if (txtNombreCiudad.Text == "") { pnlNombre.Visible = true; }
+
+            // Que desaparezca el panel que indica error
+            if (cboPaises.SelectedIndex != 0) { pnlPais.Visible = false; }
+            if (cboDepartamentos.SelectedIndex != -1 && cboDepartamentos.SelectedIndex != 0) { pnlDepartamento.Visible = false; }
+            if (txtNombreCiudad.Text != "") { pnlNombre.Visible = false; }
+
+            if(cboPaises.SelectedIndex != 0 && cboDepartamentos.SelectedIndex != 0 && txtNombreCiudad.Text != "")
+            { 
+                esValido = true;
+            }
+            else
+            {
+                esValido = false;
+            }
+
+            return esValido;
+        }
+        #endregion
+
+        #region Mensajes
+        public void MensajeAdvertencia()
+        {
+            lblAdvertencia.Visible = true;
+        }
+        public void MensajeAdvertencia_Hide()
+        {
+            lblAdvertencia.Visible = false;
+        }
+        #endregion
 
         private void frmCiudades_Load(object sender, EventArgs e)
         {
@@ -64,24 +123,24 @@ namespace Tienda_de_Peliculas
             }
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private async void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
-                Ciudades nuevaCiudad = new Ciudades
+                bool esValido = ValidarVacio();
+                if (esValido) 
                 {
-                    ciud_Descripcion = txtNombreCiudad.Text, 
-                    dept_Id = Convert.ToInt32(cboDepartamentos.SelectedValue),
-                    usua_UsuarioCreacion = 1, // acá se debe de cambiar cuando se haga el LogIn
-                    ciud_FechaCreacion = DateTime.Now 
-                };
-
+                    Insertar_Ciudades();
+                    Listado_Ciudades();
+                    LimpiarCampos();
+                }
+                else
+                { 
+                    MensajeAdvertencia();
+                    await Task.Delay(4000);
+                    MensajeAdvertencia_Hide();
+                }
                 
-                string resultado = CiudadesDAL.InsertarCiudades(nuevaCiudad);
-
-               
-                MessageBox.Show(resultado, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Listado_Ciudades();
             }
             catch (Exception ex)
             {

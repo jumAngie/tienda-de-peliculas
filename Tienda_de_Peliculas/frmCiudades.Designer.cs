@@ -55,6 +55,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cboPaises = new System.Windows.Forms.ComboBox();
             this.dgCiudades = new System.Windows.Forms.DataGridView();
+            this.pnlNombre = new System.Windows.Forms.Panel();
+            this.pnlDepartamento = new System.Windows.Forms.Panel();
+            this.pnlPais = new System.Windows.Forms.Panel();
+            this.lblAdvertencia = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
@@ -272,11 +276,14 @@
             this.groupBox1.Controls.Add(this.cboDepartamentos);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cboPaises);
+            this.groupBox1.Controls.Add(this.pnlNombre);
+            this.groupBox1.Controls.Add(this.pnlDepartamento);
+            this.groupBox1.Controls.Add(this.pnlPais);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBox1.Location = new System.Drawing.Point(140, 109);
+            this.groupBox1.Location = new System.Drawing.Point(140, 114);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(624, 115);
+            this.groupBox1.Size = new System.Drawing.Size(624, 119);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
@@ -287,7 +294,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnGuardar.Location = new System.Drawing.Point(446, 83);
+            this.btnGuardar.Location = new System.Drawing.Point(454, 86);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(148, 26);
             this.btnGuardar.TabIndex = 15;
@@ -298,7 +305,7 @@
             // txtNombreCiudad
             // 
             this.txtNombreCiudad.Font = new System.Drawing.Font("Nobile", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCiudad.Location = new System.Drawing.Point(409, 44);
+            this.txtNombreCiudad.Location = new System.Drawing.Point(417, 47);
             this.txtNombreCiudad.Name = "txtNombreCiudad";
             this.txtNombreCiudad.Size = new System.Drawing.Size(185, 21);
             this.txtNombreCiudad.TabIndex = 14;
@@ -307,7 +314,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nobile", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(406, 27);
+            this.label3.Location = new System.Drawing.Point(414, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 13);
             this.label3.TabIndex = 5;
@@ -317,7 +324,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nobile", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(206, 27);
+            this.label2.Location = new System.Drawing.Point(214, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 3;
@@ -327,7 +334,7 @@
             // 
             this.cboDepartamentos.Font = new System.Drawing.Font("Nobile", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDepartamentos.FormattingEnabled = true;
-            this.cboDepartamentos.Location = new System.Drawing.Point(209, 43);
+            this.cboDepartamentos.Location = new System.Drawing.Point(217, 47);
             this.cboDepartamentos.Name = "cboDepartamentos";
             this.cboDepartamentos.Size = new System.Drawing.Size(194, 21);
             this.cboDepartamentos.TabIndex = 2;
@@ -336,7 +343,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nobile", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 27);
+            this.label1.Location = new System.Drawing.Point(24, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 1;
@@ -346,7 +353,7 @@
             // 
             this.cboPaises.Font = new System.Drawing.Font("Nobile", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPaises.FormattingEnabled = true;
-            this.cboPaises.Location = new System.Drawing.Point(19, 43);
+            this.cboPaises.Location = new System.Drawing.Point(27, 46);
             this.cboPaises.Name = "cboPaises";
             this.cboPaises.Size = new System.Drawing.Size(184, 21);
             this.cboPaises.TabIndex = 0;
@@ -355,10 +362,50 @@
             // dgCiudades
             // 
             this.dgCiudades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCiudades.Location = new System.Drawing.Point(140, 230);
+            this.dgCiudades.Location = new System.Drawing.Point(140, 239);
             this.dgCiudades.Name = "dgCiudades";
-            this.dgCiudades.Size = new System.Drawing.Size(624, 219);
+            this.dgCiudades.Size = new System.Drawing.Size(624, 210);
             this.dgCiudades.TabIndex = 14;
+            // 
+            // pnlNombre
+            // 
+            this.pnlNombre.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlNombre.Location = new System.Drawing.Point(417, 62);
+            this.pnlNombre.Name = "pnlNombre";
+            this.pnlNombre.Size = new System.Drawing.Size(185, 10);
+            this.pnlNombre.TabIndex = 18;
+            this.pnlNombre.Visible = false;
+            // 
+            // pnlDepartamento
+            // 
+            this.pnlDepartamento.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlDepartamento.Location = new System.Drawing.Point(217, 62);
+            this.pnlDepartamento.Name = "pnlDepartamento";
+            this.pnlDepartamento.Size = new System.Drawing.Size(194, 10);
+            this.pnlDepartamento.TabIndex = 19;
+            this.pnlDepartamento.Visible = false;
+            // 
+            // pnlPais
+            // 
+            this.pnlPais.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlPais.Location = new System.Drawing.Point(27, 62);
+            this.pnlPais.Name = "pnlPais";
+            this.pnlPais.Size = new System.Drawing.Size(184, 10);
+            this.pnlPais.TabIndex = 20;
+            this.pnlPais.Visible = false;
+            // 
+            // lblAdvertencia
+            // 
+            this.lblAdvertencia.AutoSize = true;
+            this.lblAdvertencia.BackColor = System.Drawing.Color.LightCoral;
+            this.lblAdvertencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdvertencia.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblAdvertencia.Location = new System.Drawing.Point(586, 96);
+            this.lblAdvertencia.Name = "lblAdvertencia";
+            this.lblAdvertencia.Size = new System.Drawing.Size(176, 15);
+            this.lblAdvertencia.TabIndex = 21;
+            this.lblAdvertencia.Text = "¡Debe llenar todos los campos!";
+            this.lblAdvertencia.Visible = false;
             // 
             // frmCiudades
             // 
@@ -366,6 +413,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(776, 461);
+            this.Controls.Add(this.lblAdvertencia);
             this.Controls.Add(this.dgCiudades);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
@@ -415,5 +463,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboDepartamentos;
         private System.Windows.Forms.DataGridView dgCiudades;
+        private System.Windows.Forms.Panel pnlNombre;
+        private System.Windows.Forms.Panel pnlDepartamento;
+        private System.Windows.Forms.Panel pnlPais;
+        private System.Windows.Forms.Label lblAdvertencia;
     }
 }
