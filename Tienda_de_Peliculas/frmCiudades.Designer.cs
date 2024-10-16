@@ -48,12 +48,12 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombreCiudad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cboDepartamentos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboPaises = new System.Windows.Forms.ComboBox();
             this.dgCiudades = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -266,12 +266,12 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtNombreCiudad);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cboDepartamentos);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cboPaises);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox1.Location = new System.Drawing.Point(140, 109);
@@ -294,12 +294,13 @@
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtNombreCiudad
             // 
-            this.textBox1.Location = new System.Drawing.Point(409, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 20);
-            this.textBox1.TabIndex = 14;
+            this.txtNombreCiudad.Font = new System.Drawing.Font("Nobile", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCiudad.Location = new System.Drawing.Point(409, 44);
+            this.txtNombreCiudad.Name = "txtNombreCiudad";
+            this.txtNombreCiudad.Size = new System.Drawing.Size(185, 21);
+            this.txtNombreCiudad.TabIndex = 14;
             // 
             // label3
             // 
@@ -321,14 +322,14 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Departamento";
             // 
-            // comboBox2
+            // cboDepartamentos
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Vivaldi", 8.25F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(209, 43);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(164, 21);
-            this.comboBox2.TabIndex = 2;
+            this.cboDepartamentos.Font = new System.Drawing.Font("Nobile", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboDepartamentos.FormattingEnabled = true;
+            this.cboDepartamentos.Location = new System.Drawing.Point(209, 43);
+            this.cboDepartamentos.Name = "cboDepartamentos";
+            this.cboDepartamentos.Size = new System.Drawing.Size(194, 21);
+            this.cboDepartamentos.TabIndex = 2;
             // 
             // label1
             // 
@@ -340,14 +341,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Pais";
             // 
-            // comboBox1
+            // cboPaises
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Vivaldi", 8.25F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(19, 43);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(164, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cboPaises.Font = new System.Drawing.Font("Nobile", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboPaises.FormattingEnabled = true;
+            this.cboPaises.Location = new System.Drawing.Point(19, 43);
+            this.cboPaises.Name = "cboPaises";
+            this.cboPaises.Size = new System.Drawing.Size(184, 21);
+            this.cboPaises.TabIndex = 0;
+            this.cboPaises.SelectedIndexChanged += new System.EventHandler(this.cboPaises_SelectedIndexChanged);
             // 
             // dgCiudades
             // 
@@ -405,12 +407,12 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboPaises;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombreCiudad;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cboDepartamentos;
         private System.Windows.Forms.DataGridView dgCiudades;
     }
 }
