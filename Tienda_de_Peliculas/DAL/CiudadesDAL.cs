@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,7 @@ namespace Tienda_de_Peliculas.Clases
 
                 SqlDataReader reader = comando.ExecuteReader();
 
-                while (reader.Read()) { 
+                while (reader.Read()) {
                     CiudadViewModel ciudadView = new CiudadViewModel();
                     ciudadView.CiudadID = reader.GetInt32(0);
                     ciudadView.Pais = reader.GetString(1);
@@ -35,6 +36,36 @@ namespace Tienda_de_Peliculas.Clases
                 conexion.Close();
                 return lista;
             }
+
+        }
+
+        public static string InsertarCiudades(Ciudades ciudades)
+        {
+            string mensaje = "";
+            try
+            {
+                using (SqlConnection conexion = BDConexion.ObtenerConexion())
+                {
+                    SqlCommand cmd = new SqlCommand("Gral.UDP_tbCiudades_Insertar", conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@ciud_Descripcion",        ciudades.ciud_Descripcion);
+                    cmd.Parameters.AddWithValue("@dept_Id",                 ciudades.dept_Id);
+                    cmd.Parameters.AddWithValue("@usua_UsuarioCreacion",    ciudades.usua_UsuarioCreacion);
+                    cmd.Parameters.AddWithValue("@ciud_FechaCreacion",      ciudades.ciud_FechaCreacion);
+
+                    mensaje = (string)cmd.ExecuteScalar();
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                mensaje = "Error: " + ex.Message;   
+                throw;
+            }
+            
+            return mensaje;
+
 
         }
     }

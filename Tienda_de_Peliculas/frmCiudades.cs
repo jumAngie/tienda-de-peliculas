@@ -63,5 +63,30 @@ namespace Tienda_de_Peliculas
                 CargarDepartamentosPorPaisCMB(pais_Id);
             }
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Ciudades nuevaCiudad = new Ciudades
+                {
+                    ciud_Descripcion = txtNombreCiudad.Text, 
+                    dept_Id = Convert.ToInt32(cboDepartamentos.SelectedValue),
+                    usua_UsuarioCreacion = 1, // acá se debe de cambiar cuando se haga el LogIn
+                    ciud_FechaCreacion = DateTime.Now 
+                };
+
+                
+                string resultado = CiudadesDAL.InsertarCiudades(nuevaCiudad);
+
+               
+                MessageBox.Show(resultado, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Listado_Ciudades();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
