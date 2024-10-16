@@ -47,6 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BDConexion.cs" />
+    <Compile Include="Clases\Ciudades.cs" />
+    <Compile Include="Clases\DatosGenerales.cs" />
+    <Compile Include="Clases\Departamentos.cs" />
+    <Compile Include="Clases\Inventario.cs" />
+    <Compile Include="Clases\Paises.cs" />
+    <Compile Include="Clases\Roles.cs" />
+    <Compile Include="Clases\Usuarios.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
