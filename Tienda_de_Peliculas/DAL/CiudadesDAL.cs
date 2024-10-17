@@ -40,6 +40,7 @@ namespace Tienda_de_Peliculas.Clases
 
         }
 
+        // Insertar
         public static string InsertarCiudades(Ciudades ciudades)
         {
             string mensaje = "";
@@ -70,6 +71,7 @@ namespace Tienda_de_Peliculas.Clases
 
         }
 
+        // Editar_CargarDatos
         public static Ciudades Editar_CargarDatos(int ciud_Id)
         {
             Ciudades ciudades = null;
@@ -105,6 +107,7 @@ namespace Tienda_de_Peliculas.Clases
             return ciudades;
         }
 
+        // Editar
         public static string EditarCiudades(Ciudades ciudades)
         {
             string mensaje = "";
@@ -136,6 +139,7 @@ namespace Tienda_de_Peliculas.Clases
 
         }
 
+        // Eliminar
         public static string EliminarCiudades(Ciudades ciudades)
         {
             string mensaje = "";
