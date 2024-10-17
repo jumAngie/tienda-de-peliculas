@@ -40,7 +40,6 @@
             this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarAlquilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMensajeBienvenida = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
@@ -49,6 +48,8 @@
             this.lblRol = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtNombreCiudad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,14 +57,12 @@
             this.cboDepartamentos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cboPaises = new System.Windows.Forms.ComboBox();
-            this.dgCiudades = new System.Windows.Forms.DataGridView();
             this.pnlNombre = new System.Windows.Forms.Panel();
             this.pnlDepartamento = new System.Windows.Forms.Panel();
             this.pnlPais = new System.Windows.Forms.Panel();
+            this.dgCiudades = new System.Windows.Forms.DataGridView();
             this.lblAdvertencia = new System.Windows.Forms.Label();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.tHora = new System.Windows.Forms.Timer(this.components);
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
@@ -79,8 +78,7 @@
             this.toolStripMenuItem1,
             this.registroToolStripMenuItem,
             this.inventarioToolStripMenuItem,
-            this.facturaToolStripMenuItem,
-            this.reporteToolStripMenuItem});
+            this.facturaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(125, 479);
@@ -96,7 +94,7 @@
             this.toolStripMenuItem1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(112, 19);
-            this.toolStripMenuItem1.Text = "   Principal";
+            this.toolStripMenuItem1.Text = "   Inicio";
             // 
             // registroToolStripMenuItem
             // 
@@ -176,20 +174,6 @@
             this.registrarAlquilerToolStripMenuItem.Name = "registrarAlquilerToolStripMenuItem";
             this.registrarAlquilerToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.registrarAlquilerToolStripMenuItem.Text = "Registrar Alquiler";
-            // 
-            // reporteToolStripMenuItem
-            // 
-            this.reporteToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.reporteToolStripMenuItem.Font = new System.Drawing.Font("Nobile", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reporteToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.reporteToolStripMenuItem.Image = global::Tienda_de_Peliculas.Properties.Resources.analitica;
-            this.reporteToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.reporteToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
-            this.reporteToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 4, 15);
-            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(112, 36);
-            this.reporteToolStripMenuItem.Text = "  Reportes";
-            this.reporteToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
@@ -295,6 +279,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCancelar.Location = new System.Drawing.Point(439, 87);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(111, 26);
+            this.btnCancelar.TabIndex = 22;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditar.Location = new System.Drawing.Point(556, 86);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(148, 26);
+            this.btnEditar.TabIndex = 21;
+            this.btnEditar.Text = "Editar Ciudad";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -305,7 +317,7 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(148, 26);
             this.btnGuardar.TabIndex = 15;
-            this.btnGuardar.Text = "Guardar Registro";
+            this.btnGuardar.Text = "Nueva Ciudad";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -366,15 +378,6 @@
             this.cboPaises.TabIndex = 0;
             this.cboPaises.SelectedIndexChanged += new System.EventHandler(this.cboPaises_SelectedIndexChanged);
             // 
-            // dgCiudades
-            // 
-            this.dgCiudades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCiudades.Location = new System.Drawing.Point(140, 239);
-            this.dgCiudades.Name = "dgCiudades";
-            this.dgCiudades.Size = new System.Drawing.Size(724, 210);
-            this.dgCiudades.TabIndex = 14;
-            this.dgCiudades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCiudades_CellClick);
-            // 
             // pnlNombre
             // 
             this.pnlNombre.BackColor = System.Drawing.Color.DarkRed;
@@ -402,6 +405,15 @@
             this.pnlPais.TabIndex = 20;
             this.pnlPais.Visible = false;
             // 
+            // dgCiudades
+            // 
+            this.dgCiudades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCiudades.Location = new System.Drawing.Point(140, 239);
+            this.dgCiudades.Name = "dgCiudades";
+            this.dgCiudades.Size = new System.Drawing.Size(724, 210);
+            this.dgCiudades.TabIndex = 14;
+            this.dgCiudades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCiudades_CellClick);
+            // 
             // lblAdvertencia
             // 
             this.lblAdvertencia.AutoSize = true;
@@ -415,37 +427,9 @@
             this.lblAdvertencia.Text = "¡Debe llenar todos los campos!";
             this.lblAdvertencia.Visible = false;
             // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEditar.Location = new System.Drawing.Point(556, 86);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(148, 26);
-            this.btnEditar.TabIndex = 21;
-            this.btnEditar.Text = "Editar Registro";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
             // tHora
             // 
             this.tHora.Tick += new System.EventHandler(this.tHora_Tick);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.SystemColors.GrayText;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCancelar.Location = new System.Drawing.Point(439, 87);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(111, 26);
-            this.btnCancelar.TabIndex = 22;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmCiudades
             // 
@@ -488,7 +472,6 @@
         private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarVentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarAlquilerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblMensajeBienvenida;
         private System.Windows.Forms.Label lblHora;

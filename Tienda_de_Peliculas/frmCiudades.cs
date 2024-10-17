@@ -240,6 +240,7 @@ namespace Tienda_de_Peliculas
                 {
                     Eliminar_Ciudades(ciud_Id);
                     Listado_Ciudades();
+                    LimpiarCampos();
                 }
             }
             else if (e.RowIndex >= 0)
