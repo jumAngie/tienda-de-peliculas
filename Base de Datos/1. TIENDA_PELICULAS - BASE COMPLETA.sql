@@ -30,7 +30,7 @@
 --*************** SCHEMA Acceso ***************************--
 --**********************************************************--
 
--- --- -- TABLA USUARIOS -- -- -- -- 
+-- --- -- TABLA USUARIOS -- -- -- --  
 CREATE TABLE Acce.tbUsuarios(
 		usua_Id 					INT IDENTITY(1,1),
 		usua_Usuario				NVARCHAR(100) 	NOT NULL, 
