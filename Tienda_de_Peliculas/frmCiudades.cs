@@ -27,13 +27,7 @@ namespace Tienda_de_Peliculas
         #region CRUD
         public void Listado_Ciudades()
         {
-            DataGridViewButtonColumn btnEliminar = new DataGridViewButtonColumn();
-            btnEliminar.HeaderText = "Acciones";  
-            btnEliminar.Name = "btnEliminar";     
-            btnEliminar.Text = "Eliminar";        
-            btnEliminar.UseColumnTextForButtonValue = true;
             dgCiudades.DataSource = CiudadesDAL.ListarCiudades();
-            dgCiudades.Columns.Add(btnEliminar);
         }
 
         public void Insertar_Ciudades()
@@ -185,6 +179,17 @@ namespace Tienda_de_Peliculas
             cboDepartamentos.Text = "Debe seleccionar un Pais.";
             boton_mostrarGuardar();
             lblFecha.Text = DateTime.Now.ToLongDateString();
+
+            // Añadiendo el boton de eliminar al final de cada registro.
+            DataGridViewButtonColumn btnEliminar = new DataGridViewButtonColumn();
+            btnEliminar.HeaderText = "Acciones";
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseColumnTextForButtonValue = true;
+            btnEliminar.DefaultCellStyle.BackColor = Color.DarkRed;
+            btnEliminar.DefaultCellStyle.ForeColor = Color.DarkRed;
+            btnEliminar.DefaultCellStyle.Font = new Font("Nobile", 9, FontStyle.Regular);
+            dgCiudades.Columns.Add(btnEliminar);
         }
 
         private void cboPaises_SelectedIndexChanged(object sender, EventArgs e)
