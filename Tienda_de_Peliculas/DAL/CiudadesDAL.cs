@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Tienda_de_Peliculas.Vistas;
 
 namespace Tienda_de_Peliculas.Clases
@@ -64,6 +65,101 @@ namespace Tienda_de_Peliculas.Clases
                 throw;
             }
             
+            return mensaje;
+
+
+        }
+
+        public static Ciudades Editar_CargarDatos(int ciud_Id)
+        {
+            Ciudades ciudades = null;
+            try
+            {
+                using (SqlConnection conexion = BDConexion.ObtenerConexion())
+                {
+                    SqlCommand cmd = new SqlCommand("Gral.UPD_tbCiudades_CargarInformacion", conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@ciud_Id", ciud_Id);
+                   
+                   using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            ciudades = new Ciudades
+                            {
+                                pais_Id = reader.GetInt32(0),
+                                dept_Id = reader.GetInt32(1),
+                                ciud_Descripcion = reader.GetString(2)
+                            };
+                         }
+                   }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error al cargar la información de la ciudad: " + ex.Message);
+            }
+
+            return ciudades;
+        }
+
+        public static string EditarCiudades(Ciudades ciudades)
+        {
+            string mensaje = "";
+            try
+            {
+                using (SqlConnection conexion = BDConexion.ObtenerConexion())
+                {
+                    SqlCommand cmd = new SqlCommand("Gral.UPD_tbCiudades_Editar", conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@ciud_Id", ciudades.ciud_Id);
+                    cmd.Parameters.AddWithValue("@ciud_Descripcion", ciudades.ciud_Descripcion);
+                    cmd.Parameters.AddWithValue("@dept_Id", ciudades.dept_Id);
+                    cmd.Parameters.AddWithValue("@usua_UsuarioModificacion", ciudades.usua_UsuarioModificacion);
+                    cmd.Parameters.AddWithValue("@ciud_FechaModificacion", ciudades.ciud_FechaModificacion);
+
+                    mensaje = (string)cmd.ExecuteScalar();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                mensaje = "Error: " + ex.Message;
+                throw;
+            }
+
+            return mensaje;
+
+
+        }
+
+        public static string EliminarCiudades(Ciudades ciudades)
+        {
+            string mensaje = "";
+            try
+            {
+                using (SqlConnection conexion = BDConexion.ObtenerConexion())
+                {
+                    SqlCommand cmd = new SqlCommand("Gral.UPD_tbCiudades_Eliminar", conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@ciud_Id", ciudades.ciud_Id);
+                    cmd.Parameters.AddWithValue("@usua_UsuarioModificacion", ciudades.usua_UsuarioModificacion);
+                    cmd.Parameters.AddWithValue("@ciud_FechaModificacion", ciudades.ciud_FechaModificacion);
+
+                    mensaje = (string)cmd.ExecuteScalar();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                mensaje = "Error: " + ex.Message;
+                throw;
+            }
+
             return mensaje;
 
 

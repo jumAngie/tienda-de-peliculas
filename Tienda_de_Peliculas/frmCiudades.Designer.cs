@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCiudades));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,6 +61,9 @@
             this.pnlDepartamento = new System.Windows.Forms.Panel();
             this.pnlPais = new System.Windows.Forms.Panel();
             this.lblAdvertencia = new System.Windows.Forms.Label();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.tHora = new System.Windows.Forms.Timer(this.components);
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
@@ -78,7 +83,7 @@
             this.reporteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(125, 461);
+            this.menuStrip1.Size = new System.Drawing.Size(125, 479);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -197,7 +202,7 @@
             this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Location = new System.Drawing.Point(106, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(672, 89);
+            this.panel1.Size = new System.Drawing.Size(701, 89);
             this.panel1.TabIndex = 12;
             // 
             // lblMensajeBienvenida
@@ -269,6 +274,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.groupBox1.Controls.Add(this.btnCancelar);
+            this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.txtNombreCiudad);
             this.groupBox1.Controls.Add(this.label3);
@@ -283,7 +290,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox1.Location = new System.Drawing.Point(140, 114);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(624, 119);
+            this.groupBox1.Size = new System.Drawing.Size(667, 119);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
@@ -294,7 +301,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnGuardar.Location = new System.Drawing.Point(454, 86);
+            this.btnGuardar.Location = new System.Drawing.Point(494, 87);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(148, 26);
             this.btnGuardar.TabIndex = 15;
@@ -305,7 +312,7 @@
             // txtNombreCiudad
             // 
             this.txtNombreCiudad.Font = new System.Drawing.Font("Nobile", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCiudad.Location = new System.Drawing.Point(417, 47);
+            this.txtNombreCiudad.Location = new System.Drawing.Point(457, 48);
             this.txtNombreCiudad.Name = "txtNombreCiudad";
             this.txtNombreCiudad.Size = new System.Drawing.Size(185, 21);
             this.txtNombreCiudad.TabIndex = 14;
@@ -314,7 +321,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nobile", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(414, 30);
+            this.label3.Location = new System.Drawing.Point(454, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 13);
             this.label3.TabIndex = 5;
@@ -324,7 +331,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nobile", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(214, 30);
+            this.label2.Location = new System.Drawing.Point(238, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 3;
@@ -334,7 +341,7 @@
             // 
             this.cboDepartamentos.Font = new System.Drawing.Font("Nobile", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDepartamentos.FormattingEnabled = true;
-            this.cboDepartamentos.Location = new System.Drawing.Point(217, 47);
+            this.cboDepartamentos.Location = new System.Drawing.Point(241, 48);
             this.cboDepartamentos.Name = "cboDepartamentos";
             this.cboDepartamentos.Size = new System.Drawing.Size(194, 21);
             this.cboDepartamentos.TabIndex = 2;
@@ -364,13 +371,14 @@
             this.dgCiudades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCiudades.Location = new System.Drawing.Point(140, 239);
             this.dgCiudades.Name = "dgCiudades";
-            this.dgCiudades.Size = new System.Drawing.Size(624, 210);
+            this.dgCiudades.Size = new System.Drawing.Size(667, 210);
             this.dgCiudades.TabIndex = 14;
+            this.dgCiudades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCiudades_CellClick);
             // 
             // pnlNombre
             // 
             this.pnlNombre.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlNombre.Location = new System.Drawing.Point(417, 62);
+            this.pnlNombre.Location = new System.Drawing.Point(457, 63);
             this.pnlNombre.Name = "pnlNombre";
             this.pnlNombre.Size = new System.Drawing.Size(185, 10);
             this.pnlNombre.TabIndex = 18;
@@ -379,7 +387,7 @@
             // pnlDepartamento
             // 
             this.pnlDepartamento.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlDepartamento.Location = new System.Drawing.Point(217, 62);
+            this.pnlDepartamento.Location = new System.Drawing.Point(241, 63);
             this.pnlDepartamento.Name = "pnlDepartamento";
             this.pnlDepartamento.Size = new System.Drawing.Size(194, 10);
             this.pnlDepartamento.TabIndex = 19;
@@ -400,25 +408,59 @@
             this.lblAdvertencia.BackColor = System.Drawing.Color.LightCoral;
             this.lblAdvertencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdvertencia.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblAdvertencia.Location = new System.Drawing.Point(586, 96);
+            this.lblAdvertencia.Location = new System.Drawing.Point(631, 96);
             this.lblAdvertencia.Name = "lblAdvertencia";
             this.lblAdvertencia.Size = new System.Drawing.Size(176, 15);
             this.lblAdvertencia.TabIndex = 21;
             this.lblAdvertencia.Text = "¡Debe llenar todos los campos!";
             this.lblAdvertencia.Visible = false;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditar.Location = new System.Drawing.Point(494, 87);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(148, 26);
+            this.btnEditar.TabIndex = 21;
+            this.btnEditar.Text = "Editar Registro";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // tHora
+            // 
+            this.tHora.Tick += new System.EventHandler(this.tHora_Tick);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCancelar.Location = new System.Drawing.Point(377, 88);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(111, 26);
+            this.btnCancelar.TabIndex = 22;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // frmCiudades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(776, 461);
+            this.ClientSize = new System.Drawing.Size(819, 479);
             this.Controls.Add(this.lblAdvertencia);
             this.Controls.Add(this.dgCiudades);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCiudades";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCiudades";
             this.Load += new System.EventHandler(this.frmCiudades_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -467,5 +509,8 @@
         private System.Windows.Forms.Panel pnlDepartamento;
         private System.Windows.Forms.Panel pnlPais;
         private System.Windows.Forms.Label lblAdvertencia;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Timer tHora;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace Tienda_de_Peliculas.Clases
         public int usua_UsuarioModificacion { get; set; }
         public DateTime ciud_FechaModificacion { get; set; }
         public bool ciud_Estado { get; set; }
+
+        public int pais_Id { get; set; }
 
         public Ciudades() { }
 
