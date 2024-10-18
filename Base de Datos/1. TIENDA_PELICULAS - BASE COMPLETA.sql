@@ -19,12 +19,12 @@
 	GO
 	*/
 
-	CREATE SCHEMA Gral
-	GO  
-	CREATE SCHEMA Acce
-	GO
-	CREATE SCHEMA Peli
-	GO
+	--CREATE SCHEMA Gral
+	--GO  
+	--CREATE SCHEMA Acce
+	--GO
+	--CREATE SCHEMA Peli
+	--GO
 
 --**********************************************************--
 --*************** SCHEMA Acceso ***************************--
