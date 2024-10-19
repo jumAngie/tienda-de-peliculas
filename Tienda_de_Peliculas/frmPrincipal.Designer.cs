@@ -155,16 +155,16 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.lblClientesRegistrados);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel2.Location = new System.Drawing.Point(282, 131);
+            this.panel2.Location = new System.Drawing.Point(271, 131);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(161, 82);
+            this.panel2.Size = new System.Drawing.Size(171, 82);
             this.panel2.TabIndex = 7;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Image = global::Tienda_de_Peliculas.Properties.Resources.agregar_usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(23, 8);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 8);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(45, 45);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -176,7 +176,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(11, 56);
+            this.label7.Location = new System.Drawing.Point(24, 56);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 15);
             this.label7.TabIndex = 1;
@@ -185,13 +185,13 @@
             // lblClientesRegistrados
             // 
             this.lblClientesRegistrados.AutoSize = true;
-            this.lblClientesRegistrados.Font = new System.Drawing.Font("Nobile", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientesRegistrados.Font = new System.Drawing.Font("Nobile", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClientesRegistrados.ForeColor = System.Drawing.Color.White;
-            this.lblClientesRegistrados.Location = new System.Drawing.Point(72, 8);
+            this.lblClientesRegistrados.Location = new System.Drawing.Point(64, 12);
             this.lblClientesRegistrados.Name = "lblClientesRegistrados";
-            this.lblClientesRegistrados.Size = new System.Drawing.Size(84, 48);
+            this.lblClientesRegistrados.Size = new System.Drawing.Size(92, 41);
             this.lblClientesRegistrados.TabIndex = 0;
-            this.lblClientesRegistrados.Text = "00";
+            this.lblClientesRegistrados.Text = "001";
             // 
             // panel3
             // 
@@ -230,11 +230,11 @@
             // lblVentasSemanales
             // 
             this.lblVentasSemanales.AutoSize = true;
-            this.lblVentasSemanales.Font = new System.Drawing.Font("Nobile", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVentasSemanales.Font = new System.Drawing.Font("Nobile", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVentasSemanales.ForeColor = System.Drawing.Color.White;
-            this.lblVentasSemanales.Location = new System.Drawing.Point(49, 8);
+            this.lblVentasSemanales.Location = new System.Drawing.Point(57, 12);
             this.lblVentasSemanales.Name = "lblVentasSemanales";
-            this.lblVentasSemanales.Size = new System.Drawing.Size(116, 48);
+            this.lblVentasSemanales.Size = new System.Drawing.Size(102, 41);
             this.lblVentasSemanales.TabIndex = 0;
             this.lblVentasSemanales.Text = "000";
             // 
@@ -287,11 +287,11 @@
             // lblAlquileresSemanales
             // 
             this.lblAlquileresSemanales.AutoSize = true;
-            this.lblAlquileresSemanales.Font = new System.Drawing.Font("Nobile", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlquileresSemanales.Font = new System.Drawing.Font("Nobile", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlquileresSemanales.ForeColor = System.Drawing.Color.White;
-            this.lblAlquileresSemanales.Location = new System.Drawing.Point(61, 8);
+            this.lblAlquileresSemanales.Location = new System.Drawing.Point(63, 12);
             this.lblAlquileresSemanales.Name = "lblAlquileresSemanales";
-            this.lblAlquileresSemanales.Size = new System.Drawing.Size(116, 48);
+            this.lblAlquileresSemanales.Size = new System.Drawing.Size(102, 41);
             this.lblAlquileresSemanales.TabIndex = 0;
             this.lblAlquileresSemanales.Text = "000";
             // 

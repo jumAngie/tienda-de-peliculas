@@ -52,7 +52,9 @@ namespace Tienda_de_Peliculas
             string dia = Convert.ToString(diaSemana);
             int numeroDia = diasDeLaSemana(dia);
 
+           
             lblClientesRegistrados.Text = ClientesDAL.CantidadDeClientesRegistrdos();
+            
             
         }
         #endregion
