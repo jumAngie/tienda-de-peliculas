@@ -19,41 +19,18 @@ namespace Tienda_de_Peliculas
             tHora.Enabled = true;
         }
 
-        public int diasDeLaSemana(string diaSemana)
-        {
-            int dia = 0;
-            switch (diaSemana)
-            {
-                case "Monday":          dia = 1; 
-                    break;
-                case "Tuesday":         dia = 2;
-                    break;
-                case "Wednesday":       dia = 3;
-                    break;
-                case "Thursday":        dia = 4;
-                    break;
-                case "Friday":          dia = 5;
-                    break;
-                case "Saturday":        dia = 6;
-                    break;
-                case "Sunday":          dia = 7;
-                    break;
-            }
-
-            return dia;
-
-        }
-
-        #region
+        #region Dashboard 
         public void mostrarDatosDashboard()
         { 
             DateTime fechaActual = DateTime.Now;
-            var diaSemana = fechaActual.DayOfWeek;
-            string dia = Convert.ToString(diaSemana);
-            int numeroDia = diasDeLaSemana(dia);
+            var diaSemana = (int)DateTime.Now.DayOfWeek;
+            DateTime fechaLunes = fechaActual.AddDays(-((diaSemana == 0 ? 7 : diaSemana) - 1));
+            DateTime fechaDomingo = fechaLunes.AddDays(6);
 
-           
+
+            lblVentasSemanales.Text =      FacturaDAL.CantidadVentasSemanaActual(fechaLunes, fechaDomingo);
             lblClientesRegistrados.Text = ClientesDAL.CantidadDeClientesRegistrdos();
+            lblAlquileresSemanales.Text = FacturaDAL.CantidadAlquileresSemanaActual(fechaLunes, fechaDomingo);
             
             
         }
