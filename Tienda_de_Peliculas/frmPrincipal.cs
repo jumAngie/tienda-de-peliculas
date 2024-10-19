@@ -13,10 +13,34 @@ namespace Tienda_de_Peliculas
 {
     public partial class frmPrincipal : Form
     {
+        //
+        private Button currenButton;
+        private Random random;
+        private int tempIndex;
+
+        //
         public frmPrincipal()
         {
             InitializeComponent();
             tHora.Enabled = true;
+        }
+
+        //
+        private Color SelectThemeColor()
+        {
+            int index = random.Next(ThemeColor.ColorList.Count);
+            while(tempIndex == index)
+            {
+                random.Next(ThemeColor.ColorList.Count);
+            }
+            tempIndex = index;
+            string color = ThemeColor.ColorList[index];
+            return ColorTranslator.FromHtml(color);
+        }
+
+        private void ActivateButton(object sender)
+        {
+
         }
 
         #region Dashboard 
@@ -44,7 +68,8 @@ namespace Tienda_de_Peliculas
 
         private void tHora_Tick(object sender, EventArgs e)
         {
-            lblHora.Text = DateTime.Now.ToString("hh:mm:tt");
+            lblHora.Text = DateTime.Now.ToString("hh:mm tt");
         }
+
     }
 }

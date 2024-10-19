@@ -50,10 +50,15 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.lblAlquileresSemanales = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tHora = new System.Windows.Forms.Timer(this.components);
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnReportes = new System.Windows.Forms.Button();
+            this.btnInventario = new System.Windows.Forms.Button();
+            this.btnVentaAlquiler = new System.Windows.Forms.Button();
+            this.btnRegistroEmpleados = new System.Windows.Forms.Button();
+            this.btnRegistroClientes = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
             this.panel2.SuspendLayout();
@@ -62,8 +67,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMensajeBienvenida
@@ -295,6 +300,129 @@
             this.lblAlquileresSemanales.TabIndex = 0;
             this.lblAlquileresSemanales.Text = "000";
             // 
+            // tHora
+            // 
+            this.tHora.Tick += new System.EventHandler(this.tHora_Tick);
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.btnReportes);
+            this.panelMenu.Controls.Add(this.btnInventario);
+            this.panelMenu.Controls.Add(this.btnVentaAlquiler);
+            this.panelMenu.Controls.Add(this.btnRegistroEmpleados);
+            this.panelMenu.Controls.Add(this.btnRegistroClientes);
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(220, 461);
+            this.panelMenu.TabIndex = 11;
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnReportes.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Reportes;
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.Location = new System.Drawing.Point(0, 315);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
+            this.btnReportes.Size = new System.Drawing.Size(220, 60);
+            this.btnReportes.TabIndex = 5;
+            this.btnReportes.Text = "    Reportes";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportes.UseVisualStyleBackColor = true;
+            // 
+            // btnInventario
+            // 
+            this.btnInventario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInventario.FlatAppearance.BorderSize = 0;
+            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventario.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnInventario.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Inventario;
+            this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventario.Location = new System.Drawing.Point(0, 255);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
+            this.btnInventario.Size = new System.Drawing.Size(220, 60);
+            this.btnInventario.TabIndex = 4;
+            this.btnInventario.Text = "    Inventario";
+            this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInventario.UseVisualStyleBackColor = true;
+            // 
+            // btnVentaAlquiler
+            // 
+            this.btnVentaAlquiler.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVentaAlquiler.FlatAppearance.BorderSize = 0;
+            this.btnVentaAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentaAlquiler.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnVentaAlquiler.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Venta_Alquiler;
+            this.btnVentaAlquiler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentaAlquiler.Location = new System.Drawing.Point(0, 195);
+            this.btnVentaAlquiler.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnVentaAlquiler.Name = "btnVentaAlquiler";
+            this.btnVentaAlquiler.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
+            this.btnVentaAlquiler.Size = new System.Drawing.Size(220, 60);
+            this.btnVentaAlquiler.TabIndex = 3;
+            this.btnVentaAlquiler.Text = "    Venta / Alquiler";
+            this.btnVentaAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentaAlquiler.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVentaAlquiler.UseVisualStyleBackColor = true;
+            // 
+            // btnRegistroEmpleados
+            // 
+            this.btnRegistroEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegistroEmpleados.FlatAppearance.BorderSize = 0;
+            this.btnRegistroEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistroEmpleados.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnRegistroEmpleados.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Empleados;
+            this.btnRegistroEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistroEmpleados.Location = new System.Drawing.Point(0, 135);
+            this.btnRegistroEmpleados.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnRegistroEmpleados.Name = "btnRegistroEmpleados";
+            this.btnRegistroEmpleados.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
+            this.btnRegistroEmpleados.Size = new System.Drawing.Size(220, 60);
+            this.btnRegistroEmpleados.TabIndex = 2;
+            this.btnRegistroEmpleados.Text = "    Registro de Empleados\r\n";
+            this.btnRegistroEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistroEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegistroEmpleados.UseVisualStyleBackColor = true;
+            // 
+            // btnRegistroClientes
+            // 
+            this.btnRegistroClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegistroClientes.FlatAppearance.BorderSize = 0;
+            this.btnRegistroClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistroClientes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnRegistroClientes.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Clientes;
+            this.btnRegistroClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistroClientes.Location = new System.Drawing.Point(0, 75);
+            this.btnRegistroClientes.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnRegistroClientes.Name = "btnRegistroClientes";
+            this.btnRegistroClientes.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
+            this.btnRegistroClientes.Size = new System.Drawing.Size(220, 60);
+            this.btnRegistroClientes.TabIndex = 1;
+            this.btnRegistroClientes.Text = "    Registro de Clientes";
+            this.btnRegistroClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistroClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegistroClientes.UseVisualStyleBackColor = true;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(220, 75);
+            this.panelLogo.TabIndex = 0;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -305,29 +433,6 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
-            // 
-            // tHora
-            // 
-            this.tHora.Tick += new System.EventHandler(this.tHora_Tick);
-            // 
-            // panelMenu
-            // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.panelLogo);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 461);
-            this.panelMenu.TabIndex = 11;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 75);
-            this.panelLogo.TabIndex = 0;
             // 
             // frmPrincipal
             // 
@@ -360,8 +465,8 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,6 +498,11 @@
         private System.Windows.Forms.Timer tHora;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Button btnRegistroClientes;
+        private System.Windows.Forms.Button btnReportes;
+        private System.Windows.Forms.Button btnInventario;
+        private System.Windows.Forms.Button btnVentaAlquiler;
+        private System.Windows.Forms.Button btnRegistroEmpleados;
     }
 }
 
