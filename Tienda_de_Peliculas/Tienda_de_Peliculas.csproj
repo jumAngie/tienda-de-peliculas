@@ -48,7 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDConexion.cs" />
+    <Compile Include="DAL\ClientesDAL.cs" />
     <Compile Include="DAL\DepartamentosDAL.cs" />
+    <Compile Include="DAL\FacturaDAL.cs" />
     <Compile Include="DAL\PaisesDAL.cs" />
     <Compile Include="Entities\Ciudades.cs" />
     <Compile Include="DAL\CiudadesDAL.cs" />
@@ -63,6 +65,12 @@
     </Compile>
     <Compile Include="frmCiudades.Designer.cs">
       <DependentUpon>frmCiudades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventario.Designer.cs">
+      <DependentUpon>frmInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
