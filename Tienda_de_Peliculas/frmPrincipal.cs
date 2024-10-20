@@ -17,6 +17,7 @@ namespace Tienda_de_Peliculas
         private Button currentButton;
         private Random random;
         private int tempIndex;
+        private Form activateForm;
 
         //
         public frmPrincipal()
@@ -27,6 +28,7 @@ namespace Tienda_de_Peliculas
         }
 
         //
+        #region Diseño
         private Color SelectThemeColor()
         {
             int index = random.Next(ThemeColor.ColorList.Count);
@@ -70,6 +72,27 @@ namespace Tienda_de_Peliculas
             }
 
         }
+
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if(activateForm != null)
+            {
+                activateForm.Close();
+            }
+            ActivateButton(btnSender);
+            activateForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelDesktopPanel.Controls.Add(childForm);
+            this.panelDesktopPanel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lbltTitle.Text = childForm.Text;
+
+                
+        }
+#endregion
 
         #region Dashboard 
         public void mostrarDatosDashboard()
@@ -117,7 +140,7 @@ namespace Tienda_de_Peliculas
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new frmInventario(), sender);
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
