@@ -100,7 +100,7 @@ VALUES						(2,			'San Isidro',				1,						GETDATE()),
 							(2,			'Choluteca',				1,						GETDATE());
 --- insertar las 3 ciudades de los 15 deptos faltantes -- 	
 
--- Datos Generales Empleados
+-- Datos Generales
 INSERT INTO Gral.tbDatos_Generales([dato_NombreCompleto],[dato_DNI],[dato_Telefono],[dato_email],
 									[ciud_Id],[dato_Direccion],[dato_FechaNacimiento],[sexo_Id],[cate_Id],
 									[usua_UsuarioCreacion],[dato_FechaCreacion])
@@ -108,27 +108,12 @@ VALUES								('Angie Yahaira Campos Arias', '0512200300736', '95887062', 'angie
 									3, 'Avenida Flores, 8va Calle, Casa #34', '2003-01-03', 1,1,
 									1, GETDATE())
 GO
--- Datos Generales Clientes
+-- Datos Generales
 INSERT INTO Gral.tbDatos_Generales([dato_NombreCompleto],[dato_DNI],[dato_Telefono],[dato_email],
 									[ciud_Id],[dato_Direccion],[dato_FechaNacimiento],[sexo_Id],[cate_Id],
 									[usua_UsuarioCreacion],[dato_FechaCreacion])
 VALUES								('Karla Suazo', '0503199800733', '98702036', 'karla.s1998@gmail.com',
 									2, 'Avenida Rosales, 7ma Calle, Casa #4', '1998-10-03', 1,2,
-									1, GETDATE())
-GO
-INSERT INTO Gral.tbDatos_Generales([dato_NombreCompleto],[dato_DNI],[dato_Telefono],[dato_email],
-									[ciud_Id],[dato_Direccion],[dato_FechaNacimiento],[sexo_Id],[cate_Id],
-									[usua_UsuarioCreacion],[dato_FechaCreacion])
-VALUES								('Carlos Fernando Arita', '050220050078', '9999888', 'cfa05@gmail.com',
-									2, 'Avenida Rosales, 7ma Calle, Casa #12', '2005-10-03', 1,2,
-									1, GETDATE())
-GO
-
-INSERT INTO Gral.tbDatos_Generales([dato_NombreCompleto],[dato_DNI],[dato_Telefono],[dato_email],
-									[ciud_Id],[dato_Direccion],[dato_FechaNacimiento],[sexo_Id],[cate_Id],
-									[usua_UsuarioCreacion],[dato_FechaCreacion])
-VALUES								('Dominic Perez', '051018890236', '98456322', 'domp.1889@gmail.com',
-									2, 'Avenida Rosales, 7ma Calle, Casa #10', '1889-10-10', 1,2,
 									1, GETDATE())
 GO
 
@@ -233,15 +218,7 @@ VALUES						 (	'Coraline', '2009', 5, 200, 3, 1,
 								2, 120, 50.40, 1, 1, GETDATE())
 GO
 
--- Factura Ventas
+-- Factura
 INSERT INTO Peli.tbFacturas([meto_Id], [dato_Id], [fact_NumFactura],[fact_FechaFactura],[tran_Id], [fact_Subtotal],[fact_Impuesto],[fact_Descuento], [inve_Id], [fact_fechaDev],[fact_Total], [usua_UsuarioCreacion], [fact_FechaCreacion])
 VALUES						(1, 2,'00001', GETDATE(), 1, 200, 200*0.15, 200*0.05, 1, '2025-01-01', 155.59, 1, GETDATE())
-GO
-
--- Facturas Alquileres
-INSERT INTO Peli.tbFacturas([meto_Id], [dato_Id], [fact_NumFactura],[fact_FechaFactura],[tran_Id], [fact_Subtotal],[fact_Impuesto],[fact_Descuento], [inve_Id], [fact_fechaDev],[fact_Total], [usua_UsuarioCreacion], [fact_FechaCreacion])
-VALUES						(1, 2,'00014', '2024-10-15', 2, 200, 200*0.15, 200*0.05, 1, '2025-01-01', 155.59, 1, GETDATE())
-GO
-INSERT INTO Peli.tbFacturas([meto_Id], [dato_Id], [fact_NumFactura],[fact_FechaFactura],[tran_Id], [fact_Subtotal],[fact_Impuesto],[fact_Descuento], [inve_Id], [fact_fechaDev],[fact_Total], [usua_UsuarioCreacion], [fact_FechaCreacion])
-VALUES						(1, 2,'00014', '2024-10-21', 2, 200, 200*0.15, 200*0.05, 1, '2025-01-01', 155.59, 1, GETDATE())
 GO

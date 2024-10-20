@@ -39,12 +39,6 @@ AS
 GO
 
 --- CLIENTES
-CREATE OR ALTER PROCEDURE Gral.Datos_Generales_CantidadDeClientes
-AS
-	BEGIN
-		SELECT COUNT(*) AS 'Cantidad de Clientes Registrados' FROM Gral.tbDatos_Generales
-		WHERE cate_Id = 2
-	END
 
 --- PELICULAS (INVENTARIO)
 
@@ -55,28 +49,3 @@ AS
 --- GENEROS
 
 --- FORMATOS
-
---- FACTURA
-GO
-CREATE OR ALTER PROCEDURE Peli.Datos_Generales_VentasSemanales
-@fechaLunes DATETIME,
-@fechaDomingo DATETIME
-AS
-	BEGIN
-		SELECT COUNT(*)  AS 'Ventas de la Semana Actual'
-		FROM Peli.tbFacturas 
-		WHERE  fact_FechaFactura BETWEEN @fechaLunes AND @fechaDomingo
-		AND tran_Id = 1
-	END
-
-GO
-	CREATE OR ALTER PROCEDURE Peli.Datos_Generales_AlquileresSemanales
-@fechaLunes DATETIME,
-@fechaDomingo DATETIME
-AS
-	BEGIN
-		SELECT COUNT(*)  AS 'Alquileres de la Semana Actual'
-		FROM Peli.tbFacturas 
-		WHERE  fact_FechaFactura BETWEEN @fechaLunes AND @fechaDomingo
-		AND tran_Id = 2
-	END

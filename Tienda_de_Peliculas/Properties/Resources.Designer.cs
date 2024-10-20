@@ -73,26 +73,6 @@ namespace Tienda_de_Peliculas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _753173 {
-            get {
-                object obj = ResourceManager.GetObject("753173", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap agregar {
-            get {
-                object obj = ResourceManager.GetObject("agregar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap agregar_archivo {
             get {
                 object obj = ResourceManager.GetObject("agregar-archivo", resourceCulture);
@@ -176,56 +156,6 @@ namespace Tienda_de_Peliculas.Properties {
         internal static System.Drawing.Bitmap factura {
             get {
                 object obj = ResourceManager.GetObject("factura", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Icono_Inventario {
-            get {
-                object obj = ResourceManager.GetObject("Icono-Inventario", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Icono_Registrar_Clientes {
-            get {
-                object obj = ResourceManager.GetObject("Icono-Registrar-Clientes", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Icono_Registrar_Empleados {
-            get {
-                object obj = ResourceManager.GetObject("Icono-Registrar-Empleados", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Icono_Registrar_Venta_Alquiler {
-            get {
-                object obj = ResourceManager.GetObject("Icono-Registrar-Venta-Alquiler", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Icono_Reportes {
-            get {
-                object obj = ResourceManager.GetObject("Icono-Reportes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

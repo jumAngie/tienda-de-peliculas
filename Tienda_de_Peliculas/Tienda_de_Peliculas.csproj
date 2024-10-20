@@ -48,9 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDConexion.cs" />
-    <Compile Include="DAL\ClientesDAL.cs" />
     <Compile Include="DAL\DepartamentosDAL.cs" />
-    <Compile Include="DAL\FacturaDAL.cs" />
     <Compile Include="DAL\PaisesDAL.cs" />
     <Compile Include="Entities\Ciudades.cs" />
     <Compile Include="DAL\CiudadesDAL.cs" />
@@ -71,11 +69,6 @@
     </Compile>
     <Compile Include="frmFactura.Designer.cs">
       <DependentUpon>frmFactura.cs</DependentUpon>
-    <Compile Include="frmInventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmInventario.Designer.cs">
-      <DependentUpon>frmInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -91,7 +84,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThemeColor.cs" />
     <Compile Include="View Models\CiudadViewModel.cs" />
     <EmbeddedResource Include="frmCiudades.resx">
       <DependentUpon>frmCiudades.cs</DependentUpon>
@@ -169,27 +161,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cerrar-con-llave.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\agregar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\753173.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icono-Registrar-Clientes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icono-Registrar-Empleados.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icono-Registrar-Venta-Alquiler.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icono-Inventario.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icono-Reportes.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
