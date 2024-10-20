@@ -10,6 +10,9 @@ namespace Tienda_de_Peliculas
 {
     public static class ThemeColor
     {
+        public static Color PrimaryColor { get; set; }
+        public static Color SecondaryColor { get; set; }
+
         public static List<string> ColorList = new List<string>()
         {
            "#D14D57", "#C76B78", "#5F7BAF", "#003B5C", "#B24444",

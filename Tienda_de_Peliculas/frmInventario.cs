@@ -14,7 +14,8 @@ namespace Tienda_de_Peliculas
 {
     public partial class frmInventario : Form
     {
-        GeneroDAL           ge = new GeneroDAL();
+        
+        GeneroDAL ge = new GeneroDAL();
         IdiomasDAL          idi = new IdiomasDAL();
         ClasificacionesDAL  cl = new ClasificacionesDAL();
         FormatosDAL         frm = new FormatosDAL();
@@ -25,6 +26,17 @@ namespace Tienda_de_Peliculas
             InitializeComponent();
         }
 
+        #region DISEÑO
+        private void LoadTheme()
+        {
+                  btnGuardar.BackColor = ThemeColor.PrimaryColor;
+                  btnGuardar.ForeColor = Color.White;
+                  btnGuardar.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+            
+        }
+
+        #endregion
+
         #region CRUD
         public void Listado_Inventario()
         {
@@ -32,7 +44,7 @@ namespace Tienda_de_Peliculas
         }
         #endregion
 
-        #region Llenando COMBOBOXS
+        #region COMBOBOXS
         public void CargarGeneros()
         {
             cboGeneros.DataSource = ge.CargarGeneros();
@@ -71,6 +83,7 @@ namespace Tienda_de_Peliculas
 
         private void frmInventario_Load(object sender, EventArgs e)
         {
+            LoadTheme();
             txtTitulo.Focus();
             Listado_Inventario();
             CargarGeneros();
@@ -78,6 +91,7 @@ namespace Tienda_de_Peliculas
             CargarClasificaciones();
             CargarFormatos();
             CargarEstados();
+            
         }
     }
 }

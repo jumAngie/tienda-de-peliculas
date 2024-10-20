@@ -25,6 +25,8 @@ namespace Tienda_de_Peliculas
             InitializeComponent();
             tHora.Enabled = true;
             random = new Random();
+            btnCloseChildForm.Visible = false;
+
         }
 
         //
@@ -55,6 +57,9 @@ namespace Tienda_de_Peliculas
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     panelTitleBar.BackColor = color;
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    ThemeColor.PrimaryColor = color;
+                    ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    btnCloseChildForm.Visible = true;
                 }
             }
         }
@@ -146,6 +151,23 @@ namespace Tienda_de_Peliculas
         private void btnReportes_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+        }
+
+        private void btnCloseChildForm_Click(object sender, EventArgs e)
+        {
+            if(activateForm != null)
+                activateForm.Close();
+            Reset();
+        }
+
+        private void Reset()
+        {
+            DisableButton();
+            lbltTitle.Text = "INICIO";
+            panelTitleBar.BackColor = Color.FromArgb(51, 51, 76);
+            panelLogo.BackColor = Color.FromArgb(39,39,58);
+            currentButton = null;
+            btnCloseChildForm.Visible = false;
         }
     }
 }

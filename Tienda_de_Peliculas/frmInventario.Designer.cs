@@ -44,17 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtExistencias = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cboFormatos = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cboEstados = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.mtxtPrecio = new System.Windows.Forms.MaskedTextBox();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.pnlAnio = new System.Windows.Forms.Panel();
             this.pnlGenero = new System.Windows.Forms.Panel();
@@ -62,10 +51,21 @@
             this.pnlClasificacion = new System.Windows.Forms.Panel();
             this.pnlDuracion = new System.Windows.Forms.Panel();
             this.pnlDesc = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cboFormatos = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cboEstados = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlEstado = new System.Windows.Forms.Panel();
             this.pnlFormato = new System.Windows.Forms.Panel();
-            this.pnlExistencias = new System.Windows.Forms.Panel();
-            this.pnlPrecio = new System.Windows.Forms.Panel();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -240,11 +240,76 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Título";
             // 
+            // pnlTitulo
+            // 
+            this.pnlTitulo.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlTitulo.Location = new System.Drawing.Point(13, 48);
+            this.pnlTitulo.Name = "pnlTitulo";
+            this.pnlTitulo.Size = new System.Drawing.Size(263, 22);
+            this.pnlTitulo.TabIndex = 19;
+            this.pnlTitulo.Visible = false;
+            // 
+            // pnlAnio
+            // 
+            this.pnlAnio.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlAnio.Location = new System.Drawing.Point(282, 48);
+            this.pnlAnio.Name = "pnlAnio";
+            this.pnlAnio.Size = new System.Drawing.Size(117, 22);
+            this.pnlAnio.TabIndex = 20;
+            this.pnlAnio.Visible = false;
+            // 
+            // pnlGenero
+            // 
+            this.pnlGenero.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlGenero.Location = new System.Drawing.Point(13, 103);
+            this.pnlGenero.Name = "pnlGenero";
+            this.pnlGenero.Size = new System.Drawing.Size(187, 21);
+            this.pnlGenero.TabIndex = 21;
+            this.pnlGenero.Visible = false;
+            // 
+            // pnlIdioma
+            // 
+            this.pnlIdioma.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlIdioma.Location = new System.Drawing.Point(211, 103);
+            this.pnlIdioma.Name = "pnlIdioma";
+            this.pnlIdioma.Size = new System.Drawing.Size(187, 21);
+            this.pnlIdioma.TabIndex = 22;
+            this.pnlIdioma.Visible = false;
+            // 
+            // pnlClasificacion
+            // 
+            this.pnlClasificacion.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlClasificacion.Location = new System.Drawing.Point(13, 154);
+            this.pnlClasificacion.Name = "pnlClasificacion";
+            this.pnlClasificacion.Size = new System.Drawing.Size(187, 23);
+            this.pnlClasificacion.TabIndex = 23;
+            this.pnlClasificacion.Visible = false;
+            // 
+            // pnlDuracion
+            // 
+            this.pnlDuracion.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlDuracion.Location = new System.Drawing.Point(211, 155);
+            this.pnlDuracion.Name = "pnlDuracion";
+            this.pnlDuracion.Size = new System.Drawing.Size(187, 22);
+            this.pnlDuracion.TabIndex = 24;
+            this.pnlDuracion.Visible = false;
+            // 
+            // pnlDesc
+            // 
+            this.pnlDesc.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlDesc.Location = new System.Drawing.Point(14, 237);
+            this.pnlDesc.Name = "pnlDesc";
+            this.pnlDesc.Size = new System.Drawing.Size(385, 26);
+            this.pnlDesc.TabIndex = 25;
+            this.pnlDesc.Visible = false;
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.mtxtPrecio);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.panel2);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.txtExistencias);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.cboFormatos);
             this.groupBox2.Controls.Add(this.label9);
@@ -252,8 +317,6 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.pnlEstado);
             this.groupBox2.Controls.Add(this.pnlFormato);
-            this.groupBox2.Controls.Add(this.pnlPrecio);
-            this.groupBox2.Controls.Add(this.pnlExistencias);
             this.groupBox2.Location = new System.Drawing.Point(434, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(361, 284);
@@ -270,14 +333,6 @@
             this.label11.Size = new System.Drawing.Size(78, 15);
             this.label11.TabIndex = 16;
             this.label11.Text = "Precio (HNL)";
-            // 
-            // txtExistencias
-            // 
-            this.txtExistencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExistencias.Location = new System.Drawing.Point(15, 101);
-            this.txtExistencias.Name = "txtExistencias";
-            this.txtExistencias.Size = new System.Drawing.Size(153, 21);
-            this.txtExistencias.TabIndex = 15;
             // 
             // label10
             // 
@@ -325,98 +380,6 @@
             this.label8.TabIndex = 6;
             this.label8.Text = "Estado";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(541, 299);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 35);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(671, 299);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 35);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // mtxtPrecio
-            // 
-            this.mtxtPrecio.Location = new System.Drawing.Point(188, 103);
-            this.mtxtPrecio.Mask = "000.00";
-            this.mtxtPrecio.Name = "mtxtPrecio";
-            this.mtxtPrecio.Size = new System.Drawing.Size(153, 20);
-            this.mtxtPrecio.TabIndex = 18;
-            // 
-            // pnlTitulo
-            // 
-            this.pnlTitulo.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlTitulo.Location = new System.Drawing.Point(13, 48);
-            this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(263, 22);
-            this.pnlTitulo.TabIndex = 19;
-            this.pnlTitulo.Visible = false;
-            // 
-            // pnlAnio
-            // 
-            this.pnlAnio.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlAnio.Location = new System.Drawing.Point(282, 48);
-            this.pnlAnio.Name = "pnlAnio";
-            this.pnlAnio.Size = new System.Drawing.Size(117, 22);
-            this.pnlAnio.TabIndex = 20;
-            this.pnlAnio.Visible = false;
-            // 
-            // pnlGenero
-            // 
-            this.pnlGenero.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlGenero.Location = new System.Drawing.Point(13, 103);
-            this.pnlGenero.Name = "pnlGenero";
-            this.pnlGenero.Size = new System.Drawing.Size(187, 22);
-            this.pnlGenero.TabIndex = 21;
-            this.pnlGenero.Visible = false;
-            // 
-            // pnlIdioma
-            // 
-            this.pnlIdioma.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlIdioma.Location = new System.Drawing.Point(211, 103);
-            this.pnlIdioma.Name = "pnlIdioma";
-            this.pnlIdioma.Size = new System.Drawing.Size(187, 22);
-            this.pnlIdioma.TabIndex = 22;
-            this.pnlIdioma.Visible = false;
-            // 
-            // pnlClasificacion
-            // 
-            this.pnlClasificacion.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlClasificacion.Location = new System.Drawing.Point(13, 154);
-            this.pnlClasificacion.Name = "pnlClasificacion";
-            this.pnlClasificacion.Size = new System.Drawing.Size(187, 23);
-            this.pnlClasificacion.TabIndex = 23;
-            this.pnlClasificacion.Visible = false;
-            // 
-            // pnlDuracion
-            // 
-            this.pnlDuracion.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlDuracion.Location = new System.Drawing.Point(211, 155);
-            this.pnlDuracion.Name = "pnlDuracion";
-            this.pnlDuracion.Size = new System.Drawing.Size(187, 23);
-            this.pnlDuracion.TabIndex = 24;
-            this.pnlDuracion.Visible = false;
-            // 
-            // pnlDesc
-            // 
-            this.pnlDesc.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlDesc.Location = new System.Drawing.Point(14, 237);
-            this.pnlDesc.Name = "pnlDesc";
-            this.pnlDesc.Size = new System.Drawing.Size(385, 26);
-            this.pnlDesc.TabIndex = 25;
-            this.pnlDesc.Visible = false;
-            // 
             // pnlEstado
             // 
             this.pnlEstado.BackColor = System.Drawing.Color.DarkRed;
@@ -435,31 +398,69 @@
             this.pnlFormato.TabIndex = 27;
             this.pnlFormato.Visible = false;
             // 
-            // pnlExistencias
+            // btnGuardar
             // 
-            this.pnlExistencias.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlExistencias.Location = new System.Drawing.Point(15, 103);
-            this.pnlExistencias.Name = "pnlExistencias";
-            this.pnlExistencias.Size = new System.Drawing.Size(153, 22);
-            this.pnlExistencias.TabIndex = 28;
-            this.pnlExistencias.Visible = false;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Location = new System.Drawing.Point(541, 299);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(124, 35);
+            this.btnGuardar.TabIndex = 3;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
-            // pnlPrecio
+            // btnCancelar
             // 
-            this.pnlPrecio.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlPrecio.Location = new System.Drawing.Point(188, 103);
-            this.pnlPrecio.Name = "pnlPrecio";
-            this.pnlPrecio.Size = new System.Drawing.Size(153, 23);
-            this.pnlPrecio.TabIndex = 29;
-            this.pnlPrecio.Visible = false;
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCancelar.Location = new System.Drawing.Point(671, 299);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(124, 35);
+            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(15, 103);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(153, 21);
+            this.textBox1.TabIndex = 26;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkRed;
+            this.panel1.Location = new System.Drawing.Point(15, 104);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(153, 22);
+            this.panel1.TabIndex = 27;
+            this.panel1.Visible = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(188, 103);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(153, 21);
+            this.textBox2.TabIndex = 28;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkRed;
+            this.panel2.Location = new System.Drawing.Point(188, 104);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(153, 22);
+            this.panel2.TabIndex = 29;
+            this.panel2.Visible = false;
             // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 519);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgInventario);
@@ -485,8 +486,8 @@
         private System.Windows.Forms.TextBox txtAnioLanzamiento;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cboClasificacion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboIdiomas;
@@ -502,9 +503,7 @@
         private System.Windows.Forms.ComboBox cboEstados;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtExistencias;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.MaskedTextBox mtxtPrecio;
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Panel pnlAnio;
         private System.Windows.Forms.Panel pnlGenero;
@@ -514,7 +513,9 @@
         private System.Windows.Forms.Panel pnlDesc;
         private System.Windows.Forms.Panel pnlEstado;
         private System.Windows.Forms.Panel pnlFormato;
-        private System.Windows.Forms.Panel pnlPrecio;
-        private System.Windows.Forms.Panel pnlExistencias;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

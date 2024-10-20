@@ -183,6 +183,16 @@ namespace Tienda_de_Peliculas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flechas_izquierda {
+            get {
+                object obj = ResourceManager.GetObject("flechas-izquierda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icono_Inventario {
             get {
                 object obj = ResourceManager.GetObject("Icono-Inventario", resourceCulture);
@@ -226,6 +236,16 @@ namespace Tienda_de_Peliculas.Properties {
         internal static System.Drawing.Bitmap Icono_Reportes {
             get {
                 object obj = ResourceManager.GetObject("Icono-Reportes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icono_Volver {
+            get {
+                object obj = ResourceManager.GetObject("Icono-Volver", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
