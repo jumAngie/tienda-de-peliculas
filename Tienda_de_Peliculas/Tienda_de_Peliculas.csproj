@@ -72,6 +72,12 @@
     <Compile Include="frmCiudades.Designer.cs">
       <DependentUpon>frmCiudades.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDatosGeneralesCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatosGeneralesCliente.Designer.cs">
+      <DependentUpon>frmDatosGeneralesCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <Compile Include="View Models\InventarioViewModel.cs" />
     <EmbeddedResource Include="frmCiudades.resx">
       <DependentUpon>frmCiudades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatosGeneralesCliente.resx">
+      <DependentUpon>frmDatosGeneralesCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInventario.resx">
       <DependentUpon>frmInventario.cs</DependentUpon>

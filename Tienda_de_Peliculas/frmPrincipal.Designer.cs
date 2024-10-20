@@ -31,50 +31,50 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lbltTitle = new System.Windows.Forms.Label();
+            this.pcbFoto = new System.Windows.Forms.PictureBox();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.tHora = new System.Windows.Forms.Timer(this.components);
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnReportes = new System.Windows.Forms.Button();
+            this.btnInventario = new System.Windows.Forms.Button();
+            this.btnVentaAlquiler = new System.Windows.Forms.Button();
+            this.btnRegistroEmpleados = new System.Windows.Forms.Button();
+            this.btnRegistroClientes = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
             this.lblMensajeBienvenida = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.lblAlquileresSemanales = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lblVentasSemanales = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblClientesRegistrados = new System.Windows.Forms.Label();
-            this.btnReportes = new System.Windows.Forms.Button();
-            this.btnInventario = new System.Windows.Forms.Button();
-            this.btnVentaAlquiler = new System.Windows.Forms.Button();
-            this.btnRegistroEmpleados = new System.Windows.Forms.Button();
-            this.btnRegistroClientes = new System.Windows.Forms.Button();
-            this.btnCloseChildForm = new System.Windows.Forms.Button();
-            this.pcbFoto = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelDesktopPanel.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,6 +93,18 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(1024, 75);
             this.panelTitleBar.TabIndex = 6;
+            // 
+            // btnCloseChildForm
+            // 
+            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseChildForm.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Volver;
+            this.btnCloseChildForm.Location = new System.Drawing.Point(218, 0);
+            this.btnCloseChildForm.Name = "btnCloseChildForm";
+            this.btnCloseChildForm.Size = new System.Drawing.Size(79, 75);
+            this.btnCloseChildForm.TabIndex = 17;
+            this.btnCloseChildForm.UseVisualStyleBackColor = true;
+            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
             // 
             // lblHora
             // 
@@ -129,6 +141,18 @@
             this.lbltTitle.Size = new System.Drawing.Size(122, 33);
             this.lbltTitle.TabIndex = 12;
             this.lbltTitle.Text = "INICIO";
+            // 
+            // pcbFoto
+            // 
+            this.pcbFoto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pcbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pcbFoto.Image = global::Tienda_de_Peliculas.Properties.Resources.pelicula;
+            this.pcbFoto.Location = new System.Drawing.Point(965, 12);
+            this.pcbFoto.Name = "pcbFoto";
+            this.pcbFoto.Size = new System.Drawing.Size(47, 45);
+            this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbFoto.TabIndex = 0;
+            this.pcbFoto.TabStop = false;
             // 
             // lblRol
             // 
@@ -173,6 +197,111 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 599);
             this.panelMenu.TabIndex = 11;
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnReportes.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Reportes;
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.Location = new System.Drawing.Point(0, 390);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
+            this.btnReportes.Size = new System.Drawing.Size(220, 89);
+            this.btnReportes.TabIndex = 5;
+            this.btnReportes.Text = "    Reportes";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            // 
+            // btnInventario
+            // 
+            this.btnInventario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnInventario.FlatAppearance.BorderSize = 0;
+            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventario.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnInventario.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Inventario;
+            this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventario.Location = new System.Drawing.Point(0, 310);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
+            this.btnInventario.Size = new System.Drawing.Size(220, 80);
+            this.btnInventario.TabIndex = 4;
+            this.btnInventario.Text = "    Inventario";
+            this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInventario.UseVisualStyleBackColor = true;
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
+            // 
+            // btnVentaAlquiler
+            // 
+            this.btnVentaAlquiler.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVentaAlquiler.FlatAppearance.BorderSize = 0;
+            this.btnVentaAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentaAlquiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentaAlquiler.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnVentaAlquiler.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Venta_Alquiler;
+            this.btnVentaAlquiler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentaAlquiler.Location = new System.Drawing.Point(0, 231);
+            this.btnVentaAlquiler.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnVentaAlquiler.Name = "btnVentaAlquiler";
+            this.btnVentaAlquiler.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
+            this.btnVentaAlquiler.Size = new System.Drawing.Size(220, 79);
+            this.btnVentaAlquiler.TabIndex = 3;
+            this.btnVentaAlquiler.Text = "    Venta / Alquiler";
+            this.btnVentaAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentaAlquiler.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVentaAlquiler.UseVisualStyleBackColor = true;
+            this.btnVentaAlquiler.Click += new System.EventHandler(this.btnVentaAlquiler_Click);
+            // 
+            // btnRegistroEmpleados
+            // 
+            this.btnRegistroEmpleados.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRegistroEmpleados.FlatAppearance.BorderSize = 0;
+            this.btnRegistroEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistroEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistroEmpleados.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnRegistroEmpleados.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Empleados;
+            this.btnRegistroEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistroEmpleados.Location = new System.Drawing.Point(0, 144);
+            this.btnRegistroEmpleados.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnRegistroEmpleados.Name = "btnRegistroEmpleados";
+            this.btnRegistroEmpleados.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
+            this.btnRegistroEmpleados.Size = new System.Drawing.Size(220, 92);
+            this.btnRegistroEmpleados.TabIndex = 2;
+            this.btnRegistroEmpleados.Text = "    Empleados\r\n";
+            this.btnRegistroEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistroEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegistroEmpleados.UseVisualStyleBackColor = true;
+            this.btnRegistroEmpleados.Click += new System.EventHandler(this.btnRegistroEmpleados_Click);
+            // 
+            // btnRegistroClientes
+            // 
+            this.btnRegistroClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRegistroClientes.FlatAppearance.BorderSize = 0;
+            this.btnRegistroClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistroClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistroClientes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnRegistroClientes.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Clientes;
+            this.btnRegistroClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistroClientes.Location = new System.Drawing.Point(0, 72);
+            this.btnRegistroClientes.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnRegistroClientes.Name = "btnRegistroClientes";
+            this.btnRegistroClientes.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
+            this.btnRegistroClientes.Size = new System.Drawing.Size(220, 72);
+            this.btnRegistroClientes.TabIndex = 1;
+            this.btnRegistroClientes.Text = "    Clientes";
+            this.btnRegistroClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistroClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegistroClientes.UseVisualStyleBackColor = true;
+            this.btnRegistroClientes.Click += new System.EventHandler(this.btnRegistroClientes_Click);
             // 
             // panelLogo
             // 
@@ -247,6 +376,17 @@
             this.panel4.Size = new System.Drawing.Size(170, 82);
             this.panel4.TabIndex = 16;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox5.Image = global::Tienda_de_Peliculas.Properties.Resources.pelicula__2_;
+            this.pictureBox5.Location = new System.Drawing.Point(16, 8);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(42, 45);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 6;
+            this.pictureBox5.TabStop = false;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -268,6 +408,18 @@
             this.lblAlquileresSemanales.Size = new System.Drawing.Size(102, 41);
             this.lblAlquileresSemanales.TabIndex = 0;
             this.lblAlquileresSemanales.Text = "000";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox4.Image = global::Tienda_de_Peliculas.Properties.Resources._572828_200;
+            this.pictureBox4.Location = new System.Drawing.Point(27, 69);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(20, 24);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
             // 
             // label11
             // 
@@ -294,6 +446,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(170, 82);
             this.panel3.TabIndex = 14;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox3.Image = global::Tienda_de_Peliculas.Properties.Resources.bienes;
+            this.pictureBox3.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(42, 45);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
             // 
             // label8
             // 
@@ -331,6 +494,17 @@
             this.panel2.Size = new System.Drawing.Size(171, 82);
             this.panel2.TabIndex = 13;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Image = global::Tienda_de_Peliculas.Properties.Resources.agregar_usuario;
+            this.pictureBox2.Location = new System.Drawing.Point(14, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -353,180 +527,6 @@
             this.lblClientesRegistrados.TabIndex = 0;
             this.lblClientesRegistrados.Text = "001";
             // 
-            // btnReportes
-            // 
-            this.btnReportes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnReportes.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Reportes;
-            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 419);
-            this.btnReportes.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
-            this.btnReportes.Size = new System.Drawing.Size(220, 60);
-            this.btnReportes.TabIndex = 5;
-            this.btnReportes.Text = "    Reportes";
-            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReportes.UseVisualStyleBackColor = true;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
-            // 
-            // btnInventario
-            // 
-            this.btnInventario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnInventario.FlatAppearance.BorderSize = 0;
-            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventario.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnInventario.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Inventario;
-            this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.Location = new System.Drawing.Point(0, 330);
-            this.btnInventario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
-            this.btnInventario.Size = new System.Drawing.Size(220, 60);
-            this.btnInventario.TabIndex = 4;
-            this.btnInventario.Text = "    Inventario";
-            this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInventario.UseVisualStyleBackColor = true;
-            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
-            // 
-            // btnVentaAlquiler
-            // 
-            this.btnVentaAlquiler.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnVentaAlquiler.FlatAppearance.BorderSize = 0;
-            this.btnVentaAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentaAlquiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentaAlquiler.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnVentaAlquiler.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Venta_Alquiler;
-            this.btnVentaAlquiler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentaAlquiler.Location = new System.Drawing.Point(0, 250);
-            this.btnVentaAlquiler.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.btnVentaAlquiler.Name = "btnVentaAlquiler";
-            this.btnVentaAlquiler.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
-            this.btnVentaAlquiler.Size = new System.Drawing.Size(220, 60);
-            this.btnVentaAlquiler.TabIndex = 3;
-            this.btnVentaAlquiler.Text = "    Venta / Alquiler";
-            this.btnVentaAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentaAlquiler.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVentaAlquiler.UseVisualStyleBackColor = true;
-            this.btnVentaAlquiler.Click += new System.EventHandler(this.btnVentaAlquiler_Click);
-            // 
-            // btnRegistroEmpleados
-            // 
-            this.btnRegistroEmpleados.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegistroEmpleados.FlatAppearance.BorderSize = 0;
-            this.btnRegistroEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistroEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistroEmpleados.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnRegistroEmpleados.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Empleados;
-            this.btnRegistroEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistroEmpleados.Location = new System.Drawing.Point(0, 163);
-            this.btnRegistroEmpleados.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.btnRegistroEmpleados.Name = "btnRegistroEmpleados";
-            this.btnRegistroEmpleados.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
-            this.btnRegistroEmpleados.Size = new System.Drawing.Size(220, 60);
-            this.btnRegistroEmpleados.TabIndex = 2;
-            this.btnRegistroEmpleados.Text = "    Empleados\r\n";
-            this.btnRegistroEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistroEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRegistroEmpleados.UseVisualStyleBackColor = true;
-            this.btnRegistroEmpleados.Click += new System.EventHandler(this.btnRegistroEmpleados_Click);
-            // 
-            // btnRegistroClientes
-            // 
-            this.btnRegistroClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegistroClientes.FlatAppearance.BorderSize = 0;
-            this.btnRegistroClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistroClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistroClientes.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnRegistroClientes.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Clientes;
-            this.btnRegistroClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistroClientes.Location = new System.Drawing.Point(0, 84);
-            this.btnRegistroClientes.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.btnRegistroClientes.Name = "btnRegistroClientes";
-            this.btnRegistroClientes.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
-            this.btnRegistroClientes.Size = new System.Drawing.Size(220, 60);
-            this.btnRegistroClientes.TabIndex = 1;
-            this.btnRegistroClientes.Text = "    Clientes";
-            this.btnRegistroClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistroClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRegistroClientes.UseVisualStyleBackColor = true;
-            this.btnRegistroClientes.Click += new System.EventHandler(this.btnRegistroClientes_Click);
-            // 
-            // btnCloseChildForm
-            // 
-            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
-            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseChildForm.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Volver;
-            this.btnCloseChildForm.Location = new System.Drawing.Point(218, 0);
-            this.btnCloseChildForm.Name = "btnCloseChildForm";
-            this.btnCloseChildForm.Size = new System.Drawing.Size(79, 75);
-            this.btnCloseChildForm.TabIndex = 17;
-            this.btnCloseChildForm.UseVisualStyleBackColor = true;
-            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
-            // 
-            // pcbFoto
-            // 
-            this.pcbFoto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pcbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pcbFoto.Image = global::Tienda_de_Peliculas.Properties.Resources.pelicula;
-            this.pcbFoto.Location = new System.Drawing.Point(965, 12);
-            this.pcbFoto.Name = "pcbFoto";
-            this.pcbFoto.Size = new System.Drawing.Size(47, 45);
-            this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbFoto.TabIndex = 0;
-            this.pcbFoto.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox5.Image = global::Tienda_de_Peliculas.Properties.Resources.pelicula__2_;
-            this.pictureBox5.Location = new System.Drawing.Point(16, 8);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(42, 45);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 6;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox4.Image = global::Tienda_de_Peliculas.Properties.Resources._572828_200;
-            this.pictureBox4.Location = new System.Drawing.Point(27, 69);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(20, 24);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox3.Image = global::Tienda_de_Peliculas.Properties.Resources.bienes;
-            this.pictureBox3.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(42, 45);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox2.Image = global::Tienda_de_Peliculas.Properties.Resources.agregar_usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -544,6 +544,7 @@
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
@@ -551,14 +552,13 @@
             this.panelDesktopPanel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 

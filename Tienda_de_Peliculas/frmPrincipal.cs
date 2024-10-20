@@ -129,7 +129,7 @@ namespace Tienda_de_Peliculas
 
         private void btnRegistroClientes_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new frmDatosGeneralesCliente(), sender);
 
         }
 
@@ -150,7 +150,7 @@ namespace Tienda_de_Peliculas
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new frmReportes(), sender);
         }
 
         private void btnCloseChildForm_Click(object sender, EventArgs e)
