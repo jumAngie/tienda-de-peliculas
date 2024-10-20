@@ -69,3 +69,31 @@ AS
 	WHERE   c.ciud_Estado = 1
 GO
 
+CREATE OR ALTER VIEW Peli.Listado_Inventario
+AS
+	SELECT 
+			inve_Id,
+			inve_Titulo,
+			inve_Anio,
+			g.gene_Descripcion,
+			inve_Duracion,
+			f.form_Descripcion,
+			e.esta_Descripcion,
+			inve_Descripcion,
+			idi.idio_Descripcion,
+			inve_Cantidad,
+			inve_Precio,
+			c.clas_Descripcion,
+			uC.usua_Usuario AS 'Usuario Creacion',
+			uM.usua_Usuario AS 'Usuario Modificación'
+	FROM Peli.tbInventario i					INNER JOIN Peli.tbGeneros g
+	ON	 i.gene_Id = g.gene_Id					INNER JOIN Peli.tbFormatos f
+	ON   i.form_Id = f.form_Id					INNER JOIN Peli.tbEstados e
+	ON   i.esta_Id = e.esta_Id					INNER JOIN Peli.tbIdiomas idi
+	ON   i.idio_Id = idi.idio_Id				INNER JOIN Peli.tbClasificaciones c
+	ON   i.clas_Id = c.clas_Id					INNER JOIN Acce.tbUsuarios uC
+	ON   i.usua_UsuarioCreacion = uC.usua_Id	LEFT JOIN Acce.tbUsuarios uM
+	ON   i.usua_UsuarioModificacion = uM.usua_Id
+
+
+

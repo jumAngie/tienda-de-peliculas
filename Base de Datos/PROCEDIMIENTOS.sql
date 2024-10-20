@@ -45,18 +45,71 @@ AS
 		SELECT COUNT(*) AS 'Cantidad de Clientes Registrados' FROM Gral.tbDatos_Generales
 		WHERE cate_Id = 2
 	END
-
+	GO
 --- PELICULAS (INVENTARIO)
 
 --- SEXO
 
 --- CLASIFICACIONES
+CREATE OR ALTER PROCEDURE Peli.Clasificaciones_CMB
+AS
+	BEGIN
+		SELECT '0' AS 'clas_Id', ' - Seleccione una opción -' AS 'clas_Descripcion'
+		UNION ALL
+		SELECT clas_Id, clas_Descripcion FROM Peli.tbClasificaciones
+		WHERE clas_Estado = 1;
+	END
+GO
 
 --- GENEROS
+GO
+CREATE OR ALTER PROCEDURE Peli.Generos_CMB
+AS
+	BEGIN
+		SELECT '0' AS 'gene_Id', ' - Seleccione una opción -' AS 'gene_Descripcion'
+		UNION ALL
+		SELECT gene_Id, gene_Descripcion FROM Peli.tbGeneros
+		WHERE gene_Estado = 1;
+	END
+	GO
 
 --- FORMATOS
+CREATE OR ALTER PROCEDURE Peli.Formatos_CMB
+AS
+	BEGIN
+		SELECT '0' AS 'form_Id', ' - Seleccione una opción -' AS 'form_Descripcion'
+		UNION ALL
+		SELECT form_Id, form_Descripcion FROM Peli.tbFormatos
+		WHERE form_Estado = 1;
+	END
+GO
 
 --- FACTURA
+
+--- IDIOMAS
+GO
+CREATE OR ALTER PROCEDURE Peli.Idiomas_CMB
+AS
+	BEGIN
+		SELECT '0' AS 'idio_Id', ' - Seleccione una opción -' AS 'idio_Descripcion'
+		UNION ALL
+		SELECT idio_Id, idio_Descripcion FROM Peli.tbIdiomas
+		WHERE idio_Estado = 1;
+	END
+GO
+
+--- ESTADOS
+CREATE OR ALTER PROCEDURE Peli.Estados_CMB
+AS
+	BEGIN
+		SELECT '0' AS 'esta_Id', ' - Seleccione una opción -' AS 'esta_Descripcion'
+		UNION ALL
+		SELECT esta_Id, esta_Descripcion FROM Peli.tbEstados
+		WHERE esta_Estado = 1;
+	END
+GO
+
+--- DASHBOARD
 GO
 CREATE OR ALTER PROCEDURE Peli.Datos_Generales_VentasSemanales
 @fechaLunes DATETIME,

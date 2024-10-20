@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tienda_de_Peliculas.View_Models;
 using Tienda_de_Peliculas.Vistas;
 
 namespace Tienda_de_Peliculas.Clases
@@ -24,7 +25,8 @@ namespace Tienda_de_Peliculas.Clases
 
                 SqlDataReader reader = comando.ExecuteReader();
 
-                while (reader.Read()) {
+                while (reader.Read())
+                {
                     CiudadViewModel ciudadView = new CiudadViewModel();
                     ciudadView.CiudadID = reader.GetInt32(0);
                     ciudadView.Pais = reader.GetString(1);

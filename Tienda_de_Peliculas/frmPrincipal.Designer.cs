@@ -170,6 +170,8 @@
             // 
             // panelMenu
             // 
+            this.panelMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelMenu.Controls.Add(this.btnReportes);
             this.panelMenu.Controls.Add(this.btnInventario);
@@ -319,12 +321,16 @@
             // 
             // panelDesktopPanel
             // 
+            this.panelDesktopPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDesktopPanel.Controls.Add(this.lblMensajeBienvenida);
             this.panelDesktopPanel.Controls.Add(this.panel4);
             this.panelDesktopPanel.Controls.Add(this.pictureBox4);
             this.panelDesktopPanel.Controls.Add(this.label11);
             this.panelDesktopPanel.Controls.Add(this.panel3);
             this.panelDesktopPanel.Controls.Add(this.panel2);
+            this.panelDesktopPanel.ForeColor = System.Drawing.Color.Black;
             this.panelDesktopPanel.Location = new System.Drawing.Point(218, 75);
             this.panelDesktopPanel.Name = "panelDesktopPanel";
             this.panelDesktopPanel.Size = new System.Drawing.Size(806, 524);

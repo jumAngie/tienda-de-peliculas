@@ -48,9 +48,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDConexion.cs" />
+    <Compile Include="DAL\ClasificacionesDAL.cs" />
     <Compile Include="DAL\ClientesDAL.cs" />
     <Compile Include="DAL\DepartamentosDAL.cs" />
+    <Compile Include="DAL\EstadosDAL.cs" />
     <Compile Include="DAL\FacturaDAL.cs" />
+    <Compile Include="DAL\FormatosDAL.cs" />
+    <Compile Include="DAL\GeneroDAL.cs" />
+    <Compile Include="DAL\IdiomasDAL.cs" />
+    <Compile Include="DAL\InventarioDAL.cs" />
     <Compile Include="DAL\PaisesDAL.cs" />
     <Compile Include="Entities\Ciudades.cs" />
     <Compile Include="DAL\CiudadesDAL.cs" />
@@ -88,6 +94,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
     <Compile Include="View Models\CiudadViewModel.cs" />
+    <Compile Include="View Models\InventarioViewModel.cs" />
     <EmbeddedResource Include="frmCiudades.resx">
       <DependentUpon>frmCiudades.cs</DependentUpon>
     </EmbeddedResource>
