@@ -30,7 +30,7 @@ namespace Tienda_de_Peliculas
         private Color SelectThemeColor()
         {
             int index = random.Next(ThemeColor.ColorList.Count);
-            while(tempIndex == index)
+            while(tempIndex == index) 
             {
                index = random.Next(ThemeColor.ColorList.Count);
             }
