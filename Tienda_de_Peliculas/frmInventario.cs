@@ -32,9 +32,9 @@ namespace Tienda_de_Peliculas
                   btnGuardar.BackColor = ThemeColor.PrimaryColor;
                   btnGuardar.ForeColor = Color.White;
                   btnGuardar.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                  btnCancelar.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
             
         }
-
         #endregion
 
         #region CRUD
@@ -91,7 +91,7 @@ namespace Tienda_de_Peliculas
             CargarClasificaciones();
             CargarFormatos();
             CargarEstados();
-            
+
         }
     }
 }

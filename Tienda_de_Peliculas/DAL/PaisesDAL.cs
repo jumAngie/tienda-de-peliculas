@@ -13,7 +13,7 @@ namespace Tienda_de_Peliculas.DAL
         public DataTable CargarPaises()
         {
             SqlConnection conexion = BDConexion.ObtenerConexion();
-            SqlDataAdapter da = new SqlDataAdapter("Gral.Paises_CMB", conexion);
+            SqlDataAdapter da = new SqlDataAdapter("Gral.Paises_CMB", conexion); 
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             DataTable dt = new DataTable();
             da.Fill(dt);
