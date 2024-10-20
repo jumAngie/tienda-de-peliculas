@@ -55,6 +55,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.mtxtPrecio = new System.Windows.Forms.MaskedTextBox();
+            this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.pnlAnio = new System.Windows.Forms.Panel();
+            this.pnlGenero = new System.Windows.Forms.Panel();
+            this.pnlIdioma = new System.Windows.Forms.Panel();
+            this.pnlClasificacion = new System.Windows.Forms.Panel();
+            this.pnlDuracion = new System.Windows.Forms.Panel();
+            this.pnlDesc = new System.Windows.Forms.Panel();
+            this.pnlEstado = new System.Windows.Forms.Panel();
+            this.pnlFormato = new System.Windows.Forms.Panel();
+            this.pnlExistencias = new System.Windows.Forms.Panel();
+            this.pnlPrecio = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -87,6 +98,14 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtTitulo);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.pnlTitulo);
+            this.groupBox1.Controls.Add(this.pnlAnio);
+            this.groupBox1.Controls.Add(this.pnlGenero);
+            this.groupBox1.Controls.Add(this.pnlIdioma);
+            this.groupBox1.Controls.Add(this.pnlClasificacion);
+            this.groupBox1.Controls.Add(this.pnlDuracion);
+            this.groupBox1.Controls.Add(this.pnlDesc);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(416, 284);
@@ -231,6 +250,10 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.cboEstados);
             this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.pnlEstado);
+            this.groupBox2.Controls.Add(this.pnlFormato);
+            this.groupBox2.Controls.Add(this.pnlPrecio);
+            this.groupBox2.Controls.Add(this.pnlExistencias);
             this.groupBox2.Location = new System.Drawing.Point(434, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(361, 284);
@@ -331,6 +354,105 @@
             this.mtxtPrecio.Size = new System.Drawing.Size(153, 20);
             this.mtxtPrecio.TabIndex = 18;
             // 
+            // pnlTitulo
+            // 
+            this.pnlTitulo.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlTitulo.Location = new System.Drawing.Point(13, 48);
+            this.pnlTitulo.Name = "pnlTitulo";
+            this.pnlTitulo.Size = new System.Drawing.Size(263, 22);
+            this.pnlTitulo.TabIndex = 19;
+            this.pnlTitulo.Visible = false;
+            // 
+            // pnlAnio
+            // 
+            this.pnlAnio.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlAnio.Location = new System.Drawing.Point(282, 48);
+            this.pnlAnio.Name = "pnlAnio";
+            this.pnlAnio.Size = new System.Drawing.Size(117, 22);
+            this.pnlAnio.TabIndex = 20;
+            this.pnlAnio.Visible = false;
+            // 
+            // pnlGenero
+            // 
+            this.pnlGenero.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlGenero.Location = new System.Drawing.Point(13, 103);
+            this.pnlGenero.Name = "pnlGenero";
+            this.pnlGenero.Size = new System.Drawing.Size(187, 22);
+            this.pnlGenero.TabIndex = 21;
+            this.pnlGenero.Visible = false;
+            // 
+            // pnlIdioma
+            // 
+            this.pnlIdioma.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlIdioma.Location = new System.Drawing.Point(211, 103);
+            this.pnlIdioma.Name = "pnlIdioma";
+            this.pnlIdioma.Size = new System.Drawing.Size(187, 22);
+            this.pnlIdioma.TabIndex = 22;
+            this.pnlIdioma.Visible = false;
+            // 
+            // pnlClasificacion
+            // 
+            this.pnlClasificacion.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlClasificacion.Location = new System.Drawing.Point(13, 154);
+            this.pnlClasificacion.Name = "pnlClasificacion";
+            this.pnlClasificacion.Size = new System.Drawing.Size(187, 23);
+            this.pnlClasificacion.TabIndex = 23;
+            this.pnlClasificacion.Visible = false;
+            // 
+            // pnlDuracion
+            // 
+            this.pnlDuracion.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlDuracion.Location = new System.Drawing.Point(211, 155);
+            this.pnlDuracion.Name = "pnlDuracion";
+            this.pnlDuracion.Size = new System.Drawing.Size(187, 23);
+            this.pnlDuracion.TabIndex = 24;
+            this.pnlDuracion.Visible = false;
+            // 
+            // pnlDesc
+            // 
+            this.pnlDesc.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlDesc.Location = new System.Drawing.Point(14, 237);
+            this.pnlDesc.Name = "pnlDesc";
+            this.pnlDesc.Size = new System.Drawing.Size(385, 26);
+            this.pnlDesc.TabIndex = 25;
+            this.pnlDesc.Visible = false;
+            // 
+            // pnlEstado
+            // 
+            this.pnlEstado.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlEstado.Location = new System.Drawing.Point(15, 54);
+            this.pnlEstado.Name = "pnlEstado";
+            this.pnlEstado.Size = new System.Drawing.Size(153, 17);
+            this.pnlEstado.TabIndex = 26;
+            this.pnlEstado.Visible = false;
+            // 
+            // pnlFormato
+            // 
+            this.pnlFormato.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlFormato.Location = new System.Drawing.Point(188, 54);
+            this.pnlFormato.Name = "pnlFormato";
+            this.pnlFormato.Size = new System.Drawing.Size(153, 17);
+            this.pnlFormato.TabIndex = 27;
+            this.pnlFormato.Visible = false;
+            // 
+            // pnlExistencias
+            // 
+            this.pnlExistencias.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlExistencias.Location = new System.Drawing.Point(15, 103);
+            this.pnlExistencias.Name = "pnlExistencias";
+            this.pnlExistencias.Size = new System.Drawing.Size(153, 22);
+            this.pnlExistencias.TabIndex = 28;
+            this.pnlExistencias.Visible = false;
+            // 
+            // pnlPrecio
+            // 
+            this.pnlPrecio.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlPrecio.Location = new System.Drawing.Point(188, 103);
+            this.pnlPrecio.Name = "pnlPrecio";
+            this.pnlPrecio.Size = new System.Drawing.Size(153, 23);
+            this.pnlPrecio.TabIndex = 29;
+            this.pnlPrecio.Visible = false;
+            // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,5 +505,16 @@
         private System.Windows.Forms.TextBox txtExistencias;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.MaskedTextBox mtxtPrecio;
+        private System.Windows.Forms.Panel pnlTitulo;
+        private System.Windows.Forms.Panel pnlAnio;
+        private System.Windows.Forms.Panel pnlGenero;
+        private System.Windows.Forms.Panel pnlIdioma;
+        private System.Windows.Forms.Panel pnlClasificacion;
+        private System.Windows.Forms.Panel pnlDuracion;
+        private System.Windows.Forms.Panel pnlDesc;
+        private System.Windows.Forms.Panel pnlEstado;
+        private System.Windows.Forms.Panel pnlFormato;
+        private System.Windows.Forms.Panel pnlPrecio;
+        private System.Windows.Forms.Panel pnlExistencias;
     }
 }
