@@ -14,7 +14,7 @@ namespace Tienda_de_Peliculas
     public partial class frmPrincipal : Form
     {
         //
-        private Button currenButton;
+        private Button currentButton;
         private Random random;
         private int tempIndex;
 
@@ -23,6 +23,7 @@ namespace Tienda_de_Peliculas
         {
             InitializeComponent();
             tHora.Enabled = true;
+            random = new Random();
         }
 
         //
@@ -31,15 +32,42 @@ namespace Tienda_de_Peliculas
             int index = random.Next(ThemeColor.ColorList.Count);
             while(tempIndex == index)
             {
-                random.Next(ThemeColor.ColorList.Count);
+               index = random.Next(ThemeColor.ColorList.Count);
             }
             tempIndex = index;
             string color = ThemeColor.ColorList[index];
             return ColorTranslator.FromHtml(color);
         }
 
-        private void ActivateButton(object sender)
+        private void ActivateButton(object btnSender)
         {
+            if(btnSender != null)
+            {
+                if (currentButton != (Button)btnSender) { 
+                
+                    DisableButton();
+                    Color color = SelectThemeColor();
+                    currentButton= (Button)btnSender;
+                    currentButton.BackColor = color;
+                    currentButton.ForeColor = Color.White;
+                    currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    panelTitleBar.BackColor = color;
+                    panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                }
+            }
+        }
+
+        private void DisableButton()
+        {
+            foreach (Control previousBtn in panelMenu.Controls) 
+            { 
+                if(previousBtn.GetType() == typeof(Button))
+                    {
+                        previousBtn.BackColor = Color.FromArgb(51, 51, 76);
+                        previousBtn.ForeColor = Color.Gainsboro;
+                        previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                }
+            }
 
         }
 
@@ -71,5 +99,30 @@ namespace Tienda_de_Peliculas
             lblHora.Text = DateTime.Now.ToString("hh:mm tt");
         }
 
+        private void btnRegistroClientes_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+
+        }
+
+        private void btnRegistroEmpleados_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+        }
+
+        private void btnVentaAlquiler_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+        }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+        }
     }
 }

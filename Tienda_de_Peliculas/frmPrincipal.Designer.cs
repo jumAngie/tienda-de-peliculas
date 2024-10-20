@@ -31,7 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.lblMensajeBienvenida = new System.Windows.Forms.Label();
-            this.panelHeader = new System.Windows.Forms.Panel();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.pcbFoto = new System.Windows.Forms.PictureBox();
@@ -59,7 +60,9 @@
             this.btnRegistroClientes = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panelHeader.SuspendLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -68,41 +71,57 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelMenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMensajeBienvenida
             // 
+            this.lblMensajeBienvenida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMensajeBienvenida.AutoSize = true;
-            this.lblMensajeBienvenida.Font = new System.Drawing.Font("Nobile", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensajeBienvenida.ForeColor = System.Drawing.Color.White;
-            this.lblMensajeBienvenida.Location = new System.Drawing.Point(18, 8);
+            this.lblMensajeBienvenida.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblMensajeBienvenida.Font = new System.Drawing.Font("Nobile", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensajeBienvenida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.lblMensajeBienvenida.Location = new System.Drawing.Point(238, 87);
             this.lblMensajeBienvenida.Name = "lblMensajeBienvenida";
-            this.lblMensajeBienvenida.Size = new System.Drawing.Size(293, 33);
+            this.lblMensajeBienvenida.Size = new System.Drawing.Size(190, 29);
             this.lblMensajeBienvenida.TabIndex = 5;
             this.lblMensajeBienvenida.Text = "¡Bienvenido Angie!";
             // 
-            // panelHeader
+            // panelTitleBar
             // 
-            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelHeader.Controls.Add(this.lblMensajeBienvenida);
-            this.panelHeader.Controls.Add(this.lblHora);
-            this.panelHeader.Controls.Add(this.lblFecha);
-            this.panelHeader.Controls.Add(this.pcbFoto);
-            this.panelHeader.Controls.Add(this.lblRol);
-            this.panelHeader.Controls.Add(this.lblNombre);
-            this.panelHeader.Location = new System.Drawing.Point(218, 0);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(767, 75);
-            this.panelHeader.TabIndex = 6;
+            this.panelTitleBar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelTitleBar.Controls.Add(this.label1);
+            this.panelTitleBar.Controls.Add(this.lblHora);
+            this.panelTitleBar.Controls.Add(this.lblFecha);
+            this.panelTitleBar.Controls.Add(this.pcbFoto);
+            this.panelTitleBar.Controls.Add(this.lblRol);
+            this.panelTitleBar.Controls.Add(this.lblNombre);
+            this.panelTitleBar.Location = new System.Drawing.Point(218, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(767, 75);
+            this.panelTitleBar.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nobile", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(319, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 33);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "INICIO";
             // 
             // lblHora
             // 
+            this.lblHora.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.White;
-            this.lblHora.Location = new System.Drawing.Point(265, 41);
+            this.lblHora.Location = new System.Drawing.Point(20, 38);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(67, 15);
             this.lblHora.TabIndex = 5;
@@ -110,10 +129,11 @@
             // 
             // lblFecha
             // 
+            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.White;
-            this.lblFecha.Location = new System.Drawing.Point(24, 41);
+            this.lblFecha.Location = new System.Drawing.Point(20, 23);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(145, 15);
             this.lblFecha.TabIndex = 4;
@@ -121,9 +141,10 @@
             // 
             // pcbFoto
             // 
+            this.pcbFoto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pcbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pcbFoto.Image = global::Tienda_de_Peliculas.Properties.Resources.pelicula;
-            this.pcbFoto.Location = new System.Drawing.Point(697, 11);
+            this.pcbFoto.Location = new System.Drawing.Point(698, 12);
             this.pcbFoto.Name = "pcbFoto";
             this.pcbFoto.Size = new System.Drawing.Size(47, 45);
             this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,10 +153,11 @@
             // 
             // lblRol
             // 
+            this.lblRol.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Nobile", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.Color.White;
-            this.lblRol.Location = new System.Drawing.Point(601, 37);
+            this.lblRol.Location = new System.Drawing.Point(602, 38);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(90, 16);
             this.lblRol.TabIndex = 3;
@@ -143,10 +165,11 @@
             // 
             // lblNombre
             // 
+            this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Nobile", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(562, 17);
+            this.lblNombre.Location = new System.Drawing.Point(563, 18);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(129, 19);
             this.lblNombre.TabIndex = 2;
@@ -154,13 +177,14 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.lblClientesRegistrados);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel2.Location = new System.Drawing.Point(271, 131);
+            this.panel2.Location = new System.Drawing.Point(271, 173);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(171, 82);
             this.panel2.TabIndex = 7;
@@ -200,12 +224,13 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.lblVentasSemanales);
-            this.panel3.Location = new System.Drawing.Point(499, 131);
+            this.panel3.Location = new System.Drawing.Point(499, 173);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(170, 82);
             this.panel3.TabIndex = 8;
@@ -245,11 +270,12 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Gainsboro;
             this.label11.Font = new System.Drawing.Font("Nobile", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label11.Location = new System.Drawing.Point(267, 91);
+            this.label11.Location = new System.Drawing.Point(267, 135);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(131, 24);
             this.label11.TabIndex = 9;
@@ -257,12 +283,13 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.pictureBox5);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.lblAlquileresSemanales);
-            this.panel4.Location = new System.Drawing.Point(740, 131);
+            this.panel4.Location = new System.Drawing.Point(740, 173);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(170, 82);
             this.panel4.TabIndex = 10;
@@ -306,6 +333,7 @@
             // 
             // panelMenu
             // 
+            this.panelMenu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelMenu.Controls.Add(this.btnReportes);
             this.panelMenu.Controls.Add(this.btnInventario);
@@ -313,7 +341,6 @@
             this.panelMenu.Controls.Add(this.btnRegistroEmpleados);
             this.panelMenu.Controls.Add(this.btnRegistroClientes);
             this.panelMenu.Controls.Add(this.panelLogo);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 461);
@@ -321,9 +348,10 @@
             // 
             // btnReportes
             // 
-            this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnReportes.FlatAppearance.BorderSize = 0;
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportes.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnReportes.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Reportes;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -337,12 +365,14 @@
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnInventario
             // 
-            this.btnInventario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInventario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnInventario.FlatAppearance.BorderSize = 0;
             this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventario.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnInventario.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Inventario;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -356,12 +386,14 @@
             this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInventario.UseVisualStyleBackColor = true;
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
             // btnVentaAlquiler
             // 
-            this.btnVentaAlquiler.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVentaAlquiler.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVentaAlquiler.FlatAppearance.BorderSize = 0;
             this.btnVentaAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentaAlquiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVentaAlquiler.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnVentaAlquiler.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Venta_Alquiler;
             this.btnVentaAlquiler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -375,12 +407,14 @@
             this.btnVentaAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaAlquiler.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVentaAlquiler.UseVisualStyleBackColor = true;
+            this.btnVentaAlquiler.Click += new System.EventHandler(this.btnVentaAlquiler_Click);
             // 
             // btnRegistroEmpleados
             // 
-            this.btnRegistroEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegistroEmpleados.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistroEmpleados.FlatAppearance.BorderSize = 0;
             this.btnRegistroEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistroEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistroEmpleados.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnRegistroEmpleados.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Empleados;
             this.btnRegistroEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -390,16 +424,18 @@
             this.btnRegistroEmpleados.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
             this.btnRegistroEmpleados.Size = new System.Drawing.Size(220, 60);
             this.btnRegistroEmpleados.TabIndex = 2;
-            this.btnRegistroEmpleados.Text = "    Registro de Empleados\r\n";
+            this.btnRegistroEmpleados.Text = "    Empleados\r\n";
             this.btnRegistroEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistroEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistroEmpleados.UseVisualStyleBackColor = true;
+            this.btnRegistroEmpleados.Click += new System.EventHandler(this.btnRegistroEmpleados_Click);
             // 
             // btnRegistroClientes
             // 
-            this.btnRegistroClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegistroClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistroClientes.FlatAppearance.BorderSize = 0;
             this.btnRegistroClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistroClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistroClientes.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnRegistroClientes.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Clientes;
             this.btnRegistroClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -409,15 +445,18 @@
             this.btnRegistroClientes.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
             this.btnRegistroClientes.Size = new System.Drawing.Size(220, 60);
             this.btnRegistroClientes.TabIndex = 1;
-            this.btnRegistroClientes.Text = "    Registro de Clientes";
+            this.btnRegistroClientes.Text = "    Clientes";
             this.btnRegistroClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistroClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistroClientes.UseVisualStyleBackColor = true;
+            this.btnRegistroClientes.Click += new System.EventHandler(this.btnRegistroClientes_Click);
             // 
             // panelLogo
             // 
+            this.panelLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Controls.Add(this.label3);
+            this.panelLogo.Controls.Add(this.label2);
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(220, 75);
@@ -425,14 +464,35 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox4.Image = global::Tienda_de_Peliculas.Properties.Resources._572828_200;
-            this.pictureBox4.Location = new System.Drawing.Point(241, 91);
+            this.pictureBox4.Location = new System.Drawing.Point(241, 135);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(20, 24);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Suissnord", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(194, 30);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "TIENDA DE ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Suissnord", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(192, 30);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "PELICULAS";
             // 
             // frmPrincipal
             // 
@@ -440,21 +500,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(984, 461);
+            this.Controls.Add(this.lblMensajeBienvenida);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panelHeader);
+            this.Controls.Add(this.panelTitleBar);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
-            this.panelHeader.ResumeLayout(false);
-            this.panelHeader.PerformLayout();
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -466,6 +527,8 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panelMenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -478,7 +541,7 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblMensajeBienvenida;
-        private System.Windows.Forms.Panel panelHeader;
+        private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Panel panel2;
@@ -503,6 +566,9 @@
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnVentaAlquiler;
         private System.Windows.Forms.Button btnRegistroEmpleados;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
 
