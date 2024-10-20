@@ -16,7 +16,7 @@ namespace Tienda_de_Peliculas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCiudades());
+            Application.Run(new frmFactura());
         }
     }
 }
