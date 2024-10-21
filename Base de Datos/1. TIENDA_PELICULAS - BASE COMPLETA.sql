@@ -1,30 +1,19 @@
 
 /*
 		DROP DATABASE TIENDA_PELICULAS
-		GO
-		DROP SCHEMA Gral
-		GO
-		DROP SCHEMA Acce
-		GO
-		DROP SCHEMA Peli
-		GO
-		*/
-	/*
-	
-	Primero crear y luego correr script
-	
+*/
+
 	CREATE DATABASE TIENDA_PELICULAS
 	GO
 	USE TIENDA_PELICULAS
 	GO
-	*/
 
-	--CREATE SCHEMA Gral
-	--GO  
-	--CREATE SCHEMA Acce
-	--GO
-	--CREATE SCHEMA Peli
-	--GO
+	CREATE SCHEMA Gral
+	GO  
+	CREATE SCHEMA Acce
+	GO
+	CREATE SCHEMA Peli
+	GO
 
 --**********************************************************--
 --*************** SCHEMA Acceso ***************************--
