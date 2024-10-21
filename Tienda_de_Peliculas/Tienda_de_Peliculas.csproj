@@ -66,46 +66,52 @@
     <Compile Include="Entities\Paises.cs" />
     <Compile Include="Entities\Roles.cs" />
     <Compile Include="Entities\Usuarios.cs" />
-    <Compile Include="frmCiudades.cs">
+    <Compile Include="Formularios\frmCiudades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCiudades.Designer.cs">
+    <Compile Include="Formularios\frmCiudades.Designer.cs">
       <DependentUpon>frmCiudades.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDatosGeneralesClientes.cs">
+    <Compile Include="Formularios\frmDatosGeneralesClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDatosGeneralesClientes.Designer.cs">
+    <Compile Include="Formularios\frmDatosGeneralesClientes.Designer.cs">
       <DependentUpon>frmDatosGeneralesClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDatosGeneralesEmpleados.cs">
+    <Compile Include="Formularios\frmDatosGeneralesEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDatosGeneralesEmpleados.Designer.cs">
+    <Compile Include="Formularios\frmDatosGeneralesEmpleados.Designer.cs">
       <DependentUpon>frmDatosGeneralesEmpleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInventario.cs">
+    <Compile Include="Formularios\frmFactura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInventario.Designer.cs">
+    <Compile Include="Formularios\frmFactura.Designer.cs">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmInventario.Designer.cs">
       <DependentUpon>frmInventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Formularios\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Formularios\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipal.cs">
+    <Compile Include="Formularios\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
+    <Compile Include="Formularios\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReportes.cs">
+    <Compile Include="Formularios\frmReportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReportes.Designer.cs">
+    <Compile Include="Formularios\frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -113,25 +119,28 @@
     <Compile Include="ThemeColor.cs" />
     <Compile Include="View Models\CiudadViewModel.cs" />
     <Compile Include="View Models\InventarioViewModel.cs" />
-    <EmbeddedResource Include="frmCiudades.resx">
+    <EmbeddedResource Include="Formularios\frmCiudades.resx">
       <DependentUpon>frmCiudades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDatosGeneralesClientes.resx">
+    <EmbeddedResource Include="Formularios\frmDatosGeneralesClientes.resx">
       <DependentUpon>frmDatosGeneralesClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDatosGeneralesEmpleados.resx">
+    <EmbeddedResource Include="Formularios\frmDatosGeneralesEmpleados.resx">
       <DependentUpon>frmDatosGeneralesEmpleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInventario.resx">
+    <EmbeddedResource Include="Formularios\frmFactura.resx">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmInventario.resx">
       <DependentUpon>frmInventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipal.resx">
+    <EmbeddedResource Include="Formularios\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReportes.resx">
+    <EmbeddedResource Include="Formularios\frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

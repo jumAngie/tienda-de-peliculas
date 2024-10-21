@@ -270,6 +270,7 @@
             // 
             // dtFechaNacimiento
             // 
+            this.dtFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFechaNacimiento.Location = new System.Drawing.Point(175, 104);
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(199, 20);
@@ -339,7 +340,7 @@
             this.dgDatosCliente.Size = new System.Drawing.Size(783, 166);
             this.dgDatosCliente.TabIndex = 42;
             // 
-            // frmDatosGeneralesCliente
+            // frmDatosGeneralesClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -349,7 +350,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmDatosGeneralesCliente";
+            this.Name = "frmDatosGeneralesClientes";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmDatosGeneralesCliente_Load);
             this.groupBox1.ResumeLayout(false);

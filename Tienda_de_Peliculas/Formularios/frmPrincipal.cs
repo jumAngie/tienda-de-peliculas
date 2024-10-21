@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tienda_de_Peliculas.DAL;
+using Tienda_de_Peliculas.Formularios;
 
 namespace Tienda_de_Peliculas
 {
@@ -141,7 +142,7 @@ namespace Tienda_de_Peliculas
 
         private void btnVentaAlquiler_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new frmFactura(), sender);
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
