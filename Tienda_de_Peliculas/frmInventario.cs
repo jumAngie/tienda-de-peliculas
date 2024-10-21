@@ -33,6 +33,8 @@ namespace Tienda_de_Peliculas
                   btnGuardar.ForeColor = Color.White;
                   btnGuardar.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
                   btnCancelar.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                  lblPrecioHNL.ForeColor = Color.White;
+                  lblPrecioHNL.BackColor = ThemeColor.PrimaryColor;
             
         }
         #endregion
@@ -86,11 +88,11 @@ namespace Tienda_de_Peliculas
             LoadTheme();
             txtTitulo.Focus();
             Listado_Inventario();
-            CargarGeneros();
-            CargarIdiomas();
-            CargarClasificaciones();
-            CargarFormatos();
-            CargarEstados();
+            //CargarGeneros();
+            //CargarIdiomas();
+            //CargarClasificaciones();
+            //CargarFormatos();
+            //CargarEstados();
 
         }
     }

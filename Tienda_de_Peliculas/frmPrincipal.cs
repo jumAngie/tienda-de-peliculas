@@ -84,6 +84,7 @@ namespace Tienda_de_Peliculas
             {
                 activateForm.Close();
             }
+           
             ActivateButton(btnSender);
             activateForm = childForm;
             childForm.TopLevel = false;
@@ -129,13 +130,13 @@ namespace Tienda_de_Peliculas
 
         private void btnRegistroClientes_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmDatosGeneralesCliente(), sender);
+            OpenChildForm(new frmDatosGeneralesClientes(), sender);
 
         }
 
         private void btnRegistroEmpleados_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new frmDatosGeneralesEmpleados(), sender);
         }
 
         private void btnVentaAlquiler_Click(object sender, EventArgs e)

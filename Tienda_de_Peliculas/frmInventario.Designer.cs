@@ -52,7 +52,11 @@
             this.pnlDuracion = new System.Windows.Forms.Panel();
             this.pnlDesc = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblPrecioHNL = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.cboFormatos = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -62,10 +66,6 @@
             this.pnlFormato = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -309,7 +309,7 @@
             this.groupBox2.Controls.Add(this.panel2);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.panel1);
-            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.lblPrecioHNL);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.cboFormatos);
             this.groupBox2.Controls.Add(this.label9);
@@ -324,15 +324,49 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de Venta";
             // 
-            // label11
+            // textBox2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(185, 83);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 15);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Precio (HNL)";
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(188, 103);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(153, 21);
+            this.textBox2.TabIndex = 28;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkRed;
+            this.panel2.Location = new System.Drawing.Point(188, 104);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(153, 22);
+            this.panel2.TabIndex = 29;
+            this.panel2.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(15, 103);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(153, 21);
+            this.textBox1.TabIndex = 26;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkRed;
+            this.panel1.Location = new System.Drawing.Point(15, 104);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(153, 22);
+            this.panel1.TabIndex = 27;
+            this.panel1.Visible = false;
+            // 
+            // lblPrecioHNL
+            // 
+            this.lblPrecioHNL.AutoSize = true;
+            this.lblPrecioHNL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioHNL.Location = new System.Drawing.Point(185, 83);
+            this.lblPrecioHNL.Name = "lblPrecioHNL";
+            this.lblPrecioHNL.Size = new System.Drawing.Size(78, 15);
+            this.lblPrecioHNL.TabIndex = 16;
+            this.lblPrecioHNL.Text = "Precio (HNL)";
             // 
             // label10
             // 
@@ -420,40 +454,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(15, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 21);
-            this.textBox1.TabIndex = 26;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkRed;
-            this.panel1.Location = new System.Drawing.Point(15, 104);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(153, 22);
-            this.panel1.TabIndex = 27;
-            this.panel1.Visible = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(188, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 21);
-            this.textBox2.TabIndex = 28;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DarkRed;
-            this.panel2.Location = new System.Drawing.Point(188, 104);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(153, 22);
-            this.panel2.TabIndex = 29;
-            this.panel2.Visible = false;
-            // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -502,7 +502,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cboEstados;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblPrecioHNL;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Panel pnlAnio;
