@@ -26,6 +26,27 @@ namespace Tienda_de_Peliculas
             InitializeComponent();
         }
 
+        #region
+        public void Validaciones()
+        {
+            // Mostrar error
+            if(txtTitulo.Text == "")            pnlTitulo.Visible = true;
+            if (txtAnioLanzamiento.Text == "")  pnlAnio.Visible = true;
+            if(cboGeneros.SelectedIndex == 0 || cboGeneros.SelectedIndex == -1)   pnlGenero.Visible = true;
+            if(cboIdiomas.SelectedIndex == 0 || cboIdiomas.SelectedIndex == -1) pnlIdioma.Visible = true;
+
+
+
+
+            // Esconder error
+            if (txtTitulo.Text != "")           pnlTitulo.Visible = false;
+            if (txtAnioLanzamiento.Text != "")  pnlAnio.Visible = false;
+            if(cboGeneros.SelectedIndex != 0 && cboGeneros.SelectedIndex != -1) pnlGenero.Visible=false;
+            if(cboIdiomas.SelectedIndex != 0 && cboIdiomas.SelectedIndex != -1) pnlIdioma.Visible = false;
+
+        }
+        #endregion
+
         #region DISEÑO
         private void LoadTheme()
         {
@@ -94,6 +115,11 @@ namespace Tienda_de_Peliculas
             //CargarFormatos();
             //CargarEstados();
 
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Validaciones();
         }
     }
 }
