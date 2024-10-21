@@ -16,9 +16,8 @@ namespace Tienda_de_Peliculas
         public static List<string> ColorList = new List<string>()
         {
            "#D14D57", "#C76B78", "#5F7BAF", "#003B5C", "#B24444",
-            "#5BAE6E", "#9A3324", "#6A8CA1", "#C18D00", "#2CB2AC", "#6A006A",
-            "#CC3F00", "#4E4969", "#FF7F50", "#4F8A4C", "#8F3E7A", "#C1815C",
-            "#345A9D", "#C43B72", "#C2412D", "#BF7A86", "#6B35BC", "#D66088", "#993F3F"
+            "#5BAE6E", "#9A3324", "#BC3908", "#248232", "#2CB2AC", "#474B24",
+            "#CC3F00", "#4E4969", "#FF7F50",  "#028090"
 
         };
 

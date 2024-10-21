@@ -16,5 +16,17 @@ namespace Tienda_de_Peliculas
         {
             InitializeComponent();
         }
+        private void LoadTheme()
+        {
+            pnlReporteVentas.BackColor = ThemeColor.PrimaryColor;
+            pnlReporteAlquileres.BackColor = ThemeColor.PrimaryColor;
+            pnlReporteClientes.BackColor = ThemeColor.SecondaryColor;
+            pnlReporteInventario.BackColor = ThemeColor.SecondaryColor;
+        }
+
+        private void frmReportes_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+        }
     }
 }

@@ -18,14 +18,6 @@ namespace Tienda_de_Peliculas.Formularios
         }
         private void LoadTheme()
         {
-            btnVenta.BackColor = ThemeColor.PrimaryColor;
-            btnVenta.ForeColor = Color.White;
-            btnVenta.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
-
-            btnAlquiler.BackColor = ThemeColor.SecondaryColor;
-            btnAlquiler.ForeColor = Color.White;
-            btnAlquiler.FlatAppearance.BorderColor = ThemeColor.PrimaryColor;
-
             btnGuardar.BackColor = ThemeColor.SecondaryColor;
             btnGuardar.ForeColor = Color.White;
             btnGuardar.FlatAppearance.BorderColor = ThemeColor.PrimaryColor;
@@ -37,6 +29,8 @@ namespace Tienda_de_Peliculas.Formularios
             lblISV.ForeColor = ThemeColor.SecondaryColor;
             lblDescuento.ForeColor = ThemeColor.SecondaryColor;
             lblTotalResultado.ForeColor = ThemeColor.PrimaryColor;
+            lblNumFactura.BackColor = ThemeColor.PrimaryColor;
+            lblNumFactura.ForeColor = Color.White;
 
         }
 
@@ -45,15 +39,16 @@ namespace Tienda_de_Peliculas.Formularios
             LoadTheme();
         }
 
-        private void btnVenta_Click(object sender, EventArgs e)
+        private void rbAlquiler_CheckedChanged(object sender, EventArgs e)
         {
-            pnlVenta.Visible = true;
+            lblFechaDev.Visible = true;
+            dtFechaDev.Visible = true;
         }
 
-        private void btnAlquiler_Click(object sender, EventArgs e)
+        private void rbVenta_CheckedChanged(object sender, EventArgs e)
         {
-            
-            pnlVenta.Visible = false;
+            dtFechaDev.Visible=false;
+            lblFechaDev.Visible = false;
         }
     }
 }
