@@ -91,3 +91,36 @@ AS
 		END CATCH				
 	END
 GO
+
+----------------------- INVENTARIO -------------------------
+-- INSERTAR
+CREATE OR ALTER PROCEDURE Peli.UPD_tbInventario_Insertar
+@inve_Titulo	NVARCHAR(100),
+@inve_Anio		VARCHAR(5), 
+@gene_Id		INT,		
+@inve_Duracion	INT, 
+@form_Id		INT, 
+@esta_Id		INT, 
+@inve_Descripcion	NVARCHAR(MAX), 
+@idio_Id		INT, 
+@inve_Cantidad	INT, 
+@inve_Precio	DECIMAL(18,2), 
+@clas_Id		INT, 
+@usua_UsuarioCreacion	INT, 
+@inve_FechaCreacion	DATETIME
+AS
+	BEGIN
+		BEGIN TRY
+		INSERT INTO Peli.tbInventario (inve_Titulo, inve_Anio, gene_Id, inve_Duracion, form_Id, esta_Id, inve_Descripcion, 
+									   idio_Id, inve_Cantidad, inve_Precio, clas_Id, usua_UsuarioCreacion, inve_FechaCreacion)
+		VALUES							
+									   (@inve_Titulo, @inve_Anio, @gene_Id, @inve_Duracion, @form_Id, @esta_Id, @inve_Descripcion,
+										@idio_Id, @inve_Cantidad, @inve_Precio, @clas_Id, @usua_UsuarioCreacion, @inve_FechaCreacion)
+
+			SELECT 'Datos registrados correctamente.'
+		END TRY
+		BEGIN CATCH
+			SELECT 'Error Message: '+ ERROR_MESSAGE();
+		END CATCH
+
+	END
