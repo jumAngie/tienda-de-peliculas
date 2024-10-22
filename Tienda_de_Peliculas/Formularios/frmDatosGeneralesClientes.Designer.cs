@@ -50,7 +50,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.dtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxbDNI = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -232,7 +232,7 @@
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.dtFechaNacimiento);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
+            this.groupBox1.Controls.Add(this.mtxbDNI);
             this.groupBox1.Controls.Add(this.txbName);
             this.groupBox1.Controls.Add(this.lblName);
             this.groupBox1.Controls.Add(this.lblidentidad);
@@ -251,10 +251,10 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(110, 174);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(68, 17);
+            this.radioButton2.Size = new System.Drawing.Size(73, 17);
             this.radioButton2.TabIndex = 29;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Maculino";
+            this.radioButton2.Text = "Masculino";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton1
@@ -276,13 +276,13 @@
             this.dtFechaNacimiento.Size = new System.Drawing.Size(199, 20);
             this.dtFechaNacimiento.TabIndex = 9;
             // 
-            // maskedTextBox1
+            // mtxbDNI
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(20, 104);
-            this.maskedTextBox1.Mask = "0000-0000-00000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(131, 20);
-            this.maskedTextBox1.TabIndex = 3;
+            this.mtxbDNI.Location = new System.Drawing.Point(20, 104);
+            this.mtxbDNI.Mask = "0000-0000-00000";
+            this.mtxbDNI.Name = "mtxbDNI";
+            this.mtxbDNI.Size = new System.Drawing.Size(131, 20);
+            this.mtxbDNI.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -328,6 +328,7 @@
             this.btnGuardar.TabIndex = 40;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // dgDatosCliente
             // 
@@ -385,7 +386,7 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.DateTimePicker dtFechaNacimiento;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtxbDNI;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;

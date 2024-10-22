@@ -91,3 +91,28 @@ AS
 		END CATCH				
 	END
 GO
+
+-- INSERTAR DATOS GENERALES_CLIENTES
+CREATE OR ALTER PROCEDURE Gral.UDP_tbDatosGenerales_Insertar
+@dato_NombreCompleto NVARCHAR(200), 
+@dato_DNI NVARCHAR(20), 
+@dato_Telefono NVARCHAR(20), 
+@dato_email NVARCHAR(150), 
+@ciud_Id	INT, 
+@dato_Direccion NVARCHAR(500), 
+@dato_FechaNacimiento DATE, 
+@sexo_Id INT, 
+@cate_Id INT, 
+@usua_UsuarioCreacion INT, 
+@dato_FechaCreacion DATETIME
+AS
+	BEGIN
+		BEGIN TRY
+			INSERT INTO Gral.tbDatos_Generales (dato_NombreCompleto, dato_DNI, dato_Telefono, dato_email, ciud_Id, dato_Direccion, dato_FechaNacimiento, sexo_Id, cate_Id, usua_UsuarioCreacion, dato_FechaCreacion)
+			VALUES								(@dato_NombreCompleto, @dato_DNI, @dato_Telefono, @dato_email, @ciud_Id, @dato_Direccion, @dato_FechaNacimiento, @sexo_Id, @cate_Id, @usua_UsuarioCreacion, @dato_FechaCreacion)
+			SELECT 'Datos Registrados Correctamente'
+		END TRY
+		BEGIN CATCH
+			SELECT 'Error Message: '+ ERROR_MESSAGE();
+		END CATCH
+	END
