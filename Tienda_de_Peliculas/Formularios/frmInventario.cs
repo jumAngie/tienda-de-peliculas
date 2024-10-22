@@ -26,24 +26,34 @@ namespace Tienda_de_Peliculas
             InitializeComponent();
         }
 
-        #region
-        public void Validaciones()
+        #region Validaciones
+        public void ValidacionVacio()
         {
             // Mostrar error
             if(txtTitulo.Text == "")            pnlTitulo.Visible = true;
             if (txtAnioLanzamiento.Text == "")  pnlAnio.Visible = true;
             if(cboGeneros.SelectedIndex == 0 || cboGeneros.SelectedIndex == -1)   pnlGenero.Visible = true;
             if(cboIdiomas.SelectedIndex == 0 || cboIdiomas.SelectedIndex == -1) pnlIdioma.Visible = true;
-
-
-
+            if(cboClasificacion.SelectedIndex == 0 || cboClasificacion.SelectedIndex == -1) pnlClasificacion.Visible = true;
+            if (txtDuracion.Text == "") pnlDuracion.Visible = true;
+            if (txtDescripcion.Text == "") pnlDesc.Visible = true;
+            if (cboFormatos.SelectedIndex == 0 || cboFormatos.SelectedIndex == -1) pnlFormato.Visible = true;
+            if (cboEstados.SelectedIndex == 0 || cboEstados.SelectedIndex == -1) pnlEstado.Visible = true;
+            if (txtExistencias.Text == "") pnlExistencias.Visible = true;
+            if (txtPrecio.Text == "") pnlPrecio.Visible = true;
 
             // Esconder error
             if (txtTitulo.Text != "")           pnlTitulo.Visible = false;
             if (txtAnioLanzamiento.Text != "")  pnlAnio.Visible = false;
-            if(cboGeneros.SelectedIndex != 0 && cboGeneros.SelectedIndex != -1) pnlGenero.Visible=false;
-            if(cboIdiomas.SelectedIndex != 0 && cboIdiomas.SelectedIndex != -1) pnlIdioma.Visible = false;
-
+            if (cboGeneros.SelectedIndex != 0 && cboGeneros.SelectedIndex != -1) pnlGenero.Visible=false;
+            if (cboIdiomas.SelectedIndex != 0 && cboIdiomas.SelectedIndex != -1) pnlIdioma.Visible = false;
+            if (cboClasificacion.SelectedIndex != 0 && cboClasificacion.SelectedIndex != -1) pnlClasificacion.Visible = false;
+            if (txtDuracion.Text != "") pnlDuracion.Visible = false;
+            if (txtDescripcion.Text != "") pnlDesc.Visible = false;
+            if (cboFormatos.SelectedIndex != 0 && cboFormatos.SelectedIndex != -1) pnlFormato.Visible = false;
+            if (cboEstados.SelectedIndex != 0 && cboEstados.SelectedIndex != -1) pnlEstado.Visible = false;
+            if (txtExistencias.Text != "") pnlExistencias.Visible = false;
+            if (txtPrecio.Text != "") pnlPrecio.Visible = false;
         }
         #endregion
 
@@ -109,17 +119,17 @@ namespace Tienda_de_Peliculas
             LoadTheme();
             txtTitulo.Focus();
             Listado_Inventario();
-            //CargarGeneros();
-            //CargarIdiomas();
-            //CargarClasificaciones();
-            //CargarFormatos();
-            //CargarEstados();
+            CargarGeneros();
+            CargarIdiomas();
+            CargarClasificaciones();
+            CargarFormatos();
+            CargarEstados();
 
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Validaciones();
+            ValidacionVacio();
         }
     }
 }
