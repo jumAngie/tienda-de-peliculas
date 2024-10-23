@@ -95,6 +95,13 @@ namespace Tienda_de_Peliculas
         #endregion
 
         #region VALIDACIONES Y LIMPIEZA DE CAMPOS
+
+        public void ValidandoVacios()
+        {
+            // mostrar error
+
+            //esconder error
+        }
         public void LimpiarCampos()
         {
             txbName.Clear();

@@ -66,6 +66,7 @@
             this.pnlFormato = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblAdvertencia = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -107,9 +108,9 @@
             this.groupBox1.Controls.Add(this.pnlDuracion);
             this.groupBox1.Controls.Add(this.pnlDesc);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(416, 284);
+            this.groupBox1.Size = new System.Drawing.Size(416, 269);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Generales";
@@ -319,9 +320,9 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.pnlEstado);
             this.groupBox2.Controls.Add(this.pnlFormato);
-            this.groupBox2.Location = new System.Drawing.Point(434, 12);
+            this.groupBox2.Location = new System.Drawing.Point(434, 27);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(361, 284);
+            this.groupBox2.Size = new System.Drawing.Size(361, 269);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de Venta";
@@ -457,11 +458,25 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
+            // lblAdvertencia
+            // 
+            this.lblAdvertencia.AutoSize = true;
+            this.lblAdvertencia.BackColor = System.Drawing.Color.LightCoral;
+            this.lblAdvertencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdvertencia.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblAdvertencia.Location = new System.Drawing.Point(619, 9);
+            this.lblAdvertencia.Name = "lblAdvertencia";
+            this.lblAdvertencia.Size = new System.Drawing.Size(176, 15);
+            this.lblAdvertencia.TabIndex = 22;
+            this.lblAdvertencia.Text = "¡Debe llenar todos los campos!";
+            this.lblAdvertencia.Visible = false;
+            // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 519);
+            this.Controls.Add(this.lblAdvertencia);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox2);
@@ -477,6 +492,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -520,5 +536,6 @@
         private System.Windows.Forms.Panel pnlPrecio;
         private System.Windows.Forms.TextBox txtExistencias;
         private System.Windows.Forms.Panel pnlExistencias;
+        private System.Windows.Forms.Label lblAdvertencia;
     }
 }

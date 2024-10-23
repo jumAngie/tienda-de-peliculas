@@ -27,8 +27,9 @@ namespace Tienda_de_Peliculas
         }
 
         #region Validaciones
-        public void ValidacionVacio()
+        public bool ValidacionVacio()
         {
+            bool esValido = false;
             // Mostrar error
             if(txtTitulo.Text == "")            pnlTitulo.Visible = true;
             if (txtAnioLanzamiento.Text == "")  pnlAnio.Visible = true;
@@ -54,6 +55,33 @@ namespace Tienda_de_Peliculas
             if (cboEstados.SelectedIndex != 0 && cboEstados.SelectedIndex != -1) pnlEstado.Visible = false;
             if (txtExistencias.Text != "") pnlExistencias.Visible = false;
             if (txtPrecio.Text != "") pnlPrecio.Visible = false;
+
+            if(txtTitulo.Text != "" && txtAnioLanzamiento.Text != "" && cboGeneros.SelectedIndex != 0 && cboGeneros.SelectedIndex != -1
+                && cboIdiomas.SelectedIndex != 0 && cboIdiomas.SelectedIndex != -1 && cboClasificacion.SelectedIndex != 0 && cboClasificacion.SelectedIndex != -1
+                && txtDuracion.Text != "" && txtDescripcion.Text != "" && cboFormatos.SelectedIndex != 0 && cboFormatos.SelectedIndex != -1
+                && cboEstados.SelectedIndex != 0 && cboEstados.SelectedIndex != -1 && txtExistencias.Text != ""
+                && txtPrecio.Text != "")
+            {
+                esValido = true;
+            }
+            else
+            {
+                esValido = false;
+            }
+
+
+            return esValido;
+        }
+        #endregion
+
+        #region Mensajes
+        public void MensajeAdvertencia()
+        {
+            lblAdvertencia.Visible = true;
+        }
+        public void MensajeAdvertencia_Hide()
+        {
+            lblAdvertencia.Visible = false;
         }
         #endregion
 
@@ -127,9 +155,19 @@ namespace Tienda_de_Peliculas
 
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private async void btnGuardar_Click(object sender, EventArgs e)
         {
-            ValidacionVacio();
+            bool esValido = ValidacionVacio();
+            if(esValido) 
+            {
+                MessageBox.Show("Acá va la lógica para insertar.", "YAY NO DEJÓ NI UN CAMPO VACÍO :D", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MensajeAdvertencia();
+                await Task.Delay(5000);
+                MensajeAdvertencia_Hide();
+            }
         }
     }
 }
