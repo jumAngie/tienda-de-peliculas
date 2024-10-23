@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tienda_de_Peliculas.Clases;
+using Tienda_de_Peliculas.DAL;
 
 namespace Tienda_de_Peliculas
 {
@@ -27,9 +29,37 @@ namespace Tienda_de_Peliculas
 
         }
 
+        public void ListarClientes()
+        {
+            dgDatosCliente.DataSource = ClientesDAL.ListarClientes();
+        }
+
+        public void InsertarClientes()
+        {
+            DatosGenerales Dg = new DatosGenerales
+            {
+                dato_NombreCompleto = txbName.Text,
+                dato_DNI = mtxbDNI.Text,
+                dato_Telefono = txbTel.Text,
+                dato_FechaNacimiento = DateTime.Now,
+                sexo_Id = 1,
+                dato_email= txbemail.Text,
+                ciud_Id = cbxCiudad.SelectedIndex,
+                dato_Direccion = txbDirE.Text,
+            };
+
+            string resultados = ClientesDAL.InsertarClientes(Dg);
+            MessageBox.Show(resultados, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
         private void frmDatosGeneralesCliente_Load(object sender, EventArgs e)
         {
             LoadTheme();
+            ListarClientes();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            InsertarClientes();
         }
     }
 }

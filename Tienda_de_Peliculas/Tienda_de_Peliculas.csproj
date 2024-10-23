@@ -124,6 +124,7 @@
     </Compile>
     <Compile Include="ThemeColor.cs" />
     <Compile Include="View Models\CiudadViewModel.cs" />
+    <Compile Include="View Models\ClientesViewModel.cs" />
     <Compile Include="View Models\InventarioViewModel.cs" />
     <EmbeddedResource Include="Formularios\frmCiudades.resx">
       <DependentUpon>frmCiudades.cs</DependentUpon>
