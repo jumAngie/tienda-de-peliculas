@@ -31,50 +31,52 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lbltTitle = new System.Windows.Forms.Label();
-            this.pcbFoto = new System.Windows.Forms.PictureBox();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.tHora = new System.Windows.Forms.Timer(this.components);
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.panelDesktopPanel = new System.Windows.Forms.Panel();
+            this.lblMensajeBienvenida = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblAlquileresSemanales = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblVentasSemanales = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblClientesRegistrados = new System.Windows.Forms.Label();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnVentaAlquiler = new System.Windows.Forms.Button();
             this.btnRegistroEmpleados = new System.Windows.Forms.Button();
             this.btnRegistroClientes = new System.Windows.Forms.Button();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panelDesktopPanel = new System.Windows.Forms.Panel();
-            this.lblMensajeBienvenida = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.btnCloseChildForm = new System.Windows.Forms.Button();
+            this.pcbFoto = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblAlquileresSemanales = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblVentasSemanales = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblClientesRegistrados = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelDesktopPanel.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,18 +95,6 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(1024, 75);
             this.panelTitleBar.TabIndex = 6;
-            // 
-            // btnCloseChildForm
-            // 
-            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
-            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseChildForm.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Volver;
-            this.btnCloseChildForm.Location = new System.Drawing.Point(218, 0);
-            this.btnCloseChildForm.Name = "btnCloseChildForm";
-            this.btnCloseChildForm.Size = new System.Drawing.Size(79, 75);
-            this.btnCloseChildForm.TabIndex = 17;
-            this.btnCloseChildForm.UseVisualStyleBackColor = true;
-            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
             // 
             // lblHora
             // 
@@ -141,18 +131,6 @@
             this.lbltTitle.Size = new System.Drawing.Size(122, 33);
             this.lbltTitle.TabIndex = 12;
             this.lbltTitle.Text = "INICIO";
-            // 
-            // pcbFoto
-            // 
-            this.pcbFoto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pcbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pcbFoto.Image = global::Tienda_de_Peliculas.Properties.Resources.pelicula;
-            this.pcbFoto.Location = new System.Drawing.Point(965, 12);
-            this.pcbFoto.Name = "pcbFoto";
-            this.pcbFoto.Size = new System.Drawing.Size(47, 45);
-            this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbFoto.TabIndex = 0;
-            this.pcbFoto.TabStop = false;
             // 
             // lblRol
             // 
@@ -197,6 +175,166 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 599);
             this.panelMenu.TabIndex = 11;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panelLogo.Controls.Add(this.label2);
+            this.panelLogo.Controls.Add(this.label1);
+            this.panelLogo.Controls.Add(this.pbLogo);
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(220, 75);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // panelDesktopPanel
+            // 
+            this.panelDesktopPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDesktopPanel.Controls.Add(this.lblMensajeBienvenida);
+            this.panelDesktopPanel.Controls.Add(this.panel4);
+            this.panelDesktopPanel.Controls.Add(this.pictureBox4);
+            this.panelDesktopPanel.Controls.Add(this.label11);
+            this.panelDesktopPanel.Controls.Add(this.panel3);
+            this.panelDesktopPanel.Controls.Add(this.panel2);
+            this.panelDesktopPanel.ForeColor = System.Drawing.Color.Black;
+            this.panelDesktopPanel.Location = new System.Drawing.Point(218, 75);
+            this.panelDesktopPanel.Name = "panelDesktopPanel";
+            this.panelDesktopPanel.Size = new System.Drawing.Size(806, 524);
+            this.panelDesktopPanel.TabIndex = 12;
+            // 
+            // lblMensajeBienvenida
+            // 
+            this.lblMensajeBienvenida.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMensajeBienvenida.AutoSize = true;
+            this.lblMensajeBienvenida.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblMensajeBienvenida.Font = new System.Drawing.Font("Nobile", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensajeBienvenida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.lblMensajeBienvenida.Location = new System.Drawing.Point(24, 21);
+            this.lblMensajeBienvenida.Name = "lblMensajeBienvenida";
+            this.lblMensajeBienvenida.Size = new System.Drawing.Size(190, 29);
+            this.lblMensajeBienvenida.TabIndex = 11;
+            this.lblMensajeBienvenida.Text = "¡Bienvenido Angie!";
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.pictureBox5);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.lblAlquileresSemanales);
+            this.panel4.Location = new System.Drawing.Point(528, 107);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(170, 82);
+            this.panel4.TabIndex = 16;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(13, 56);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(142, 15);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Alquileres Semanales";
+            // 
+            // lblAlquileresSemanales
+            // 
+            this.lblAlquileresSemanales.AutoSize = true;
+            this.lblAlquileresSemanales.Font = new System.Drawing.Font("Nobile", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlquileresSemanales.ForeColor = System.Drawing.Color.White;
+            this.lblAlquileresSemanales.Location = new System.Drawing.Point(63, 12);
+            this.lblAlquileresSemanales.Name = "lblAlquileresSemanales";
+            this.lblAlquileresSemanales.Size = new System.Drawing.Size(102, 41);
+            this.lblAlquileresSemanales.TabIndex = 0;
+            this.lblAlquileresSemanales.Text = "000";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Gainsboro;
+            this.label11.Font = new System.Drawing.Font("Nobile", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label11.Location = new System.Drawing.Point(53, 69);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(131, 24);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Dashboard";
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.lblVentasSemanales);
+            this.panel3.Location = new System.Drawing.Point(287, 107);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(170, 82);
+            this.panel3.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(17, 56);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(124, 15);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Ventas Semanales";
+            // 
+            // lblVentasSemanales
+            // 
+            this.lblVentasSemanales.AutoSize = true;
+            this.lblVentasSemanales.Font = new System.Drawing.Font("Nobile", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVentasSemanales.ForeColor = System.Drawing.Color.White;
+            this.lblVentasSemanales.Location = new System.Drawing.Point(57, 12);
+            this.lblVentasSemanales.Name = "lblVentasSemanales";
+            this.lblVentasSemanales.Size = new System.Drawing.Size(102, 41);
+            this.lblVentasSemanales.TabIndex = 0;
+            this.lblVentasSemanales.Text = "000";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.lblClientesRegistrados);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panel2.Location = new System.Drawing.Point(59, 107);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(171, 82);
+            this.panel2.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(24, 56);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(132, 15);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Clientes Registrados";
+            // 
+            // lblClientesRegistrados
+            // 
+            this.lblClientesRegistrados.AutoSize = true;
+            this.lblClientesRegistrados.Font = new System.Drawing.Font("Nobile", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientesRegistrados.ForeColor = System.Drawing.Color.White;
+            this.lblClientesRegistrados.Location = new System.Drawing.Point(64, 12);
+            this.lblClientesRegistrados.Name = "lblClientesRegistrados";
+            this.lblClientesRegistrados.Size = new System.Drawing.Size(92, 41);
+            this.lblClientesRegistrados.TabIndex = 0;
+            this.lblClientesRegistrados.Text = "001";
             // 
             // btnReportes
             // 
@@ -302,78 +440,39 @@
             this.btnRegistroClientes.UseVisualStyleBackColor = true;
             this.btnRegistroClientes.Click += new System.EventHandler(this.btnRegistroClientes_Click);
             // 
-            // panelLogo
+            // pbLogo
             // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panelLogo.Controls.Add(this.label3);
-            this.panelLogo.Controls.Add(this.label2);
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 75);
-            this.panelLogo.TabIndex = 0;
+            this.pbLogo.BackgroundImage = global::Tienda_de_Peliculas.Properties.Resources.logo;
+            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbLogo.Location = new System.Drawing.Point(12, 15);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(94, 42);
+            this.pbLogo.TabIndex = 0;
+            this.pbLogo.TabStop = false;
             // 
-            // label3
+            // btnCloseChildForm
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Suissnord", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(192, 30);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "PELICULAS";
+            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseChildForm.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Volver;
+            this.btnCloseChildForm.Location = new System.Drawing.Point(218, 0);
+            this.btnCloseChildForm.Name = "btnCloseChildForm";
+            this.btnCloseChildForm.Size = new System.Drawing.Size(79, 75);
+            this.btnCloseChildForm.TabIndex = 17;
+            this.btnCloseChildForm.UseVisualStyleBackColor = true;
+            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
             // 
-            // label2
+            // pcbFoto
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Suissnord", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 30);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "TIENDA DE ";
-            // 
-            // panelDesktopPanel
-            // 
-            this.panelDesktopPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelDesktopPanel.Controls.Add(this.lblMensajeBienvenida);
-            this.panelDesktopPanel.Controls.Add(this.panel4);
-            this.panelDesktopPanel.Controls.Add(this.pictureBox4);
-            this.panelDesktopPanel.Controls.Add(this.label11);
-            this.panelDesktopPanel.Controls.Add(this.panel3);
-            this.panelDesktopPanel.Controls.Add(this.panel2);
-            this.panelDesktopPanel.ForeColor = System.Drawing.Color.Black;
-            this.panelDesktopPanel.Location = new System.Drawing.Point(218, 75);
-            this.panelDesktopPanel.Name = "panelDesktopPanel";
-            this.panelDesktopPanel.Size = new System.Drawing.Size(806, 524);
-            this.panelDesktopPanel.TabIndex = 12;
-            // 
-            // lblMensajeBienvenida
-            // 
-            this.lblMensajeBienvenida.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblMensajeBienvenida.AutoSize = true;
-            this.lblMensajeBienvenida.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblMensajeBienvenida.Font = new System.Drawing.Font("Nobile", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensajeBienvenida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.lblMensajeBienvenida.Location = new System.Drawing.Point(24, 21);
-            this.lblMensajeBienvenida.Name = "lblMensajeBienvenida";
-            this.lblMensajeBienvenida.Size = new System.Drawing.Size(190, 29);
-            this.lblMensajeBienvenida.TabIndex = 11;
-            this.lblMensajeBienvenida.Text = "¡Bienvenido Angie!";
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.pictureBox5);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.lblAlquileresSemanales);
-            this.panel4.Location = new System.Drawing.Point(528, 107);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(170, 82);
-            this.panel4.TabIndex = 16;
+            this.pcbFoto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pcbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pcbFoto.Image = global::Tienda_de_Peliculas.Properties.Resources.pelicula;
+            this.pcbFoto.Location = new System.Drawing.Point(965, 12);
+            this.pcbFoto.Name = "pcbFoto";
+            this.pcbFoto.Size = new System.Drawing.Size(47, 45);
+            this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbFoto.TabIndex = 0;
+            this.pcbFoto.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -385,28 +484,6 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(13, 56);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(142, 15);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Alquileres Semanales";
-            // 
-            // lblAlquileresSemanales
-            // 
-            this.lblAlquileresSemanales.AutoSize = true;
-            this.lblAlquileresSemanales.Font = new System.Drawing.Font("Nobile", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlquileresSemanales.ForeColor = System.Drawing.Color.White;
-            this.lblAlquileresSemanales.Location = new System.Drawing.Point(63, 12);
-            this.lblAlquileresSemanales.Name = "lblAlquileresSemanales";
-            this.lblAlquileresSemanales.Size = new System.Drawing.Size(102, 41);
-            this.lblAlquileresSemanales.TabIndex = 0;
-            this.lblAlquileresSemanales.Text = "000";
             // 
             // pictureBox4
             // 
@@ -420,32 +497,6 @@
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
             // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Gainsboro;
-            this.label11.Font = new System.Drawing.Font("Nobile", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label11.Location = new System.Drawing.Point(53, 69);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(131, 24);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Dashboard";
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.lblVentasSemanales);
-            this.panel3.Location = new System.Drawing.Point(287, 107);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(170, 82);
-            this.panel3.TabIndex = 14;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -456,42 +507,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(17, 56);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(124, 15);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Ventas Semanales";
-            // 
-            // lblVentasSemanales
-            // 
-            this.lblVentasSemanales.AutoSize = true;
-            this.lblVentasSemanales.Font = new System.Drawing.Font("Nobile", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVentasSemanales.ForeColor = System.Drawing.Color.White;
-            this.lblVentasSemanales.Location = new System.Drawing.Point(57, 12);
-            this.lblVentasSemanales.Name = "lblVentasSemanales";
-            this.lblVentasSemanales.Size = new System.Drawing.Size(102, 41);
-            this.lblVentasSemanales.TabIndex = 0;
-            this.lblVentasSemanales.Text = "000";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.lblClientesRegistrados);
-            this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel2.Location = new System.Drawing.Point(59, 107);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(171, 82);
-            this.panel2.TabIndex = 13;
             // 
             // pictureBox2
             // 
@@ -504,27 +519,25 @@
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // label7
+            // label1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(24, 56);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(132, 15);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Clientes Registrados";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(112, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "HOLLYWOOD";
             // 
-            // lblClientesRegistrados
+            // label2
             // 
-            this.lblClientesRegistrados.AutoSize = true;
-            this.lblClientesRegistrados.Font = new System.Drawing.Font("Nobile", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientesRegistrados.ForeColor = System.Drawing.Color.White;
-            this.lblClientesRegistrados.Location = new System.Drawing.Point(64, 12);
-            this.lblClientesRegistrados.Name = "lblClientesRegistrados";
-            this.lblClientesRegistrados.Size = new System.Drawing.Size(92, 41);
-            this.lblClientesRegistrados.TabIndex = 0;
-            this.lblClientesRegistrados.Text = "001";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cascadia Mono SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(111, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "V I D E O";
             // 
             // frmPrincipal
             // 
@@ -543,7 +556,6 @@
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
@@ -551,13 +563,15 @@
             this.panelDesktopPanel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -578,8 +592,6 @@
         private System.Windows.Forms.Button btnVentaAlquiler;
         private System.Windows.Forms.Button btnRegistroEmpleados;
         private System.Windows.Forms.Label lbltTitle;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelDesktopPanel;
         private System.Windows.Forms.Label lblMensajeBienvenida;
         private System.Windows.Forms.Panel panel4;
@@ -599,6 +611,9 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Button btnCloseChildForm;
+        private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -170,6 +170,7 @@ namespace Tienda_de_Peliculas
             panelLogo.BackColor = Color.FromArgb(39,39,58);
             currentButton = null;
             btnCloseChildForm.Visible = false;
+            mostrarDatosDashboard();
         }
     }
 }

@@ -47,8 +47,8 @@
             this.txbName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbM = new System.Windows.Forms.RadioButton();
+            this.rbF = new System.Windows.Forms.RadioButton();
             this.dtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.mtxbDNI = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -87,7 +87,7 @@
             this.txbDirE.Multiline = true;
             this.txbDirE.Name = "txbDirE";
             this.txbDirE.Size = new System.Drawing.Size(354, 33);
-            this.txbDirE.TabIndex = 25;
+            this.txbDirE.TabIndex = 200;
             // 
             // lblCiudad
             // 
@@ -233,8 +233,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rbM);
+            this.groupBox1.Controls.Add(this.rbF);
             this.groupBox1.Controls.Add(this.dtFechaNacimiento);
             this.groupBox1.Controls.Add(this.mtxbDNI);
             this.groupBox1.Controls.Add(this.txbName);
@@ -250,27 +250,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
             // 
-            // radioButton2
+            // rbM
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(110, 174);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(73, 17);
-            this.radioButton2.TabIndex = 29;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Masculino";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbM.AutoSize = true;
+            this.rbM.Location = new System.Drawing.Point(110, 174);
+            this.rbM.Name = "rbM";
+            this.rbM.Size = new System.Drawing.Size(73, 17);
+            this.rbM.TabIndex = 29;
+            this.rbM.TabStop = true;
+            this.rbM.Text = "Masculino";
+            this.rbM.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbF
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(26, 174);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(71, 17);
-            this.radioButton1.TabIndex = 28;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Femenino";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbF.AutoSize = true;
+            this.rbF.Location = new System.Drawing.Point(26, 174);
+            this.rbF.Name = "rbF";
+            this.rbF.Size = new System.Drawing.Size(71, 17);
+            this.rbF.TabIndex = 28;
+            this.rbF.TabStop = true;
+            this.rbF.Text = "Femenino";
+            this.rbF.UseVisualStyleBackColor = true;
             // 
             // dtFechaNacimiento
             // 
@@ -322,6 +322,7 @@
             this.btnCancelar.TabIndex = 41;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -387,8 +388,8 @@
         private System.Windows.Forms.TextBox txbName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbM;
+        private System.Windows.Forms.RadioButton rbF;
         private System.Windows.Forms.DateTimePicker dtFechaNacimiento;
         private System.Windows.Forms.MaskedTextBox mtxbDNI;
         private System.Windows.Forms.GroupBox groupBox2;

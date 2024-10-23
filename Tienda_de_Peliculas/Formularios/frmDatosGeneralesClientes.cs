@@ -19,6 +19,11 @@ namespace Tienda_de_Peliculas
         DepartamentosDAL depto = new DepartamentosDAL();
         CiudadesDAL ciudad = new CiudadesDAL();
         #endregion
+        #region VARIABLES
+        private int sexo = 0;
+        private int cliente = 2;
+        #endregion
+
         public frmDatosGeneralesClientes()
         {
             InitializeComponent();
@@ -44,6 +49,8 @@ namespace Tienda_de_Peliculas
 
         public void InsertarClientes()
         {
+            if (rbF.Checked) sexo = 1;
+            if(rbM.Checked) sexo = 2;
 
             DatosGenerales Dg = new DatosGenerales
             {
@@ -51,11 +58,11 @@ namespace Tienda_de_Peliculas
                 dato_DNI = mtxbDNI.Text,
                 dato_Telefono = txbTel.Text,
                 dato_FechaNacimiento = dtFechaNacimiento.Value,
-                sexo_Id = 1,
+                sexo_Id = sexo,
                 dato_email = txbemail.Text,
                 ciud_Id = cbxCiudad.SelectedIndex,
                 dato_Direccion = txbDirE.Text,
-                cate_Id = 2,
+                cate_Id = cliente,
                 dato_FechaCreacion = DateTime.Now,
                 usua_UsuarioCreacion = 1
             };
@@ -87,6 +94,25 @@ namespace Tienda_de_Peliculas
         }
         #endregion
 
+        #region VALIDACIONES Y LIMPIEZA DE CAMPOS
+        public void LimpiarCampos()
+        {
+            txbName.Clear();
+            txbTel.Clear();
+            txbDirE.Clear();
+            txbemail.Clear();
+            mtxbDNI.Clear();
+            rbF.Checked = false;
+            rbM.Checked = false;
+            cbxCiudad.Enabled = false;
+            cbxDepto.Enabled = false;
+            cbxDepto.Text = "Seleccione un país.";
+            cbxCiudad.Text = "Seleccione un departamento.";
+            cbxPais.SelectedIndex = 0;
+            dtFechaNacimiento.Value = DateTime.Now;
+        }
+        #endregion
+
         private void frmDatosGeneralesCliente_Load(object sender, EventArgs e)
         {
             LoadTheme();
@@ -99,7 +125,9 @@ namespace Tienda_de_Peliculas
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             InsertarClientes();
+            LimpiarCampos();
             ListarClientes();
+
         }
 
         private void cbxPais_SelectedIndexChanged(object sender, EventArgs e)
@@ -129,6 +157,11 @@ namespace Tienda_de_Peliculas
                 cbxCiudad.DataSource = null; 
                 cbxCiudad.Enabled = false;
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
 }
