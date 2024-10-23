@@ -60,7 +60,7 @@ namespace Tienda_de_Peliculas
                 dato_FechaNacimiento = dtFechaNacimiento.Value,
                 sexo_Id = sexo,
                 dato_email = txbemail.Text,
-                ciud_Id = cbxCiudad.SelectedIndex,
+                ciud_Id = Convert.ToInt32(cbxCiudad.SelectedValue),
                 dato_Direccion = txbDirE.Text,
                 cate_Id = cliente,
                 dato_FechaCreacion = DateTime.Now,
