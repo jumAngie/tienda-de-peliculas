@@ -83,11 +83,11 @@
             // txbDirE
             // 
             this.txbDirE.Location = new System.Drawing.Point(20, 220);
-            this.txbDirE.MaxLength = 20;
+            this.txbDirE.MaxLength = 200;
             this.txbDirE.Multiline = true;
             this.txbDirE.Name = "txbDirE";
             this.txbDirE.Size = new System.Drawing.Size(354, 33);
-            this.txbDirE.TabIndex = 200;
+            this.txbDirE.TabIndex = 20;
             // 
             // lblCiudad
             // 

@@ -100,99 +100,100 @@ VALUES						(2,			'San Isidro',				1,						GETDATE()),
 							(2,			'Choluteca',				1,						GETDATE());
 -------------------------------- 3 ciudades de Colón -------------------------------- 
 INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
-VALUES						(3,			'Tocoa',				1,						GETDATE()),
-							(3,			'Trujillo',				1,						GETDATE()),
-							(3,			'Sabá',				1,						GETDATE());
+VALUES						(3,			'Trujillo',				1,						GETDATE()),
+							(3,			'Tocoa',				1,						GETDATE()),
+							(3,			'Bonito Oriental',		1,						GETDATE());
 
 -------------------------------- 3 ciudades de Comayagua -------------------------------- 
 INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
 VALUES						(4,			'Comayagua',			1,						GETDATE()),
-							(4,			'La Paz',				1,						GETDATE()),
-							(4,			'Villa de San Antonio',	1,						GETDATE());
+							(4,			'Siguatepeque',			1,						GETDATE()),
+							(4,			'La Libertad',			1,						GETDATE());
+
+-------------------------------- 3 ciudades de Copán -------------------------------- 
+INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
+VALUES						(5,			'Santa Rosa de Copán',	1,						GETDATE()),
+							(5,			'La Entrada',			1,						GETDATE()),
+							(5,			'Dulce Nombre',			1,						GETDATE());
 
 -------------------------------- 3 ciudades de Cortés -------------------------------- 
 INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
-VALUES						(5,			'Tegucigalpa',			1,						GETDATE()),
-							(5,			'San Pedro Sula',		1,						GETDATE()),
-							(5,			'Choloma',				1,						GETDATE());
-
--------------------------------- 3 ciudades de La Paz -------------------------------- 
-INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
-VALUES						(6,			'La Paz',				1,						GETDATE()),
-							(6,			'San Antonio del Norte',	1,						GETDATE()),
-							(6,			'El Paraíso',			1,						GETDATE());
-
--------------------------------- 3 ciudades de Intibucá -------------------------------- 
-INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
-VALUES						(7,			'La Esperanza',			1,						GETDATE()),
-							(7,			'Intibucá',				1,						GETDATE()),
-							(7,			'San Marcos de la Sierra',	1,						GETDATE());
-
--------------------------------- 3 ciudades de Islas de la Bahía -------------------------------- 
-INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
-VALUES						(8,			'Roatán',				1,						GETDATE()),
-							(8,			'Utila',				1,						GETDATE()),
-							(8,			'Guanaja',				1,						GETDATE());
-
--------------------------------- 3 ciudades de Ocotepeque -------------------------------- 
-INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
-VALUES						(9,			'Ocotepeque',			1,						GETDATE()),
-							(9,			'San Fernando',			1,						GETDATE()),
-							(9,			'La Labor',				1,						GETDATE());
-
--------------------------------- 3 ciudades de Santa Bárbara -------------------------------- 
-INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
-VALUES						(10,			'Santa Bárbara',		1,						GETDATE()),
-							(10,			'Macuelizo',			1,						GETDATE()),
-							(10,			'El Eden',				1,						GETDATE());
-
--------------------------------- 3 ciudades de Cortés -------------------------------- 
-INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
-VALUES						(11,			'Puerto Cortés',		1,						GETDATE()),
-							(11,			'Choloma',				1,						GETDATE()),
-							(11,			'Tela',				1,						GETDATE());
-
--------------------------------- 3 ciudades de Atlántida -------------------------------- 
-INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
-VALUES						(12,			'La Ceiba',				1,						GETDATE()),
-							(12,			'Esparta',				1,						GETDATE()),
-							(12,			'Jutiapa',				1,						GETDATE());
-
--------------------------------- 3 ciudades de Yoro -------------------------------- 
-INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
-VALUES						(13,			'El Progreso',			1,						GETDATE()),
-							(13,			'Yoro',				1,						GETDATE()),
-							(13,			'Orocuina',				1,						GETDATE());
-
--------------------------------- 3 ciudades de Gracias a Dios -------------------------------- 
-INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
-VALUES						(14,			'La Mosquitia',			1,						GETDATE()),
-							(14,			'Puerto Lempira',		1,						GETDATE()),
-							(14,			'Plaplaya',				1,						GETDATE());
-
--------------------------------- 3 ciudades de Lempira -------------------------------- 
-INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
-VALUES						(15,			'Gracias',				1,						GETDATE()),
-							(15,			'La Unión',				1,						GETDATE()),
-							(15,			'Pueblo Viejo',		1,						GETDATE());
+VALUES						(6,			'San Pedro Sula',		1,						GETDATE()),
+							(6,			'Puerto Cortés',		1,						GETDATE()),
+							(6,			'Choloma',				1,						GETDATE());
 
 -------------------------------- 3 ciudades de El Paraíso -------------------------------- 
 INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
-VALUES						(16,			'El Paraíso',			1,						GETDATE()),
-							(16,			'La Villa',				1,						GETDATE()),
-							(16,			'Yarula',				1,						GETDATE());
+VALUES						(7,			'Danlí',				1,						GETDATE()),
+							(7,			'Yuscarán',				1,						GETDATE()),
+							(7,			'Alauca',				1,						GETDATE());
+
+-------------------------------- 3 ciudades de Francisco Morazán -------------------------------- 
+INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
+VALUES						(8,			'Tegucigalpa',			1,						GETDATE()),
+							(8,			'Valle de Ángeles',		1,						GETDATE()),
+							(8,			'Santa Lucía',			1,						GETDATE());
+
+-------------------------------- 3 ciudades de Gracias a Dios -------------------------------- 
+INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
+VALUES						(9,			'Puerto Lempira',		1,						GETDATE()),
+							(9,			'Brus Laguna',			1,						GETDATE()),
+							(9,			'Ahuas',				1,						GETDATE());
+
+-------------------------------- 3 ciudades de Intibucá -------------------------------- 
+INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
+VALUES						(10,		'La Esperanza',			1,						GETDATE()),
+							(10,		'Yamaranguila',			1,						GETDATE()),
+							(10,		'San Francisco de Opalaca', 1,					GETDATE());
+
+-------------------------------- 3 ciudades de Islas de la Bahía -------------------------------- 
+INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
+VALUES						(11,		'Coxen Hole',			1,						GETDATE()),
+							(11,		'Utila',				1,						GETDATE()),
+							(11,		'French Harbour',		1,						GETDATE());
+
+-------------------------------- 3 ciudades de La Paz -------------------------------- 
+INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
+VALUES						(12,		'La Paz',				1,						GETDATE()),
+							(12,		'Marcala',				1,						GETDATE()),
+							(12,		'Cabañas',				1,						GETDATE());
+
+-------------------------------- 3 ciudades de Lempira -------------------------------- 
+INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
+VALUES						(13,		'Gracias',				1,						GETDATE()),
+							(13,		'Erandique',			1,						GETDATE()),
+							(13,		'La Campa',				1,						GETDATE());
+
+-------------------------------- 3 ciudades de Ocotepeque -------------------------------- 
+INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
+VALUES						(14,		'Nueva Ocotepeque',		1,						GETDATE()),
+							(14,		'La Encarnación',		1,						GETDATE()),
+							(14,		'Sensenti',				1,						GETDATE());
 
 -------------------------------- 3 ciudades de Olancho -------------------------------- 
 INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
-VALUES						(17,			'La Union',				1,						GETDATE()),
-							(17,			'Tocoa',				1,						GETDATE()),
-							(17,			'San Francisco de la Paz',	1,						GETDATE());
+VALUES						(15,		'Juticalpa',			1,						GETDATE()),
+							(15,		'Catacamas',			1,						GETDATE()),
+							(15,		'San Francisco de la Paz',	1,				GETDATE());
 
--------------------------------- 3 ciudades de Choluteca -------------------------------- 
+-------------------------------- 3 ciudades de Santa Bárbara -------------------------------- 
 INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
-VALUES						(18,			'Choluteca',				1,						GETDATE()),
-							(18,			'San Isidro',				1,						GETDATE()),
-							(18,			'Pespire',				1,						GETDATE());
+VALUES						(16,		'Santa Bárbara',		1,						GETDATE()),
+							(16,		'Quimistán',			1,						GETDATE()),
+							(16,		'Ilama',				1,						GETDATE());
+
+-------------------------------- 3 ciudades de Valle -------------------------------- 
+INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
+VALUES						(17,		'Nacaome',				1,						GETDATE()),
+							(17,		'San Lorenzo',			1,						GETDATE()),
+							(17,		'Amapala',				1,						GETDATE());
+
+-------------------------------- 3 ciudades de Yoro -------------------------------- 
+INSERT INTO Gral.tbCiudades([dept_Id], [ciud_Descripcion],[usua_UsuarioCreacion],[ciud_FechaCreacion])
+VALUES						(18,		'Yoro',					1,						GETDATE()),
+							(18,		'El Progreso',			1,						GETDATE()),
+							(18,		'Olanchito',			1,						GETDATE());
+
 
 
 -- Datos Generales Empleados
