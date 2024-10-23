@@ -31,12 +31,13 @@ CREATE OR ALTER PROCEDURE Gral.Ciudades_CMB
 @dept_Id INT
 AS
 	BEGIN
-			SELECT '0' AS 'dept_Id', ' - Seleccione una opción -' AS 'dept_Descripcion'
+			SELECT '0' AS 'ciud_Id', ' - Seleccione una opción -' AS 'ciud_Descripcion'
 			UNION ALL
 			SELECT ciud_Id, ciud_Descripcion FROM Gral.tbCiudades
 			WHERE  dept_Id = @dept_Id
 	END
 GO
+
 
 --- CLIENTES
 CREATE OR ALTER PROCEDURE Gral.Datos_Generales_CantidadDeClientes

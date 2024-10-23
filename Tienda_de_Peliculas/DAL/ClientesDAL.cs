@@ -94,13 +94,15 @@ namespace Tienda_de_Peliculas.DAL
                     SqlCommand cmd = new SqlCommand("Gral.UDP_tbDatosGenerales_Insertar", conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
+                    string fechaformateada = DgClientes.dato_FechaNacimiento.ToString("yyyy-MM-dd");
+
                     cmd.Parameters.AddWithValue("@dato_NombreCompleto", DgClientes.dato_NombreCompleto);
                     cmd.Parameters.AddWithValue("@dato_DNI", DgClientes.dato_DNI);
                     cmd.Parameters.AddWithValue("@dato_Telefono", DgClientes.dato_Telefono);
                     cmd.Parameters.AddWithValue("@dato_email", DgClientes.dato_email);
                     cmd.Parameters.AddWithValue("@ciud_Id", DgClientes.ciud_Id);
                     cmd.Parameters.AddWithValue("@dato_Direccion", DgClientes.dato_Direccion);
-                    cmd.Parameters.AddWithValue("@dato_FechaNacimiento", DgClientes.dato_FechaNacimiento);
+                    cmd.Parameters.AddWithValue("@dato_FechaNacimiento", fechaformateada);
                     cmd.Parameters.AddWithValue("@sexo_Id", DgClientes.sexo_Id);
                     cmd.Parameters.AddWithValue("@cate_Id", DgClientes.cate_Id);
                     cmd.Parameters.AddWithValue("@usua_UsuarioCreacion", DgClientes.usua_UsuarioCreacion);

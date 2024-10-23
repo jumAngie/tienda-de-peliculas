@@ -121,14 +121,17 @@
             // 
             // cbxDepto
             // 
+            this.cbxDepto.Enabled = false;
             this.cbxDepto.FormattingEnabled = true;
             this.cbxDepto.Location = new System.Drawing.Point(177, 118);
             this.cbxDepto.Name = "cbxDepto";
             this.cbxDepto.Size = new System.Drawing.Size(197, 21);
             this.cbxDepto.TabIndex = 21;
+            this.cbxDepto.SelectedIndexChanged += new System.EventHandler(this.cbxDepto_SelectedIndexChanged);
             // 
             // cbxCiudad
             // 
+            this.cbxCiudad.Enabled = false;
             this.cbxCiudad.FormattingEnabled = true;
             this.cbxCiudad.Location = new System.Drawing.Point(20, 170);
             this.cbxCiudad.Name = "cbxCiudad";
@@ -142,6 +145,7 @@
             this.cbxPais.Name = "cbxPais";
             this.cbxPais.Size = new System.Drawing.Size(151, 21);
             this.cbxPais.TabIndex = 19;
+            this.cbxPais.SelectedIndexChanged += new System.EventHandler(this.cbxPais_SelectedIndexChanged);
             // 
             // lblDir
             // 

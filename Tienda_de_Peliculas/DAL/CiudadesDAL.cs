@@ -170,5 +170,20 @@ namespace Tienda_de_Peliculas.Clases
 
 
         }
+
+        public DataTable CargarCiudadesPorDepto(int dept_Id)
+        {
+            SqlConnection conexion = BDConexion.ObtenerConexion();
+            SqlCommand cmd = new SqlCommand("Gral.Ciudades_CMB", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@dept_Id", dept_Id);
+
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
     }
 }
