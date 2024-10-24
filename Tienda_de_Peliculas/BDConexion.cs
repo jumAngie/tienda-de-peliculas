@@ -27,7 +27,6 @@ namespace Tienda_de_Peliculas
         {
             
             SqlConnection conexion = new SqlConnection(connString);
-            conexion.Open();
 
             return conexion;
         }
