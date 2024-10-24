@@ -264,9 +264,6 @@ GO
 INSERT INTO Peli.tbFormatos([form_Descripcion],[usua_UsuarioCreacion], [form_FechaCreacion])
 VALUES						('DVD', 1, GETDATE())
 GO
-INSERT INTO Peli.tbFormatos([form_Descripcion],[usua_UsuarioCreacion], [form_FechaCreacion])
-VALUES						('Streaming', 1, GETDATE())
-GO
 
 -- Generos
 INSERT INTO Peli.tbGeneros([gene_Descripcion],[usua_UsuarioCreacion],[gene_FechaCreacion])
