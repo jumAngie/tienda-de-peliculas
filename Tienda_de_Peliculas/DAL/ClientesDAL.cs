@@ -25,7 +25,7 @@ namespace Tienda_de_Peliculas.DAL
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("Gral.Datos_Generales_CantidadDeClientes", conexion);
+                    SqlCommand cmd = new SqlCommand(ScriptsDatabase.ClientesRegistrados, conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     clientes = (int)cmd.ExecuteScalar();

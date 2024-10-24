@@ -21,7 +21,7 @@ namespace Tienda_de_Peliculas.Clases
             using (SqlConnection conexion = BDConexion.ObtenerConexion())
             {
                 conexion.Open();
-                string query = "SELECT * FROM Gral.Listado_Ciudades";
+                string query = ScriptsDatabase.ListarCiudades;
                 SqlCommand comando = new SqlCommand(query, conexion);
 
                 SqlDataReader reader = comando.ExecuteReader();

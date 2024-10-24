@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tienda_de_Peliculas.Clases;
 using Tienda_de_Peliculas.View_Models;
 using Tienda_de_Peliculas.Vistas;
 
@@ -48,6 +50,45 @@ namespace Tienda_de_Peliculas.DAL
                 return lista;
             }
 
+        }
+
+        // Inserta
+        public static string InsertarInventario(Inventario inve)
+        {
+            string mensaje = "";
+            try
+            {
+                using(SqlConnection conexion = BDConexion.ObtenerConexion())
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand(ScriptsDatabase.InsertarInventario, conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@inve_Titulo", inve.inve_Titulo);
+                    cmd.Parameters.AddWithValue("@inve_Anio", inve.inve_Anio);
+                    cmd.Parameters.AddWithValue("@gene_Id", inve.gene_Id);
+                    cmd.Parameters.AddWithValue("@inve_Duracion", inve.inve_Duracion);
+                    cmd.Parameters.AddWithValue("@form_Id", inve.form_Id);
+                    cmd.Parameters.AddWithValue("@esta_Id", inve.esta_Id);
+                    cmd.Parameters.AddWithValue("@inve_Descripcion", inve.inve_Descripcion);
+                    cmd.Parameters.AddWithValue("@idio_Id", inve.idio_Id);
+                    cmd.Parameters.AddWithValue("@inve_Cantidad", inve.inve_Cantidad);
+                    cmd.Parameters.AddWithValue("@inve_Precio", inve.inve_Precio);
+                    cmd.Parameters.AddWithValue("@clas_Id", inve.clas_Id);
+                    cmd.Parameters.AddWithValue("@usua_UsuarioCreacion", inve.usua_UsuarioCreacion);
+                    cmd.Parameters.AddWithValue("@inve_FechaCreacion", inve.inve_FechaCreacion);
+
+                    mensaje = (string)cmd.ExecuteScalar();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                mensaje = "Error: " + ex.Message;
+                throw;
+            }
+            
+            return mensaje;
         }
     }
 }

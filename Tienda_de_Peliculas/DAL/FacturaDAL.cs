@@ -21,7 +21,7 @@ namespace Tienda_de_Peliculas.DAL
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("Peli.Datos_Generales_VentasSemanales", conexion);
+                    SqlCommand cmd = new SqlCommand(ScriptsDatabase.VentasSemanales, conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@fechaLunes", fechaLunes);
@@ -53,7 +53,7 @@ namespace Tienda_de_Peliculas.DAL
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("Peli.Datos_Generales_AlquileresSemanales", conexion);
+                    SqlCommand cmd = new SqlCommand(ScriptsDatabase.AlquileresSemanales, conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@fechaLunes", fechaLunes);

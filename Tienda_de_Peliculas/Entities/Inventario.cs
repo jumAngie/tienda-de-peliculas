@@ -12,7 +12,7 @@ namespace Tienda_de_Peliculas.Clases
         public string inve_Titulo { get; set; }
 		public string inve_Anio { get; set; }
 		public int gene_Id { get; set; }
-		public string inve_Duracion { get; set; }
+		public int inve_Duracion { get; set; }
 		public int form_Id { get; set; }
 		public int esta_Id { get; set; }
 		public string inve_Descripcion { get; set; }

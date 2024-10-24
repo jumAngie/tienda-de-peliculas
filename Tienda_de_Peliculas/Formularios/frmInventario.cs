@@ -20,13 +20,15 @@ namespace Tienda_de_Peliculas
         ClasificacionesDAL  cl = new ClasificacionesDAL();
         FormatosDAL         frm = new FormatosDAL();
         EstadosDAL          est = new EstadosDAL();
+       
+        private int usuario_Id = 1;
 
         public frmInventario()
         {
             InitializeComponent();
         }
 
-        #region Validaciones
+        #region VALIDACIONES Y LIMPIEZA DE CAMPOS
         public bool ValidacionVacio()
         {
             bool esValido = false;
@@ -72,9 +74,23 @@ namespace Tienda_de_Peliculas
 
             return esValido;
         }
+
+        public void LimpiarCampos()
+        {
+            txtTitulo.Clear();
+            txtAnioLanzamiento.Clear();
+            txtDescripcion.Clear();
+            txtDuracion.Clear();
+            txtExistencias.Clear();
+            txtPrecio.Clear();
+            cboGeneros.SelectedIndex = 0;
+            cboEstados.SelectedIndex = 0;
+            cboFormatos.SelectedIndex = 0;
+            cboIdiomas.SelectedIndex = 0;
+        }
         #endregion
 
-        #region Mensajes
+        #region MENSAJES
         public void MensajeAdvertencia()
         {
             lblAdvertencia.Visible = true;
@@ -102,6 +118,29 @@ namespace Tienda_de_Peliculas
         public void Listado_Inventario()
         {
             dgInventario.DataSource = InventarioDAL.ListarInventario();
+        }
+
+        public void Insertar_Inventario()
+        {
+            Inventario inve = new Inventario
+            {
+                inve_Titulo = txtTitulo.Text,
+                inve_Anio = txtAnioLanzamiento.Text,
+                gene_Id = Convert.ToInt32(cboGeneros.SelectedValue),
+                inve_Duracion = Convert.ToInt32(txtDuracion.Text),
+                form_Id = Convert.ToInt32(cboFormatos.SelectedValue),
+                esta_Id = Convert.ToInt32(cboEstados.SelectedValue),
+                inve_Descripcion = txtDescripcion.Text,
+                idio_Id = Convert.ToInt32(cboIdiomas.SelectedValue),
+                inve_Cantidad = Convert.ToInt32(txtExistencias.Text),
+                inve_Precio = Convert.ToDouble(txtPrecio.Text),
+                clas_Id = Convert.ToInt32(cboClasificacion.SelectedValue),
+                usua_UsuarioCreacion = usuario_Id,
+                inve_FechaCreacion = DateTime.Now,
+            };
+
+            string resultados = InventarioDAL.InsertarInventario(inve);
+            MessageBox.Show(resultados, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 
@@ -142,6 +181,7 @@ namespace Tienda_de_Peliculas
         }
         #endregion
 
+        #region EVENTOS DE LOS ELEMENTOS DEL FORMULARIO
         private void frmInventario_Load(object sender, EventArgs e)
         {
             LoadTheme();
@@ -158,9 +198,12 @@ namespace Tienda_de_Peliculas
         private async void btnGuardar_Click(object sender, EventArgs e)
         {
             bool esValido = ValidacionVacio();
-            if(esValido) 
+            if (esValido)
             {
-                MessageBox.Show("Acá va la lógica para insertar.", "YAY NO DEJÓ NI UN CAMPO VACÍO :D", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Insertar_Inventario();
+                Listado_Inventario();
+                LimpiarCampos();
+
             }
             else
             {
@@ -169,5 +212,12 @@ namespace Tienda_de_Peliculas
                 MensajeAdvertencia_Hide();
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+        #endregion
+
     }
 }

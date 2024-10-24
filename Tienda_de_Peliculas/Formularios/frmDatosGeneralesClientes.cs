@@ -120,6 +120,7 @@ namespace Tienda_de_Peliculas
         }
         #endregion
 
+        #region EVENTOS DE LOS ELEMENTOS DEL FORMULARIO
         private void frmDatosGeneralesCliente_Load(object sender, EventArgs e)
         {
             LoadTheme();
@@ -132,8 +133,8 @@ namespace Tienda_de_Peliculas
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             InsertarClientes();
-            LimpiarCampos();
             ListarClientes();
+            LimpiarCampos();
 
         }
 
@@ -151,7 +152,7 @@ namespace Tienda_de_Peliculas
         {
             if (cbxDepto.SelectedValue != null && cbxDepto.SelectedValue is int)
             {
-                
+
                 int dept_Id = (int)cbxDepto.SelectedValue;
                 if (dept_Id > 0) // verifica que sea un valor válidop
                 {
@@ -161,7 +162,7 @@ namespace Tienda_de_Peliculas
             }
             else
             {
-                cbxCiudad.DataSource = null; 
+                cbxCiudad.DataSource = null;
                 cbxCiudad.Enabled = false;
             }
         }
@@ -170,5 +171,7 @@ namespace Tienda_de_Peliculas
         {
             LimpiarCampos();
         }
+        #endregion
+
     }
 }
