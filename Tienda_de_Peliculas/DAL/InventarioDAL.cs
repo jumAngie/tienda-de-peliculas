@@ -18,7 +18,9 @@ namespace Tienda_de_Peliculas.DAL
 
             using (SqlConnection conexion = BDConexion.ObtenerConexion())
             {
-                string query = "SELECT * FROM Peli.Listado_Inventario";
+
+                conexion.Open();
+                string query = ScriptsDatabase.ListarInventario;
                 SqlCommand comando = new SqlCommand(query, conexion);
 
                 SqlDataReader reader = comando.ExecuteReader();

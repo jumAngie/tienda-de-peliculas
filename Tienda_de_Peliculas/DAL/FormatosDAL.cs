@@ -12,11 +12,20 @@ namespace Tienda_de_Peliculas.DAL
     {
         public DataTable CargarFormatos()
         {
-            SqlConnection conexion = BDConexion.ObtenerConexion();
-            SqlDataAdapter da = new SqlDataAdapter("Peli.Formatos_CMB", conexion);
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
             DataTable dt = new DataTable();
-            da.Fill(dt);
+
+            using (SqlConnection conexion = BDConexion.ObtenerConexion())
+            {
+                conexion.Open();
+                using (SqlCommand cmd = new SqlCommand("Peli.Formatos_CMB", conexion))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
+            }
+
             return dt;
         }
     }

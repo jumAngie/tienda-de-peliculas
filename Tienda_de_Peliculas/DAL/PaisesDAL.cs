@@ -12,11 +12,20 @@ namespace Tienda_de_Peliculas.DAL
     {
         public DataTable CargarPaises()
         {
-            SqlConnection conexion = BDConexion.ObtenerConexion();
-            SqlDataAdapter da = new SqlDataAdapter("Gral.Paises_CMB", conexion); 
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
             DataTable dt = new DataTable();
-            da.Fill(dt);
+
+            using (SqlConnection conexion = BDConexion.ObtenerConexion())
+            {
+                conexion.Open();
+                using (SqlCommand cmd = new SqlCommand("Gral.Paises_CMB", conexion))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
+            }
+
             return dt;
         }
     }

@@ -122,6 +122,7 @@
     <Compile Include="Formularios\Reportes\frmReporteVentas.Designer.cs">
       <DependentUpon>frmReporteVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ScriptsDatabase.cs" />
     <Compile Include="ThemeColor.cs" />
     <Compile Include="View Models\CiudadViewModel.cs" />
     <Compile Include="View Models\ClientesViewModel.cs" />

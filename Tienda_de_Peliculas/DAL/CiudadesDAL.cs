@@ -20,6 +20,7 @@ namespace Tienda_de_Peliculas.Clases
 
             using (SqlConnection conexion = BDConexion.ObtenerConexion())
             {
+                conexion.Open();
                 string query = "SELECT * FROM Gral.Listado_Ciudades";
                 SqlCommand comando = new SqlCommand(query, conexion);
 
@@ -50,6 +51,7 @@ namespace Tienda_de_Peliculas.Clases
             {
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
+                    conexion.Open();
                     SqlCommand cmd = new SqlCommand("Gral.UDP_tbCiudades_Insertar", conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -81,6 +83,7 @@ namespace Tienda_de_Peliculas.Clases
             {
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
+                    conexion.Open();
                     SqlCommand cmd = new SqlCommand("Gral.UPD_tbCiudades_CargarInformacion", conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -117,6 +120,7 @@ namespace Tienda_de_Peliculas.Clases
             {
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
+                    conexion.Open();
                     SqlCommand cmd = new SqlCommand("Gral.UPD_tbCiudades_Editar", conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -149,6 +153,7 @@ namespace Tienda_de_Peliculas.Clases
             {
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
+                    conexion.Open();
                     SqlCommand cmd = new SqlCommand("Gral.UPD_tbCiudades_Eliminar", conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -173,17 +178,23 @@ namespace Tienda_de_Peliculas.Clases
 
         public DataTable CargarCiudadesPorDepto(int dept_Id)
         {
-            SqlConnection conexion = BDConexion.ObtenerConexion();
-            SqlCommand cmd = new SqlCommand("Gral.Ciudades_CMB", conexion);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@dept_Id", dept_Id);
-
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-
             DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
+            
+            using (SqlConnection conexion = BDConexion.ObtenerConexion())
+            {
+                conexion.Open();
+                using (SqlCommand cmd = new SqlCommand("Gral.Ciudades_CMB", conexion))
+                {
+                    
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@dept_Id", dept_Id);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt); 
+                }
+            }
+
+            return dt;  
         }
     }
 }

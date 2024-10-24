@@ -24,6 +24,7 @@ namespace Tienda_de_Peliculas.DAL
             {
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
+                    conexion.Open();
                     SqlCommand cmd = new SqlCommand("Gral.Datos_Generales_CantidadDeClientes", conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -50,6 +51,7 @@ namespace Tienda_de_Peliculas.DAL
 
             using (SqlConnection conexion = BDConexion.ObtenerConexion())
             {
+                conexion.Open();
                 string query = "SELECT * FROM Gral.DatosGenerales_Cliente";
                 SqlCommand comando = new SqlCommand(query, conexion);
 
@@ -91,6 +93,7 @@ namespace Tienda_de_Peliculas.DAL
             {
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
+                    conexion.Open();
                     SqlCommand cmd = new SqlCommand("Gral.UDP_tbDatosGenerales_Insertar", conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 

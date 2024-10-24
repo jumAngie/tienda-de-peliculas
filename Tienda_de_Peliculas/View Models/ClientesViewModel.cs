@@ -42,7 +42,7 @@ namespace Tienda_de_Peliculas.View_Models
         [DisplayName("Categoria")]
         public string Cate_Descripcion { get; set; }
 
-        [DisplayName("Usuario")]
+        [DisplayName("Usuario Creador")]
         public string usua_Usuario { get; set; }
 
         [DisplayName("Fecha de Creacion")]

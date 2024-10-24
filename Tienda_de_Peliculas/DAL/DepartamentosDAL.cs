@@ -12,16 +12,21 @@ namespace Tienda_de_Peliculas.DAL
     {
         public DataTable CargarDepartamentosPorPais(int pais_Id)
         {
-            SqlConnection conexion = BDConexion.ObtenerConexion();
-            SqlCommand cmd = new SqlCommand("Gral.Departamentos_CMB", conexion);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@pais_Id", pais_Id);
-
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-
             DataTable dt = new DataTable();
-            da.Fill(dt);
+
+            using (SqlConnection conexion = BDConexion.ObtenerConexion())
+            {
+                conexion.Open();
+                using (SqlCommand cmd = new SqlCommand("Gral.Departamentos_CMB", conexion))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@pais_Id", pais_Id);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);  
+                }
+            }
+
             return dt;
         }
     }

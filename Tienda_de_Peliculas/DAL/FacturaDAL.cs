@@ -20,6 +20,7 @@ namespace Tienda_de_Peliculas.DAL
             {
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
+                    conexion.Open();
                     SqlCommand cmd = new SqlCommand("Peli.Datos_Generales_VentasSemanales", conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -51,6 +52,7 @@ namespace Tienda_de_Peliculas.DAL
             {
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
+                    conexion.Open();
                     SqlCommand cmd = new SqlCommand("Peli.Datos_Generales_AlquileresSemanales", conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 

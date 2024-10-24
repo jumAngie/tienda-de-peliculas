@@ -10,14 +10,24 @@ namespace Tienda_de_Peliculas.DAL
 {
     public class ClasificacionesDAL
     {
+
         public DataTable CargarClasificaciones()
         {
-            SqlConnection conexion = BDConexion.ObtenerConexion();
-            SqlDataAdapter da = new SqlDataAdapter("Peli.Clasificaciones_CMB", conexion);
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
             DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
+
+            using (SqlConnection conexion = BDConexion.ObtenerConexion())
+            {
+                conexion.Open();
+                using (SqlCommand cmd = new SqlCommand("Peli.Clasificaciones_CMB", conexion))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
+            }
+
+            return dt; 
         }
     }
 }
