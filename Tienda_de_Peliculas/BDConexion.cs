@@ -25,7 +25,6 @@ namespace Tienda_de_Peliculas
 
         public static SqlConnection ObtenerConexion()
         {
-            
             SqlConnection conexion = new SqlConnection(connString);
 
             return conexion;

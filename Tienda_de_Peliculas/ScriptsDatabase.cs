@@ -23,6 +23,7 @@ namespace Tienda_de_Peliculas
         #endregion
 
         #region Factura
+        public static string InsertarFactura = "";
         #endregion
 
         #region Datos Generales
