@@ -280,5 +280,8 @@
   <ItemGroup>
     <None Include="Resources\lupa.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plantilla.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
