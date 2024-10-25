@@ -207,6 +207,7 @@
             this.cbxPais.Name = "cbxPais";
             this.cbxPais.Size = new System.Drawing.Size(151, 21);
             this.cbxPais.TabIndex = 19;
+            this.cbxPais.SelectedIndexChanged += new System.EventHandler(this.cbxPais_SelectedIndexChanged);
             // 
             // lblDepto
             // 
@@ -352,7 +353,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmDatosGeneralesEmpleados";
             this.Text = "Empleados";
-            this.Load += new System.EventHandler(this.frmDatosGeneralesEmpleados_Load);
+            this.Load += new System.EventHandler(this.frmDatosGeneralesEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgDatosEmpleado)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

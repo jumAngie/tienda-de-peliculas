@@ -60,6 +60,7 @@
     <Compile Include="DAL\ClasificacionesDAL.cs" />
     <Compile Include="DAL\ClientesDAL.cs" />
     <Compile Include="DAL\DepartamentosDAL.cs" />
+    <Compile Include="DAL\EmpleadosDAL.cs" />
     <Compile Include="DAL\EstadosDAL.cs" />
     <Compile Include="DAL\FacturaDAL.cs" />
     <Compile Include="DAL\FormatosDAL.cs" />
@@ -144,6 +145,7 @@
     <Compile Include="View Models\CiudadViewModel.cs" />
     <Compile Include="View Models\ClientesViewModel.cs" />
     <Compile Include="View Models\FacturaViewModel.cs" />
+    <Compile Include="View Models\EmpleadosViewModel.cs" />
     <Compile Include="View Models\InventarioViewModel.cs" />
     <EmbeddedResource Include="Formularios\frmCiudades.resx">
       <DependentUpon>frmCiudades.cs</DependentUpon>
