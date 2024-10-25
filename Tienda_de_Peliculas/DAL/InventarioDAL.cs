@@ -90,5 +90,25 @@ namespace Tienda_de_Peliculas.DAL
             
             return mensaje;
         }
+
+        // COMBOBOX
+        public DataTable CargarPeliculas()
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conexion = BDConexion.ObtenerConexion())
+            {
+                conexion.Open();
+                using (SqlCommand cmd = new SqlCommand(ScriptsDatabase.CargarPeliculas, conexion))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
+            }
+
+            return dt;
+
+        }
     }
 }

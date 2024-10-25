@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tienda_de_Peliculas.Reportes;
 
 namespace Tienda_de_Peliculas
 {
@@ -27,6 +28,17 @@ namespace Tienda_de_Peliculas
         private void frmReportes_Load(object sender, EventArgs e)
         {
             LoadTheme();
+        }
+
+        private void pnlReporteVentas_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+        private void pnlReporteVentas_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmReporteVentas reporteVentasForm = new frmReporteVentas();
+            reporteVentasForm.Show();
         }
     }
 }

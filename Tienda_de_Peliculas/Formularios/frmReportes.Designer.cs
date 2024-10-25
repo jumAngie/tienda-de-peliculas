@@ -60,6 +60,8 @@
             this.pnlReporteVentas.Name = "pnlReporteVentas";
             this.pnlReporteVentas.Size = new System.Drawing.Size(351, 190);
             this.pnlReporteVentas.TabIndex = 0;
+            this.pnlReporteVentas.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlReporteVentas_Paint);
+            this.pnlReporteVentas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlReporteVentas_MouseClick);
             // 
             // label1
             // 

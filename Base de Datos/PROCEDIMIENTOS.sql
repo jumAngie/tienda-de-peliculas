@@ -48,6 +48,15 @@ AS
 	END
 	GO
 --- PELICULAS (INVENTARIO)
+CREATE OR ALTER PROCEDURE Peli.Inventario_CMB
+AS
+	BEGIN
+		SELECT '0' AS 'inve_Id', ' - Seleccione una opción - ' AS 'inve_Titulo'
+		UNION ALL
+		SELECT inve_Id, inve_Titulo FROM Peli.tbInventario
+		WHERE inve_Estado = 1
+	END
+GO
 
 --- SEXO
 

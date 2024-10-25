@@ -20,6 +20,7 @@ namespace Tienda_de_Peliculas
         #region Inventario
         public static string ListarInventario = "SELECT * FROM Peli.Listado_Inventario";
         public static string InsertarInventario = "Peli.UPD_tbInventario_Insertar";
+        public static string CargarPeliculas = "Peli.Inventario_CMB";
         #endregion
 
         #region Factura
@@ -45,6 +46,11 @@ namespace Tienda_de_Peliculas
 
         #region Clasificaciones
         public static string ListarClasificaciones = "Peli.Clasificaciones_CMB";
+        #endregion
+
+        #region Reportes
+        public static string VentasPorPeliculas = "Peli.REPORTE_VentasPorPeliculas";
+        public static string VentasPorPeliculas_TOTAL = "Peli.REPORTE_VentasPorPeliculas_TOTAL";
         #endregion
     }
 }

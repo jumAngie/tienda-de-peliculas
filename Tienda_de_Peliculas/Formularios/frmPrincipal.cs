@@ -27,7 +27,6 @@ namespace Tienda_de_Peliculas
             tHora.Enabled = true;
             random = new Random();
             btnCloseChildForm.Visible = false;
-
         }
 
         //

@@ -34,6 +34,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itextsharp.xmlworker.5.5.13.4\lib\net461\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,10 +67,12 @@
     <Compile Include="DAL\IdiomasDAL.cs" />
     <Compile Include="DAL\InventarioDAL.cs" />
     <Compile Include="DAL\PaisesDAL.cs" />
+    <Compile Include="DAL\ReportesDAL.cs" />
     <Compile Include="Entities\Ciudades.cs" />
     <Compile Include="DAL\CiudadesDAL.cs" />
     <Compile Include="Entities\DatosGenerales.cs" />
     <Compile Include="Entities\Departamentos.cs" />
+    <Compile Include="Entities\Facturas.cs" />
     <Compile Include="Entities\Inventario.cs" />
     <Compile Include="Entities\Paises.cs" />
     <Compile Include="Entities\Roles.cs" />
@@ -114,6 +125,12 @@
     <Compile Include="Formularios\frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Reportes\frmReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\frmReporteClientes.Designer.cs">
+      <DependentUpon>frmReporteClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Formularios\Reportes\frmReporteVentas.cs">
@@ -126,6 +143,7 @@
     <Compile Include="ThemeColor.cs" />
     <Compile Include="View Models\CiudadViewModel.cs" />
     <Compile Include="View Models\ClientesViewModel.cs" />
+    <Compile Include="View Models\FacturaViewModel.cs" />
     <Compile Include="View Models\InventarioViewModel.cs" />
     <EmbeddedResource Include="Formularios\frmCiudades.resx">
       <DependentUpon>frmCiudades.cs</DependentUpon>
@@ -164,6 +182,7 @@
     <EmbeddedResource Include="Formularios\Reportes\frmReporteVentas.resx">
       <DependentUpon>frmReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -251,6 +270,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hogar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar-datos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar-datos1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
