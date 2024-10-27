@@ -67,6 +67,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblAdvertencia = new System.Windows.Forms.Label();
+            this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -83,6 +84,7 @@
             this.dgInventario.RowHeadersWidth = 51;
             this.dgInventario.Size = new System.Drawing.Size(783, 166);
             this.dgInventario.TabIndex = 0;
+            this.dgInventario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventario_CellClick);
             // 
             // groupBox1
             // 
@@ -476,11 +478,23 @@
             this.lblAdvertencia.Text = "¡Debe llenar todos los campos!";
             this.lblAdvertencia.Visible = false;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Location = new System.Drawing.Point(541, 299);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(124, 35);
+            this.btnEditar.TabIndex = 23;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 519);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.lblAdvertencia);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -542,5 +556,6 @@
         private System.Windows.Forms.TextBox txtExistencias;
         private System.Windows.Forms.Panel pnlExistencias;
         private System.Windows.Forms.Label lblAdvertencia;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

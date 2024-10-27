@@ -125,6 +125,72 @@ AS
 	END
 GO
 
+-- CARGAR INFORMACION PARA EDITAR
+CREATE OR ALTER PROCEDURE Peli.UPD_tbInventario_CargarInformacion
+@inve_Id INT
+AS
+	BEGIN
+			SELECT 
+					inve_Id, 
+					inve_Titulo, 
+					inve_Anio, 
+					inve_Duracion, 
+					form_Id, 
+					esta_Id, 
+					gene_Id,
+					inve_Descripcion, 
+					idio_Id, 
+					inve_Cantidad,
+					inve_Precio,
+					clas_Id
+			FROM	Peli.tbInventario
+			WHERE	inve_Id = @inve_Id
+	END
+GO
+
+-- EDITAR INVENTARIO
+CREATE OR ALTER PROCEDURE Peli.UDP_tbInventario_Editar
+@inve_Id INT, 
+@inve_Titulo NVARCHAR(100) ,
+	@inve_Anio VARCHAR(5),
+	@gene_Id INT ,
+	@inve_Duracion INT ,
+	@form_Id INT ,
+	@esta_Id INT ,
+	@inve_Descripcion NVARCHAR(max) ,
+	@idio_Id INT ,
+	@inve_Cantidad INT ,
+	@inve_Precio decimal(18, 2),
+	@clas_Id INT ,
+	@usua_UsuarioModificacion  INT ,
+	@inve_FechaModificacion DATETIME
+AS
+	BEGIN
+		BEGIN TRY
+			UPDATE Peli.tbInventario
+			SET	   inve_Titulo = @inve_Titulo,
+				   inve_Anio = @inve_Anio,
+				   gene_Id = @gene_Id,
+				   inve_Duracion = @inve_Duracion,
+				   form_Id = @form_Id,
+				   esta_Id = @esta_Id,
+				   inve_Descripcion = @inve_Descripcion,
+				   idio_Id = @idio_Id,
+				   inve_Cantidad = @inve_Cantidad,
+				   inve_Precio = @inve_Precio,
+				   clas_Id = @clas_Id,
+				   usua_UsuarioModificacion = @usua_UsuarioModificacion,
+				   inve_FechaModificacion = @inve_FechaModificacion
+			WHERE  inve_Id = @inve_Id
+		
+			SELECT 'Datos editados correctamente.'
+		END TRY
+
+		BEGIN CATCH
+			SELECT 'Error Message: '+ ERROR_MESSAGE();
+		END CATCH
+	END
+GO
 -- INSERTAR DATOS GENERALES_CLIENTES
 CREATE OR ALTER PROCEDURE Gral.UDP_tbDatosGenerales_Insertar
 @dato_NombreCompleto NVARCHAR(200), 

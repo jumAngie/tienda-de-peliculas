@@ -43,6 +43,7 @@ namespace Tienda_de_Peliculas.DAL
                     inventarioView.inve_Precio = reader.GetDecimal(10);
                     inventarioView.clas_Descripcion = reader.GetString(11);
                     inventarioView.usua_UsuarioCreacion = reader.GetString(12);
+                    inventarioView.usua_UsuarioModificacion = reader.GetString(13);
                     lista.Add(inventarioView);
                 }
 
@@ -88,6 +89,89 @@ namespace Tienda_de_Peliculas.DAL
                 throw;
             }
             
+            return mensaje;
+        }
+        
+        // Editar cargar datos
+        public static Inventario Editar_CargarDatos(int inve_Id)
+        {
+            Inventario inve = null;
+            try
+            {
+                using (SqlConnection conexion = BDConexion.ObtenerConexion())
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand(ScriptsDatabase.EditarInventario_CargarInformacion, conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@inve_Id", inve_Id);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            inve = new Inventario
+                            {
+                                inve_Id = reader.GetInt32(0),
+                                inve_Titulo = reader.GetString(1),
+                                inve_Anio = reader.GetString(2),
+                                inve_Duracion = reader.GetInt32(3),
+                                form_Id = reader.GetInt32(4),
+                                esta_Id = reader.GetInt32(5),
+                                gene_Id   = reader.GetInt32(6),
+                                inve_Descripcion = reader.GetString(7),
+                                idio_Id = reader.GetInt32(8),
+                                inve_Cantidad = reader.GetInt32(9),
+                                inve_Precio = reader.GetDecimal(10),
+                                clas_Id = reader.GetInt32(11),
+                            };
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al cargar la información de la ciudad: " + ex.Message);
+            }
+
+            return inve;
+        }
+
+        // Editar
+        public static string EditarInventario(Inventario inve)
+        {
+            string mensaje = "";
+            try
+            {  
+                using(SqlConnection conexion = BDConexion.ObtenerConexion())
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand(ScriptsDatabase.EditarInventario, conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@inve_Id", inve.inve_Id);
+                    cmd.Parameters.AddWithValue("@inve_Titulo", inve.inve_Titulo);
+                    cmd.Parameters.AddWithValue("@inve_Anio", inve.inve_Anio);
+                    cmd.Parameters.AddWithValue("@gene_Id", inve.gene_Id);
+                    cmd.Parameters.AddWithValue("@inve_Duracion", inve.inve_Duracion);
+                    cmd.Parameters.AddWithValue("@form_Id", inve.form_Id);
+                    cmd.Parameters.AddWithValue("@esta_Id", inve.esta_Id);
+                    cmd.Parameters.AddWithValue("@inve_Descripcion", inve.inve_Descripcion);
+                    cmd.Parameters.AddWithValue("@idio_Id", inve.idio_Id);
+                    cmd.Parameters.AddWithValue("@inve_Cantidad", inve.inve_Cantidad);
+                    cmd.Parameters.AddWithValue("@inve_Precio", inve.inve_Precio);
+                    cmd.Parameters.AddWithValue("@clas_Id", inve.clas_Id);
+                    cmd.Parameters.AddWithValue("@usua_UsuarioModificacion", inve.usua_UsuarioModificacion);
+                    cmd.Parameters.AddWithValue("@inve_FechaModificacion", inve.inve_FechaModificacion);
+
+                    mensaje = (string)cmd.ExecuteScalar();
+                }
+            }
+            catch (Exception ex)
+            {
+                mensaje = "Error: " + ex.Message;
+                throw;
+            }
             return mensaje;
         }
 

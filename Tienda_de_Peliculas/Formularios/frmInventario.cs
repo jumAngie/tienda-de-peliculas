@@ -20,7 +20,7 @@ namespace Tienda_de_Peliculas
         ClasificacionesDAL  cl = new ClasificacionesDAL();
         FormatosDAL         frm = new FormatosDAL();
         EstadosDAL          est = new EstadosDAL();
-       
+        private int id_filaSeleccionada;
         private int usuario_Id = 1;
 
         public frmInventario()
@@ -29,7 +29,6 @@ namespace Tienda_de_Peliculas
         }
 
         #region VALIDACIONES Y LIMPIEZA DE CAMPOS
-        
         public bool ValidacionVacio()
         {
             bool esValido = false;
@@ -76,6 +75,37 @@ namespace Tienda_de_Peliculas
             return esValido;
         }
 
+        public void boton_mostrarEditar()
+        {
+            btnEditar.Visible = true;
+            btnGuardar.Visible = false;
+        }
+
+        public void boton_mostrarGuardar()
+        {
+            btnEditar.Visible = false;
+            btnGuardar.Visible = true;
+
+        }
+
+        public void panel_OcultarValidaciones()
+        {
+            pnlTitulo.Visible = false;
+            pnlAnio.Visible = false;
+            
+            pnlGenero.Visible = false;
+            pnlClasificacion.Visible = false;
+            pnlIdioma.Visible = false;
+            pnlDuracion.Visible = false;
+            
+            pnlDesc.Visible = false;
+            
+            pnlEstado.Visible = false;
+            pnlPrecio.Visible = false;
+            pnlFormato.Visible = false;
+            pnlExistencias.Visible = false;
+        }
+
         public void ValidacionNumerica()
         {
             // necesito capturar los error providers que estén activos para evitar q pueda presionar el boton guardar
@@ -115,13 +145,15 @@ namespace Tienda_de_Peliculas
         #region DISEÑO
         private void LoadTheme()
         {
-                  btnGuardar.BackColor = ThemeColor.PrimaryColor;
-                  btnGuardar.ForeColor = Color.White;
-                  btnGuardar.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
-                  btnCancelar.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
-                  lblPrecioHNL.ForeColor = Color.White;
-                  lblPrecioHNL.BackColor = ThemeColor.PrimaryColor;
-            
+            btnGuardar.BackColor = ThemeColor.PrimaryColor;
+            btnGuardar.ForeColor = Color.White;
+            btnGuardar.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+            btnCancelar.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+            lblPrecioHNL.ForeColor = Color.White;
+            lblPrecioHNL.BackColor = ThemeColor.PrimaryColor;
+            btnEditar.ForeColor = Color.White;
+            btnEditar.BackColor = ThemeColor.SecondaryColor;
+            btnEditar.FlatAppearance.BorderColor = ThemeColor.PrimaryColor;
         }
         #endregion
 
@@ -144,7 +176,7 @@ namespace Tienda_de_Peliculas
                 inve_Descripcion = txtDescripcion.Text,
                 idio_Id = Convert.ToInt32(cboIdiomas.SelectedValue),
                 inve_Cantidad = Convert.ToInt32(txtExistencias.Text),
-                inve_Precio = Convert.ToDouble(txtPrecio.Text),
+                inve_Precio = Convert.ToDecimal(txtPrecio.Text),
                 clas_Id = Convert.ToInt32(cboClasificacion.SelectedValue),
                 usua_UsuarioCreacion = usuario_Id,
                 inve_FechaCreacion = DateTime.Now,
@@ -152,6 +184,52 @@ namespace Tienda_de_Peliculas
 
             string resultados = InventarioDAL.InsertarInventario(inve);
             MessageBox.Show(resultados, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public void Editar_CargarDatos(int inve_Id)
+        {
+            Inventario inve = InventarioDAL.Editar_CargarDatos(inve_Id);
+            if (inve != null)
+            {
+                txtTitulo.Text = inve.inve_Titulo;
+                txtAnioLanzamiento.Text = inve.inve_Anio;
+                cboGeneros.SelectedValue = inve.gene_Id;
+                cboIdiomas.SelectedValue = inve.idio_Id;
+                cboClasificacion.SelectedValue = inve.clas_Id;
+                txtDescripcion.Text = inve.inve_Descripcion;
+                txtDuracion.Text = Convert.ToString(inve.inve_Duracion);
+                cboEstados.SelectedValue = inve.esta_Id;
+                cboFormatos.SelectedValue = inve.form_Id;
+                txtExistencias.Text = Convert.ToString(inve.inve_Cantidad);
+                txtPrecio.Text = Convert.ToString(inve.inve_Precio);
+            }
+        }
+
+        public void Editar_Inventario(int inve_Id)
+        {
+            Inventario inve = new Inventario
+            {
+                inve_Id = inve_Id,
+                inve_Titulo = txtTitulo.Text,
+                inve_Anio = txtAnioLanzamiento.Text,
+                inve_Cantidad = Convert.ToInt32(txtExistencias.Text),
+                inve_Descripcion = txtDescripcion.Text,
+                inve_Duracion = Convert.ToInt32(txtDuracion.Text),
+                inve_Precio = Convert.ToDecimal(txtPrecio.Text),
+
+                gene_Id = Convert.ToInt32(cboGeneros.SelectedValue),
+                idio_Id = Convert.ToInt32(cboIdiomas.SelectedValue),
+                clas_Id = Convert.ToInt32(cboClasificacion.SelectedValue),
+                form_Id = Convert.ToInt32(cboFormatos.SelectedValue),
+                esta_Id = Convert.ToInt32(cboEstados.SelectedValue),
+
+                usua_UsuarioModificacion = 1, // acá se debe de cambiar cuando se haga el LogIn
+                inve_FechaModificacion = DateTime.Now
+            };
+
+            string resultado = InventarioDAL.EditarInventario(inve);
+
+            MessageBox.Show(resultado, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 
@@ -197,6 +275,23 @@ namespace Tienda_de_Peliculas
         {
             LoadTheme();
             txtTitulo.Focus();
+            boton_mostrarGuardar();
+            
+            // Añadiendo el boton al comenzar cada registro pq si queda al final no se ve y le es más dificil
+            // al usuario desplazarse hasta el final para eliminar un registro  (?
+
+            DataGridViewButtonColumn btnEliminar = new DataGridViewButtonColumn();
+            btnEliminar.HeaderText = "Acciones";
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Width = 70;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseColumnTextForButtonValue = true;
+            btnEliminar.DefaultCellStyle.BackColor = ThemeColor.PrimaryColor;
+            btnEliminar.DefaultCellStyle.ForeColor = Color.White;
+            btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEliminar.DefaultCellStyle.Font = new Font("Nobile", 7, FontStyle.Regular);
+            dgInventario.Columns.Add(btnEliminar);
+
             Listado_Inventario();
             CargarGeneros();
             CargarIdiomas();
@@ -214,7 +309,7 @@ namespace Tienda_de_Peliculas
                 Insertar_Inventario();
                 Listado_Inventario();
                 LimpiarCampos();
-
+                boton_mostrarGuardar();
             }
             else
             {
@@ -227,8 +322,9 @@ namespace Tienda_de_Peliculas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
+            boton_mostrarGuardar();
+            panel_OcultarValidaciones();
         }
-        #endregion
 
         ErrorProvider errorAnioLanzamiento = new ErrorProvider();
         private void txtAnioLanzamiento_KeyPress(object sender, KeyPressEventArgs e)
@@ -293,5 +389,59 @@ namespace Tienda_de_Peliculas
                 errorDuracion.Clear();
             }
         }
+
+        private void dgInventario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgInventario.Columns["btnEliminar"].Index && e.RowIndex >= 0)
+            {
+                int inve_Id = Convert.ToInt32(dgInventario.Rows[e.RowIndex].Cells["inve_Id"].Value);
+                var result = MessageBox.Show("¿Está seguro que desea eliminar este registro?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    //Eliminar_Ciudades(ciud_Id);
+                    Listado_Inventario();
+                    LimpiarCampos();
+                }
+            }
+            else if (e.RowIndex >= 0)
+            {
+                boton_mostrarEditar();
+                DataGridViewRow fila = dgInventario.Rows[e.RowIndex];
+
+                int inve_Id = Convert.ToInt32(fila.Cells["inve_Id"].Value);
+                id_filaSeleccionada = inve_Id;
+
+                LimpiarCampos();
+                panel_OcultarValidaciones();
+                Editar_CargarDatos(inve_Id);
+            }
+        }
+
+        private async void btnEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool esValido = ValidacionVacio();
+                if (esValido)
+                {
+                    Editar_Inventario(id_filaSeleccionada);
+                    Listado_Inventario();
+                    LimpiarCampos();
+                    boton_mostrarGuardar();
+                }
+                else
+                {
+                    MensajeAdvertencia();
+                    await Task.Delay(4000);
+                    MensajeAdvertencia_Hide();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
     }
 }

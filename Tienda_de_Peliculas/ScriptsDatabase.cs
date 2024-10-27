@@ -21,6 +21,8 @@ namespace Tienda_de_Peliculas
         public static string ListarInventario = "SELECT * FROM Peli.Listado_Inventario";
         public static string InsertarInventario = "Peli.UPD_tbInventario_Insertar";
         public static string CargarPeliculas = "Peli.Inventario_CMB";
+        public static string EditarInventario_CargarInformacion = "Peli.UPD_tbInventario_CargarInformacion";
+        public static string EditarInventario = "Peli.UDP_tbInventario_Editar";
         #endregion
 
         #region Factura

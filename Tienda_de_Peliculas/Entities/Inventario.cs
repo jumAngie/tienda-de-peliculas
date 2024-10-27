@@ -18,7 +18,7 @@ namespace Tienda_de_Peliculas.Clases
 		public string inve_Descripcion { get; set; }
 		public int idio_Id { get; set; }
 		public int inve_Cantidad { get; set; }
-		public double inve_Precio { get; set; }
+		public Decimal inve_Precio { get; set; }
 		public int clas_Id { get; set; }
 		public int usua_UsuarioCreacion { get; set; }
 		public DateTime inve_FechaCreacion { get; set; }
