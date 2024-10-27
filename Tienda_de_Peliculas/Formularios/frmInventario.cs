@@ -29,6 +29,7 @@ namespace Tienda_de_Peliculas
         }
 
         #region VALIDACIONES Y LIMPIEZA DE CAMPOS
+        
         public bool ValidacionVacio()
         {
             bool esValido = false;
@@ -75,6 +76,11 @@ namespace Tienda_de_Peliculas
             return esValido;
         }
 
+        public void ValidacionNumerica()
+        {
+            // necesito capturar los error providers que estén activos para evitar q pueda presionar el boton guardar
+        }
+
         public void LimpiarCampos()
         {
             txtTitulo.Clear();
@@ -87,6 +93,11 @@ namespace Tienda_de_Peliculas
             cboEstados.SelectedIndex = 0;
             cboFormatos.SelectedIndex = 0;
             cboIdiomas.SelectedIndex = 0;
+            cboClasificacion.SelectedIndex = 0;
+            errorAnioLanzamiento.Clear();
+            errorDuracion.Clear();
+            errorExistencias.Clear();
+            errorPrecio.Clear();
         }
         #endregion
 
@@ -219,5 +230,68 @@ namespace Tienda_de_Peliculas
         }
         #endregion
 
+        ErrorProvider errorAnioLanzamiento = new ErrorProvider();
+        private void txtAnioLanzamiento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool esValido = Validaciones.soloNumeros(e);
+            if (!esValido)
+            {
+                btnGuardar.Enabled = false;
+                errorAnioLanzamiento.SetError(txtAnioLanzamiento, "Por favor, ingrese solo números.");
+            }
+            else
+            {
+                btnGuardar.Enabled = true;
+                errorAnioLanzamiento.Clear();
+            }
+        }
+
+        ErrorProvider errorExistencias = new ErrorProvider();
+        private void txtExistencias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool esValido = Validaciones.soloNumeros(e);
+            if (!esValido)
+            {
+                btnGuardar.Enabled = false;
+                errorExistencias.SetError(txtExistencias, "Por favor, ingrese solo números.");
+            }
+            else
+            {
+                btnGuardar.Enabled = true;
+                errorExistencias.Clear();
+            }
+        }
+
+        ErrorProvider errorPrecio = new ErrorProvider();
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool esValido = Validaciones.soloNumerosPrecio(e);
+            if (!esValido)
+            {
+                btnGuardar.Enabled = false;
+                errorPrecio.SetError(txtPrecio, "Por favor, ingrese solo números.");
+            }
+            else
+            {
+                btnGuardar.Enabled = true;
+                errorPrecio.Clear();
+            }
+        }
+
+        ErrorProvider errorDuracion = new ErrorProvider();
+        private void txtDuracion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool esValido = Validaciones.soloNumeros(e);
+            if (!esValido)
+            {
+                btnGuardar.Enabled = false;
+                errorDuracion.SetError(txtDuracion, "Por favor, ingrese solo números.");
+            }
+            else
+            {
+                btnGuardar.Enabled = true;
+                errorDuracion.Clear();
+            }
+        }
     }
 }

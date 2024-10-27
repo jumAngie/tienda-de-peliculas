@@ -142,6 +142,7 @@
     </Compile>
     <Compile Include="ScriptsDatabase.cs" />
     <Compile Include="ThemeColor.cs" />
+    <Compile Include="Validaciones.cs" />
     <Compile Include="View Models\CiudadViewModel.cs" />
     <Compile Include="View Models\ClientesViewModel.cs" />
     <Compile Include="View Models\FacturaViewModel.cs" />

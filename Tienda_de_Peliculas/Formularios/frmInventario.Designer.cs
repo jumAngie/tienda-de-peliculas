@@ -141,6 +141,7 @@
             this.txtDuracion.Name = "txtDuracion";
             this.txtDuracion.Size = new System.Drawing.Size(188, 21);
             this.txtDuracion.TabIndex = 11;
+            this.txtDuracion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDuracion_KeyPress);
             // 
             // label6
             // 
@@ -214,6 +215,7 @@
             this.txtAnioLanzamiento.Name = "txtAnioLanzamiento";
             this.txtAnioLanzamiento.Size = new System.Drawing.Size(117, 21);
             this.txtAnioLanzamiento.TabIndex = 3;
+            this.txtAnioLanzamiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnioLanzamiento_KeyPress);
             // 
             // label2
             // 
@@ -334,6 +336,7 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(153, 21);
             this.txtPrecio.TabIndex = 28;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // pnlPrecio
             // 
@@ -351,6 +354,7 @@
             this.txtExistencias.Name = "txtExistencias";
             this.txtExistencias.Size = new System.Drawing.Size(153, 21);
             this.txtExistencias.TabIndex = 26;
+            this.txtExistencias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExistencias_KeyPress);
             // 
             // pnlExistencias
             // 
