@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblSex = new System.Windows.Forms.Label();
             this.lblDirE = new System.Windows.Forms.Label();
             this.txbDirE = new System.Windows.Forms.TextBox();
             this.lblCiudad = new System.Windows.Forms.Label();
@@ -38,37 +37,37 @@
             this.cbxCiudad = new System.Windows.Forms.ComboBox();
             this.cbxPais = new System.Windows.Forms.ComboBox();
             this.lblDir = new System.Windows.Forms.Label();
-            this.lblFechaN = new System.Windows.Forms.Label();
             this.txbemail = new System.Windows.Forms.TextBox();
             this.lblemail = new System.Windows.Forms.Label();
             this.txbTel = new System.Windows.Forms.TextBox();
             this.lblTel = new System.Windows.Forms.Label();
-            this.lblidentidad = new System.Windows.Forms.Label();
-            this.txbName = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbM = new System.Windows.Forms.RadioButton();
-            this.rbF = new System.Windows.Forms.RadioButton();
-            this.dtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.mtxbDNI = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dgDatosCliente = new System.Windows.Forms.DataGridView();
-            this.groupBox1.SuspendLayout();
+            this.lblFechaN = new System.Windows.Forms.Label();
+            this.lblSex = new System.Windows.Forms.Label();
+            this.lblidentidad = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.txbName = new System.Windows.Forms.TextBox();
+            this.mtxbDNI = new System.Windows.Forms.MaskedTextBox();
+            this.dtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.rbF = new System.Windows.Forms.RadioButton();
+            this.rbM = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pnlnombre = new System.Windows.Forms.Panel();
+            this.pnldireccion = new System.Windows.Forms.Panel();
+            this.pnlciudad = new System.Windows.Forms.Panel();
+            this.pnltel = new System.Windows.Forms.Panel();
+            this.pnlemail = new System.Windows.Forms.Panel();
+            this.pnldepto = new System.Windows.Forms.Panel();
+            this.pnlpais = new System.Windows.Forms.Panel();
+            this.pnlDNI = new System.Windows.Forms.Panel();
+            this.lblAdvertencia = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDatosCliente)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblSex
-            // 
-            this.lblSex.AutoSize = true;
-            this.lblSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSex.Location = new System.Drawing.Point(23, 150);
-            this.lblSex.Name = "lblSex";
-            this.lblSex.Size = new System.Drawing.Size(38, 15);
-            this.lblSex.TabIndex = 27;
-            this.lblSex.Text = "Sexo:";
             // 
             // lblDirE
             // 
@@ -82,7 +81,7 @@
             // 
             // txbDirE
             // 
-            this.txbDirE.Location = new System.Drawing.Point(20, 220);
+            this.txbDirE.Location = new System.Drawing.Point(20, 224);
             this.txbDirE.MaxLength = 200;
             this.txbDirE.Multiline = true;
             this.txbDirE.Name = "txbDirE";
@@ -158,16 +157,6 @@
             this.lblDir.TabIndex = 18;
             this.lblDir.Text = "Dirección:";
             // 
-            // lblFechaN
-            // 
-            this.lblFechaN.AutoSize = true;
-            this.lblFechaN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaN.Location = new System.Drawing.Point(172, 83);
-            this.lblFechaN.Name = "lblFechaN";
-            this.lblFechaN.Size = new System.Drawing.Size(127, 15);
-            this.lblFechaN.TabIndex = 8;
-            this.lblFechaN.Text = "Fecha de Nacimiento:";
-            // 
             // txbemail
             // 
             this.txbemail.Location = new System.Drawing.Point(177, 48);
@@ -204,105 +193,28 @@
             this.lblTel.TabIndex = 4;
             this.lblTel.Text = "Teléfono:";
             // 
-            // lblidentidad
-            // 
-            this.lblidentidad.AutoSize = true;
-            this.lblidentidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidentidad.Location = new System.Drawing.Point(17, 83);
-            this.lblidentidad.Name = "lblidentidad";
-            this.lblidentidad.Size = new System.Drawing.Size(126, 15);
-            this.lblidentidad.TabIndex = 2;
-            this.lblidentidad.Text = "Número de Identidad:";
-            // 
-            // txbName
-            // 
-            this.txbName.Location = new System.Drawing.Point(20, 48);
-            this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(354, 20);
-            this.txbName.TabIndex = 1;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(17, 29);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(111, 15);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Nombre Completo:";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbM);
-            this.groupBox1.Controls.Add(this.rbF);
-            this.groupBox1.Controls.Add(this.dtFechaNacimiento);
-            this.groupBox1.Controls.Add(this.mtxbDNI);
-            this.groupBox1.Controls.Add(this.txbName);
-            this.groupBox1.Controls.Add(this.lblName);
-            this.groupBox1.Controls.Add(this.lblidentidad);
-            this.groupBox1.Controls.Add(this.lblSex);
-            this.groupBox1.Controls.Add(this.lblFechaN);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Location = new System.Drawing.Point(15, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(394, 284);
-            this.groupBox1.TabIndex = 38;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos Personales";
-            // 
-            // rbM
-            // 
-            this.rbM.AutoSize = true;
-            this.rbM.Location = new System.Drawing.Point(110, 174);
-            this.rbM.Name = "rbM";
-            this.rbM.Size = new System.Drawing.Size(73, 17);
-            this.rbM.TabIndex = 29;
-            this.rbM.TabStop = true;
-            this.rbM.Text = "Masculino";
-            this.rbM.UseVisualStyleBackColor = true;
-            // 
-            // rbF
-            // 
-            this.rbF.AutoSize = true;
-            this.rbF.Location = new System.Drawing.Point(26, 174);
-            this.rbF.Name = "rbF";
-            this.rbF.Size = new System.Drawing.Size(71, 17);
-            this.rbF.TabIndex = 28;
-            this.rbF.TabStop = true;
-            this.rbF.Text = "Femenino";
-            this.rbF.UseVisualStyleBackColor = true;
-            // 
-            // dtFechaNacimiento
-            // 
-            this.dtFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaNacimiento.Location = new System.Drawing.Point(175, 104);
-            this.dtFechaNacimiento.Name = "dtFechaNacimiento";
-            this.dtFechaNacimiento.Size = new System.Drawing.Size(199, 20);
-            this.dtFechaNacimiento.TabIndex = 9;
-            // 
-            // mtxbDNI
-            // 
-            this.mtxbDNI.Location = new System.Drawing.Point(20, 104);
-            this.mtxbDNI.Mask = "0000-0000-00000";
-            this.mtxbDNI.Name = "mtxbDNI";
-            this.mtxbDNI.Size = new System.Drawing.Size(131, 20);
-            this.mtxbDNI.TabIndex = 3;
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblAdvertencia);
+            this.groupBox2.Controls.Add(this.txbDirE);
             this.groupBox2.Controls.Add(this.txbTel);
             this.groupBox2.Controls.Add(this.lblTel);
             this.groupBox2.Controls.Add(this.txbemail);
             this.groupBox2.Controls.Add(this.lblemail);
-            this.groupBox2.Controls.Add(this.txbDirE);
             this.groupBox2.Controls.Add(this.lblDirE);
             this.groupBox2.Controls.Add(this.lblDir);
             this.groupBox2.Controls.Add(this.cbxCiudad);
             this.groupBox2.Controls.Add(this.lblCiudad);
             this.groupBox2.Controls.Add(this.cbxPais);
+            this.groupBox2.Controls.Add(this.pnldireccion);
             this.groupBox2.Controls.Add(this.lblDepto);
             this.groupBox2.Controls.Add(this.cbxDepto);
             this.groupBox2.Controls.Add(this.lblPais);
+            this.groupBox2.Controls.Add(this.pnlciudad);
+            this.groupBox2.Controls.Add(this.pnltel);
+            this.groupBox2.Controls.Add(this.pnlemail);
+            this.groupBox2.Controls.Add(this.pnldepto);
+            this.groupBox2.Controls.Add(this.pnlpais);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox2.Location = new System.Drawing.Point(415, 12);
             this.groupBox2.Name = "groupBox2";
@@ -346,6 +258,204 @@
             this.dgDatosCliente.Size = new System.Drawing.Size(783, 166);
             this.dgDatosCliente.TabIndex = 42;
             // 
+            // lblFechaN
+            // 
+            this.lblFechaN.AutoSize = true;
+            this.lblFechaN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaN.Location = new System.Drawing.Point(172, 83);
+            this.lblFechaN.Name = "lblFechaN";
+            this.lblFechaN.Size = new System.Drawing.Size(127, 15);
+            this.lblFechaN.TabIndex = 8;
+            this.lblFechaN.Text = "Fecha de Nacimiento:";
+            // 
+            // lblSex
+            // 
+            this.lblSex.AutoSize = true;
+            this.lblSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSex.Location = new System.Drawing.Point(23, 150);
+            this.lblSex.Name = "lblSex";
+            this.lblSex.Size = new System.Drawing.Size(38, 15);
+            this.lblSex.TabIndex = 27;
+            this.lblSex.Text = "Sexo:";
+            // 
+            // lblidentidad
+            // 
+            this.lblidentidad.AutoSize = true;
+            this.lblidentidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidentidad.Location = new System.Drawing.Point(17, 83);
+            this.lblidentidad.Name = "lblidentidad";
+            this.lblidentidad.Size = new System.Drawing.Size(126, 15);
+            this.lblidentidad.TabIndex = 2;
+            this.lblidentidad.Text = "Número de Identidad:";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(17, 29);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(111, 15);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Nombre Completo:";
+            // 
+            // txbName
+            // 
+            this.txbName.Location = new System.Drawing.Point(20, 48);
+            this.txbName.Name = "txbName";
+            this.txbName.Size = new System.Drawing.Size(354, 20);
+            this.txbName.TabIndex = 1;
+            // 
+            // mtxbDNI
+            // 
+            this.mtxbDNI.Location = new System.Drawing.Point(20, 104);
+            this.mtxbDNI.Mask = "0000-0000-00000";
+            this.mtxbDNI.Name = "mtxbDNI";
+            this.mtxbDNI.Size = new System.Drawing.Size(131, 20);
+            this.mtxbDNI.TabIndex = 3;
+            // 
+            // dtFechaNacimiento
+            // 
+            this.dtFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaNacimiento.Location = new System.Drawing.Point(175, 104);
+            this.dtFechaNacimiento.Name = "dtFechaNacimiento";
+            this.dtFechaNacimiento.Size = new System.Drawing.Size(199, 20);
+            this.dtFechaNacimiento.TabIndex = 9;
+            // 
+            // rbF
+            // 
+            this.rbF.AutoSize = true;
+            this.rbF.Location = new System.Drawing.Point(26, 174);
+            this.rbF.Name = "rbF";
+            this.rbF.Size = new System.Drawing.Size(71, 17);
+            this.rbF.TabIndex = 28;
+            this.rbF.TabStop = true;
+            this.rbF.Text = "Femenino";
+            this.rbF.UseVisualStyleBackColor = true;
+            // 
+            // rbM
+            // 
+            this.rbM.AutoSize = true;
+            this.rbM.Location = new System.Drawing.Point(110, 174);
+            this.rbM.Name = "rbM";
+            this.rbM.Size = new System.Drawing.Size(73, 17);
+            this.rbM.TabIndex = 29;
+            this.rbM.TabStop = true;
+            this.rbM.Text = "Masculino";
+            this.rbM.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbM);
+            this.groupBox1.Controls.Add(this.rbF);
+            this.groupBox1.Controls.Add(this.dtFechaNacimiento);
+            this.groupBox1.Controls.Add(this.mtxbDNI);
+            this.groupBox1.Controls.Add(this.txbName);
+            this.groupBox1.Controls.Add(this.lblName);
+            this.groupBox1.Controls.Add(this.lblidentidad);
+            this.groupBox1.Controls.Add(this.lblSex);
+            this.groupBox1.Controls.Add(this.lblFechaN);
+            this.groupBox1.Controls.Add(this.pnlnombre);
+            this.groupBox1.Controls.Add(this.pnlDNI);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBox1.Location = new System.Drawing.Point(15, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(394, 284);
+            this.groupBox1.TabIndex = 38;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos Personales";
+            // 
+            // pnlnombre
+            // 
+            this.pnlnombre.BackColor = System.Drawing.Color.Red;
+            this.pnlnombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlnombre.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnlnombre.Location = new System.Drawing.Point(20, 48);
+            this.pnlnombre.Name = "pnlnombre";
+            this.pnlnombre.Size = new System.Drawing.Size(354, 23);
+            this.pnlnombre.TabIndex = 30;
+            // 
+            // pnldireccion
+            // 
+            this.pnldireccion.BackColor = System.Drawing.Color.Red;
+            this.pnldireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnldireccion.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnldireccion.Location = new System.Drawing.Point(20, 237);
+            this.pnldireccion.Name = "pnldireccion";
+            this.pnldireccion.Size = new System.Drawing.Size(354, 24);
+            this.pnldireccion.TabIndex = 31;
+            // 
+            // pnlciudad
+            // 
+            this.pnlciudad.BackColor = System.Drawing.Color.Red;
+            this.pnlciudad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlciudad.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnlciudad.Location = new System.Drawing.Point(20, 174);
+            this.pnlciudad.Name = "pnlciudad";
+            this.pnlciudad.Size = new System.Drawing.Size(354, 20);
+            this.pnlciudad.TabIndex = 32;
+            // 
+            // pnltel
+            // 
+            this.pnltel.BackColor = System.Drawing.Color.Red;
+            this.pnltel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnltel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnltel.Location = new System.Drawing.Point(20, 51);
+            this.pnltel.Name = "pnltel";
+            this.pnltel.Size = new System.Drawing.Size(151, 20);
+            this.pnltel.TabIndex = 33;
+            // 
+            // pnlemail
+            // 
+            this.pnlemail.BackColor = System.Drawing.Color.Red;
+            this.pnlemail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlemail.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnlemail.Location = new System.Drawing.Point(177, 51);
+            this.pnlemail.Name = "pnlemail";
+            this.pnlemail.Size = new System.Drawing.Size(197, 20);
+            this.pnlemail.TabIndex = 34;
+            // 
+            // pnldepto
+            // 
+            this.pnldepto.BackColor = System.Drawing.Color.Red;
+            this.pnldepto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnldepto.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnldepto.Location = new System.Drawing.Point(177, 118);
+            this.pnldepto.Name = "pnldepto";
+            this.pnldepto.Size = new System.Drawing.Size(197, 24);
+            this.pnldepto.TabIndex = 35;
+            // 
+            // pnlpais
+            // 
+            this.pnlpais.BackColor = System.Drawing.Color.Red;
+            this.pnlpais.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlpais.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnlpais.Location = new System.Drawing.Point(20, 122);
+            this.pnlpais.Name = "pnlpais";
+            this.pnlpais.Size = new System.Drawing.Size(151, 20);
+            this.pnlpais.TabIndex = 36;
+            // 
+            // pnlDNI
+            // 
+            this.pnlDNI.BackColor = System.Drawing.Color.Red;
+            this.pnlDNI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlDNI.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnlDNI.Location = new System.Drawing.Point(20, 104);
+            this.pnlDNI.Name = "pnlDNI";
+            this.pnlDNI.Size = new System.Drawing.Size(131, 22);
+            this.pnlDNI.TabIndex = 37;
+            // 
+            // lblAdvertencia
+            // 
+            this.lblAdvertencia.AutoSize = true;
+            this.lblAdvertencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lblAdvertencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdvertencia.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblAdvertencia.Location = new System.Drawing.Point(187, 0);
+            this.lblAdvertencia.Name = "lblAdvertencia";
+            this.lblAdvertencia.Size = new System.Drawing.Size(193, 16);
+            this.lblAdvertencia.TabIndex = 37;
+            this.lblAdvertencia.Text = "¡Debe llenar todos los campos!";
+            // 
             // frmDatosGeneralesClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,17 +469,16 @@
             this.Name = "frmDatosGeneralesClientes";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmDatosGeneralesCliente_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDatosCliente)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblSex;
         private System.Windows.Forms.Label lblDirE;
         private System.Windows.Forms.TextBox txbDirE;
         private System.Windows.Forms.Label lblCiudad;
@@ -379,22 +488,32 @@
         private System.Windows.Forms.ComboBox cbxCiudad;
         private System.Windows.Forms.ComboBox cbxPais;
         private System.Windows.Forms.Label lblDir;
-        private System.Windows.Forms.Label lblFechaN;
         private System.Windows.Forms.TextBox txbemail;
         private System.Windows.Forms.Label lblemail;
         private System.Windows.Forms.TextBox txbTel;
         private System.Windows.Forms.Label lblTel;
-        private System.Windows.Forms.Label lblidentidad;
-        private System.Windows.Forms.TextBox txbName;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rbM;
-        private System.Windows.Forms.RadioButton rbF;
-        private System.Windows.Forms.DateTimePicker dtFechaNacimiento;
-        private System.Windows.Forms.MaskedTextBox mtxbDNI;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DataGridView dgDatosCliente;
+        private System.Windows.Forms.Label lblFechaN;
+        private System.Windows.Forms.Label lblSex;
+        private System.Windows.Forms.Label lblidentidad;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txbName;
+        private System.Windows.Forms.MaskedTextBox mtxbDNI;
+        private System.Windows.Forms.DateTimePicker dtFechaNacimiento;
+        private System.Windows.Forms.RadioButton rbF;
+        private System.Windows.Forms.RadioButton rbM;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel pnlnombre;
+        private System.Windows.Forms.Panel pnldireccion;
+        private System.Windows.Forms.Panel pnlciudad;
+        private System.Windows.Forms.Panel pnltel;
+        private System.Windows.Forms.Panel pnlemail;
+        private System.Windows.Forms.Panel pnldepto;
+        private System.Windows.Forms.Panel pnlpais;
+        private System.Windows.Forms.Panel pnlDNI;
+        private System.Windows.Forms.Label lblAdvertencia;
     }
 }

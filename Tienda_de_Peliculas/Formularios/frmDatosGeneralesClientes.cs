@@ -96,12 +96,71 @@ namespace Tienda_de_Peliculas
 
         #region VALIDACIONES Y LIMPIEZA DE CAMPOS
 
-        public void ValidandoVacios()
+        public bool ValidacionesVacio()
         {
+            bool esvalido = false;
             // mostrar error
+            if (txbName.Text == "") pnlnombre.Visible = true;
+            if (txbemail.Text == "") pnlemail.Visible = true;
+            if (txbTel.Text == "") pnltel.Visible = true;
+            if (mtxbDNI.Text == "") pnlDNI.Visible = true;
+            if (cbxPais.SelectedIndex == 0 || cbxPais.SelectedIndex == -1) pnlpais.Visible = true;
+            if (cbxDepto.SelectedIndex == 0 || cbxDepto.SelectedIndex == -1) pnldepto.Visible = true;
+            if (cbxCiudad.SelectedIndex == 0 || cbxCiudad.SelectedIndex == -1) pnlciudad.Visible = true;
+            if (txbDirE.Text == "") pnldireccion.Visible = true;
 
             //esconder error
+            if (txbName.Text != "") pnlnombre.Visible = false;
+            if (txbemail.Text != "") pnlemail.Visible = false;
+            if (txbTel.Text != "") pnltel.Visible = false;
+            if (mtxbDNI.Text != "") pnlDNI.Visible = false;
+            if (cbxPais.SelectedIndex != 0 || cbxPais.SelectedIndex != -1) pnlpais.Visible = false;
+            if (cbxDepto.SelectedIndex != 0 || cbxDepto.SelectedIndex != -1) pnldepto.Visible = false;
+            if (cbxCiudad.SelectedIndex != 0 || cbxCiudad.SelectedIndex != -1) pnlciudad.Visible = false;
+            if (txbDirE.Text != "") pnldireccion.Visible = false;
+        
+            if(txbName.Text!="" && txbemail.Text!="" && txbTel.Text!="" && mtxbDNI.Text!="" && cbxPais.SelectedIndex!=0 &&
+                cbxPais.SelectedIndex!=-1 && cbxDepto.SelectedIndex!=0 && cbxDepto.SelectedIndex!=-1 && cbxCiudad.SelectedIndex!=0
+                && cbxCiudad.SelectedIndex!=-1 && txbDirE.Text!="")
+            {
+                esvalido = true;
+            }
+            {
+                esvalido = false;
+            }
+
+            return esvalido;
         }
+
+
+        public void boton_mostrarCancelar()
+        {
+            btnCancelar.Visible = true;
+            btnGuardar.Visible = false;
+        }
+
+        public void boton_mostrarGuardar()
+        {
+            btnCancelar.Visible = false;
+            btnGuardar.Visible = true;
+
+        }
+
+        public void panel_OcultarValidaciones()
+        {
+            pnlnombre.Visible = false;
+            pnlDNI.Visible = false;
+            pnltel.Visible = false;
+            pnlemail.Visible = false;
+
+            pnlpais.Visible = false;
+            pnldepto.Visible = false;
+            pnlciudad.Visible = false;
+
+            pnldireccion.Visible = false;
+           
+        }
+
         public void LimpiarCampos()
         {
             txbName.Clear();
@@ -120,6 +179,17 @@ namespace Tienda_de_Peliculas
         }
         #endregion
 
+        
+        #region MENSAJES
+        public void MensajeAdvertencia()
+        {
+            lblAdvertencia.Visible = true;
+        }
+        public void MensajeAdvertencia_Hide()
+        {
+            lblAdvertencia.Visible = false;
+        }
+        #endregion
         #region EVENTOS DE LOS ELEMENTOS DEL FORMULARIO
         private void frmDatosGeneralesCliente_Load(object sender, EventArgs e)
         {
@@ -130,14 +200,7 @@ namespace Tienda_de_Peliculas
             cbxCiudad.Text = "Seleccione un departamento.";
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            InsertarClientes();
-            ListarClientes();
-            LimpiarCampos();
-
-        }
-
+       
         private void cbxPais_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxPais.SelectedValue != null && cbxPais.SelectedValue is int)
@@ -170,8 +233,28 @@ namespace Tienda_de_Peliculas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
+            boton_mostrarCancelar();
+            boton_mostrarGuardar();
+            panel_OcultarValidaciones();
         }
-        #endregion
 
+        private async void btnGuardar_Click(object sender, EventArgs e)
+        {
+            bool esValido = ValidacionesVacio();
+            if (esValido)
+            {
+                InsertarClientes();
+                ListarClientes();
+                LimpiarCampos();
+                boton_mostrarGuardar();
+            }
+            else
+            {
+                MensajeAdvertencia();
+                await Task.Delay(5000);
+                MensajeAdvertencia_Hide();
+            }
+        }
+         #endregion
     }
 }
