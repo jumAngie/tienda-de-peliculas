@@ -53,7 +53,6 @@ AS
  WHERE		dg.cate_Id = 1
 GO
 
--- VISTA DE CIUDADES -- 
 CREATE OR ALTER VIEW Gral.Listado_Ciudades
 AS
 	SELECT	
@@ -70,7 +69,6 @@ AS
 	WHERE   c.ciud_Estado = 1
 GO
 
--- VISTA DE INVENTARIO -- 
 CREATE OR ALTER VIEW Peli.Listado_Inventario
 AS
 	SELECT 
@@ -101,35 +99,3 @@ AS
 
 GO
 
--- VISTA DE FACTURAS -- 
-CREATE OR ALTER VIEW Peli.Listado_Facturas
-	AS
-		SELECT  fact_Id, 
-				met.meto_Descripcion, 
-				dato.dato_NombreCompleto, 
-				fact_NumFactura, 
-				fact_FechaFactura, 
-				trn.tran_Descripcion, 
-				fact_Impuesto, 
-				fact_Descuento, 
-				fact_Subtotal, 
-				inve.inve_Titulo, 
-				fact_fechaDev, 
-				fact_Total, 
-				usuC.usua_Usuario AS 'Usuario Creación',
-				fact_FechaCreacion, 
-
-				CASE WHEN usuM.usua_Usuario IS NULL THEN 'N/A' 
-				ELSE usuM.usua_Usuario  
-				END AS 'Usuario Modificador',
-
-				fact_FechaModificacion
-		FROM	Peli.tbFacturas fact							INNER JOIN Peli.tbMetodosPago met
-		ON		fact.meto_Id = met.meto_Id						INNER JOIN Peli.tbTipoTransaccion trn
-		ON		fact.tran_Id = trn.tran_Id						INNER JOIN Peli.tbInventario inve
-		ON		fact.inve_Id = inve.inve_Id						INNER JOIN Acce.tbUsuarios usuC
-		ON		fact.usua_UsuarioCreacion = usuC.usua_Id		LEFT JOIN Acce.tbUsuarios usuM
-		ON		fact.usua_UsuarioModificacion = usuM.usua_Id	INNER JOIN Gral.tbDatos_Generales dato
-		ON		fact.dato_Id = dato.dato_Id
-		WHERE	fact_Estado = 1
-	GO
