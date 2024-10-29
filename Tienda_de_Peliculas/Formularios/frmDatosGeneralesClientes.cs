@@ -154,6 +154,7 @@ namespace Tienda_de_Peliculas
             txbDirE.Clear();
             txbemail.Clear();
             mtxbDNI.Clear();
+            txbDNIE.Clear();
             rbF.Checked = false;
             rbM.Checked = false;
             cbxCiudad.Enabled = false;
