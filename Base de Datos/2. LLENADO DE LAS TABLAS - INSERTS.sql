@@ -337,8 +337,18 @@ INSERT INTO Peli.tbFacturas([meto_Id], [dato_Id], [fact_NumFactura],[fact_FechaF
 VALUES						(1, 4,'00001', GETDATE(), 1, 200, 200*0.15, 200*0.05, 2, '2025-01-01', 155.59, 1, GETDATE())
 GO
 INSERT INTO Peli.tbFacturas([meto_Id], [dato_Id], [fact_NumFactura],[fact_FechaFactura],[tran_Id], [fact_Subtotal],[fact_Impuesto],[fact_Descuento], [inve_Id], [fact_fechaDev],[fact_Total], [usua_UsuarioCreacion], [fact_FechaCreacion])
+VALUES						(1, 4,'00043', GETDATE(), 1, 200, 200*0.15, 200*0.05, 2, '2025-01-01', 155.59, 1, GETDATE())
+GO
+INSERT INTO Peli.tbFacturas([meto_Id], [dato_Id], [fact_NumFactura],[fact_FechaFactura],[tran_Id], [fact_Subtotal],[fact_Impuesto],[fact_Descuento], [inve_Id], [fact_fechaDev],[fact_Total], [usua_UsuarioCreacion], [fact_FechaCreacion])
+VALUES						(1, 4,'00056', GETDATE(), 1, 200, 200*0.15, 200*0.05, 2, '2025-01-01', 155.59, 1, GETDATE())
+GO
+INSERT INTO Peli.tbFacturas([meto_Id], [dato_Id], [fact_NumFactura],[fact_FechaFactura],[tran_Id], [fact_Subtotal],[fact_Impuesto],[fact_Descuento], [inve_Id], [fact_fechaDev],[fact_Total], [usua_UsuarioCreacion], [fact_FechaCreacion])
+VALUES						(1, 4,'00089', GETDATE(), 1, 200, 200*0.15, 200*0.05, 2, '2025-01-01', 155.59, 1, GETDATE())
+GO
+INSERT INTO Peli.tbFacturas([meto_Id], [dato_Id], [fact_NumFactura],[fact_FechaFactura],[tran_Id], [fact_Subtotal],[fact_Impuesto],[fact_Descuento], [inve_Id], [fact_fechaDev],[fact_Total], [usua_UsuarioCreacion], [fact_FechaCreacion])
 VALUES						(1, 6,'00002', '2024-10-26', 1, 300, 200*0.15, 200*0.05, 3, '2025-01-01', 55.59, 1, GETDATE())
 GO
+
 
 -- Facturas Alquileres
 INSERT INTO Peli.tbFacturas([meto_Id], [dato_Id], [fact_NumFactura],[fact_FechaFactura],[tran_Id], [fact_Subtotal],[fact_Impuesto],[fact_Descuento], [inve_Id], [fact_fechaDev],[fact_Total], [usua_UsuarioCreacion], [fact_FechaCreacion])

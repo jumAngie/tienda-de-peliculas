@@ -179,9 +179,9 @@
             this.lblTitulo.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(49, 25);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(402, 28);
+            this.lblTitulo.Size = new System.Drawing.Size(389, 28);
             this.lblTitulo.TabIndex = 54;
-            this.lblTitulo.Text = "VENTAS FILTRADAS POR PELICULAS";
+            this.lblTitulo.Text = "VENTAS FILTRADAS POR PELICULA";
             // 
             // lblVolver
             // 

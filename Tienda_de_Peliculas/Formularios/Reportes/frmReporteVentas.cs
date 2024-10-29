@@ -88,12 +88,12 @@ namespace Tienda_de_Peliculas.Reportes
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             SaveFileDialog savefile = new SaveFileDialog();
-            savefile.FileName = "REPORTE VENTAS POR PELICULAS - " + string.Format("{0}.pdf", DateTime.Now.ToString("dd/MM/yyyy"));
+            savefile.FileName = "REPORTE VENTAS POR PELICULA - " + string.Format("{0}.pdf", DateTime.Now.ToString("ddMMyyyyhhmmss"));
 
             string PaginaHTML_Texto = Properties.Resources.Plantilla.ToString();
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@TIPOREPORTE", lblTitulo.Text);
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA",  dtFechaInicio.Value.ToString("d") + " - " + dtFechaFinal.Value.ToString("d"));
-            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@USERNAME", "jumAngie");
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@USERNAME", "Nombre del Empleado");
             PaginaHTML_Texto = PaginaHTML_Texto.Replace("@EMISION", DateTime.Now.ToString("g"));
 
             string filas = string.Empty;
