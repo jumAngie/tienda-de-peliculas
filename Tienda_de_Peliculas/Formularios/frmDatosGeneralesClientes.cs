@@ -95,57 +95,6 @@ namespace Tienda_de_Peliculas
         #endregion
 
         #region VALIDACIONES Y LIMPIEZA DE CAMPOS
-
-        public bool ValidacionesVacio()
-        {
-            bool esvalido = false;
-            // mostrar error
-            if (txbName.Text == "") pnlnombre.Visible = true;
-            if (txbemail.Text == "") pnlemail.Visible = true;
-            if (txbTel.Text == "") pnltel.Visible = true;
-            if (mtxbDNI.Text == "") pnlDNI.Visible = true;
-            if (cbxPais.SelectedIndex == 0 || cbxPais.SelectedIndex == -1) pnlpais.Visible = true;
-            if (cbxDepto.SelectedIndex == 0 || cbxDepto.SelectedIndex == -1) pnldepto.Visible = true;
-            if (cbxCiudad.SelectedIndex == 0 || cbxCiudad.SelectedIndex == -1) pnlciudad.Visible = true;
-            if (txbDirE.Text == "") pnldireccion.Visible = true;
-
-            //esconder error
-            if (txbName.Text != "") pnlnombre.Visible = false;
-            if (txbemail.Text != "") pnlemail.Visible = false;
-            if (txbTel.Text != "") pnltel.Visible = false;
-            if (mtxbDNI.Text != "") pnlDNI.Visible = false;
-            if (cbxPais.SelectedIndex != 0 || cbxPais.SelectedIndex != -1) pnlpais.Visible = false;
-            if (cbxDepto.SelectedIndex != 0 || cbxDepto.SelectedIndex != -1) pnldepto.Visible = false;
-            if (cbxCiudad.SelectedIndex != 0 || cbxCiudad.SelectedIndex != -1) pnlciudad.Visible = false;
-            if (txbDirE.Text != "") pnldireccion.Visible = false;
-        
-            if(txbName.Text!="" && txbemail.Text!="" && txbTel.Text!="" && mtxbDNI.Text!="" && cbxPais.SelectedIndex!=0 &&
-                cbxPais.SelectedIndex!=-1 && cbxDepto.SelectedIndex!=0 && cbxDepto.SelectedIndex!=-1 && cbxCiudad.SelectedIndex!=0
-                && cbxCiudad.SelectedIndex!=-1 && txbDirE.Text!="")
-            {
-                esvalido = true;
-            }
-            {
-                esvalido = false;
-            }
-
-            return esvalido;
-        }
-
-
-        public void boton_mostrarCancelar()
-        {
-            btnCancelar.Visible = true;
-            btnGuardar.Visible = false;
-        }
-
-        public void boton_mostrarGuardar()
-        {
-            btnCancelar.Visible = false;
-            btnGuardar.Visible = true;
-
-        }
-
         public void panel_OcultarValidaciones()
         {
             pnlnombre.Visible = false;
@@ -158,8 +107,45 @@ namespace Tienda_de_Peliculas
             pnlciudad.Visible = false;
 
             pnldireccion.Visible = false;
-           
+            pnlDNIE.Visible = false;
         }
+        public bool ValidacionesVacio()
+        {
+            bool esvalido = false;
+            // mostrar error
+            if (txbName.Text == "") pnlnombre.Visible = true;
+            if (txbemail.Text == "") pnlemail.Visible = true;
+            if (txbTel.Text == "") pnltel.Visible = true;
+            if (!mtxbDNI.MaskFull) pnlDNI.Visible = true;
+            if (cbxPais.SelectedIndex == 0 || cbxPais.SelectedIndex == -1) pnlpais.Visible = true;
+            if (cbxDepto.SelectedIndex == 0 || cbxDepto.SelectedIndex == -1) pnldepto.Visible = true;
+            if (cbxCiudad.SelectedIndex == 0 || cbxCiudad.SelectedIndex == -1) pnlciudad.Visible = true;
+            if (txbDirE.Text == "") pnldireccion.Visible = true;
+            if (txbDNIE.Text == "") pnlDNIE.Visible = true;
+
+            //esconder error
+            if (txbName.Text != "") pnlnombre.Visible = false;
+            if (txbemail.Text != "") pnlemail.Visible = false;
+            if (txbTel.Text != "") pnltel.Visible = false;
+            if (mtxbDNI.MaskFull) pnlDNI.Visible = false;
+            if (cbxPais.SelectedIndex != 0 && cbxPais.SelectedIndex != -1) pnlpais.Visible = false;
+            if (cbxDepto.SelectedIndex != 0 && cbxDepto.SelectedIndex != -1) pnldepto.Visible = false;
+            if (cbxCiudad.SelectedIndex != 0 && cbxCiudad.SelectedIndex != -1) pnlciudad.Visible = false;
+            if (txbDirE.Text != "") pnldireccion.Visible = false;
+            if (txbDNIE.Text != "") pnlDNIE.Visible = false;        
+
+            if(txbName.Text!="" && txbemail.Text!="" && txbTel.Text!="" && mtxbDNI.Text!="" && cbxPais.SelectedIndex!=0 &&
+                cbxPais.SelectedIndex!=-1 && cbxDepto.SelectedIndex!=0 && cbxDepto.SelectedIndex!=-1 && cbxCiudad.SelectedIndex!=0
+                && cbxCiudad.SelectedIndex!=-1 && txbDirE.Text!="" && txbDNIE.Text!="")
+            {
+                esvalido = true;
+            }
+            {
+                esvalido = false;
+            }
+
+            return esvalido;
+        }   
 
         public void LimpiarCampos()
         {
@@ -198,6 +184,8 @@ namespace Tienda_de_Peliculas
             CargarPaisesCMB();
             cbxDepto.Text = "Seleccione un país.";
             cbxCiudad.Text = "Seleccione un departamento.";
+            panel_OcultarValidaciones();
+            MensajeAdvertencia_Hide();
         }
 
        
@@ -233,9 +221,8 @@ namespace Tienda_de_Peliculas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
-            boton_mostrarCancelar();
-            boton_mostrarGuardar();
             panel_OcultarValidaciones();
+            MensajeAdvertencia_Hide();        
         }
 
         private async void btnGuardar_Click(object sender, EventArgs e)
@@ -246,7 +233,7 @@ namespace Tienda_de_Peliculas
                 InsertarClientes();
                 ListarClientes();
                 LimpiarCampos();
-                boton_mostrarGuardar();
+                //boton_mostrarGuardar();
             }
             else
             {
@@ -255,6 +242,23 @@ namespace Tienda_de_Peliculas
                 MensajeAdvertencia_Hide();
             }
         }
-         #endregion
+
+        #endregion
+
+        private void rbH_CheckedChanged(object sender, EventArgs e)
+        {
+            lblidentidad.Visible = true;
+            mtxbDNI.Visible = true;
+            lblDNIE.Visible = false;
+            txbDNIE.Visible = false;
+        }
+
+        private void rbE_CheckedChanged(object sender, EventArgs e)
+        {
+            lblDNIE.Visible = true;
+            txbDNIE.Visible = true;
+            lblidentidad.Visible = false;
+            mtxbDNI.Visible = false;
+        }
     }
 }

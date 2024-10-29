@@ -42,6 +42,13 @@
             this.txbTel = new System.Windows.Forms.TextBox();
             this.lblTel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblAdvertencia = new System.Windows.Forms.Label();
+            this.pnldireccion = new System.Windows.Forms.Panel();
+            this.pnlciudad = new System.Windows.Forms.Panel();
+            this.pnltel = new System.Windows.Forms.Panel();
+            this.pnlemail = new System.Windows.Forms.Panel();
+            this.pnldepto = new System.Windows.Forms.Panel();
+            this.pnlpais = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dgDatosCliente = new System.Windows.Forms.DataGridView();
@@ -56,17 +63,18 @@
             this.rbM = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pnlnombre = new System.Windows.Forms.Panel();
-            this.pnldireccion = new System.Windows.Forms.Panel();
-            this.pnlciudad = new System.Windows.Forms.Panel();
-            this.pnltel = new System.Windows.Forms.Panel();
-            this.pnlemail = new System.Windows.Forms.Panel();
-            this.pnldepto = new System.Windows.Forms.Panel();
-            this.pnlpais = new System.Windows.Forms.Panel();
+            this.lblNacionalidad = new System.Windows.Forms.Label();
+            this.rbE = new System.Windows.Forms.RadioButton();
+            this.rbH = new System.Windows.Forms.RadioButton();
+            this.txbDNIE = new System.Windows.Forms.TextBox();
+            this.lblDNIE = new System.Windows.Forms.Label();
             this.pnlDNI = new System.Windows.Forms.Panel();
-            this.lblAdvertencia = new System.Windows.Forms.Label();
+            this.pnlDNIE = new System.Windows.Forms.Panel();
+            this.gbDNI = new System.Windows.Forms.GroupBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDatosCliente)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.gbDNI.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDirE
@@ -149,6 +157,7 @@
             // lblDir
             // 
             this.lblDir.AutoSize = true;
+            this.lblDir.BackColor = System.Drawing.SystemColors.Control;
             this.lblDir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDir.ForeColor = System.Drawing.Color.White;
             this.lblDir.Location = new System.Drawing.Point(148, 83);
@@ -223,6 +232,78 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de Contacto";
             // 
+            // lblAdvertencia
+            // 
+            this.lblAdvertencia.AutoSize = true;
+            this.lblAdvertencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lblAdvertencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdvertencia.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblAdvertencia.Location = new System.Drawing.Point(187, 0);
+            this.lblAdvertencia.Name = "lblAdvertencia";
+            this.lblAdvertencia.Size = new System.Drawing.Size(193, 16);
+            this.lblAdvertencia.TabIndex = 37;
+            this.lblAdvertencia.Text = "¡Debe llenar todos los campos!";
+            // 
+            // pnldireccion
+            // 
+            this.pnldireccion.BackColor = System.Drawing.Color.DarkRed;
+            this.pnldireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnldireccion.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnldireccion.Location = new System.Drawing.Point(20, 237);
+            this.pnldireccion.Name = "pnldireccion";
+            this.pnldireccion.Size = new System.Drawing.Size(354, 24);
+            this.pnldireccion.TabIndex = 31;
+            // 
+            // pnlciudad
+            // 
+            this.pnlciudad.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlciudad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlciudad.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnlciudad.Location = new System.Drawing.Point(20, 174);
+            this.pnlciudad.Name = "pnlciudad";
+            this.pnlciudad.Size = new System.Drawing.Size(354, 20);
+            this.pnlciudad.TabIndex = 32;
+            // 
+            // pnltel
+            // 
+            this.pnltel.BackColor = System.Drawing.Color.DarkRed;
+            this.pnltel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnltel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnltel.Location = new System.Drawing.Point(20, 51);
+            this.pnltel.Name = "pnltel";
+            this.pnltel.Size = new System.Drawing.Size(151, 20);
+            this.pnltel.TabIndex = 33;
+            // 
+            // pnlemail
+            // 
+            this.pnlemail.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlemail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlemail.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnlemail.Location = new System.Drawing.Point(177, 51);
+            this.pnlemail.Name = "pnlemail";
+            this.pnlemail.Size = new System.Drawing.Size(197, 20);
+            this.pnlemail.TabIndex = 34;
+            // 
+            // pnldepto
+            // 
+            this.pnldepto.BackColor = System.Drawing.Color.DarkRed;
+            this.pnldepto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnldepto.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnldepto.Location = new System.Drawing.Point(177, 118);
+            this.pnldepto.Name = "pnldepto";
+            this.pnldepto.Size = new System.Drawing.Size(197, 24);
+            this.pnldepto.TabIndex = 35;
+            // 
+            // pnlpais
+            // 
+            this.pnlpais.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlpais.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlpais.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnlpais.Location = new System.Drawing.Point(20, 122);
+            this.pnlpais.Name = "pnlpais";
+            this.pnlpais.Size = new System.Drawing.Size(151, 20);
+            this.pnlpais.TabIndex = 36;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -262,7 +343,7 @@
             // 
             this.lblFechaN.AutoSize = true;
             this.lblFechaN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaN.Location = new System.Drawing.Point(172, 83);
+            this.lblFechaN.Location = new System.Drawing.Point(211, 83);
             this.lblFechaN.Name = "lblFechaN";
             this.lblFechaN.Size = new System.Drawing.Size(127, 15);
             this.lblFechaN.TabIndex = 8;
@@ -272,7 +353,7 @@
             // 
             this.lblSex.AutoSize = true;
             this.lblSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSex.Location = new System.Drawing.Point(23, 150);
+            this.lblSex.Location = new System.Drawing.Point(17, 83);
             this.lblSex.Name = "lblSex";
             this.lblSex.Size = new System.Drawing.Size(38, 15);
             this.lblSex.TabIndex = 27;
@@ -282,11 +363,12 @@
             // 
             this.lblidentidad.AutoSize = true;
             this.lblidentidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidentidad.Location = new System.Drawing.Point(17, 83);
+            this.lblidentidad.Location = new System.Drawing.Point(10, 72);
             this.lblidentidad.Name = "lblidentidad";
             this.lblidentidad.Size = new System.Drawing.Size(126, 15);
             this.lblidentidad.TabIndex = 2;
             this.lblidentidad.Text = "Número de Identidad:";
+            this.lblidentidad.Visible = false;
             // 
             // lblName
             // 
@@ -307,24 +389,25 @@
             // 
             // mtxbDNI
             // 
-            this.mtxbDNI.Location = new System.Drawing.Point(20, 104);
+            this.mtxbDNI.Location = new System.Drawing.Point(13, 89);
             this.mtxbDNI.Mask = "0000-0000-00000";
             this.mtxbDNI.Name = "mtxbDNI";
             this.mtxbDNI.Size = new System.Drawing.Size(131, 20);
             this.mtxbDNI.TabIndex = 3;
+            this.mtxbDNI.Visible = false;
             // 
             // dtFechaNacimiento
             // 
             this.dtFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaNacimiento.Location = new System.Drawing.Point(175, 104);
+            this.dtFechaNacimiento.Location = new System.Drawing.Point(214, 104);
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
-            this.dtFechaNacimiento.Size = new System.Drawing.Size(199, 20);
+            this.dtFechaNacimiento.Size = new System.Drawing.Size(160, 20);
             this.dtFechaNacimiento.TabIndex = 9;
             // 
             // rbF
             // 
             this.rbF.AutoSize = true;
-            this.rbF.Location = new System.Drawing.Point(26, 174);
+            this.rbF.Location = new System.Drawing.Point(13, 108);
             this.rbF.Name = "rbF";
             this.rbF.Size = new System.Drawing.Size(71, 17);
             this.rbF.TabIndex = 28;
@@ -335,7 +418,7 @@
             // rbM
             // 
             this.rbM.AutoSize = true;
-            this.rbM.Location = new System.Drawing.Point(110, 174);
+            this.rbM.Location = new System.Drawing.Point(111, 108);
             this.rbM.Name = "rbM";
             this.rbM.Size = new System.Drawing.Size(73, 17);
             this.rbM.TabIndex = 29;
@@ -348,25 +431,22 @@
             this.groupBox1.Controls.Add(this.rbM);
             this.groupBox1.Controls.Add(this.rbF);
             this.groupBox1.Controls.Add(this.dtFechaNacimiento);
-            this.groupBox1.Controls.Add(this.mtxbDNI);
             this.groupBox1.Controls.Add(this.txbName);
             this.groupBox1.Controls.Add(this.lblName);
-            this.groupBox1.Controls.Add(this.lblidentidad);
             this.groupBox1.Controls.Add(this.lblSex);
             this.groupBox1.Controls.Add(this.lblFechaN);
             this.groupBox1.Controls.Add(this.pnlnombre);
-            this.groupBox1.Controls.Add(this.pnlDNI);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Location = new System.Drawing.Point(15, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(394, 284);
+            this.groupBox1.Size = new System.Drawing.Size(394, 142);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
             // 
             // pnlnombre
             // 
-            this.pnlnombre.BackColor = System.Drawing.Color.Red;
+            this.pnlnombre.BackColor = System.Drawing.Color.DarkRed;
             this.pnlnombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlnombre.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlnombre.Location = new System.Drawing.Point(20, 48);
@@ -374,93 +454,105 @@
             this.pnlnombre.Size = new System.Drawing.Size(354, 23);
             this.pnlnombre.TabIndex = 30;
             // 
-            // pnldireccion
+            // lblNacionalidad
             // 
-            this.pnldireccion.BackColor = System.Drawing.Color.Red;
-            this.pnldireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnldireccion.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnldireccion.Location = new System.Drawing.Point(20, 237);
-            this.pnldireccion.Name = "pnldireccion";
-            this.pnldireccion.Size = new System.Drawing.Size(354, 24);
-            this.pnldireccion.TabIndex = 31;
+            this.lblNacionalidad.AutoSize = true;
+            this.lblNacionalidad.Location = new System.Drawing.Point(17, 22);
+            this.lblNacionalidad.Name = "lblNacionalidad";
+            this.lblNacionalidad.Size = new System.Drawing.Size(52, 13);
+            this.lblNacionalidad.TabIndex = 41;
+            this.lblNacionalidad.Text = "Usted es:";
             // 
-            // pnlciudad
+            // rbE
             // 
-            this.pnlciudad.BackColor = System.Drawing.Color.Red;
-            this.pnlciudad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlciudad.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnlciudad.Location = new System.Drawing.Point(20, 174);
-            this.pnlciudad.Name = "pnlciudad";
-            this.pnlciudad.Size = new System.Drawing.Size(354, 20);
-            this.pnlciudad.TabIndex = 32;
+            this.rbE.AutoSize = true;
+            this.rbE.Location = new System.Drawing.Point(132, 38);
+            this.rbE.Name = "rbE";
+            this.rbE.Size = new System.Drawing.Size(72, 17);
+            this.rbE.TabIndex = 40;
+            this.rbE.TabStop = true;
+            this.rbE.Text = "Extranjero";
+            this.rbE.UseVisualStyleBackColor = true;
+            this.rbE.CheckedChanged += new System.EventHandler(this.rbE_CheckedChanged);
             // 
-            // pnltel
+            // rbH
             // 
-            this.pnltel.BackColor = System.Drawing.Color.Red;
-            this.pnltel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnltel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnltel.Location = new System.Drawing.Point(20, 51);
-            this.pnltel.Name = "pnltel";
-            this.pnltel.Size = new System.Drawing.Size(151, 20);
-            this.pnltel.TabIndex = 33;
+            this.rbH.AutoSize = true;
+            this.rbH.Location = new System.Drawing.Point(20, 38);
+            this.rbH.Name = "rbH";
+            this.rbH.Size = new System.Drawing.Size(78, 17);
+            this.rbH.TabIndex = 39;
+            this.rbH.TabStop = true;
+            this.rbH.Text = "Hondureño";
+            this.rbH.UseVisualStyleBackColor = true;
+            this.rbH.CheckedChanged += new System.EventHandler(this.rbH_CheckedChanged);
             // 
-            // pnlemail
+            // txbDNIE
             // 
-            this.pnlemail.BackColor = System.Drawing.Color.Red;
-            this.pnlemail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlemail.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnlemail.Location = new System.Drawing.Point(177, 51);
-            this.pnlemail.Name = "pnlemail";
-            this.pnlemail.Size = new System.Drawing.Size(197, 20);
-            this.pnlemail.TabIndex = 34;
+            this.txbDNIE.Location = new System.Drawing.Point(189, 90);
+            this.txbDNIE.MaxLength = 20;
+            this.txbDNIE.Name = "txbDNIE";
+            this.txbDNIE.Size = new System.Drawing.Size(185, 20);
+            this.txbDNIE.TabIndex = 38;
+            this.txbDNIE.Visible = false;
             // 
-            // pnldepto
+            // lblDNIE
             // 
-            this.pnldepto.BackColor = System.Drawing.Color.Red;
-            this.pnldepto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnldepto.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnldepto.Location = new System.Drawing.Point(177, 118);
-            this.pnldepto.Name = "pnldepto";
-            this.pnldepto.Size = new System.Drawing.Size(197, 24);
-            this.pnldepto.TabIndex = 35;
-            // 
-            // pnlpais
-            // 
-            this.pnlpais.BackColor = System.Drawing.Color.Red;
-            this.pnlpais.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlpais.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnlpais.Location = new System.Drawing.Point(20, 122);
-            this.pnlpais.Name = "pnlpais";
-            this.pnlpais.Size = new System.Drawing.Size(151, 20);
-            this.pnlpais.TabIndex = 36;
+            this.lblDNIE.AutoSize = true;
+            this.lblDNIE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDNIE.Location = new System.Drawing.Point(186, 73);
+            this.lblDNIE.Name = "lblDNIE";
+            this.lblDNIE.Size = new System.Drawing.Size(191, 15);
+            this.lblDNIE.TabIndex = 38;
+            this.lblDNIE.Text = "Número de Identidad Extranjeros:";
+            this.lblDNIE.Visible = false;
             // 
             // pnlDNI
             // 
-            this.pnlDNI.BackColor = System.Drawing.Color.Red;
+            this.pnlDNI.BackColor = System.Drawing.Color.DarkRed;
             this.pnlDNI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlDNI.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnlDNI.Location = new System.Drawing.Point(20, 104);
+            this.pnlDNI.Location = new System.Drawing.Point(13, 94);
             this.pnlDNI.Name = "pnlDNI";
-            this.pnlDNI.Size = new System.Drawing.Size(131, 22);
+            this.pnlDNI.Size = new System.Drawing.Size(131, 19);
             this.pnlDNI.TabIndex = 37;
+            this.pnlDNI.Visible = false;
             // 
-            // lblAdvertencia
+            // pnlDNIE
             // 
-            this.lblAdvertencia.AutoSize = true;
-            this.lblAdvertencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lblAdvertencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdvertencia.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblAdvertencia.Location = new System.Drawing.Point(187, 0);
-            this.lblAdvertencia.Name = "lblAdvertencia";
-            this.lblAdvertencia.Size = new System.Drawing.Size(193, 16);
-            this.lblAdvertencia.TabIndex = 37;
-            this.lblAdvertencia.Text = "¡Debe llenar todos los campos!";
+            this.pnlDNIE.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlDNIE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlDNIE.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnlDNIE.Location = new System.Drawing.Point(189, 94);
+            this.pnlDNIE.Name = "pnlDNIE";
+            this.pnlDNIE.Size = new System.Drawing.Size(185, 19);
+            this.pnlDNIE.TabIndex = 38;
+            this.pnlDNIE.Visible = false;
+            // 
+            // gbDNI
+            // 
+            this.gbDNI.Controls.Add(this.lblidentidad);
+            this.gbDNI.Controls.Add(this.txbDNIE);
+            this.gbDNI.Controls.Add(this.mtxbDNI);
+            this.gbDNI.Controls.Add(this.lblNacionalidad);
+            this.gbDNI.Controls.Add(this.rbE);
+            this.gbDNI.Controls.Add(this.rbH);
+            this.gbDNI.Controls.Add(this.pnlDNI);
+            this.gbDNI.Controls.Add(this.lblDNIE);
+            this.gbDNI.Controls.Add(this.pnlDNIE);
+            this.gbDNI.Location = new System.Drawing.Point(15, 164);
+            this.gbDNI.Name = "gbDNI";
+            this.gbDNI.Size = new System.Drawing.Size(394, 132);
+            this.gbDNI.TabIndex = 43;
+            this.gbDNI.TabStop = false;
+            this.gbDNI.Text = "Datos de Identificación";
             // 
             // frmDatosGeneralesClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 519);
+            this.Controls.Add(this.gbDNI);
             this.Controls.Add(this.dgDatosCliente);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -474,6 +566,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgDatosCliente)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.gbDNI.ResumeLayout(false);
+            this.gbDNI.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -515,5 +609,12 @@
         private System.Windows.Forms.Panel pnlpais;
         private System.Windows.Forms.Panel pnlDNI;
         private System.Windows.Forms.Label lblAdvertencia;
+        private System.Windows.Forms.TextBox txbDNIE;
+        private System.Windows.Forms.Label lblDNIE;
+        private System.Windows.Forms.Panel pnlDNIE;
+        private System.Windows.Forms.RadioButton rbE;
+        private System.Windows.Forms.RadioButton rbH;
+        private System.Windows.Forms.Label lblNacionalidad;
+        private System.Windows.Forms.GroupBox gbDNI;
     }
 }
