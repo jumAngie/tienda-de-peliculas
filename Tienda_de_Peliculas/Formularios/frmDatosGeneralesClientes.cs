@@ -111,41 +111,50 @@ namespace Tienda_de_Peliculas
         }
         public bool ValidacionesVacio()
         {
-            bool esvalido = false;
+            bool esvalido = true;
+
             // mostrar error
-            if (txbName.Text == "") pnlnombre.Visible = true;
-            if (txbemail.Text == "") pnlemail.Visible = true;
-            if (txbTel.Text == "") pnltel.Visible = true;
-            if (!mtxbDNI.MaskFull) pnlDNI.Visible = true;
-            if (cbxPais.SelectedIndex == 0 || cbxPais.SelectedIndex == -1) pnlpais.Visible = true;
-            if (cbxDepto.SelectedIndex == 0 || cbxDepto.SelectedIndex == -1) pnldepto.Visible = true;
-            if (cbxCiudad.SelectedIndex == 0 || cbxCiudad.SelectedIndex == -1) pnlciudad.Visible = true;
-            if (txbDirE.Text == "") pnldireccion.Visible = true;
-            if (txbDNIE.Text == "") pnlDNIE.Visible = true;
+            if (txbName.Text == "") { pnlnombre.Visible = true; esvalido = false; }
+            if (txbemail.Text == "") { pnlemail.Visible = true; esvalido = false; }
+            if (txbTel.Text == "") { pnltel.Visible = true; esvalido = false; }
 
-            //esconder error
-            if (txbName.Text != "") pnlnombre.Visible = false;
-            if (txbemail.Text != "") pnlemail.Visible = false;
-            if (txbTel.Text != "") pnltel.Visible = false;
-            if (mtxbDNI.MaskFull) pnlDNI.Visible = false;
-            if (cbxPais.SelectedIndex != 0 && cbxPais.SelectedIndex != -1) pnlpais.Visible = false;
-            if (cbxDepto.SelectedIndex != 0 && cbxDepto.SelectedIndex != -1) pnldepto.Visible = false;
-            if (cbxCiudad.SelectedIndex != 0 && cbxCiudad.SelectedIndex != -1) pnlciudad.Visible = false;
-            if (txbDirE.Text != "") pnldireccion.Visible = false;
-            if (txbDNIE.Text != "") pnlDNIE.Visible = false;        
-
-            if(txbName.Text!="" && txbemail.Text!="" && txbTel.Text!="" && mtxbDNI.Text!="" && cbxPais.SelectedIndex!=0 &&
-                cbxPais.SelectedIndex!=-1 && cbxDepto.SelectedIndex!=0 && cbxDepto.SelectedIndex!=-1 && cbxCiudad.SelectedIndex!=0
-                && cbxCiudad.SelectedIndex!=-1 && txbDirE.Text!="" && txbDNIE.Text!="")
+            // Validación condicional del DNI y DNIE
+            if (rbH.Checked && !mtxbDNI.MaskFull) // Si está seleccionado el radio button de DNI
             {
-                esvalido = true;
-            }
-            {
+                pnlDNI.Visible = true;
                 esvalido = false;
             }
+            else
+            {
+                pnlDNI.Visible = false;
+            }
+
+            if (rbE.Checked && txbDNIE.Text == "") // Si está seleccionado el radio button de DNIE
+            {
+                pnlDNIE.Visible = true;
+                esvalido = false;
+            }
+            else
+            {
+                pnlDNIE.Visible = false;
+            }
+
+            if (cbxPais.SelectedIndex == 0 || cbxPais.SelectedIndex == -1) { pnlpais.Visible = true; esvalido = false; }
+            if (cbxDepto.SelectedIndex == 0 || cbxDepto.SelectedIndex == -1) { pnldepto.Visible = true; esvalido = false; }
+            if (cbxCiudad.SelectedIndex == 0 || cbxCiudad.SelectedIndex == -1) { pnlciudad.Visible = true; esvalido = false; }
+            if (txbDirE.Text == "") { pnldireccion.Visible = true; esvalido = false; }
+
+            // esconder error
+            pnlnombre.Visible = txbName.Text == "";
+            pnlemail.Visible = txbemail.Text == "";
+            pnltel.Visible = txbTel.Text == "";
+            pnlpais.Visible = cbxPais.SelectedIndex == 0 || cbxPais.SelectedIndex == -1;
+            pnldepto.Visible = cbxDepto.SelectedIndex == 0 || cbxDepto.SelectedIndex == -1;
+            pnlciudad.Visible = cbxCiudad.SelectedIndex == 0 || cbxCiudad.SelectedIndex == -1;
+            pnldireccion.Visible = txbDirE.Text == "";
 
             return esvalido;
-        }   
+        }
 
         public void LimpiarCampos()
         {
@@ -234,7 +243,7 @@ namespace Tienda_de_Peliculas
                 InsertarClientes();
                 ListarClientes();
                 LimpiarCampos();
-                //boton_mostrarGuardar();
+                
             }
             else
             {

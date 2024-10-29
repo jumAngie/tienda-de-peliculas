@@ -253,6 +253,7 @@
             this.pnldireccion.Name = "pnldireccion";
             this.pnldireccion.Size = new System.Drawing.Size(354, 24);
             this.pnldireccion.TabIndex = 31;
+            this.pnldireccion.Visible = false;
             // 
             // pnlciudad
             // 
@@ -263,6 +264,7 @@
             this.pnlciudad.Name = "pnlciudad";
             this.pnlciudad.Size = new System.Drawing.Size(354, 20);
             this.pnlciudad.TabIndex = 32;
+            this.pnlciudad.Visible = false;
             // 
             // pnltel
             // 
@@ -273,6 +275,7 @@
             this.pnltel.Name = "pnltel";
             this.pnltel.Size = new System.Drawing.Size(151, 20);
             this.pnltel.TabIndex = 33;
+            this.pnltel.Visible = false;
             // 
             // pnlemail
             // 
@@ -283,6 +286,7 @@
             this.pnlemail.Name = "pnlemail";
             this.pnlemail.Size = new System.Drawing.Size(197, 20);
             this.pnlemail.TabIndex = 34;
+            this.pnlemail.Visible = false;
             // 
             // pnldepto
             // 
@@ -293,6 +297,7 @@
             this.pnldepto.Name = "pnldepto";
             this.pnldepto.Size = new System.Drawing.Size(197, 24);
             this.pnldepto.TabIndex = 35;
+            this.pnldepto.Visible = false;
             // 
             // pnlpais
             // 
@@ -303,6 +308,7 @@
             this.pnlpais.Name = "pnlpais";
             this.pnlpais.Size = new System.Drawing.Size(151, 20);
             this.pnlpais.TabIndex = 36;
+            this.pnlpais.Visible = false;
             // 
             // btnCancelar
             // 
@@ -453,6 +459,7 @@
             this.pnlnombre.Name = "pnlnombre";
             this.pnlnombre.Size = new System.Drawing.Size(354, 23);
             this.pnlnombre.TabIndex = 30;
+            this.pnlnombre.Visible = false;
             // 
             // lblNacionalidad
             // 
