@@ -164,6 +164,8 @@ namespace Tienda_de_Peliculas
             txbemail.Clear();
             mtxbDNI.Clear();
             txbDNIE.Clear();
+            rbH.Checked = false;
+            rbE.Checked = false;
             rbF.Checked = false;
             rbM.Checked = false;
             cbxCiudad.Enabled = false;
@@ -172,6 +174,11 @@ namespace Tienda_de_Peliculas
             cbxCiudad.Text = "Seleccione un departamento.";
             cbxPais.SelectedIndex = 0;
             dtFechaNacimiento.Value = DateTime.Now;
+            lblidentidad.Visible = false;
+            mtxbDNI.Visible = false;
+            lblDNIE.Visible = false;
+            txbDNIE.Visible = false;
+            
         }
         #endregion
 

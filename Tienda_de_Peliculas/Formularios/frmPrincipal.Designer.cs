@@ -113,11 +113,11 @@
             // 
             this.lblHora.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.White;
             this.lblHora.Location = new System.Drawing.Point(303, 37);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(67, 15);
+            this.lblHora.Size = new System.Drawing.Size(66, 16);
             this.lblHora.TabIndex = 18;
             this.lblHora.Text = "12:20 p.m.";
             // 
@@ -125,11 +125,11 @@
             // 
             this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.White;
             this.lblFecha.Location = new System.Drawing.Point(303, 22);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(145, 15);
+            this.lblFecha.Size = new System.Drawing.Size(143, 16);
             this.lblFecha.TabIndex = 17;
             this.lblFecha.Text = "15 de Octubre del 2025";
             // 
@@ -137,11 +137,11 @@
             // 
             this.lbltTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbltTitle.AutoSize = true;
-            this.lbltTitle.Font = new System.Drawing.Font("Nobile", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltTitle.ForeColor = System.Drawing.Color.White;
             this.lbltTitle.Location = new System.Drawing.Point(564, 18);
             this.lbltTitle.Name = "lbltTitle";
-            this.lbltTitle.Size = new System.Drawing.Size(122, 33);
+            this.lbltTitle.Size = new System.Drawing.Size(110, 33);
             this.lbltTitle.TabIndex = 12;
             this.lbltTitle.Text = "INICIO";
             // 
@@ -161,11 +161,11 @@
             // 
             this.lblRol.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRol.AutoSize = true;
-            this.lblRol.Font = new System.Drawing.Font("Nobile", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.Color.White;
             this.lblRol.Location = new System.Drawing.Point(869, 38);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(90, 16);
+            this.lblRol.Size = new System.Drawing.Size(96, 15);
             this.lblRol.TabIndex = 3;
             this.lblRol.Text = "Administrador";
             // 
@@ -173,11 +173,11 @@
             // 
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Nobile", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(830, 18);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(129, 19);
+            this.lblNombre.Size = new System.Drawing.Size(125, 20);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Angie Campos";
             // 
@@ -203,7 +203,6 @@
             // 
             // btnReportes
             // 
-            this.btnReportes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnReportes.FlatAppearance.BorderSize = 0;
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,7 +223,6 @@
             // 
             // btnInventario
             // 
-            this.btnInventario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnInventario.FlatAppearance.BorderSize = 0;
             this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -245,7 +243,6 @@
             // 
             // btnVentaAlquiler
             // 
-            this.btnVentaAlquiler.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVentaAlquiler.FlatAppearance.BorderSize = 0;
             this.btnVentaAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaAlquiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -266,7 +263,6 @@
             // 
             // btnRegistroEmpleados
             // 
-            this.btnRegistroEmpleados.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistroEmpleados.FlatAppearance.BorderSize = 0;
             this.btnRegistroEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistroEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -368,11 +364,11 @@
             this.lblMensajeBienvenida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMensajeBienvenida.AutoSize = true;
             this.lblMensajeBienvenida.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblMensajeBienvenida.Font = new System.Drawing.Font("Nobile", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensajeBienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensajeBienvenida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.lblMensajeBienvenida.Location = new System.Drawing.Point(24, 21);
             this.lblMensajeBienvenida.Name = "lblMensajeBienvenida";
-            this.lblMensajeBienvenida.Size = new System.Drawing.Size(190, 29);
+            this.lblMensajeBienvenida.Size = new System.Drawing.Size(210, 25);
             this.lblMensajeBienvenida.TabIndex = 11;
             this.lblMensajeBienvenida.Text = "¡Bienvenido Angie!";
             // 
@@ -403,22 +399,22 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(13, 56);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(142, 15);
+            this.label10.Size = new System.Drawing.Size(139, 16);
             this.label10.TabIndex = 1;
             this.label10.Text = "Alquileres Semanales";
             // 
             // lblAlquileresSemanales
             // 
             this.lblAlquileresSemanales.AutoSize = true;
-            this.lblAlquileresSemanales.Font = new System.Drawing.Font("Nobile", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlquileresSemanales.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlquileresSemanales.ForeColor = System.Drawing.Color.White;
             this.lblAlquileresSemanales.Location = new System.Drawing.Point(63, 12);
             this.lblAlquileresSemanales.Name = "lblAlquileresSemanales";
-            this.lblAlquileresSemanales.Size = new System.Drawing.Size(102, 41);
+            this.lblAlquileresSemanales.Size = new System.Drawing.Size(84, 42);
             this.lblAlquileresSemanales.TabIndex = 0;
             this.lblAlquileresSemanales.Text = "000";
             // 
@@ -439,11 +435,11 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Gainsboro;
-            this.label11.Font = new System.Drawing.Font("Nobile", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.label11.Location = new System.Drawing.Point(53, 69);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(131, 24);
+            this.label11.Size = new System.Drawing.Size(126, 25);
             this.label11.TabIndex = 15;
             this.label11.Text = "Dashboard";
             // 
@@ -474,22 +470,22 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(17, 56);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(124, 15);
+            this.label8.Size = new System.Drawing.Size(121, 16);
             this.label8.TabIndex = 1;
             this.label8.Text = "Ventas Semanales";
             // 
             // lblVentasSemanales
             // 
             this.lblVentasSemanales.AutoSize = true;
-            this.lblVentasSemanales.Font = new System.Drawing.Font("Nobile", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVentasSemanales.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVentasSemanales.ForeColor = System.Drawing.Color.White;
             this.lblVentasSemanales.Location = new System.Drawing.Point(57, 12);
             this.lblVentasSemanales.Name = "lblVentasSemanales";
-            this.lblVentasSemanales.Size = new System.Drawing.Size(102, 41);
+            this.lblVentasSemanales.Size = new System.Drawing.Size(84, 42);
             this.lblVentasSemanales.TabIndex = 0;
             this.lblVentasSemanales.Text = "000";
             // 
@@ -521,22 +517,22 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Nobile", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(24, 56);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(132, 15);
+            this.label7.Size = new System.Drawing.Size(132, 16);
             this.label7.TabIndex = 1;
             this.label7.Text = "Clientes Registrados";
             // 
             // lblClientesRegistrados
             // 
             this.lblClientesRegistrados.AutoSize = true;
-            this.lblClientesRegistrados.Font = new System.Drawing.Font("Nobile", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientesRegistrados.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClientesRegistrados.ForeColor = System.Drawing.Color.White;
             this.lblClientesRegistrados.Location = new System.Drawing.Point(64, 12);
             this.lblClientesRegistrados.Name = "lblClientesRegistrados";
-            this.lblClientesRegistrados.Size = new System.Drawing.Size(92, 41);
+            this.lblClientesRegistrados.Size = new System.Drawing.Size(84, 42);
             this.lblClientesRegistrados.TabIndex = 0;
             this.lblClientesRegistrados.Text = "001";
             // 
