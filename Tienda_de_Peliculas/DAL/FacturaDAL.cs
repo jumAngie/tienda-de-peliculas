@@ -84,7 +84,7 @@ namespace Tienda_de_Peliculas.DAL
             using (SqlConnection conexion =BDConexion.ObtenerConexion())
             {
                 conexion.Open();
-                string query = "Select * Peli.listado_Facturas";
+                string query = "Select * FROM Peli.listado_Facturas";
                 SqlCommand comando = new SqlCommand (query, conexion);
 
                 SqlDataReader reader = comando.ExecuteReader();
@@ -93,9 +93,23 @@ namespace Tienda_de_Peliculas.DAL
                 {
                     FacturaViewModel facturaview = new FacturaViewModel ();
                     facturaview.fact_ID = reader.GetInt32(0);
-                        facturaview.
-f                }
-                        
+                    facturaview.meto_Descripcion = reader.GetString(1);
+                    facturaview.dato_NombreCompleto = reader.GetString(2);
+                    facturaview.fact_NumFactura= reader.GetString(3);
+                    facturaview.fact_FechaFactura=reader.GetDateTime(4);
+                    facturaview.tran_Descripcion= reader.GetString(5);
+                    facturaview.fact_Impuesto=reader.GetDecimal(6);
+                    facturaview.fact_Descuento=reader.GetDecimal(7);
+                    facturaview.fact_Subtotal=reader.GetDecimal(8);
+                    facturaview.inve_Titulo=reader.GetString(9);
+                    facturaview.fact_fechaDev = reader.GetDateTime(10); 
+                    facturaview.fact_Total = reader.GetDecimal(11);
+                    
+                    lista.Add(facturaview);
+
+                };
+                conexion.Close();     
+                return lista;   
 
             }
 

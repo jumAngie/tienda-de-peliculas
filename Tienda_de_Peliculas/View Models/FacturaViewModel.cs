@@ -26,6 +26,9 @@ namespace Tienda_de_Peliculas.View_Models
         [DisplayName("Pelicula Id")]
         public int inve_Id { get; set; }
 
+        [DisplayName("Metodo de pago")]
+        public string meto_Descripcion { get; set; }
+
         [DisplayName("Nombre de la Pelicula")]
         public string inve_Titulo { get; set; }
 
@@ -36,22 +39,27 @@ namespace Tienda_de_Peliculas.View_Models
         public string fact_NumFactura { get; set; }
 
         [DisplayName("Fecha de la Factura")]
-        public string fact_FechaFactura { get; set; }
+        public DateTime fact_FechaFactura { get; set; }
 
         [DisplayName("Tipo de Transacción")]
         public string tran_Descripcion { get; set; }
 
         [DisplayName("ISV")]
-        public string fact_Impuesto { get; set; }
+        public decimal fact_Impuesto { get; set; }
 
         [DisplayName("Descuento")]
-        public string fact_Descuento { get; set; }
+        public decimal fact_Descuento { get; set; }
 
         [DisplayName("Subtotal")]
-        public string fact_Subtotal { get; set; }
+        public decimal fact_Subtotal { get; set; }
 
         [DisplayName("Fecha devolución")]
-        public string fact_fechaDev { get; set; }
+        public DateTime fact_fechaDev { get; set; }
+
+
+        [DisplayName("gran total")]
+        public decimal fact_Total { get; set; }
+
 
         [DisplayName("Total")]
         public decimal inve_Total { get; set; }
