@@ -30,6 +30,7 @@ namespace Tienda_de_Peliculas
         #endregion
 
         #region Datos Generales
+        public static string Clientes_CMB = "Gral.Clientes_CMB";
         #endregion
 
         #region Paises

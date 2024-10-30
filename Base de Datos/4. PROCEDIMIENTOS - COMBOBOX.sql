@@ -28,12 +28,13 @@ GO
 CREATE OR ALTER PROCEDURE Gral.Clientes_CMB
 AS
 	BEGIN
-		SELECT '0' AS 'dato_Id', ' - Seleccione una opción -' AS 'dato_NombreCompleto'
+		SELECT '0' AS 'dato_Id'g, ' - Seleccione una opción -' AS 'dato_NombreCompleto'
 		UNION ALL
 		SELECT dato_Id, dato_NombreCompleto FROM Gral.tbDatos_Generales
 		WHERE dato_Estado = 1
 	END
 GO
+
 --- CIUDADES FILTRADAS POR DEPARTAMENTOS
 CREATE OR ALTER PROCEDURE Gral.Ciudades_CMB
 @dept_Id INT
