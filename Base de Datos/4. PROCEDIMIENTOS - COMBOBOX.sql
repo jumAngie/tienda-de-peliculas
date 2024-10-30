@@ -28,7 +28,7 @@ GO
 CREATE OR ALTER PROCEDURE Gral.Clientes_CMB
 AS
 	BEGIN
-		SELECT '0' AS 'dato_Id'g, ' - Seleccione una opción -' AS 'dato_NombreCompleto'
+		SELECT '0' AS 'dato_Id', ' - Seleccione una opción -' AS 'dato_NombreCompleto'
 		UNION ALL
 		SELECT dato_Id, dato_NombreCompleto FROM Gral.tbDatos_Generales
 		WHERE dato_Estado = 1
@@ -104,6 +104,11 @@ AS
 GO
 
 --- FACTURA
+CREATE OR ALTER PROCEDURE 
+SELECT TOP 1 (fact_NumFactura) AS 'Último Num Factura'
+	FROM Peli.tbFacturas
+	ORDER BY fact_Id DESC
+
 
 --- IDIOMAS
 GO
