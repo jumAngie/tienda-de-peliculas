@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tienda_de_Peliculas.Clases;
+using Tienda_de_Peliculas.View_Models;
 
 namespace Tienda_de_Peliculas.DAL
 {
@@ -74,5 +75,31 @@ namespace Tienda_de_Peliculas.DAL
 
             return cantAlquileres;
         }
+
+        //listar factura
+        public static List<FacturaViewModel>listarfactura()
+        {
+            List<FacturaViewModel> lista =new List<FacturaViewModel>();
+
+            using (SqlConnection conexion =BDConexion.ObtenerConexion())
+            {
+                conexion.Open();
+                string query = "Select * Peli.listado_Facturas";
+                SqlCommand comando = new SqlCommand (query, conexion);
+
+                SqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    FacturaViewModel facturaview = new FacturaViewModel ();
+                    facturaview.fact_ID = reader.GetInt32(0);
+                        facturaview.
+f                }
+                        
+
+            }
+
+        }
     }
+
 }

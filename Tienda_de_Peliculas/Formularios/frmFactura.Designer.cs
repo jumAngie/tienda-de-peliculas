@@ -30,47 +30,47 @@
         {
             this.pnlVenta = new System.Windows.Forms.Panel();
             this.lblTotalResultado = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtImpuesto = new System.Windows.Forms.TextBox();
+            this.txtDescuento = new System.Windows.Forms.TextBox();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.lblISV = new System.Windows.Forms.Label();
             this.lblDescuento = new System.Windows.Forms.Label();
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbCompra = new System.Windows.Forms.GroupBox();
             this.rbAlquiler = new System.Windows.Forms.RadioButton();
             this.rbVenta = new System.Windows.Forms.RadioButton();
             this.dtFechaDev = new System.Windows.Forms.DateTimePicker();
             this.lblFechaDev = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbxPago = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbGenerales = new System.Windows.Forms.GroupBox();
             this.lblNumFactura = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbxPelicula = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxCliente = new System.Windows.Forms.ComboBox();
             this.lblName = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dgFactura = new System.Windows.Forms.DataGridView();
             this.pnlVenta.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbCompra.SuspendLayout();
+            this.gbGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFactura)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlVenta
             // 
             this.pnlVenta.Controls.Add(this.lblTotalResultado);
-            this.pnlVenta.Controls.Add(this.textBox3);
-            this.pnlVenta.Controls.Add(this.textBox2);
-            this.pnlVenta.Controls.Add(this.textBox1);
+            this.pnlVenta.Controls.Add(this.txtImpuesto);
+            this.pnlVenta.Controls.Add(this.txtDescuento);
+            this.pnlVenta.Controls.Add(this.txtSubtotal);
             this.pnlVenta.Controls.Add(this.lblISV);
             this.pnlVenta.Controls.Add(this.lblDescuento);
             this.pnlVenta.Controls.Add(this.lblSubtotal);
             this.pnlVenta.Controls.Add(this.lblTotal);
-            this.pnlVenta.Controls.Add(this.groupBox2);
-            this.pnlVenta.Controls.Add(this.groupBox1);
+            this.pnlVenta.Controls.Add(this.gbCompra);
+            this.pnlVenta.Controls.Add(this.gbGenerales);
             this.pnlVenta.Controls.Add(this.btnCancelar);
             this.pnlVenta.Controls.Add(this.btnGuardar);
             this.pnlVenta.Location = new System.Drawing.Point(12, 12);
@@ -88,35 +88,35 @@
             this.lblTotalResultado.TabIndex = 17;
             this.lblTotalResultado.Text = "L. 0.00 ";
             // 
-            // textBox3
+            // txtImpuesto
             // 
-            this.textBox3.Location = new System.Drawing.Point(148, 250);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(130, 20);
-            this.textBox3.TabIndex = 16;
+            this.txtImpuesto.Location = new System.Drawing.Point(148, 250);
+            this.txtImpuesto.Name = "txtImpuesto";
+            this.txtImpuesto.ReadOnly = true;
+            this.txtImpuesto.Size = new System.Drawing.Size(130, 20);
+            this.txtImpuesto.TabIndex = 16;
             // 
-            // textBox2
+            // txtDescuento
             // 
-            this.textBox2.Location = new System.Drawing.Point(148, 224);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(130, 20);
-            this.textBox2.TabIndex = 15;
+            this.txtDescuento.Location = new System.Drawing.Point(148, 224);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.ReadOnly = true;
+            this.txtDescuento.Size = new System.Drawing.Size(130, 20);
+            this.txtDescuento.TabIndex = 15;
             // 
-            // textBox1
+            // txtSubtotal
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 198);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(130, 20);
-            this.textBox1.TabIndex = 14;
+            this.txtSubtotal.Location = new System.Drawing.Point(148, 198);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.ReadOnly = true;
+            this.txtSubtotal.Size = new System.Drawing.Size(130, 20);
+            this.txtSubtotal.TabIndex = 14;
             // 
             // lblISV
             // 
             this.lblISV.AutoSize = true;
             this.lblISV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblISV.Location = new System.Drawing.Point(27, 199);
+            this.lblISV.Location = new System.Drawing.Point(28, 254);
             this.lblISV.Name = "lblISV";
             this.lblISV.Size = new System.Drawing.Size(114, 16);
             this.lblISV.TabIndex = 13;
@@ -136,7 +136,7 @@
             // 
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtotal.Location = new System.Drawing.Point(27, 254);
+            this.lblSubtotal.Location = new System.Drawing.Point(27, 202);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(79, 16);
             this.lblSubtotal.TabIndex = 11;
@@ -152,20 +152,20 @@
             this.lblTotal.TabIndex = 10;
             this.lblTotal.Text = "TOTAL";
             // 
-            // groupBox2
+            // gbCompra
             // 
-            this.groupBox2.Controls.Add(this.rbAlquiler);
-            this.groupBox2.Controls.Add(this.rbVenta);
-            this.groupBox2.Controls.Add(this.dtFechaDev);
-            this.groupBox2.Controls.Add(this.lblFechaDev);
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(401, 14);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(366, 167);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos de la Compra";
+            this.gbCompra.Controls.Add(this.rbAlquiler);
+            this.gbCompra.Controls.Add(this.rbVenta);
+            this.gbCompra.Controls.Add(this.dtFechaDev);
+            this.gbCompra.Controls.Add(this.lblFechaDev);
+            this.gbCompra.Controls.Add(this.cbxPago);
+            this.gbCompra.Controls.Add(this.label2);
+            this.gbCompra.Location = new System.Drawing.Point(401, 14);
+            this.gbCompra.Name = "gbCompra";
+            this.gbCompra.Size = new System.Drawing.Size(366, 167);
+            this.gbCompra.TabIndex = 9;
+            this.gbCompra.TabStop = false;
+            this.gbCompra.Text = "Datos de la Compra";
             // 
             // rbAlquiler
             // 
@@ -213,13 +213,13 @@
             this.lblFechaDev.Text = "Fecha Devolución";
             this.lblFechaDev.Visible = false;
             // 
-            // comboBox3
+            // cbxPago
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(28, 72);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(318, 21);
-            this.comboBox3.TabIndex = 8;
+            this.cbxPago.FormattingEnabled = true;
+            this.cbxPago.Location = new System.Drawing.Point(28, 72);
+            this.cbxPago.Name = "cbxPago";
+            this.cbxPago.Size = new System.Drawing.Size(318, 21);
+            this.cbxPago.TabIndex = 8;
             // 
             // label2
             // 
@@ -231,19 +231,19 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Método de Pago";
             // 
-            // groupBox1
+            // gbGenerales
             // 
-            this.groupBox1.Controls.Add(this.lblNumFactura);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.lblName);
-            this.groupBox1.Location = new System.Drawing.Point(17, 14);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(366, 167);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos Generales";
+            this.gbGenerales.Controls.Add(this.lblNumFactura);
+            this.gbGenerales.Controls.Add(this.cbxPelicula);
+            this.gbGenerales.Controls.Add(this.label1);
+            this.gbGenerales.Controls.Add(this.cbxCliente);
+            this.gbGenerales.Controls.Add(this.lblName);
+            this.gbGenerales.Location = new System.Drawing.Point(17, 14);
+            this.gbGenerales.Name = "gbGenerales";
+            this.gbGenerales.Size = new System.Drawing.Size(366, 167);
+            this.gbGenerales.TabIndex = 8;
+            this.gbGenerales.TabStop = false;
+            this.gbGenerales.Text = "Datos Generales";
             // 
             // lblNumFactura
             // 
@@ -256,14 +256,16 @@
             this.lblNumFactura.Size = new System.Drawing.Size(117, 24);
             this.lblNumFactura.TabIndex = 6;
             this.lblNumFactura.Text = "FAC#00001";
+            this.lblNumFactura.Click += new System.EventHandler(this.lblNumFactura_Click);
             // 
-            // comboBox2
+            // cbxPelicula
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(81, 107);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(257, 21);
-            this.comboBox2.TabIndex = 5;
+            this.cbxPelicula.FormattingEnabled = true;
+            this.cbxPelicula.Location = new System.Drawing.Point(81, 107);
+            this.cbxPelicula.Name = "cbxPelicula";
+            this.cbxPelicula.Size = new System.Drawing.Size(257, 21);
+            this.cbxPelicula.TabIndex = 5;
+            this.cbxPelicula.SelectedIndexChanged += new System.EventHandler(this.cbxPelicula_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -275,13 +277,14 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Pelicula:";
             // 
-            // comboBox1
+            // cbxCliente
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(81, 72);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(257, 21);
-            this.comboBox1.TabIndex = 3;
+            this.cbxCliente.FormattingEnabled = true;
+            this.cbxCliente.Location = new System.Drawing.Point(81, 72);
+            this.cbxCliente.Name = "cbxCliente";
+            this.cbxCliente.Size = new System.Drawing.Size(257, 21);
+            this.cbxCliente.TabIndex = 3;
+            this.cbxCliente.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // lblName
             // 
@@ -325,6 +328,7 @@
             this.dgFactura.Name = "dgFactura";
             this.dgFactura.Size = new System.Drawing.Size(783, 166);
             this.dgFactura.TabIndex = 5;
+            this.dgFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFactura_CellContentClick);
             // 
             // frmFactura
             // 
@@ -338,10 +342,10 @@
             this.Load += new System.EventHandler(this.frmFactura_Load);
             this.pnlVenta.ResumeLayout(false);
             this.pnlVenta.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbCompra.ResumeLayout(false);
+            this.gbCompra.PerformLayout();
+            this.gbGenerales.ResumeLayout(false);
+            this.gbGenerales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFactura)).EndInit();
             this.ResumeLayout(false);
 
@@ -353,23 +357,23 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DataGridView dgFactura;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbCompra;
+        private System.Windows.Forms.GroupBox gbGenerales;
         private System.Windows.Forms.Label lblTotalResultado;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtImpuesto;
+        private System.Windows.Forms.TextBox txtDescuento;
+        private System.Windows.Forms.TextBox txtSubtotal;
         private System.Windows.Forms.Label lblISV;
         private System.Windows.Forms.Label lblDescuento;
         private System.Windows.Forms.Label lblSubtotal;
         private System.Windows.Forms.DateTimePicker dtFechaDev;
         private System.Windows.Forms.Label lblFechaDev;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbxPago;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblNumFactura;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbxPelicula;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxCliente;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.RadioButton rbAlquiler;
         private System.Windows.Forms.RadioButton rbVenta;

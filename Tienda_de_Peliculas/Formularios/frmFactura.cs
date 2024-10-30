@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tienda_de_Peliculas.Clases;
+using Tienda_de_Peliculas.DAL;
 
 namespace Tienda_de_Peliculas.Formularios
 {
@@ -34,8 +36,21 @@ namespace Tienda_de_Peliculas.Formularios
 
         }
 
+        #region validaciones limpieza de campo 
+
+        #endregion
+
+        #region crud
+        public void listado_factura()
+        {
+           dgFactura.DataSource=FacturaDAL.listarfactura();
+        }
+
+        #endregion
         private void frmFactura_Load(object sender, EventArgs e)
         {
+           listado_factura();
+
             LoadTheme();
         }
 
@@ -50,5 +65,31 @@ namespace Tienda_de_Peliculas.Formularios
             dtFechaDev.Visible=false;
             lblFechaDev.Visible = false;
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumFactura_Click(object sender, EventArgs e)
+        {
+            int NumFactura = 1;
+            lblNumFactura.Text = "FAC#" + NumFactura.ToString("D6");
+
+        }
+
+        private void cbxPelicula_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            
+
+        }
+
+        private void dgFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
+
+    
 }
