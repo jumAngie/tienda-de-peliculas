@@ -19,7 +19,11 @@ namespace Tienda_de_Peliculas.View_Models
 
 				fact_FechaModificacion
          */
+
         [DisplayName("ID")]
+        public int fact_ID { get; set; }
+
+        [DisplayName("Pelicula Id")]
         public int inve_Id { get; set; }
 
         [DisplayName("Nombre de la Pelicula")]
