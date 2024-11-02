@@ -4,7 +4,6 @@
 INSERT INTO Acce.tbUsuarios(usua_Usuario,usua_Contrasenia,dato_Id,role_Id,usua_UsuarioCreacion,usua_FechaCreacion)
 VALUES						('Admin', '123', 1, 1, 1, GETDATE());
 GO
-
 -- ROLES
 INSERT INTO Acce.tbRoles(role_Descripcion,usua_UsuarioCreacion, role_FechaCreacion)
 VALUES					('Administrador',		1,					GETDATE());
@@ -358,3 +357,116 @@ INSERT INTO Peli.tbFacturas([meto_Id], [dato_Id], [fact_NumFactura],[fact_FechaF
 VALUES						(1, 7,'00044', '2024-10-21', 2, 200, 200*0.15, 200*0.05, 2, '2025-01-01', 155.59, 1, GETDATE())
 GO
 
+-- LLENANDO ROLES
+INSERT INTO Acce.tbRoles (role_Descripcion, usua_UsuarioCreacion, role_FechaCreacion)
+VALUES					('Supervisor', 1, GETDATE())
+GO
+INSERT INTO Acce.tbRoles (role_Descripcion, usua_UsuarioCreacion, role_FechaCreacion)
+VALUES					('Vendedor', 1, GETDATE())
+GO
+INSERT INTO Acce.tbRoles (role_Descripcion, usua_UsuarioCreacion, role_FechaCreacion)
+VALUES					('Almacén', 1, GETDATE())
+GO
+INSERT INTO Acce.tbRoles (role_Descripcion, usua_UsuarioCreacion, role_FechaCreacion)
+VALUES					('RRHH', 1, GETDATE())
+GO
+
+--- INSERTANDO PANTALLAS
+INSERT INTO Acce.tbPantallas ([pant_NombrePantalla], [pant_RutaImagen], [pant_NombreBoton], [PosicionY])
+VALUES						 ('Clientes', 'Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Clientes', 'btnRegistroClientes', 72)
+GO
+INSERT INTO Acce.tbPantallas ([pant_NombrePantalla], [pant_RutaImagen], [pant_NombreBoton], [PosicionY])
+VALUES						 ('Empleados', 'Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Empleados', 'btnRegistroEmpleados', 144)
+GO
+INSERT INTO Acce.tbPantallas ([pant_NombrePantalla], [pant_RutaImagen], [pant_NombreBoton], [PosicionY])
+VALUES						 ('Venta/Alquiler', 'Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Venta_Alquiler', 'btnVentaAlquiler', 231)
+GO
+INSERT INTO Acce.tbPantallas ([pant_NombrePantalla], [pant_RutaImagen], [pant_NombreBoton], [PosicionY])
+VALUES						 ('Inventario', 'Tienda_de_Peliculas.Properties.Resources.Icono_Inventario', 'btnInventario', 310)
+GO
+INSERT INTO Acce.tbPantallas ([pant_NombrePantalla], [pant_RutaImagen], [pant_NombreBoton], [PosicionY])
+VALUES						 ('Reportes', 'Tienda_de_Peliculas.Properties.Resources.Icono_Reportes', 'btnReportes', 390)
+GO
+
+--- ASIGNANDO PERMISOS
+------- ADMIN
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(1, 1, 1)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(1, 2, 1)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(1, 3, 1)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(1, 4, 1)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(1, 5, 1)
+GO
+
+------- SUPERVISOR
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(3, 1, 1)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(3, 2, 1)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(3, 3, 0)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(3, 4, 0)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(3, 5, 1)
+GO
+------- VENTAS
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(4, 1, 1)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(4, 2, 0)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(4, 3, 1)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(4, 4, 1)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(4, 5, 0)
+GO
+------- ALMACEN
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(5, 1, 0)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(5, 2, 0)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(5, 3, 0)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(5, 4, 1)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(5, 5, 0)
+GO
+------- RRHH
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(6, 1, 1)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(6, 2, 1)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(6, 3, 0)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(6, 4, 0)
+GO
+INSERT INTO Acce.tbPermisos ([role_Id], [pant_ID], [perm_TienePermiso])
+VALUES						(6, 5, 0)
+GO
