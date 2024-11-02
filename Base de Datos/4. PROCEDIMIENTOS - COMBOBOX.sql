@@ -47,6 +47,15 @@ AS
 	END
 GO
 
+	-- MÉTODOS DE PAGO
+CREATE OR ALTER PROCEDURE Peli.MetodosPago_CMB
+AS
+	BEGIN
+			SELECT '0' AS 'ciud_Id', ' - Seleccione una opción -' AS 'ciud_Descripcion'
+			UNION ALL
+			SELECT meto_Id, meto_Descripcion FROM Peli.tbMetodosPago
+	END
+GO
 
 --- CLIENTES
 CREATE OR ALTER PROCEDURE Gral.Datos_Generales_CantidadDeClientes
@@ -104,10 +113,10 @@ AS
 GO
 
 --- FACTURA
-CREATE OR ALTER PROCEDURE 
-SELECT TOP 1 (fact_NumFactura) AS 'Último Num Factura'
-	FROM Peli.tbFacturas
-	ORDER BY fact_Id DESC
+--CREATE OR ALTER PROCEDURE 
+--SELECT TOP 1 (fact_NumFactura) AS 'Último Num Factura'
+--	FROM Peli.tbFacturas
+--	ORDER BY fact_Id DESC
 
 
 --- IDIOMAS
@@ -147,7 +156,9 @@ AS
 	END
 
 GO
-	CREATE OR ALTER PROCEDURE Peli.Datos_Generales_AlquileresSemanales
+	
+	
+CREATE OR ALTER PROCEDURE Peli.Datos_Generales_AlquileresSemanales
 @fechaLunes DATETIME,
 @fechaDomingo DATETIME
 AS
