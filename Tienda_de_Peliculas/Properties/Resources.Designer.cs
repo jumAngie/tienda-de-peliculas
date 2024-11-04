@@ -183,6 +183,16 @@ namespace Tienda_de_Peliculas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cerrar_con_llave1 {
+            get {
+                object obj = ResourceManager.GetObject("cerrar-con-llave1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap customer_review {
             get {
                 object obj = ResourceManager.GetObject("customer-review", resourceCulture);
@@ -359,15 +369,24 @@ namespace Tienda_de_Peliculas.Properties {
         ///                padding: 5px;
         ///                border: 1px solid black;
         ///            }
-        ///    &lt;/style&gt;
-        ///&lt;/head&gt;
-        ///&lt;body&gt;
-        ///    &lt;table style=&quot;width:100%&quot;&gt;
-        ///        [resto de la cadena truncado]&quot;;.
+        ///
+        ///        .footer {
+        ///            position: fixed;
+        ///            left: 0 [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string Plantilla {
             get {
                 return ResourceManager.GetString("Plantilla", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuario {
+            get {
+                object obj = ResourceManager.GetObject("usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
