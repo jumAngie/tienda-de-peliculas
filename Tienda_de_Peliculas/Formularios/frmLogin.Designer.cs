@@ -28,29 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pnlFondo = new System.Windows.Forms.Panel();
+            this.lblError = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnEntrar = new System.Windows.Forms.Button();
+            this.pnlContrasenia = new System.Windows.Forms.Panel();
+            this.txtContrasenia = new System.Windows.Forms.TextBox();
+            this.pbxContrasenia = new System.Windows.Forms.PictureBox();
+            this.pnlValidarContra = new System.Windows.Forms.Panel();
+            this.pnlUsuario = new System.Windows.Forms.Panel();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.pbxUsuario = new System.Windows.Forms.PictureBox();
+            this.pnlValidarUsuario = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlFondo.SuspendLayout();
+            this.pnlContrasenia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxContrasenia)).BeginInit();
+            this.pnlUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,6 +64,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -88,6 +95,14 @@
             this.label2.Size = new System.Drawing.Size(191, 35);
             this.label2.TabIndex = 4;
             this.label2.Text = "V I D E O S";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.DarkRed;
+            this.panel4.Location = new System.Drawing.Point(300, 277);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(450, 5);
+            this.panel4.TabIndex = 7;
             // 
             // label3
             // 
@@ -121,59 +136,147 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
+            // pnlFondo
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Window;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.btnCerrar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(300, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(450, 530);
-            this.panel2.TabIndex = 1;
+            this.pnlFondo.BackColor = System.Drawing.SystemColors.Window;
+            this.pnlFondo.Controls.Add(this.lblError);
+            this.pnlFondo.Controls.Add(this.label6);
+            this.pnlFondo.Controls.Add(this.btnEntrar);
+            this.pnlFondo.Controls.Add(this.pnlContrasenia);
+            this.pnlFondo.Controls.Add(this.pnlUsuario);
+            this.pnlFondo.Controls.Add(this.label5);
+            this.pnlFondo.Controls.Add(this.btnCerrar);
+            this.pnlFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFondo.Location = new System.Drawing.Point(300, 0);
+            this.pnlFondo.Name = "pnlFondo";
+            this.pnlFondo.Size = new System.Drawing.Size(450, 530);
+            this.pnlFondo.TabIndex = 1;
             // 
-            // panel4
+            // lblError
             // 
-            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(0, 232);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(450, 45);
-            this.panel4.TabIndex = 3;
+            this.lblError.AutoSize = true;
+            this.lblError.BackColor = System.Drawing.Color.DarkRed;
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblError.Location = new System.Drawing.Point(236, 43);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(202, 16);
+            this.lblError.TabIndex = 7;
+            this.lblError.Text = "Usuario o Contraseña incorrecta.";
+            this.lblError.Visible = false;
             // 
-            // pictureBox3
+            // label6
             // 
-            this.pictureBox3.Image = global::Tienda_de_Peliculas.Properties.Resources.cerrar_con_llave1;
-            this.pictureBox3.Location = new System.Drawing.Point(15, 9);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label6.Location = new System.Drawing.Point(305, 506);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(133, 15);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Hollywood Videos 2024";
             // 
-            // panel3
+            // btnEntrar
             // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(0, 177);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(450, 45);
-            this.panel3.TabIndex = 3;
+            this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.ForeColor = System.Drawing.Color.White;
+            this.btnEntrar.Location = new System.Drawing.Point(105, 310);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(232, 35);
+            this.btnEntrar.TabIndex = 4;
+            this.btnEntrar.Text = "ENTRAR";
+            this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
-            // pictureBox2
+            // pnlContrasenia
             // 
-            this.pictureBox2.Image = global::Tienda_de_Peliculas.Properties.Resources.usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.pnlContrasenia.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlContrasenia.Controls.Add(this.txtContrasenia);
+            this.pnlContrasenia.Controls.Add(this.pbxContrasenia);
+            this.pnlContrasenia.Controls.Add(this.pnlValidarContra);
+            this.pnlContrasenia.Location = new System.Drawing.Point(0, 232);
+            this.pnlContrasenia.Name = "pnlContrasenia";
+            this.pnlContrasenia.Size = new System.Drawing.Size(450, 45);
+            this.pnlContrasenia.TabIndex = 3;
+            // 
+            // txtContrasenia
+            // 
+            this.txtContrasenia.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtContrasenia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContrasenia.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasenia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtContrasenia.Location = new System.Drawing.Point(55, 12);
+            this.txtContrasenia.Name = "txtContrasenia";
+            this.txtContrasenia.Size = new System.Drawing.Size(370, 17);
+            this.txtContrasenia.TabIndex = 1;
+            this.txtContrasenia.UseSystemPasswordChar = true;
+            this.txtContrasenia.Click += new System.EventHandler(this.txtContrasenia_Click);
+            // 
+            // pbxContrasenia
+            // 
+            this.pbxContrasenia.Image = global::Tienda_de_Peliculas.Properties.Resources.cerrar_con_llave1;
+            this.pbxContrasenia.Location = new System.Drawing.Point(15, 9);
+            this.pbxContrasenia.Name = "pbxContrasenia";
+            this.pbxContrasenia.Size = new System.Drawing.Size(24, 24);
+            this.pbxContrasenia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxContrasenia.TabIndex = 0;
+            this.pbxContrasenia.TabStop = false;
+            this.pbxContrasenia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbxContrasenia_MouseDown);
+            this.pbxContrasenia.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbxContrasenia_MouseUp);
+            // 
+            // pnlValidarContra
+            // 
+            this.pnlValidarContra.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlValidarContra.Location = new System.Drawing.Point(0, 42);
+            this.pnlValidarContra.Name = "pnlValidarContra";
+            this.pnlValidarContra.Size = new System.Drawing.Size(450, 1);
+            this.pnlValidarContra.TabIndex = 7;
+            this.pnlValidarContra.Visible = false;
+            // 
+            // pnlUsuario
+            // 
+            this.pnlUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlUsuario.Controls.Add(this.txtUsuario);
+            this.pnlUsuario.Controls.Add(this.pbxUsuario);
+            this.pnlUsuario.Controls.Add(this.pnlValidarUsuario);
+            this.pnlUsuario.Location = new System.Drawing.Point(0, 177);
+            this.pnlUsuario.Name = "pnlUsuario";
+            this.pnlUsuario.Size = new System.Drawing.Size(450, 45);
+            this.pnlUsuario.TabIndex = 3;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtUsuario.Location = new System.Drawing.Point(55, 10);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(370, 20);
+            this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.Click += new System.EventHandler(this.txtUsuario_Click);
+            // 
+            // pbxUsuario
+            // 
+            this.pbxUsuario.Image = global::Tienda_de_Peliculas.Properties.Resources.usuario;
+            this.pbxUsuario.Location = new System.Drawing.Point(15, 11);
+            this.pbxUsuario.Name = "pbxUsuario";
+            this.pbxUsuario.Size = new System.Drawing.Size(24, 24);
+            this.pbxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxUsuario.TabIndex = 0;
+            this.pbxUsuario.TabStop = false;
+            this.pbxUsuario.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbxUsuario_MouseDown);
+            // 
+            // pnlValidarUsuario
+            // 
+            this.pnlValidarUsuario.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlValidarUsuario.Location = new System.Drawing.Point(0, 44);
+            this.pnlValidarUsuario.Name = "pnlValidarUsuario";
+            this.pnlValidarUsuario.Size = new System.Drawing.Size(450, 5);
+            this.pnlValidarUsuario.TabIndex = 7;
+            this.pnlValidarUsuario.Visible = false;
             // 
             // label5
             // 
@@ -201,38 +304,6 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.textBox1.Location = new System.Drawing.Point(55, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(370, 27);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.textBox2.Location = new System.Drawing.Point(55, 12);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(370, 24);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.UseSystemPasswordChar = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(105, 310);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(232, 35);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "ENTRAR";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,23 +311,24 @@
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(750, 530);
             this.ControlBox = false;
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlFondo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogIn";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnlFondo.ResumeLayout(false);
+            this.pnlFondo.PerformLayout();
+            this.pnlContrasenia.ResumeLayout(false);
+            this.pnlContrasenia.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxContrasenia)).EndInit();
+            this.pnlUsuario.ResumeLayout(false);
+            this.pnlUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,7 +336,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlFondo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -272,12 +344,17 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlUsuario;
+        private System.Windows.Forms.Panel pnlContrasenia;
+        private System.Windows.Forms.PictureBox pbxUsuario;
+        private System.Windows.Forms.PictureBox pbxContrasenia;
+        private System.Windows.Forms.TextBox txtContrasenia;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pnlValidarContra;
+        private System.Windows.Forms.Panel pnlValidarUsuario;
+        private System.Windows.Forms.Label lblError;
     }
 }

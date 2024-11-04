@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tienda_de_Peliculas.DAL;
 using Tienda_de_Peliculas.Formularios;
+using Tienda_de_Peliculas.View_Models;
 
 namespace Tienda_de_Peliculas
 {
@@ -19,6 +20,88 @@ namespace Tienda_de_Peliculas
         private Random random;
         private int tempIndex;
         private Form activateForm;
+        public DatosUsuarioViewModel UsuarioActual { get; set; }
+        public List<PantallasViewModel> pantallasPermitidas   { get; set; }
+
+        private Dictionary<int, Form> formulariosPorPantalla;
+
+        private void InicializarFormularios()
+        {
+            formulariosPorPantalla = new Dictionary<int, Form>
+            {
+                { 1, new frmDatosGeneralesClientes() },
+                { 2, new frmDatosGeneralesEmpleados() },
+                { 3, new frmFactura() },
+                { 4, new frmInventario() },
+                { 5, new frmReportes() }
+            };
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            DibujarMenu();
+            if (UsuarioActual != null)
+            {
+                string mensajeBienvenida = "";
+                lblNombre.Text = UsuarioActual.usua_Usuario;
+                lblRol.Text = UsuarioActual.role_Descripcion;
+                if (UsuarioActual.sexo_Id == 1) mensajeBienvenida = "Bienvenida";
+                else mensajeBienvenida = "Bienvenido";
+
+                lblMensajeBienvenida.Text = $"¡ {mensajeBienvenida}, {UsuarioActual.dato_NombreCompleto} !";
+            }
+        }
+
+        private void DibujarMenu()
+        {
+            // Limpia cualquier botón previamente agregado al panel
+           // panelMenu.Controls.Clear();
+
+            foreach (var pantalla in pantallasPermitidas)
+            {
+                Button boton = new Button
+                {
+                    Text = pantalla.pant_NombrePantalla,
+                    Size = new Size(220, 92),
+                    Location = new Point(0, pantalla.PosicionY),
+                    TextAlign = ContentAlignment.MiddleLeft,
+                    ImageAlign = ContentAlignment.MiddleLeft,
+                    Padding = new Padding(11, 2, 0, 0),
+                    FlatStyle = FlatStyle.Flat,
+                    ForeColor = Color.Gainsboro,
+                    Font = new Font("Microsoft Sans Serif", 9, FontStyle.Regular)
+                };
+
+                // Cargar la imagen desde los recursos
+                try
+                {
+                    boton.Image = (Image)Properties.Resources.ResourceManager.GetObject(pantalla.pant_RutaImagen);
+                }
+                catch
+                {
+                    // Manejo de errores si la imagen no se encuentra
+                    boton.Image = Properties.Resources.alquiler; // Puedes usar un ícono predeterminado
+                }
+
+                // Asociar el evento Click al botón y pasarle el PantallaId
+                boton.Click += (sender, e) =>
+                {
+                    // Verificar que el diccionario esté inicializado y que contenga el ID de la pantalla
+                    if (formulariosPorPantalla != null && formulariosPorPantalla.ContainsKey(pantalla.pant_ID))
+                    {
+                        OpenChildForm(formulariosPorPantalla[pantalla.pant_ID], sender);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Formulario no disponible para esta pantalla.");
+                    }
+                };
+
+                // Agrega el botón al panel
+                panelMenu.Controls.Add(boton);
+            }
+        }
 
         //
         public frmPrincipal()
@@ -78,27 +161,23 @@ namespace Tienda_de_Peliculas
 
         }
 
+        private Form formularioActual = null;
         private void OpenChildForm(Form childForm, object btnSender)
         {
-            if(activateForm != null)
+            if (formularioActual != null)
             {
-                activateForm.Close();
+                formularioActual.Close();
             }
-           
-            ActivateButton(btnSender);
-            activateForm = childForm;
+            formularioActual = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            this.panelDesktopPanel.Controls.Add(childForm);
-            this.panelDesktopPanel.Tag = childForm;
+            this.Controls.Add(childForm);
+            this.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lbltTitle.Text = childForm.Text;
-
-                
         }
-#endregion
+        #endregion
 
         #region Dashboard 
         public void mostrarDatosDashboard()
@@ -170,6 +249,13 @@ namespace Tienda_de_Peliculas
             currentButton = null;
             btnCloseChildForm.Visible = false;
             mostrarDatosDashboard();
+        }
+
+        private void pcbFoto_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Hide();
         }
     }
 }

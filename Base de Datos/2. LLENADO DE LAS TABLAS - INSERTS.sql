@@ -203,6 +203,20 @@ VALUES								('Angie Yahaira Campos Arias', '0512200300736', '95887062', 'angie
 									3, 'Avenida Flores, 8va Calle, Casa #34', '2003-01-03', 1,1,
 									1, GETDATE())
 GO
+INSERT INTO Gral.tbDatos_Generales([dato_NombreCompleto],[dato_DNI],[dato_Telefono],[dato_email],
+									[ciud_Id],[dato_Direccion],[dato_FechaNacimiento],[sexo_Id],[cate_Id],
+									[usua_UsuarioCreacion],[dato_FechaCreacion])
+VALUES								('Cindy Nicole Reyes', '0512200200736', '33663366', 'cindy@gmail.com',
+									3, 'Avenida Flores, 8va Calle, Casa #34', '2002-01-13', 1,1,
+									1, GETDATE())
+GO
+INSERT INTO Gral.tbDatos_Generales([dato_NombreCompleto],[dato_DNI],[dato_Telefono],[dato_email],
+									[ciud_Id],[dato_Direccion],[dato_FechaNacimiento],[sexo_Id],[cate_Id],
+									[usua_UsuarioCreacion],[dato_FechaCreacion])
+VALUES								('Carlos Francisco Arita', '0512200500736', '33663366', 'carlos005@gmail.com',
+									3, 'Avenida Flores, 8va Calle, Casa #34', '2005-11-16', 1,1,
+									1, GETDATE())
+GO
 -- Datos Generales Clientes
 INSERT INTO Gral.tbDatos_Generales([dato_NombreCompleto],[dato_DNI],[dato_Telefono],[dato_email],
 									[ciud_Id],[dato_Direccion],[dato_FechaNacimiento],[sexo_Id],[cate_Id],

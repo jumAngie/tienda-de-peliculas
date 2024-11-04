@@ -55,5 +55,10 @@ namespace Tienda_de_Peliculas
         public static string VentasPorPeliculas = "Peli.REPORTE_VentasPorPeliculas";
         public static string VentasPorPeliculas_TOTAL = "Peli.REPORTE_VentasPorPeliculas_TOTAL";
         #endregion
+
+        #region Login
+        public static string IniciarSesión = "Acce.UDP_IniciarSesion";
+        public static string DibujarPantallas = "Acce.UDP_DibujarMenuPorRol";
+        #endregion
     }
 }
