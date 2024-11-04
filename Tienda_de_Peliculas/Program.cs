@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tienda_de_Peliculas
@@ -16,7 +13,7 @@ namespace Tienda_de_Peliculas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrincipal());
+            Application.Run(new frmLogin());
         }
     }
 }
