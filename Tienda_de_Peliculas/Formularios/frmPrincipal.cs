@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tienda_de_Peliculas.DAL;
 using Tienda_de_Peliculas.Formularios;
+using Tienda_de_Peliculas.Properties;
 using Tienda_de_Peliculas.View_Models;
 
 namespace Tienda_de_Peliculas
@@ -22,8 +23,8 @@ namespace Tienda_de_Peliculas
         private Form activateForm;
         public DatosUsuarioViewModel UsuarioActual { get; set; }
         public List<PantallasViewModel> pantallasPermitidas   { get; set; }
+        Dictionary<int, Form> formulariosPorPantalla = new Dictionary<int, Form>();
 
-        private Dictionary<int, Form> formulariosPorPantalla;
 
         private void InicializarFormularios()
         {
@@ -55,51 +56,56 @@ namespace Tienda_de_Peliculas
 
         private void DibujarMenu()
         {
-            // Limpia cualquier botón previamente agregado al panel
-           // panelMenu.Controls.Clear();
+            int posicionY = 72;
 
             foreach (var pantalla in pantallasPermitidas)
             {
+                
                 Button boton = new Button
                 {
                     Text = pantalla.pant_NombrePantalla,
                     Size = new Size(220, 92),
-                    Location = new Point(0, pantalla.PosicionY),
+                    Location = new Point(0, posicionY),
                     TextAlign = ContentAlignment.MiddleLeft,
                     ImageAlign = ContentAlignment.MiddleLeft,
                     Padding = new Padding(11, 2, 0, 0),
+                    Margin = new Padding(3, 5, 3, 3),
                     FlatStyle = FlatStyle.Flat,
                     ForeColor = Color.Gainsboro,
-                    Font = new Font("Microsoft Sans Serif", 9, FontStyle.Regular)
+                    TextImageRelation = TextImageRelation.ImageBeforeText,
+                    UseVisualStyleBackColor = true,
+                    Font = new Font("Microsoft Sans Serif", 9, FontStyle.Regular),
+                    FlatAppearance = {BorderSize = 0}
                 };
 
-                // Cargar la imagen desde los recursos
-                try
-                {
-                    boton.Image = (Image)Properties.Resources.ResourceManager.GetObject(pantalla.pant_RutaImagen);
-                }
-                catch
-                {
-                    // Manejo de errores si la imagen no se encuentra
-                    boton.Image = Properties.Resources.alquiler; // Puedes usar un ícono predeterminado
-                }
+                if (pantalla.pant_RutaImagen == "Icono_Registrar_Clientes")
+                    boton.Image = Properties.Resources.Icono_Registrar_Clientes;
+                else if (pantalla.pant_RutaImagen == "Icono_Registrar_Empleados")
+                    boton.Image = Properties.Resources.Icono_Registrar_Empleados;
+                else if (pantalla.pant_RutaImagen == "Icono_Registrar_Venta_Alquiler")
+                    boton.Image = Properties.Resources.Icono_Registrar_Venta_Alquiler;
+                else if (pantalla.pant_RutaImagen == "Icono_Inventario")
+                    boton.Image = Properties.Resources.Icono_Inventario;
+                else if (pantalla.pant_RutaImagen == "Icono_Reportes")
+                    boton.Image = Properties.Resources.Icono_Reportes;
 
-                // Asociar el evento Click al botón y pasarle el PantallaId
+               
                 boton.Click += (sender, e) =>
                 {
-                    // Verificar que el diccionario esté inicializado y que contenga el ID de la pantalla
+                   
                     if (formulariosPorPantalla != null && formulariosPorPantalla.ContainsKey(pantalla.pant_ID))
                     {
                         OpenChildForm(formulariosPorPantalla[pantalla.pant_ID], sender);
                     }
                     else
                     {
-                        MessageBox.Show("Formulario no disponible para esta pantalla.");
+                        MessageBox.Show("no jala D:");
                     }
                 };
 
                 // Agrega el botón al panel
                 panelMenu.Controls.Add(boton);
+                posicionY += boton.Height + boton.Margin.Top + boton.Margin.Bottom;
             }
         }
 
@@ -107,6 +113,7 @@ namespace Tienda_de_Peliculas
         public frmPrincipal()
         {
             InitializeComponent();
+            InicializarFormularios();
             tHora.Enabled = true;
             random = new Random();
             btnCloseChildForm.Visible = false;
@@ -128,20 +135,24 @@ namespace Tienda_de_Peliculas
 
         private void ActivateButton(object btnSender)
         {
-            if(btnSender != null)
+            if (btnSender != null)
             {
-                if (currentButton != (Button)btnSender) { 
-                
-                    DisableButton();
-                    Color color = SelectThemeColor();
-                    currentButton= (Button)btnSender;
+                if (currentButton != (Button)btnSender)
+                {
+                    DisableButton(); // Deshabilita el botón previamente activo
+                    Color color = SelectThemeColor(); // Selecciona un color aleatorio
+                    currentButton = (Button)btnSender;
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
-                    currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    currentButton.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+
                     panelTitleBar.BackColor = color;
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+
+                    
                     ThemeColor.PrimaryColor = color;
                     ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+
                     btnCloseChildForm.Visible = true;
                 }
             }
@@ -149,33 +160,35 @@ namespace Tienda_de_Peliculas
 
         private void DisableButton()
         {
-            foreach (Control previousBtn in panelMenu.Controls) 
-            { 
-                if(previousBtn.GetType() == typeof(Button))
-                    {
-                        previousBtn.BackColor = Color.FromArgb(51, 51, 76);
-                        previousBtn.ForeColor = Color.Gainsboro;
-                        previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            foreach (Control previousBtn in panelMenu.Controls)
+            {
+                if (previousBtn.GetType() == typeof(Button))
+                {
+                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
+                    previousBtn.ForeColor = Color.Gainsboro;
+                    previousBtn.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
             }
-
         }
 
-        private Form formularioActual = null;
+
         private void OpenChildForm(Form childForm, object btnSender)
         {
-            if (formularioActual != null)
+            if (activateForm != null)
             {
-                formularioActual.Close();
+                activateForm.Hide();
             }
-            formularioActual = childForm;
+
+            ActivateButton(btnSender); 
+            activateForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            this.Controls.Add(childForm);
-            this.Tag = childForm;
+            panelDesktopPanel.Controls.Add(childForm);
+            panelDesktopPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+            lbltTitle.Text = childForm.Text;
         }
         #endregion
 
@@ -242,13 +255,13 @@ namespace Tienda_de_Peliculas
 
         private void Reset()
         {
-            DisableButton();
-            lbltTitle.Text = "INICIO";
-            panelTitleBar.BackColor = Color.FromArgb(51, 51, 76);
-            panelLogo.BackColor = Color.FromArgb(39,39,58);
+            DisableButton(); // Resetea todos los botones a su estilo predeterminado
+            lbltTitle.Text = "INICIO"; // Título predeterminado
+            panelTitleBar.BackColor = Color.FromArgb(51, 51, 76); // Color original de la barra de título
+            panelLogo.BackColor = Color.FromArgb(39, 39, 58); // Color original del panel del logo
             currentButton = null;
-            btnCloseChildForm.Visible = false;
-            mostrarDatosDashboard();
+            btnCloseChildForm.Visible = false; // Oculta el botón de cerrar formulario
+            mostrarDatosDashboard(); // Restaura el dashboard o el contenido inicial
         }
 
         private void pcbFoto_Click(object sender, EventArgs e)

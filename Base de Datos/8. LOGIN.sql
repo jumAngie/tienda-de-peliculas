@@ -72,4 +72,12 @@ DECLARE @contrasenaEncriptada_Cindy VARBINARY(MAX) = HASHBYTES('SHA2_512', @CONT
 
 INSERT INTO Acce.tbUsuarios(usua_Usuario, usua_Contrasenia, role_Id, usua_UsuarioCreacion,usua_FechaCreacion, dato_Id)
 VALUES						('Cindy', @contrasenaEncriptada_Cindy, 1,1, GETDATE(), 16)
+GO
+--- añadiendo los demas usuarios
+----RHONDA
+DECLARE @CONTRA_R NVARCHAR(100) = '321'
+DECLARE @contrasenaEncriptada_R VARBINARY(MAX) = HASHBYTES('SHA2_512', @CONTRA_R);
+
+INSERT INTO Acce.tbUsuarios(usua_Usuario, usua_Contrasenia, role_Id, usua_UsuarioCreacion,usua_FechaCreacion, dato_Id)
+VALUES						('Rhonda_1999', @contrasenaEncriptada_R, 5,1, GETDATE(), 18)
 
