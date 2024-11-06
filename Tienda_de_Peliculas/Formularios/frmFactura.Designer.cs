@@ -53,10 +53,20 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dgFactura = new System.Windows.Forms.DataGridView();
+            this.pnlCliente = new System.Windows.Forms.Panel();
+            this.pnlPelicula = new System.Windows.Forms.Panel();
+            this.pnlPago = new System.Windows.Forms.Panel();
+            this.pnlDevolucion = new System.Windows.Forms.Panel();
+            this.lblVenta = new System.Windows.Forms.Label();
+            this.lblAlquiler = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlVenta.SuspendLayout();
             this.gbCompra.SuspendLayout();
             this.gbGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFactura)).BeginInit();
+            this.pnlDevolucion.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlVenta
@@ -73,16 +83,16 @@
             this.pnlVenta.Controls.Add(this.gbGenerales);
             this.pnlVenta.Controls.Add(this.btnCancelar);
             this.pnlVenta.Controls.Add(this.btnGuardar);
-            this.pnlVenta.Location = new System.Drawing.Point(12, 12);
+            this.pnlVenta.Location = new System.Drawing.Point(12, 27);
             this.pnlVenta.Name = "pnlVenta";
-            this.pnlVenta.Size = new System.Drawing.Size(783, 323);
+            this.pnlVenta.Size = new System.Drawing.Size(783, 308);
             this.pnlVenta.TabIndex = 2;
             // 
             // lblTotalResultado
             // 
             this.lblTotalResultado.AutoSize = true;
             this.lblTotalResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalResultado.Location = new System.Drawing.Point(162, 283);
+            this.lblTotalResultado.Location = new System.Drawing.Point(162, 276);
             this.lblTotalResultado.Name = "lblTotalResultado";
             this.lblTotalResultado.Size = new System.Drawing.Size(78, 24);
             this.lblTotalResultado.TabIndex = 17;
@@ -90,7 +100,7 @@
             // 
             // txtImpuesto
             // 
-            this.txtImpuesto.Location = new System.Drawing.Point(148, 250);
+            this.txtImpuesto.Location = new System.Drawing.Point(148, 243);
             this.txtImpuesto.Name = "txtImpuesto";
             this.txtImpuesto.ReadOnly = true;
             this.txtImpuesto.Size = new System.Drawing.Size(130, 20);
@@ -98,7 +108,7 @@
             // 
             // txtDescuento
             // 
-            this.txtDescuento.Location = new System.Drawing.Point(148, 224);
+            this.txtDescuento.Location = new System.Drawing.Point(148, 217);
             this.txtDescuento.Name = "txtDescuento";
             this.txtDescuento.ReadOnly = true;
             this.txtDescuento.Size = new System.Drawing.Size(130, 20);
@@ -106,7 +116,7 @@
             // 
             // txtSubtotal
             // 
-            this.txtSubtotal.Location = new System.Drawing.Point(148, 198);
+            this.txtSubtotal.Location = new System.Drawing.Point(148, 191);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.ReadOnly = true;
             this.txtSubtotal.Size = new System.Drawing.Size(130, 20);
@@ -116,7 +126,7 @@
             // 
             this.lblISV.AutoSize = true;
             this.lblISV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblISV.Location = new System.Drawing.Point(28, 254);
+            this.lblISV.Location = new System.Drawing.Point(28, 247);
             this.lblISV.Name = "lblISV";
             this.lblISV.Size = new System.Drawing.Size(114, 16);
             this.lblISV.TabIndex = 13;
@@ -126,7 +136,7 @@
             // 
             this.lblDescuento.AutoSize = true;
             this.lblDescuento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescuento.Location = new System.Drawing.Point(27, 228);
+            this.lblDescuento.Location = new System.Drawing.Point(27, 221);
             this.lblDescuento.Name = "lblDescuento";
             this.lblDescuento.Size = new System.Drawing.Size(92, 16);
             this.lblDescuento.TabIndex = 12;
@@ -136,7 +146,7 @@
             // 
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtotal.Location = new System.Drawing.Point(27, 202);
+            this.lblSubtotal.Location = new System.Drawing.Point(27, 195);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(79, 16);
             this.lblSubtotal.TabIndex = 11;
@@ -146,7 +156,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(26, 283);
+            this.lblTotal.Location = new System.Drawing.Point(26, 276);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(77, 24);
             this.lblTotal.TabIndex = 10;
@@ -154,12 +164,18 @@
             // 
             // gbCompra
             // 
+            this.gbCompra.Controls.Add(this.lblCantidad);
+            this.gbCompra.Controls.Add(this.txtCantidad);
+            this.gbCompra.Controls.Add(this.lblAlquiler);
+            this.gbCompra.Controls.Add(this.lblVenta);
             this.gbCompra.Controls.Add(this.rbAlquiler);
             this.gbCompra.Controls.Add(this.rbVenta);
-            this.gbCompra.Controls.Add(this.dtFechaDev);
             this.gbCompra.Controls.Add(this.lblFechaDev);
             this.gbCompra.Controls.Add(this.cbxPago);
             this.gbCompra.Controls.Add(this.label2);
+            this.gbCompra.Controls.Add(this.pnlPago);
+            this.gbCompra.Controls.Add(this.pnlDevolucion);
+            this.gbCompra.Controls.Add(this.panel1);
             this.gbCompra.Location = new System.Drawing.Point(401, 14);
             this.gbCompra.Name = "gbCompra";
             this.gbCompra.Size = new System.Drawing.Size(366, 167);
@@ -196,9 +212,9 @@
             // dtFechaDev
             // 
             this.dtFechaDev.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaDev.Location = new System.Drawing.Point(28, 126);
+            this.dtFechaDev.Location = new System.Drawing.Point(0, -2);
             this.dtFechaDev.Name = "dtFechaDev";
-            this.dtFechaDev.Size = new System.Drawing.Size(318, 20);
+            this.dtFechaDev.Size = new System.Drawing.Size(200, 20);
             this.dtFechaDev.TabIndex = 10;
             this.dtFechaDev.Visible = false;
             // 
@@ -206,7 +222,7 @@
             // 
             this.lblFechaDev.AutoSize = true;
             this.lblFechaDev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaDev.Location = new System.Drawing.Point(25, 107);
+            this.lblFechaDev.Location = new System.Drawing.Point(131, 107);
             this.lblFechaDev.Name = "lblFechaDev";
             this.lblFechaDev.Size = new System.Drawing.Size(105, 15);
             this.lblFechaDev.TabIndex = 9;
@@ -238,6 +254,8 @@
             this.gbGenerales.Controls.Add(this.label1);
             this.gbGenerales.Controls.Add(this.cbxCliente);
             this.gbGenerales.Controls.Add(this.lblName);
+            this.gbGenerales.Controls.Add(this.pnlCliente);
+            this.gbGenerales.Controls.Add(this.pnlPelicula);
             this.gbGenerales.Location = new System.Drawing.Point(17, 14);
             this.gbGenerales.Name = "gbGenerales";
             this.gbGenerales.Size = new System.Drawing.Size(366, 167);
@@ -301,7 +319,7 @@
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCancelar.Location = new System.Drawing.Point(643, 269);
+            this.btnCancelar.Location = new System.Drawing.Point(643, 256);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(124, 35);
             this.btnCancelar.TabIndex = 7;
@@ -311,7 +329,7 @@
             // btnGuardar
             // 
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Location = new System.Drawing.Point(513, 269);
+            this.btnGuardar.Location = new System.Drawing.Point(513, 256);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(124, 35);
             this.btnGuardar.TabIndex = 6;
@@ -330,6 +348,94 @@
             this.dgFactura.TabIndex = 5;
             this.dgFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFactura_CellContentClick);
             // 
+            // pnlCliente
+            // 
+            this.pnlCliente.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlCliente.Location = new System.Drawing.Point(81, 78);
+            this.pnlCliente.Name = "pnlCliente";
+            this.pnlCliente.Size = new System.Drawing.Size(257, 18);
+            this.pnlCliente.TabIndex = 18;
+            this.pnlCliente.Visible = false;
+            // 
+            // pnlPelicula
+            // 
+            this.pnlPelicula.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlPelicula.Location = new System.Drawing.Point(81, 111);
+            this.pnlPelicula.Name = "pnlPelicula";
+            this.pnlPelicula.Size = new System.Drawing.Size(257, 20);
+            this.pnlPelicula.TabIndex = 19;
+            this.pnlPelicula.Visible = false;
+            // 
+            // pnlPago
+            // 
+            this.pnlPago.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlPago.Location = new System.Drawing.Point(28, 78);
+            this.pnlPago.Name = "pnlPago";
+            this.pnlPago.Size = new System.Drawing.Size(318, 18);
+            this.pnlPago.TabIndex = 19;
+            this.pnlPago.Visible = false;
+            // 
+            // pnlDevolucion
+            // 
+            this.pnlDevolucion.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlDevolucion.Controls.Add(this.dtFechaDev);
+            this.pnlDevolucion.Location = new System.Drawing.Point(135, 128);
+            this.pnlDevolucion.Name = "pnlDevolucion";
+            this.pnlDevolucion.Size = new System.Drawing.Size(200, 21);
+            this.pnlDevolucion.TabIndex = 19;
+            this.pnlDevolucion.Visible = false;
+            // 
+            // lblVenta
+            // 
+            this.lblVenta.AutoSize = true;
+            this.lblVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVenta.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblVenta.Location = new System.Drawing.Point(73, 27);
+            this.lblVenta.Name = "lblVenta";
+            this.lblVenta.Size = new System.Drawing.Size(15, 20);
+            this.lblVenta.TabIndex = 20;
+            this.lblVenta.Text = "*";
+            this.lblVenta.Visible = false;
+            this.lblVenta.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // lblAlquiler
+            // 
+            this.lblAlquiler.AutoSize = true;
+            this.lblAlquiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlquiler.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblAlquiler.Location = new System.Drawing.Point(163, 27);
+            this.lblAlquiler.Name = "lblAlquiler";
+            this.lblAlquiler.Size = new System.Drawing.Size(15, 20);
+            this.lblAlquiler.TabIndex = 21;
+            this.lblAlquiler.Text = "*";
+            this.lblAlquiler.Visible = false;
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(28, 126);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
+            this.txtCantidad.TabIndex = 22;
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(25, 107);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(49, 13);
+            this.lblCantidad.TabIndex = 23;
+            this.lblCantidad.Text = "Cantidad";
+            this.lblCantidad.Click += new System.EventHandler(this.label3_Click_1);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkRed;
+            this.panel1.Location = new System.Drawing.Point(28, 129);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(100, 20);
+            this.panel1.TabIndex = 20;
+            this.panel1.Visible = false;
+            // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,6 +453,7 @@
             this.gbGenerales.ResumeLayout(false);
             this.gbGenerales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFactura)).EndInit();
+            this.pnlDevolucion.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -377,5 +484,14 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.RadioButton rbAlquiler;
         private System.Windows.Forms.RadioButton rbVenta;
+        private System.Windows.Forms.Panel pnlCliente;
+        private System.Windows.Forms.Panel pnlPelicula;
+        private System.Windows.Forms.Panel pnlPago;
+        private System.Windows.Forms.Panel pnlDevolucion;
+        private System.Windows.Forms.Label lblVenta;
+        private System.Windows.Forms.Label lblAlquiler;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Panel panel1;
     }
 }

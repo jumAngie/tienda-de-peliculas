@@ -14,6 +14,7 @@ namespace Tienda_de_Peliculas.Formularios
 {
     public partial class frmFactura : Form
     {
+        
         public frmFactura()
         {
             InitializeComponent();
@@ -47,12 +48,38 @@ namespace Tienda_de_Peliculas.Formularios
         }
 
         #endregion
+        #region Combobox 
+        //combox 
+        #region LLENANDO COMBOBOX
+
+        public void CargarMetodosPagoCMB()
+        {
+            cbxPago.DataSource = metodosPago.CargarMetodosPago();
+            cbxPago.ValueMember = "meto_Id";
+            cbxPago.DisplayMember = "meto_Descripcion";
+        }
+
+        public void CargarClientesCMB()
+        {
+            cbxCliente.DataSource = clientes.CargarClientes();
+            cbxCliente.ValueMember = "dato_Id";
+            cbxCliente.DisplayMember = "dato_NombreCompleto";
+        }
+
+        public void CargarInventarioCMB()
+        {
+            cbxPelicula.DataSource = inventario.CargarInventario();
+            cbxPelicula.ValueMember = "inve_Id";
+            cbxPelicula.DisplayMember = "inve_Titulo";
+        }
+        #endregion
         private void frmFactura_Load(object sender, EventArgs e)
         {
            listado_factura();
 
             LoadTheme();
         }
+
 
         private void rbAlquiler_CheckedChanged(object sender, EventArgs e)
         {
@@ -80,12 +107,20 @@ namespace Tienda_de_Peliculas.Formularios
 
         private void cbxPelicula_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            
 
         }
 
         private void dgFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
         {
 
         }
