@@ -113,10 +113,6 @@ AS
 GO
 
 --- FACTURA
---CREATE OR ALTER PROCEDURE 
---SELECT TOP 1 (fact_NumFactura) AS 'Último Num Factura'
---	FROM Peli.tbFacturas
---	ORDER BY fact_Id DESC
 
 
 --- IDIOMAS
