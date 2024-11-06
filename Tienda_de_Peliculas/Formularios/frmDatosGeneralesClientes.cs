@@ -155,7 +155,38 @@ namespace Tienda_de_Peliculas
 
             return esvalido;
         }
+        //VALIDACIONES NÚMEROS
+        ErrorProvider errortelefono = new ErrorProvider();
+        private void txbTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool esValido = Validaciones.soloNumeros(e);
+            if (!esValido)
+            {
+                btnGuardar.Enabled = false;
+                errortelefono.SetError(txbTel, "Por favor, ingrese solo números.");
+            }
+            else
+            {
+                btnGuardar.Enabled = true;
+                errortelefono.Clear();
+            }
+        }
 
+        ErrorProvider errorDNI = new ErrorProvider();
+        private void mtxbDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool esValido = Validaciones.soloNumeros(e);
+            if (!esValido)
+            {
+                btnGuardar.Enabled = false;
+                errorDNI.SetError(mtxbDNI, "Por favor, ingrese solo números.");
+            }
+            else
+            {
+                btnGuardar.Enabled = true;
+                errorDNI.Clear();
+            }
+        }
         public void LimpiarCampos()
         {
             txbName.Clear();

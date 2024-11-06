@@ -191,6 +191,8 @@
             this.txbTel.Name = "txbTel";
             this.txbTel.Size = new System.Drawing.Size(151, 20);
             this.txbTel.TabIndex = 5;
+            this.txbTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTel_KeyPress);
+
             // 
             // lblTel
             // 
@@ -401,6 +403,8 @@
             this.mtxbDNI.Size = new System.Drawing.Size(131, 20);
             this.mtxbDNI.TabIndex = 3;
             this.mtxbDNI.Visible = false;
+            this.mtxbDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxbDNI_KeyPress);
+
             // 
             // dtFechaNacimiento
             // 
