@@ -48,27 +48,26 @@ namespace Tienda_de_Peliculas.Formularios
         }
 
         #endregion
-        #region Combobox 
         //combox 
         #region LLENANDO COMBOBOX
 
         public void CargarMetodosPagoCMB()
         {
-            cbxPago.DataSource = metodosPago.CargarMetodosPago();
+            //cbxPago.DataSource = metodosPago.CargarMetodosPago();
             cbxPago.ValueMember = "meto_Id";
             cbxPago.DisplayMember = "meto_Descripcion";
         }
 
         public void CargarClientesCMB()
         {
-            cbxCliente.DataSource = clientes.CargarClientes();
+           // cbxCliente.DataSource = clientes.CargarClientes();
             cbxCliente.ValueMember = "dato_Id";
             cbxCliente.DisplayMember = "dato_NombreCompleto";
         }
 
         public void CargarInventarioCMB()
         {
-            cbxPelicula.DataSource = inventario.CargarInventario();
+            //cbxPelicula.DataSource = inventario.CargarInventario();
             cbxPelicula.ValueMember = "inve_Id";
             cbxPelicula.DisplayMember = "inve_Titulo";
         }

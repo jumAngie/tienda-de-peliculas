@@ -12,9 +12,9 @@ namespace Tienda_de_Peliculas.DAL
 {
     public class ReportesDAL
     {
-        public List<FacturaViewModel> VentasPorPeliculas(int inve_Id, DateTime rangoInicio, DateTime rangoFin)
+        public List<ReporteViewModel> VentasPorPeliculas(int inve_Id, DateTime rangoInicio, DateTime rangoFin)
         {
-            List<FacturaViewModel> lista = new List<FacturaViewModel>();
+            List<ReporteViewModel> lista = new List<ReporteViewModel>();
             string rgI = rangoInicio.ToString("yyyy-MM-dd");
             string rgF = rangoFin.ToString("yyyy-MM-dd");
 
@@ -33,7 +33,7 @@ namespace Tienda_de_Peliculas.DAL
                     while (reader.Read())
                     {
 
-                        FacturaViewModel factura = new FacturaViewModel
+                        ReporteViewModel factura = new ReporteViewModel
                         {
                             inve_Id = reader.GetInt32(0),
                             fact_NumFactura = reader.GetString(1),
