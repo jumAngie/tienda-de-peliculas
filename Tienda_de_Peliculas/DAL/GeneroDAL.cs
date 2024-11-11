@@ -18,7 +18,7 @@ namespace Tienda_de_Peliculas.DAL
             using (SqlConnection conexion = BDConexion.ObtenerConexion())
             {
                 conexion.Open();
-                using (SqlCommand cmd = new SqlCommand("Peli.Generos_CMB", conexion))
+                using (SqlCommand cmd = new SqlCommand(ScriptsDatabase.ListarGeneros, conexion))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
