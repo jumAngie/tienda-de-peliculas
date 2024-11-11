@@ -23,20 +23,6 @@ namespace Tienda_de_Peliculas
         private Form activateForm;
         public DatosUsuarioViewModel UsuarioActual { get; set; }
         public List<PantallasViewModel> pantallasPermitidas   { get; set; }
-        Dictionary<int, Form> formulariosPorPantalla = new Dictionary<int, Form>();
-
-
-        private void InicializarFormularios()
-        {
-            formulariosPorPantalla = new Dictionary<int, Form>
-            {
-                { 1, new frmDatosGeneralesClientes() },
-                { 2, new frmDatosGeneralesEmpleados() },
-                { 3, new frmFactura() },
-                { 4, new frmInventario() },
-                { 5, new frmReportes() }
-            };
-        }
 
         protected override void OnLoad(EventArgs e)
         {
@@ -56,56 +42,40 @@ namespace Tienda_de_Peliculas
 
         private void DibujarMenu()
         {
-            int posicionY = 72;
+            int posicionY = 72; // Margen de espacio entre el header y los botones
 
             foreach (var pantalla in pantallasPermitidas)
             {
-                
-                Button boton = new Button
-                {
-                    Text = pantalla.pant_NombrePantalla,
-                    Size = new Size(220, 92),
-                    Location = new Point(0, posicionY),
-                    TextAlign = ContentAlignment.MiddleLeft,
-                    ImageAlign = ContentAlignment.MiddleLeft,
-                    Padding = new Padding(11, 2, 0, 0),
-                    Margin = new Padding(3, 5, 3, 3),
-                    FlatStyle = FlatStyle.Flat,
-                    ForeColor = Color.Gainsboro,
-                    TextImageRelation = TextImageRelation.ImageBeforeText,
-                    UseVisualStyleBackColor = true,
-                    Font = new Font("Microsoft Sans Serif", 9, FontStyle.Regular),
-                    FlatAppearance = {BorderSize = 0}
-                };
-
                 if (pantalla.pant_RutaImagen == "Icono_Registrar_Clientes")
-                    boton.Image = Properties.Resources.Icono_Registrar_Clientes;
-                else if (pantalla.pant_RutaImagen == "Icono_Registrar_Empleados")
-                    boton.Image = Properties.Resources.Icono_Registrar_Empleados;
-                else if (pantalla.pant_RutaImagen == "Icono_Registrar_Venta_Alquiler")
-                    boton.Image = Properties.Resources.Icono_Registrar_Venta_Alquiler;
-                else if (pantalla.pant_RutaImagen == "Icono_Inventario")
-                    boton.Image = Properties.Resources.Icono_Inventario;
-                else if (pantalla.pant_RutaImagen == "Icono_Reportes")
-                    boton.Image = Properties.Resources.Icono_Reportes;
-
-               
-                boton.Click += (sender, e) =>
                 {
-                   
-                    if (formulariosPorPantalla != null && formulariosPorPantalla.ContainsKey(pantalla.pant_ID))
-                    {
-                        OpenChildForm(formulariosPorPantalla[pantalla.pant_ID], sender);
-                    }
-                    else
-                    {
-                        MessageBox.Show("no jala D:");
-                    }
-                };
-
-                // Agrega el botón al panel
-                panelMenu.Controls.Add(boton);
-                posicionY += boton.Height + boton.Margin.Top + boton.Margin.Bottom;
+                    btnRegistroClientes.Visible = true;
+                    btnRegistroClientes.Location = new System.Drawing.Point(0, posicionY);
+                    posicionY += btnRegistroClientes.Height + btnRegistroClientes.Margin.Top + btnRegistroClientes.Margin.Bottom;
+                }
+                else if (pantalla.pant_RutaImagen == "Icono_Registrar_Empleados")
+                {
+                    btnRegistroEmpleados.Visible = true;
+                    btnRegistroEmpleados.Location = new System.Drawing.Point(0, posicionY);
+                    posicionY += btnRegistroEmpleados.Height + btnRegistroEmpleados.Margin.Top + btnRegistroEmpleados.Margin.Bottom;
+                }
+                else if (pantalla.pant_RutaImagen == "Icono_Registrar_Venta_Alquiler")
+                {
+                    btnVentaAlquiler.Visible = true;
+                    btnVentaAlquiler.Location = new System.Drawing.Point(0, posicionY);
+                    posicionY += btnVentaAlquiler.Height + btnVentaAlquiler.Margin.Top + btnVentaAlquiler.Margin.Bottom;
+                }
+                else if (pantalla.pant_RutaImagen == "Icono_Inventario")
+                {
+                    btnInventario.Visible = true;
+                    btnInventario.Location = new System.Drawing.Point(0, posicionY);
+                    posicionY += btnInventario.Height + btnInventario.Margin.Top + btnInventario.Margin.Bottom;
+                }
+                else if (pantalla.pant_RutaImagen == "Icono_Reportes")
+                {
+                    btnReportes.Visible = true;
+                    btnReportes.Location = new System.Drawing.Point(0, posicionY);
+                    posicionY += btnReportes.Height + btnReportes.Margin.Top + btnReportes.Margin.Bottom;
+                }
             }
         }
 
@@ -113,7 +83,6 @@ namespace Tienda_de_Peliculas
         public frmPrincipal()
         {
             InitializeComponent();
-            InicializarFormularios();
             tHora.Enabled = true;
             random = new Random();
             btnCloseChildForm.Visible = false;

@@ -233,7 +233,7 @@
             this.btnInventario.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnInventario.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Inventario;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.Location = new System.Drawing.Point(0, 310);
+            //this.btnInventario.Location = new System.Drawing.Point(0, 310);
             this.btnInventario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
@@ -254,7 +254,7 @@
             this.btnVentaAlquiler.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnVentaAlquiler.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Venta_Alquiler;
             this.btnVentaAlquiler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentaAlquiler.Location = new System.Drawing.Point(0, 231);
+            //this.btnVentaAlquiler.Location = new System.Drawing.Point(0, 231);
             this.btnVentaAlquiler.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.btnVentaAlquiler.Name = "btnVentaAlquiler";
             this.btnVentaAlquiler.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
@@ -275,7 +275,7 @@
             this.btnRegistroEmpleados.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnRegistroEmpleados.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Empleados;
             this.btnRegistroEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistroEmpleados.Location = new System.Drawing.Point(0, 144);
+            //this.btnRegistroEmpleados.Location = new System.Drawing.Point(0, 144);
             this.btnRegistroEmpleados.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.btnRegistroEmpleados.Name = "btnRegistroEmpleados";
             this.btnRegistroEmpleados.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
@@ -296,7 +296,7 @@
             this.btnRegistroClientes.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnRegistroClientes.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Clientes;
             this.btnRegistroClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistroClientes.Location = new System.Drawing.Point(0, 72);
+            //this.btnRegistroClientes.Location = new System.Drawing.Point(0, 72);
             this.btnRegistroClientes.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.btnRegistroClientes.Name = "btnRegistroClientes";
             this.btnRegistroClientes.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
