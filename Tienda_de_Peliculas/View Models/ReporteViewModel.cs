@@ -13,6 +13,5 @@ namespace Tienda_de_Peliculas.View_Models
         public string fact_NumFactura { get; set; }
         public string inve_Titulo { get; set; }
         public decimal inve_Total { get; set; }
-        public decimal fact_Total { get; set; }
     }
 }
