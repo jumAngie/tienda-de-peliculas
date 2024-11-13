@@ -171,7 +171,7 @@
             this.txbemail.Location = new System.Drawing.Point(177, 48);
             this.txbemail.MaxLength = 100;
             this.txbemail.Name = "txbemail";
-            this.txbemail.Size = new System.Drawing.Size(197, 20);
+            this.txbemail.Size = new System.Drawing.Size(186, 20);
             this.txbemail.TabIndex = 7;
             // 
             // lblemail
@@ -186,19 +186,18 @@
             // 
             // txbTel
             // 
-            this.txbTel.Location = new System.Drawing.Point(20, 48);
+            this.txbTel.Location = new System.Drawing.Point(9, 51);
             this.txbTel.MaxLength = 20;
             this.txbTel.Name = "txbTel";
-            this.txbTel.Size = new System.Drawing.Size(151, 20);
+            this.txbTel.Size = new System.Drawing.Size(142, 20);
             this.txbTel.TabIndex = 5;
             this.txbTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTel_KeyPress);
-
             // 
             // lblTel
             // 
             this.lblTel.AutoSize = true;
             this.lblTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTel.Location = new System.Drawing.Point(17, 29);
+            this.lblTel.Location = new System.Drawing.Point(6, 29);
             this.lblTel.Name = "lblTel";
             this.lblTel.Size = new System.Drawing.Size(58, 15);
             this.lblTel.TabIndex = 4;
@@ -273,9 +272,9 @@
             this.pnltel.BackColor = System.Drawing.Color.DarkRed;
             this.pnltel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnltel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnltel.Location = new System.Drawing.Point(20, 51);
+            this.pnltel.Location = new System.Drawing.Point(9, 54);
             this.pnltel.Name = "pnltel";
-            this.pnltel.Size = new System.Drawing.Size(151, 20);
+            this.pnltel.Size = new System.Drawing.Size(142, 20);
             this.pnltel.TabIndex = 33;
             this.pnltel.Visible = false;
             // 
@@ -286,7 +285,7 @@
             this.pnlemail.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlemail.Location = new System.Drawing.Point(177, 51);
             this.pnlemail.Name = "pnlemail";
-            this.pnlemail.Size = new System.Drawing.Size(197, 20);
+            this.pnlemail.Size = new System.Drawing.Size(186, 20);
             this.pnlemail.TabIndex = 34;
             this.pnlemail.Visible = false;
             // 
@@ -404,7 +403,6 @@
             this.mtxbDNI.TabIndex = 3;
             this.mtxbDNI.Visible = false;
             this.mtxbDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxbDNI_KeyPress);
-
             // 
             // dtFechaNacimiento
             // 
