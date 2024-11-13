@@ -17,7 +17,7 @@ namespace Tienda_de_Peliculas.DAL
             using (SqlConnection conexion = BDConexion.ObtenerConexion())
             {
                 conexion.Open();
-                using (SqlCommand cmd = new SqlCommand("Peli.Estados_CMB", conexion))
+                using (SqlCommand cmd = new SqlCommand("", conexion))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 

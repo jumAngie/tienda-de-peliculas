@@ -52,7 +52,7 @@ namespace Tienda_de_Peliculas.Clases
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("Gral.UDP_tbCiudades_Insertar", conexion);
+                    SqlCommand cmd = new SqlCommand(ScriptsDatabase.InsertarCiudades, conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@ciud_Descripcion",        ciudades.ciud_Descripcion);
@@ -84,7 +84,7 @@ namespace Tienda_de_Peliculas.Clases
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("Gral.UPD_tbCiudades_CargarInformacion", conexion);
+                    SqlCommand cmd = new SqlCommand(ScriptsDatabase.EditarCiudades_CargarInformacion, conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@ciud_Id", ciud_Id);
@@ -121,7 +121,7 @@ namespace Tienda_de_Peliculas.Clases
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("Gral.UPD_tbCiudades_Editar", conexion);
+                    SqlCommand cmd = new SqlCommand(ScriptsDatabase.EditarCiudades, conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@ciud_Id", ciudades.ciud_Id);
@@ -154,7 +154,7 @@ namespace Tienda_de_Peliculas.Clases
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("Gral.UPD_tbCiudades_Eliminar", conexion);
+                    SqlCommand cmd = new SqlCommand(ScriptsDatabase.EliminarCiudades, conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@ciud_Id", ciudades.ciud_Id);
@@ -183,7 +183,7 @@ namespace Tienda_de_Peliculas.Clases
             using (SqlConnection conexion = BDConexion.ObtenerConexion())
             {
                 conexion.Open();
-                using (SqlCommand cmd = new SqlCommand("Gral.Ciudades_CMB", conexion))
+                using (SqlCommand cmd = new SqlCommand(ScriptsDatabase.Ciudades_CMB, conexion))
                 {
                     
                     cmd.CommandType = CommandType.StoredProcedure;

@@ -49,7 +49,7 @@ namespace Tienda_de_Peliculas.DAL
             using (SqlConnection conexion = BDConexion.ObtenerConexion())
             {
                 conexion.Open();
-                string query = "SELECT * FROM Gral.DatosGenerales_Empleado";
+                string query = ScriptsDatabase.ListarEmpleados;
                 SqlCommand comando = new SqlCommand(query, conexion);
 
                 SqlDataReader reader = comando.ExecuteReader();
@@ -91,7 +91,7 @@ namespace Tienda_de_Peliculas.DAL
                 using (SqlConnection conexion = BDConexion.ObtenerConexion())
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("Gral.UDP_tbDatosGenerales_Insertar", conexion);
+                    SqlCommand cmd = new SqlCommand(ScriptsDatabase.InsertarEmpleados, conexion);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     string fechaformateada = DgEmpleados.dato_FechaNacimiento.ToString("yyyy-MM-dd");

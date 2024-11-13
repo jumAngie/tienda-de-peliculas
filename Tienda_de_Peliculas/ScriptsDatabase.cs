@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -29,8 +30,13 @@ namespace Tienda_de_Peliculas
         public static string InsertarFactura = "";
         #endregion
 
-        #region Datos Generales
+        #region Clientes
         public static string Clientes_CMB = "Gral.Clientes_CMB";
+        #endregion
+
+        #region Empleados
+        public static string ListarEmpleados = "SELECT * FROM Gral.DatosGenerales_Empleado";
+        public static string InsertarEmpleados = "Gral.UDP_tbDatosGenerales_Insertar";
         #endregion
 
         #region Paises
@@ -42,9 +48,15 @@ namespace Tienda_de_Peliculas
 
         #region Ciudades
         public static string ListarCiudades = "SELECT * FROM Gral.Listado_Ciudades";
+        public static string Ciudades_CMB = "Gral.Ciudades_CMB";
+        public static string InsertarCiudades = "Gral.UDP_tbCiudades_Insertar";
+        public static string EditarCiudades_CargarInformacion = "Gral.UPD_tbCiudades_CargarInformacion";
+        public static string EditarCiudades = "Gral.UPD_tbCiudades_Editar";
+        public static string EliminarCiudades = "Gral.UPD_tbCiudades_Eliminar";
         #endregion
 
         #region Idiomas
+        public static string ListarIdiomas = "Peli.Idiomas_CMB";
         #endregion
 
         #region Clasificaciones
@@ -54,6 +66,18 @@ namespace Tienda_de_Peliculas
         #region Reportes
         public static string VentasPorPeliculas = "Peli.REPORTE_VentasPorPeliculas";
         public static string VentasPorPeliculas_TOTAL = "Peli.REPORTE_VentasPorPeliculas_TOTAL";
+        #endregion
+
+        #region Formatos
+        public static string ListarFormatos = "Peli.Formatos_CMB";
+        #endregion
+
+        #region Generos
+        public static string ListarGeneros = "Peli.Generos_CMB";
+        #endregion
+
+        #region Estados
+        public static string ListarEstados = "Peli.Estados_CMB";
         #endregion
     }
 }

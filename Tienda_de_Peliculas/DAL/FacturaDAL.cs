@@ -86,7 +86,7 @@ namespace Tienda_de_Peliculas.DAL
             using (SqlConnection conexion =BDConexion.ObtenerConexion())
             {
                 conexion.Open();
-                string query = "Select * FROM Peli.listado_Facturas";
+                string query = "Select * FROM Peli.Listado_Facturas";
                 SqlCommand comando = new SqlCommand (query, conexion);
 
                 SqlDataReader reader = comando.ExecuteReader();

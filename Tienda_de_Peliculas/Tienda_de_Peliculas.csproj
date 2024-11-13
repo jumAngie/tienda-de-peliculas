@@ -149,6 +149,7 @@
     <Compile Include="View Models\EmpleadosViewModel.cs" />
     <Compile Include="View Models\InventarioViewModel.cs" />
     <Compile Include="View Models\PantallasViewModel.cs" />
+    <Compile Include="View Models\ReporteViewModel.cs" />
     <EmbeddedResource Include="Formularios\frmCiudades.resx">
       <DependentUpon>frmCiudades.cs</DependentUpon>
     </EmbeddedResource>
