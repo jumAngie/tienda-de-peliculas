@@ -203,6 +203,27 @@ VALUES								('Angie Yahaira Campos Arias', '0512200300736', '95887062', 'angie
 									3, 'Avenida Flores, 8va Calle, Casa #34', '2003-01-03', 1,1,
 									1, GETDATE())
 GO
+INSERT INTO Gral.tbDatos_Generales([dato_NombreCompleto],[dato_DNI],[dato_Telefono],[dato_email],
+									[ciud_Id],[dato_Direccion],[dato_FechaNacimiento],[sexo_Id],[cate_Id],
+									[usua_UsuarioCreacion],[dato_FechaCreacion])
+VALUES								('Cindy Nicole Reyes', '0512200200736', '33663366', 'cindy@gmail.com',
+									3, 'Avenida Flores, 8va Calle, Casa #34', '2002-01-13', 1,1,
+									1, GETDATE())
+GO
+INSERT INTO Gral.tbDatos_Generales([dato_NombreCompleto],[dato_DNI],[dato_Telefono],[dato_email],
+									[ciud_Id],[dato_Direccion],[dato_FechaNacimiento],[sexo_Id],[cate_Id],
+									[usua_UsuarioCreacion],[dato_FechaCreacion])
+VALUES								('Carlos Francisco Arita', '0512200500736', '33663366', 'carlos005@gmail.com',
+									3, 'Avenida Flores, 8va Calle, Casa #34', '2005-11-16', 2,1,
+									1, GETDATE())
+GO
+INSERT INTO Gral.tbDatos_Generales([dato_NombreCompleto],[dato_DNI],[dato_Telefono],[dato_email],
+									[ciud_Id],[dato_Direccion],[dato_FechaNacimiento],[sexo_Id],[cate_Id],
+									[usua_UsuarioCreacion],[dato_FechaCreacion])
+VALUES								('Rhonda Gutierrez', '0510199900736', '785269', 'ronda@gmail.com',
+									3, 'Avenida Flores, 8va Calle, Casa #34', '1995-11-16', 1,1,
+									1, GETDATE())
+GO
 -- Datos Generales Clientes
 INSERT INTO Gral.tbDatos_Generales([dato_NombreCompleto],[dato_DNI],[dato_Telefono],[dato_email],
 									[ciud_Id],[dato_Direccion],[dato_FechaNacimiento],[sexo_Id],[cate_Id],
@@ -373,19 +394,19 @@ GO
 
 --- INSERTANDO PANTALLAS
 INSERT INTO Acce.tbPantallas ([pant_NombrePantalla], [pant_RutaImagen], [pant_NombreBoton], [PosicionY])
-VALUES						 ('Clientes', 'Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Clientes', 'btnRegistroClientes', 72)
+VALUES						 ('Clientes', 'Icono_Registrar_Clientes', 'btnRegistroClientes', 72)
 GO
 INSERT INTO Acce.tbPantallas ([pant_NombrePantalla], [pant_RutaImagen], [pant_NombreBoton], [PosicionY])
-VALUES						 ('Empleados', 'Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Empleados', 'btnRegistroEmpleados', 144)
+VALUES						 ('Empleados', 'Icono_Registrar_Empleados', 'btnRegistroEmpleados', 144)
 GO
 INSERT INTO Acce.tbPantallas ([pant_NombrePantalla], [pant_RutaImagen], [pant_NombreBoton], [PosicionY])
-VALUES						 ('Venta/Alquiler', 'Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Venta_Alquiler', 'btnVentaAlquiler', 231)
+VALUES						 ('Venta/Alquiler', 'Icono_Registrar_Venta_Alquiler', 'btnVentaAlquiler', 231)
 GO
 INSERT INTO Acce.tbPantallas ([pant_NombrePantalla], [pant_RutaImagen], [pant_NombreBoton], [PosicionY])
-VALUES						 ('Inventario', 'Tienda_de_Peliculas.Properties.Resources.Icono_Inventario', 'btnInventario', 310)
+VALUES						 ('Inventario', 'Icono_Inventario', 'btnInventario', 310)
 GO
 INSERT INTO Acce.tbPantallas ([pant_NombrePantalla], [pant_RutaImagen], [pant_NombreBoton], [PosicionY])
-VALUES						 ('Reportes', 'Tienda_de_Peliculas.Properties.Resources.Icono_Reportes', 'btnReportes', 390)
+VALUES						 ('Reportes', 'Icono_Reportes', 'btnReportes', 390)
 GO
 
 --- ASIGNANDO PERMISOS

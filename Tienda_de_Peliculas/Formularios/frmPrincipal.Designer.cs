@@ -149,13 +149,15 @@
             // 
             this.pcbFoto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pcbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pcbFoto.Image = global::Tienda_de_Peliculas.Properties.Resources.pelicula;
-            this.pcbFoto.Location = new System.Drawing.Point(965, 12);
+            this.pcbFoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcbFoto.Image = global::Tienda_de_Peliculas.Properties.Resources.cerrar_sesion;
+            this.pcbFoto.Location = new System.Drawing.Point(962, 12);
             this.pcbFoto.Name = "pcbFoto";
-            this.pcbFoto.Size = new System.Drawing.Size(47, 45);
+            this.pcbFoto.Size = new System.Drawing.Size(50, 45);
             this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFoto.TabIndex = 0;
             this.pcbFoto.TabStop = false;
+            this.pcbFoto.Click += new System.EventHandler(this.pcbFoto_Click);
             // 
             // lblRol
             // 
@@ -163,23 +165,24 @@
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.Color.White;
-            this.lblRol.Location = new System.Drawing.Point(869, 38);
+            this.lblRol.Location = new System.Drawing.Point(842, 42);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(96, 15);
+            this.lblRol.Size = new System.Drawing.Size(114, 15);
             this.lblRol.TabIndex = 3;
-            this.lblRol.Text = "Administrador";
+            this.lblRol.Text = "role_descripcion";
             // 
             // lblNombre
             // 
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(830, 18);
+            this.lblNombre.Location = new System.Drawing.Point(847, 22);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(125, 20);
+            this.lblNombre.Size = new System.Drawing.Size(109, 18);
             this.lblNombre.TabIndex = 2;
-            this.lblNombre.Text = "Angie Campos";
+            this.lblNombre.Text = "dato_Usuario";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tHora
             // 
@@ -219,6 +222,7 @@
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Visible = false;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnInventario
@@ -229,7 +233,7 @@
             this.btnInventario.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnInventario.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Inventario;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.Location = new System.Drawing.Point(0, 310);
+            //this.btnInventario.Location = new System.Drawing.Point(0, 310);
             this.btnInventario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
@@ -239,6 +243,7 @@
             this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInventario.UseVisualStyleBackColor = true;
+            this.btnInventario.Visible = false;
             this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
             // btnVentaAlquiler
@@ -249,7 +254,7 @@
             this.btnVentaAlquiler.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnVentaAlquiler.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Venta_Alquiler;
             this.btnVentaAlquiler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentaAlquiler.Location = new System.Drawing.Point(0, 231);
+            //this.btnVentaAlquiler.Location = new System.Drawing.Point(0, 231);
             this.btnVentaAlquiler.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.btnVentaAlquiler.Name = "btnVentaAlquiler";
             this.btnVentaAlquiler.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
@@ -259,6 +264,7 @@
             this.btnVentaAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentaAlquiler.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVentaAlquiler.UseVisualStyleBackColor = true;
+            this.btnVentaAlquiler.Visible = false;
             this.btnVentaAlquiler.Click += new System.EventHandler(this.btnVentaAlquiler_Click);
             // 
             // btnRegistroEmpleados
@@ -269,7 +275,7 @@
             this.btnRegistroEmpleados.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnRegistroEmpleados.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Empleados;
             this.btnRegistroEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistroEmpleados.Location = new System.Drawing.Point(0, 144);
+            //this.btnRegistroEmpleados.Location = new System.Drawing.Point(0, 144);
             this.btnRegistroEmpleados.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.btnRegistroEmpleados.Name = "btnRegistroEmpleados";
             this.btnRegistroEmpleados.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
@@ -279,6 +285,7 @@
             this.btnRegistroEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistroEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistroEmpleados.UseVisualStyleBackColor = true;
+            this.btnRegistroEmpleados.Visible = false;
             this.btnRegistroEmpleados.Click += new System.EventHandler(this.btnRegistroEmpleados_Click);
             // 
             // btnRegistroClientes
@@ -289,7 +296,7 @@
             this.btnRegistroClientes.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnRegistroClientes.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Clientes;
             this.btnRegistroClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistroClientes.Location = new System.Drawing.Point(0, 72);
+            //this.btnRegistroClientes.Location = new System.Drawing.Point(0, 72);
             this.btnRegistroClientes.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.btnRegistroClientes.Name = "btnRegistroClientes";
             this.btnRegistroClientes.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
@@ -299,6 +306,7 @@
             this.btnRegistroClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistroClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistroClientes.UseVisualStyleBackColor = true;
+            this.btnRegistroClientes.Visible = false;
             this.btnRegistroClientes.Click += new System.EventHandler(this.btnRegistroClientes_Click);
             // 
             // panelLogo
@@ -368,9 +376,9 @@
             this.lblMensajeBienvenida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.lblMensajeBienvenida.Location = new System.Drawing.Point(24, 21);
             this.lblMensajeBienvenida.Name = "lblMensajeBienvenida";
-            this.lblMensajeBienvenida.Size = new System.Drawing.Size(210, 25);
+            this.lblMensajeBienvenida.Size = new System.Drawing.Size(217, 25);
             this.lblMensajeBienvenida.TabIndex = 11;
-            this.lblMensajeBienvenida.Text = "¡Bienvenido Angie!";
+            this.lblMensajeBienvenida.Text = "mensajeBienvenida";
             // 
             // panel4
             // 

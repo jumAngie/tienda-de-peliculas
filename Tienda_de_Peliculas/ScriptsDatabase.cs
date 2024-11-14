@@ -78,6 +78,9 @@ namespace Tienda_de_Peliculas
 
         #region Estados
         public static string ListarEstados = "Peli.Estados_CMB";
+        #region Login
+        public static string IniciarSesión = "Acce.UDP_IniciarSesion";
+        public static string DibujarPantallas = "Acce.UDP_DibujarMenuPorRol";
         #endregion
     }
 }

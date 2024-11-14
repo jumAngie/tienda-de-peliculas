@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tienda_de_Peliculas.View_Models
+{
+    public class UsuarioViewModel
+    {
+        public int usua_Id { get; set; }
+        public string usua_Usuario { get; set; }
+        public int dato_Id { get; set; }
+        public string dato_NombreCompleto { get; set; }
+        public string dato_email { get; set; }
+        public string role_Descripcion { get; set; }
+        public int role_Id { get; set; }
+
+    }
+}
