@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -50,7 +51,7 @@ namespace Tienda_de_Peliculas
         public void InsertarClientes()
         {
             if (rbF.Checked) sexo = 1;
-            if(rbM.Checked) sexo = 2;
+            if (rbM.Checked) sexo = 2;
 
             DatosGenerales Dg = new DatosGenerales
             {
@@ -75,7 +76,7 @@ namespace Tienda_de_Peliculas
         #region LLENANDO COMBOBOX
         public void CargarPaisesCMB()
         {
-            cbxPais.DataSource  = paises.CargarPaises();
+            cbxPais.DataSource = paises.CargarPaises();
             cbxPais.ValueMember = "pais_Id";
             cbxPais.DisplayMember = "pais_Descripcion";
         }
@@ -172,6 +173,8 @@ namespace Tienda_de_Peliculas
             }
         }
 
+
+
         ErrorProvider errorDNI = new ErrorProvider();
         private void mtxbDNI_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -187,6 +190,18 @@ namespace Tienda_de_Peliculas
                 errorDNI.Clear();
             }
         }
+
+        //VALIDACIONES EMAIL
+             ErrorProvider erroremail = new ErrorProvider();
+        private void txbemail_Leave(object sender, EventArgs e)
+        {
+            if (!Validaciones.validarEmail(txbemail.Text))
+                erroremail.SetError(txbemail, "Correo no válido");
+            else
+                erroremail.Clear();
+        }
+
+        //LIMPIEZA DE CAMPOS
         public void LimpiarCampos()
         {
             txbName.Clear();
@@ -209,11 +224,11 @@ namespace Tienda_de_Peliculas
             mtxbDNI.Visible = false;
             lblDNIE.Visible = false;
             txbDNIE.Visible = false;
-            
+
         }
         #endregion
 
-        
+
         #region MENSAJES
         public void MensajeAdvertencia()
         {
@@ -236,7 +251,7 @@ namespace Tienda_de_Peliculas
             MensajeAdvertencia_Hide();
         }
 
-       
+
         private void cbxPais_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxPais.SelectedValue != null && cbxPais.SelectedValue is int)
@@ -270,7 +285,7 @@ namespace Tienda_de_Peliculas
         {
             LimpiarCampos();
             panel_OcultarValidaciones();
-            MensajeAdvertencia_Hide();        
+            MensajeAdvertencia_Hide();
         }
 
         private async void btnGuardar_Click(object sender, EventArgs e)
@@ -281,7 +296,7 @@ namespace Tienda_de_Peliculas
                 InsertarClientes();
                 ListarClientes();
                 LimpiarCampos();
-                
+
             }
             else
             {
@@ -308,5 +323,7 @@ namespace Tienda_de_Peliculas
             lblidentidad.Visible = false;
             mtxbDNI.Visible = false;
         }
+
+        
     }
 }

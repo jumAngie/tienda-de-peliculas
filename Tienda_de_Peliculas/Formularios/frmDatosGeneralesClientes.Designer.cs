@@ -94,7 +94,7 @@
             this.txbDirE.Multiline = true;
             this.txbDirE.Name = "txbDirE";
             this.txbDirE.Size = new System.Drawing.Size(354, 33);
-            this.txbDirE.TabIndex = 20;
+            this.txbDirE.TabIndex = 14;
             // 
             // lblCiudad
             // 
@@ -130,10 +130,11 @@
             // 
             this.cbxDepto.Enabled = false;
             this.cbxDepto.FormattingEnabled = true;
+            this.cbxDepto.ItemHeight = 13;
             this.cbxDepto.Location = new System.Drawing.Point(177, 118);
             this.cbxDepto.Name = "cbxDepto";
             this.cbxDepto.Size = new System.Drawing.Size(197, 21);
-            this.cbxDepto.TabIndex = 21;
+            this.cbxDepto.TabIndex = 12;
             this.cbxDepto.SelectedIndexChanged += new System.EventHandler(this.cbxDepto_SelectedIndexChanged);
             // 
             // cbxCiudad
@@ -143,15 +144,16 @@
             this.cbxCiudad.Location = new System.Drawing.Point(20, 170);
             this.cbxCiudad.Name = "cbxCiudad";
             this.cbxCiudad.Size = new System.Drawing.Size(354, 21);
-            this.cbxCiudad.TabIndex = 20;
+            this.cbxCiudad.TabIndex = 13;
             // 
             // cbxPais
             // 
             this.cbxPais.FormattingEnabled = true;
+            this.cbxPais.ItemHeight = 13;
             this.cbxPais.Location = new System.Drawing.Point(20, 118);
             this.cbxPais.Name = "cbxPais";
             this.cbxPais.Size = new System.Drawing.Size(151, 21);
-            this.cbxPais.TabIndex = 19;
+            this.cbxPais.TabIndex = 11;
             this.cbxPais.SelectedIndexChanged += new System.EventHandler(this.cbxPais_SelectedIndexChanged);
             // 
             // lblDir
@@ -172,7 +174,8 @@
             this.txbemail.MaxLength = 100;
             this.txbemail.Name = "txbemail";
             this.txbemail.Size = new System.Drawing.Size(186, 20);
-            this.txbemail.TabIndex = 7;
+            this.txbemail.TabIndex = 10;
+            this.txbemail.Leave += new System.EventHandler(this.txbemail_Leave);
             // 
             // lblemail
             // 
@@ -186,11 +189,11 @@
             // 
             // txbTel
             // 
-            this.txbTel.Location = new System.Drawing.Point(9, 51);
+            this.txbTel.Location = new System.Drawing.Point(9, 48);
             this.txbTel.MaxLength = 20;
             this.txbTel.Name = "txbTel";
             this.txbTel.Size = new System.Drawing.Size(142, 20);
-            this.txbTel.TabIndex = 5;
+            this.txbTel.TabIndex = 9;
             this.txbTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTel_KeyPress);
             // 
             // lblTel
@@ -272,7 +275,7 @@
             this.pnltel.BackColor = System.Drawing.Color.DarkRed;
             this.pnltel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnltel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnltel.Location = new System.Drawing.Point(9, 54);
+            this.pnltel.Location = new System.Drawing.Point(9, 51);
             this.pnltel.Name = "pnltel";
             this.pnltel.Size = new System.Drawing.Size(142, 20);
             this.pnltel.TabIndex = 33;
@@ -400,7 +403,7 @@
             this.mtxbDNI.Mask = "0000-0000-00000";
             this.mtxbDNI.Name = "mtxbDNI";
             this.mtxbDNI.Size = new System.Drawing.Size(131, 20);
-            this.mtxbDNI.TabIndex = 3;
+            this.mtxbDNI.TabIndex = 7;
             this.mtxbDNI.Visible = false;
             this.mtxbDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxbDNI_KeyPress);
             // 
@@ -410,7 +413,7 @@
             this.dtFechaNacimiento.Location = new System.Drawing.Point(214, 104);
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(160, 20);
-            this.dtFechaNacimiento.TabIndex = 9;
+            this.dtFechaNacimiento.TabIndex = 4;
             // 
             // rbF
             // 
@@ -418,7 +421,7 @@
             this.rbF.Location = new System.Drawing.Point(13, 108);
             this.rbF.Name = "rbF";
             this.rbF.Size = new System.Drawing.Size(71, 17);
-            this.rbF.TabIndex = 28;
+            this.rbF.TabIndex = 2;
             this.rbF.TabStop = true;
             this.rbF.Text = "Femenino";
             this.rbF.UseVisualStyleBackColor = true;
@@ -429,7 +432,7 @@
             this.rbM.Location = new System.Drawing.Point(111, 108);
             this.rbM.Name = "rbM";
             this.rbM.Size = new System.Drawing.Size(73, 17);
-            this.rbM.TabIndex = 29;
+            this.rbM.TabIndex = 3;
             this.rbM.TabStop = true;
             this.rbM.Text = "Masculino";
             this.rbM.UseVisualStyleBackColor = true;
@@ -478,7 +481,7 @@
             this.rbE.Location = new System.Drawing.Point(132, 38);
             this.rbE.Name = "rbE";
             this.rbE.Size = new System.Drawing.Size(72, 17);
-            this.rbE.TabIndex = 40;
+            this.rbE.TabIndex = 6;
             this.rbE.TabStop = true;
             this.rbE.Text = "Extranjero";
             this.rbE.UseVisualStyleBackColor = true;
@@ -490,7 +493,7 @@
             this.rbH.Location = new System.Drawing.Point(20, 38);
             this.rbH.Name = "rbH";
             this.rbH.Size = new System.Drawing.Size(78, 17);
-            this.rbH.TabIndex = 39;
+            this.rbH.TabIndex = 5;
             this.rbH.TabStop = true;
             this.rbH.Text = "Hondureño";
             this.rbH.UseVisualStyleBackColor = true;
@@ -499,10 +502,10 @@
             // txbDNIE
             // 
             this.txbDNIE.Location = new System.Drawing.Point(189, 90);
-            this.txbDNIE.MaxLength = 20;
+            this.txbDNIE.MaxLength = 100;
             this.txbDNIE.Name = "txbDNIE";
             this.txbDNIE.Size = new System.Drawing.Size(185, 20);
-            this.txbDNIE.TabIndex = 38;
+            this.txbDNIE.TabIndex = 8;
             this.txbDNIE.Visible = false;
             // 
             // lblDNIE

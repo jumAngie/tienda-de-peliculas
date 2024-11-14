@@ -58,5 +58,11 @@ namespace Tienda_de_Peliculas
         {
             return txtPrecio != null && Regex.IsMatch(txtPrecio, "^$[0-9]{1,3}([\\.][0-9]{2})");
         }
+
+        public static bool validarEmail(string txtEmail)
+        {
+            return txtEmail != null && Regex.IsMatch(txtEmail,
+                @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+         }       
     }
 }
