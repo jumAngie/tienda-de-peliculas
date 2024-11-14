@@ -13,7 +13,7 @@ namespace Tienda_de_Peliculas
         // Conexiones para la base
 
         // otros
-        private static string connString = "Password=acampos;Persist Security Info=True;User ID=sa;Initial Catalog=TIENDA_PELICULAS;Data Source=COMPUDARIO\\SQLEXPRESS";
+        //private static string connString = "Password=acampos;Persist Security Info=True;User ID=sa;Initial Catalog=TIENDA_PELICULAS;Data Source=COMPUDARIO\\SQLEXPRESS";
 
         // local (angie casita):
         //  private static string connString = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=TIENDA_PELICULAS;Data Source=DESKTOP-J3T0LDQ\\SQLEXPRESS";
@@ -24,7 +24,7 @@ namespace Tienda_de_Peliculas
         // local (cindy): aun no hay vuelva otro día
 
         // nube:
-        //private static string connString = "workstation id=TIENDA_PELICULAS.mssql.somee.com;packet size=4096;user id=jum4angie_SQLLogin_1;pwd=jddug3yr1p;data source=TIENDA_PELICULAS.mssql.somee.com;persist security info=False;initial catalog=TIENDA_PELICULAS;TrustServerCertificate=True";
+        private static string connString = "workstation id=TIENDA_PELICULAS.mssql.somee.com;packet size=4096;user id=jum4angie_SQLLogin_1;pwd=jddug3yr1p;data source=TIENDA_PELICULAS.mssql.somee.com;persist security info=False;initial catalog=TIENDA_PELICULAS;TrustServerCertificate=True";
 
         public static SqlConnection ObtenerConexion()
         {
