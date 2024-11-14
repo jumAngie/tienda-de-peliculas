@@ -45,11 +45,11 @@ namespace Tienda_de_Peliculas.View_Models
         [DisplayName("Clasificación")]
         public string clas_Descripcion { get; set; } 
 
-        [DisplayName("Usuario Creador")]
+        /*[DisplayName("Usuario Creador")]
         public string usua_UsuarioCreacion { get; set; }
 
         [DisplayName("Usuario Modificador")]
-        public string usua_UsuarioModificacion { get; set; }
+        public string usua_UsuarioModificacion { get; set; }*/
        
     }
 }

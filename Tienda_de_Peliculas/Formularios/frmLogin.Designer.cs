@@ -70,18 +70,20 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 530);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(400, 652);
+            this.panel1.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cascadia Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(168, 501);
+            this.label4.Location = new System.Drawing.Point(224, 617);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 20);
+            this.label4.Size = new System.Drawing.Size(155, 25);
             this.label4.TabIndex = 5;
             this.label4.Text = "Versión 1.0.0";
             // 
@@ -90,18 +92,20 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cascadia Mono SemiBold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(69, 277);
+            this.label2.Location = new System.Drawing.Point(92, 341);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 35);
+            this.label2.Size = new System.Drawing.Size(228, 44);
             this.label2.TabIndex = 4;
             this.label2.Text = "V I D E O S";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.DarkRed;
-            this.panel4.Location = new System.Drawing.Point(300, 277);
+            this.panel4.Location = new System.Drawing.Point(400, 341);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(450, 5);
+            this.panel4.Size = new System.Drawing.Size(600, 6);
             this.panel4.TabIndex = 7;
             // 
             // label3
@@ -109,10 +113,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(57, 241);
+            this.label3.Location = new System.Drawing.Point(76, 297);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(223, 36);
-            this.label3.TabIndex = 3;
+            this.label3.Size = new System.Drawing.Size(278, 45);
+            this.label3.TabIndex = 10;
             this.label3.Text = "HOLLYWOOD";
             // 
             // label1
@@ -120,18 +125,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(82, 177);
+            this.label1.Location = new System.Drawing.Point(109, 218);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 24);
-            this.label1.TabIndex = 1;
+            this.label1.Size = new System.Drawing.Size(190, 33);
+            this.label1.TabIndex = 10;
             this.label1.Text = "Bienvenido a";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Tienda_de_Peliculas.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(63, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(84, 63);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(185, 105);
+            this.pictureBox1.Size = new System.Drawing.Size(247, 129);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -147,10 +154,11 @@
             this.pnlFondo.Controls.Add(this.label5);
             this.pnlFondo.Controls.Add(this.btnCerrar);
             this.pnlFondo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlFondo.Location = new System.Drawing.Point(300, 0);
+            this.pnlFondo.Location = new System.Drawing.Point(400, 0);
+            this.pnlFondo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFondo.Name = "pnlFondo";
-            this.pnlFondo.Size = new System.Drawing.Size(450, 530);
-            this.pnlFondo.TabIndex = 1;
+            this.pnlFondo.Size = new System.Drawing.Size(600, 652);
+            this.pnlFondo.TabIndex = 10;
             // 
             // lblError
             // 
@@ -158,9 +166,10 @@
             this.lblError.BackColor = System.Drawing.Color.DarkRed;
             this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblError.Location = new System.Drawing.Point(236, 43);
+            this.lblError.Location = new System.Drawing.Point(315, 53);
+            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(202, 16);
+            this.lblError.Size = new System.Drawing.Size(256, 20);
             this.lblError.TabIndex = 7;
             this.lblError.Text = "Usuario o Contraseña incorrecta.";
             this.lblError.Visible = false;
@@ -170,9 +179,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Cascadia Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label6.Location = new System.Drawing.Point(305, 506);
+            this.label6.Location = new System.Drawing.Point(407, 623);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 15);
+            this.label6.Size = new System.Drawing.Size(176, 18);
             this.label6.TabIndex = 6;
             this.label6.Text = "Hollywood Videos 2024";
             // 
@@ -182,10 +192,11 @@
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(105, 310);
+            this.btnEntrar.Location = new System.Drawing.Point(140, 382);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(232, 35);
-            this.btnEntrar.TabIndex = 4;
+            this.btnEntrar.Size = new System.Drawing.Size(309, 43);
+            this.btnEntrar.TabIndex = 3;
             this.btnEntrar.Text = "ENTRAR";
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
@@ -196,9 +207,10 @@
             this.pnlContrasenia.Controls.Add(this.txtContrasenia);
             this.pnlContrasenia.Controls.Add(this.pbxContrasenia);
             this.pnlContrasenia.Controls.Add(this.pnlValidarContra);
-            this.pnlContrasenia.Location = new System.Drawing.Point(0, 232);
+            this.pnlContrasenia.Location = new System.Drawing.Point(0, 286);
+            this.pnlContrasenia.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContrasenia.Name = "pnlContrasenia";
-            this.pnlContrasenia.Size = new System.Drawing.Size(450, 45);
+            this.pnlContrasenia.Size = new System.Drawing.Size(600, 55);
             this.pnlContrasenia.TabIndex = 3;
             // 
             // txtContrasenia
@@ -207,19 +219,21 @@
             this.txtContrasenia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContrasenia.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasenia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.txtContrasenia.Location = new System.Drawing.Point(55, 12);
+            this.txtContrasenia.Location = new System.Drawing.Point(73, 15);
+            this.txtContrasenia.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasenia.Name = "txtContrasenia";
-            this.txtContrasenia.Size = new System.Drawing.Size(370, 17);
-            this.txtContrasenia.TabIndex = 1;
+            this.txtContrasenia.Size = new System.Drawing.Size(493, 21);
+            this.txtContrasenia.TabIndex = 2;
             this.txtContrasenia.UseSystemPasswordChar = true;
             this.txtContrasenia.Click += new System.EventHandler(this.txtContrasenia_Click);
             // 
             // pbxContrasenia
             // 
             this.pbxContrasenia.Image = global::Tienda_de_Peliculas.Properties.Resources.cerrar_con_llave1;
-            this.pbxContrasenia.Location = new System.Drawing.Point(15, 9);
+            this.pbxContrasenia.Location = new System.Drawing.Point(20, 11);
+            this.pbxContrasenia.Margin = new System.Windows.Forms.Padding(4);
             this.pbxContrasenia.Name = "pbxContrasenia";
-            this.pbxContrasenia.Size = new System.Drawing.Size(24, 24);
+            this.pbxContrasenia.Size = new System.Drawing.Size(32, 30);
             this.pbxContrasenia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxContrasenia.TabIndex = 0;
             this.pbxContrasenia.TabStop = false;
@@ -229,9 +243,10 @@
             // pnlValidarContra
             // 
             this.pnlValidarContra.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlValidarContra.Location = new System.Drawing.Point(0, 42);
+            this.pnlValidarContra.Location = new System.Drawing.Point(0, 52);
+            this.pnlValidarContra.Margin = new System.Windows.Forms.Padding(4);
             this.pnlValidarContra.Name = "pnlValidarContra";
-            this.pnlValidarContra.Size = new System.Drawing.Size(450, 1);
+            this.pnlValidarContra.Size = new System.Drawing.Size(600, 1);
             this.pnlValidarContra.TabIndex = 7;
             this.pnlValidarContra.Visible = false;
             // 
@@ -241,9 +256,10 @@
             this.pnlUsuario.Controls.Add(this.txtUsuario);
             this.pnlUsuario.Controls.Add(this.pbxUsuario);
             this.pnlUsuario.Controls.Add(this.pnlValidarUsuario);
-            this.pnlUsuario.Location = new System.Drawing.Point(0, 177);
+            this.pnlUsuario.Location = new System.Drawing.Point(0, 218);
+            this.pnlUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.pnlUsuario.Name = "pnlUsuario";
-            this.pnlUsuario.Size = new System.Drawing.Size(450, 45);
+            this.pnlUsuario.Size = new System.Drawing.Size(600, 55);
             this.pnlUsuario.TabIndex = 3;
             // 
             // txtUsuario
@@ -252,18 +268,20 @@
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.txtUsuario.Location = new System.Drawing.Point(55, 10);
+            this.txtUsuario.Location = new System.Drawing.Point(73, 12);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(370, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(493, 25);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Click += new System.EventHandler(this.txtUsuario_Click);
             // 
             // pbxUsuario
             // 
             this.pbxUsuario.Image = global::Tienda_de_Peliculas.Properties.Resources.usuario;
-            this.pbxUsuario.Location = new System.Drawing.Point(15, 11);
+            this.pbxUsuario.Location = new System.Drawing.Point(20, 14);
+            this.pbxUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.pbxUsuario.Name = "pbxUsuario";
-            this.pbxUsuario.Size = new System.Drawing.Size(24, 24);
+            this.pbxUsuario.Size = new System.Drawing.Size(32, 30);
             this.pbxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxUsuario.TabIndex = 0;
             this.pbxUsuario.TabStop = false;
@@ -272,9 +290,10 @@
             // pnlValidarUsuario
             // 
             this.pnlValidarUsuario.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlValidarUsuario.Location = new System.Drawing.Point(0, 44);
+            this.pnlValidarUsuario.Location = new System.Drawing.Point(0, 54);
+            this.pnlValidarUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.pnlValidarUsuario.Name = "pnlValidarUsuario";
-            this.pnlValidarUsuario.Size = new System.Drawing.Size(450, 5);
+            this.pnlValidarUsuario.Size = new System.Drawing.Size(600, 6);
             this.pnlValidarUsuario.TabIndex = 7;
             this.pnlValidarUsuario.Visible = false;
             // 
@@ -283,10 +302,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label5.Location = new System.Drawing.Point(38, 135);
+            this.label5.Location = new System.Drawing.Point(51, 166);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 24);
-            this.label5.TabIndex = 2;
+            this.label5.Size = new System.Drawing.Size(180, 33);
+            this.label5.TabIndex = 25;
             this.label5.Text = "Iniciar Sesión";
             // 
             // btnCerrar
@@ -296,28 +316,31 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnCerrar.Location = new System.Drawing.Point(410, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(547, 0);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(40, 40);
-            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.Size = new System.Drawing.Size(53, 49);
+            this.btnCerrar.TabIndex = 4;
             this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(750, 530);
+            this.ClientSize = new System.Drawing.Size(1000, 652);
             this.ControlBox = false;
             this.Controls.Add(this.pnlFondo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogIn";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

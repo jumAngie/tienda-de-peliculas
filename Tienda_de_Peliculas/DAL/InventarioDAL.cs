@@ -42,8 +42,8 @@ namespace Tienda_de_Peliculas.DAL
                     inventarioView.inve_Cantidad = reader.GetInt32(9);
                     inventarioView.inve_Precio = reader.GetDecimal(10);
                     inventarioView.clas_Descripcion = reader.GetString(11);
-                    inventarioView.usua_UsuarioCreacion = reader.GetString(12);
-                    inventarioView.usua_UsuarioModificacion = reader.GetString(13);
+                   // inventarioView.usua_UsuarioCreacion = reader.GetString(12);
+                   //inventarioView.usua_UsuarioModificacion = reader.GetString(13);
                     lista.Add(inventarioView);
                 }
 
