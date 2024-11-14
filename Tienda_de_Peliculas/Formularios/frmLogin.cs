@@ -119,5 +119,10 @@ namespace Tienda_de_Peliculas
                 }
             }
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            txtUsuario.Focus();
+        }
     }
 }
