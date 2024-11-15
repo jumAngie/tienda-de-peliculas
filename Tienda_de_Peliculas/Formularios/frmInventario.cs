@@ -21,7 +21,7 @@ namespace Tienda_de_Peliculas
         ClasificacionesDAL  cl = new ClasificacionesDAL();
         FormatosDAL         frm = new FormatosDAL();
         EstadosDAL          est = new EstadosDAL();
-        public DatosUsuarioViewModel UsuarioActual { get; }
+        
         private int id_filaSeleccionada;
 
         public frmInventario()
@@ -179,7 +179,7 @@ namespace Tienda_de_Peliculas
                 inve_Cantidad = Convert.ToInt32(txtExistencias.Text),
                 inve_Precio = Convert.ToDecimal(txtPrecio.Text),
                 clas_Id = Convert.ToInt32(cboClasificacion.SelectedValue),
-                usua_UsuarioCreacion = UsuarioActual.usua_Id,
+                usua_UsuarioCreacion = 1,
                 inve_FechaCreacion = DateTime.Now,
             };
 
@@ -277,7 +277,7 @@ namespace Tienda_de_Peliculas
             LoadTheme();
             txtTitulo.Focus();
             boton_mostrarGuardar();
-            MessageBox.Show(UsuarioActual.usua_Id + " " + UsuarioActual.dato_NombreCompleto);
+            
             // Añadiendo el boton al comenzar cada registro pq si queda al final no se ve y le es más dificil
             // al usuario desplazarse hasta el final para eliminar un registro  (?
 
