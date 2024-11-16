@@ -32,8 +32,9 @@ namespace Tienda_de_Peliculas.DAL
 
                     clientesRegistrados = Convert.ToString(clientes);
                 }
-
+               
             }
+
             catch (Exception ex)
             {
                 clientesRegistrados = "Error: " + ex.Message;

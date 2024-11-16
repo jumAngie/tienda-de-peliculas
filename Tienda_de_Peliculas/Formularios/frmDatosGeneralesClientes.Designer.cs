@@ -71,6 +71,8 @@
             this.pnlDNI = new System.Windows.Forms.Panel();
             this.pnlDNIE = new System.Windows.Forms.Panel();
             this.gbDNI = new System.Windows.Forms.GroupBox();
+            this.lblsexoA = new System.Windows.Forms.Label();
+            this.lblnacionalidadAD = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDatosCliente)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -429,7 +431,7 @@
             // rbM
             // 
             this.rbM.AutoSize = true;
-            this.rbM.Location = new System.Drawing.Point(111, 108);
+            this.rbM.Location = new System.Drawing.Point(90, 107);
             this.rbM.Name = "rbM";
             this.rbM.Size = new System.Drawing.Size(73, 17);
             this.rbM.TabIndex = 3;
@@ -439,6 +441,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblsexoA);
             this.groupBox1.Controls.Add(this.rbM);
             this.groupBox1.Controls.Add(this.rbF);
             this.groupBox1.Controls.Add(this.dtFechaNacimiento);
@@ -543,6 +546,7 @@
             // 
             // gbDNI
             // 
+            this.gbDNI.Controls.Add(this.lblnacionalidadAD);
             this.gbDNI.Controls.Add(this.lblidentidad);
             this.gbDNI.Controls.Add(this.txbDNIE);
             this.gbDNI.Controls.Add(this.mtxbDNI);
@@ -558,6 +562,30 @@
             this.gbDNI.TabIndex = 43;
             this.gbDNI.TabStop = false;
             this.gbDNI.Text = "Datos de Identificación";
+            // 
+            // lblsexoA
+            // 
+            this.lblsexoA.AutoSize = true;
+            this.lblsexoA.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsexoA.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblsexoA.Location = new System.Drawing.Point(169, 108);
+            this.lblsexoA.Name = "lblsexoA";
+            this.lblsexoA.Size = new System.Drawing.Size(17, 24);
+            this.lblsexoA.TabIndex = 31;
+            this.lblsexoA.Text = "*";
+            this.lblsexoA.Visible = false;
+            // 
+            // lblnacionalidadAD
+            // 
+            this.lblnacionalidadAD.AutoSize = true;
+            this.lblnacionalidadAD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnacionalidadAD.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblnacionalidadAD.Location = new System.Drawing.Point(199, 38);
+            this.lblnacionalidadAD.Name = "lblnacionalidadAD";
+            this.lblnacionalidadAD.Size = new System.Drawing.Size(17, 24);
+            this.lblnacionalidadAD.TabIndex = 32;
+            this.lblnacionalidadAD.Text = "*";
+            this.lblnacionalidadAD.Visible = false;
             // 
             // frmDatosGeneralesClientes
             // 
@@ -628,5 +656,7 @@
         private System.Windows.Forms.RadioButton rbH;
         private System.Windows.Forms.Label lblNacionalidad;
         private System.Windows.Forms.GroupBox gbDNI;
+        private System.Windows.Forms.Label lblsexoA;
+        private System.Windows.Forms.Label lblnacionalidadAD;
     }
 }
