@@ -68,6 +68,7 @@
     <Compile Include="DAL\IdiomasDAL.cs" />
     <Compile Include="DAL\InventarioDAL.cs" />
     <Compile Include="DAL\LoginDAL.cs" />
+    <Compile Include="DAL\PagoDAL.cs" />
     <Compile Include="DAL\PaisesDAL.cs" />
     <Compile Include="DAL\ReportesDAL.cs" />
     <Compile Include="Entities\Ciudades.cs" />

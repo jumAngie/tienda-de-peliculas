@@ -266,6 +266,10 @@
             // cbxPago
             // 
             this.cbxPago.FormattingEnabled = true;
+            this.cbxPago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Trasnferencia",
+            "Tarjeta "});
             this.cbxPago.Location = new System.Drawing.Point(28, 72);
             this.cbxPago.Name = "cbxPago";
             this.cbxPago.Size = new System.Drawing.Size(318, 21);
@@ -415,6 +419,7 @@
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -425,6 +430,7 @@
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // dgFactura
             // 

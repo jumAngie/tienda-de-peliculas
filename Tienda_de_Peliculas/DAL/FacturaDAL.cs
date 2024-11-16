@@ -14,7 +14,8 @@ namespace Tienda_de_Peliculas.DAL
 {
     public class FacturaDAL
     {
-
+   
+        #region Cantida de Venta
         public static string CantidadVentasSemanaActual(DateTime fechaLunes, DateTime fechaDomingo)
         {
             string cantVentas = "0";
@@ -46,7 +47,9 @@ namespace Tienda_de_Peliculas.DAL
 
             return cantVentas;
         }
+        #endregion
 
+        #region Cantida de Alquiler
         public static string CantidadAlquileresSemanaActual(DateTime fechaLunes, DateTime fechaDomingo)
         {
             string cantAlquileres = "0";
@@ -78,8 +81,9 @@ namespace Tienda_de_Peliculas.DAL
 
             return cantAlquileres;
         }
+        #endregion
 
-        //listar factura
+        #region listar factura
         public static List<FacturaViewModel>listarfactura()
         {
             List<FacturaViewModel> lista =new List<FacturaViewModel>();
@@ -117,7 +121,9 @@ namespace Tienda_de_Peliculas.DAL
             }
 
         }
-        //insertar
+        #endregion
+
+        #region insertar
         public static string InsertarFacturas(Facturas facturas)
         {
             string mensaje = "";
@@ -155,8 +161,9 @@ namespace Tienda_de_Peliculas.DAL
 
             return mensaje;
         }
+        #endregion
 
-        // Cargar Datos de Factura para Editar
+        #region Cargar Datos de Factura para Editar
         public static Facturas Editar_CargarDatos(int fact_ID)
         {
             Facturas factura = null;
@@ -199,8 +206,9 @@ namespace Tienda_de_Peliculas.DAL
 
             return factura;
         }
+        #endregion
 
-        // Editar Factura
+        #region Editar Factura
         public static string EditarFacturas(Facturas factura)
         {
             string mensaje = "";
@@ -239,8 +247,9 @@ namespace Tienda_de_Peliculas.DAL
 
             return mensaje;
         }
+     #endregion
 
-        // Eliminar Factura
+        #region Eliminar Factura
         public static string EliminarFacturas(Facturas factura)
         {
             string mensaje = "";
@@ -268,9 +277,10 @@ namespace Tienda_de_Peliculas.DAL
 
             return mensaje;
         }
+        #endregion
+
         public class FacturaDal
         {
-            //combobox
             public DataTable CargarFacturas()
             {
                 DataTable dt = new DataTable();
