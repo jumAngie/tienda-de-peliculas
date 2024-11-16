@@ -51,7 +51,7 @@ GO
 CREATE OR ALTER PROCEDURE Peli.MetodosPago_CMB
 AS
 	BEGIN
-			SELECT '0' AS 'ciud_Id', ' - Seleccione una opción -' AS 'ciud_Descripcion'
+			SELECT '0' AS 'meto_Id', ' - Seleccione una opción -' AS 'meto_Descripcion'
 			UNION ALL
 			SELECT meto_Id, meto_Descripcion FROM Peli.tbMetodosPago
 	END
@@ -113,6 +113,15 @@ AS
 GO
 
 --- FACTURA
+CREATE OR ALTER PROCEDURE Peli.Facturas_CMB
+AS
+BEGIN
+    SELECT '0' AS 'fact_ID', ' - Seleccione una opción - ' AS 'fact_NumFactura'
+    UNION ALL
+    SELECT fact_ID, fact_NumFactura FROM Peli.tbFacturas
+    WHERE  fact_Estado = 1; 
+  END
+GO
 
 
 --- IDIOMAS

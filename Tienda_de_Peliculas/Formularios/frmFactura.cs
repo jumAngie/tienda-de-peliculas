@@ -9,12 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tienda_de_Peliculas.Clases;
 using Tienda_de_Peliculas.DAL;
+using Tienda_de_Peliculas.View_Models;
 
 namespace Tienda_de_Peliculas.Formularios
 {
     public partial class frmFactura : Form
     {
-        
+        FacturaDAL fac = new FacturaDAL();
+        ClientesDAL clie = new ClientesDAL();  
+        //MetodosPagoDAL meto = new MetodosPagoDAL(); 
+        InventarioDAL inv = new InventarioDAL();  
+
+        public DatosUsuarioViewModel UsuarioActual { get;} 
+
+        private int id_filaSeleccionada;
+
         public frmFactura()
         {
             InitializeComponent();
@@ -48,7 +57,7 @@ namespace Tienda_de_Peliculas.Formularios
         }
 
         #endregion
-        //combox 
+        //combobox 
         #region LLENANDO COMBOBOX
 
         public void CargarMetodosPagoCMB()
@@ -60,21 +69,23 @@ namespace Tienda_de_Peliculas.Formularios
 
         public void CargarClientesCMB()
         {
-           // cbxCliente.DataSource = clientes.CargarClientes();
+           //cbxCliente.DataSource = Clientes.CargarClientes();
             cbxCliente.ValueMember = "dato_Id";
             cbxCliente.DisplayMember = "dato_NombreCompleto";
         }
 
         public void CargarInventarioCMB()
         {
+            
             //cbxPelicula.DataSource = inventario.CargarInventario();
             cbxPelicula.ValueMember = "inve_Id";
             cbxPelicula.DisplayMember = "inve_Titulo";
         }
         #endregion
         private void frmFactura_Load(object sender, EventArgs e)
-        {
-           listado_factura();
+        {   
+
+            listado_factura();
 
             LoadTheme();
         }
@@ -100,7 +111,8 @@ namespace Tienda_de_Peliculas.Formularios
         private void lblNumFactura_Click(object sender, EventArgs e)
         {
             int NumFactura = 1;
-            lblNumFactura.Text = "FAC#" + NumFactura.ToString("D6");
+            lblNumFactura.Text = "FAC#" + NumFactura.ToString("D6"); 
+            NumFactura++;
 
         }
 
@@ -120,6 +132,11 @@ namespace Tienda_de_Peliculas.Formularios
         }
 
         private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxPago_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

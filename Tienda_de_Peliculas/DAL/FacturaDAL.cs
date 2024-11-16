@@ -14,6 +14,7 @@ namespace Tienda_de_Peliculas.DAL
 {
     public class FacturaDAL
     {
+
         public static string CantidadVentasSemanaActual(DateTime fechaLunes, DateTime fechaDomingo)
         {
             string cantVentas = "0";
@@ -267,7 +268,28 @@ namespace Tienda_de_Peliculas.DAL
 
             return mensaje;
         }
+        public class FacturaDal
+        {
+            //combobox
+            public DataTable CargarFacturas()
+            {
+                DataTable dt = new DataTable();
+                    using (SqlConnection conexion = BDConexion.ObtenerConexion())
+                    {
+                        conexion.Open();
 
+                        using (SqlCommand cmd = new SqlCommand("Peli.CargarFacturas", conexion))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            SqlDataAdapter da = new SqlDataAdapter(cmd);
+                            da.Fill(dt); 
+                        }
+                    }
+
+                return dt;
+            }
+
+         }
     }
-
 }

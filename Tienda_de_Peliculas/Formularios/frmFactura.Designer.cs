@@ -38,35 +38,36 @@
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.gbCompra = new System.Windows.Forms.GroupBox();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.lblAlquiler = new System.Windows.Forms.Label();
+            this.lblVenta = new System.Windows.Forms.Label();
             this.rbAlquiler = new System.Windows.Forms.RadioButton();
             this.rbVenta = new System.Windows.Forms.RadioButton();
-            this.dtFechaDev = new System.Windows.Forms.DateTimePicker();
             this.lblFechaDev = new System.Windows.Forms.Label();
             this.cbxPago = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pnlPago = new System.Windows.Forms.Panel();
+            this.pnlDevolucion = new System.Windows.Forms.Panel();
+            this.dtFechaDev = new System.Windows.Forms.DateTimePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.gbGenerales = new System.Windows.Forms.GroupBox();
             this.lblNumFactura = new System.Windows.Forms.Label();
             this.cbxPelicula = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxCliente = new System.Windows.Forms.ComboBox();
             this.lblName = new System.Windows.Forms.Label();
+            this.pnlCliente = new System.Windows.Forms.Panel();
+            this.pnlPelicula = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dgFactura = new System.Windows.Forms.DataGridView();
-            this.pnlCliente = new System.Windows.Forms.Panel();
-            this.pnlPelicula = new System.Windows.Forms.Panel();
-            this.pnlPago = new System.Windows.Forms.Panel();
-            this.pnlDevolucion = new System.Windows.Forms.Panel();
-            this.lblVenta = new System.Windows.Forms.Label();
-            this.lblAlquiler = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.lblCantidad = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pnlVenta.SuspendLayout();
             this.gbCompra.SuspendLayout();
+            this.pnlDevolucion.SuspendLayout();
             this.gbGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFactura)).BeginInit();
-            this.pnlDevolucion.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlVenta
@@ -183,6 +184,48 @@
             this.gbCompra.TabStop = false;
             this.gbCompra.Text = "Datos de la Compra";
             // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(25, 107);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(49, 13);
+            this.lblCantidad.TabIndex = 23;
+            this.lblCantidad.Text = "Cantidad";
+            this.lblCantidad.Click += new System.EventHandler(this.label3_Click_1);
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(28, 126);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
+            this.txtCantidad.TabIndex = 22;
+            // 
+            // lblAlquiler
+            // 
+            this.lblAlquiler.AutoSize = true;
+            this.lblAlquiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlquiler.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblAlquiler.Location = new System.Drawing.Point(163, 27);
+            this.lblAlquiler.Name = "lblAlquiler";
+            this.lblAlquiler.Size = new System.Drawing.Size(15, 20);
+            this.lblAlquiler.TabIndex = 21;
+            this.lblAlquiler.Text = "*";
+            this.lblAlquiler.Visible = false;
+            // 
+            // lblVenta
+            // 
+            this.lblVenta.AutoSize = true;
+            this.lblVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVenta.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblVenta.Location = new System.Drawing.Point(73, 27);
+            this.lblVenta.Name = "lblVenta";
+            this.lblVenta.Size = new System.Drawing.Size(15, 20);
+            this.lblVenta.TabIndex = 20;
+            this.lblVenta.Text = "*";
+            this.lblVenta.Visible = false;
+            this.lblVenta.Click += new System.EventHandler(this.label3_Click);
+            // 
             // rbAlquiler
             // 
             this.rbAlquiler.AutoSize = true;
@@ -209,15 +252,6 @@
             this.rbVenta.UseVisualStyleBackColor = true;
             this.rbVenta.CheckedChanged += new System.EventHandler(this.rbVenta_CheckedChanged);
             // 
-            // dtFechaDev
-            // 
-            this.dtFechaDev.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaDev.Location = new System.Drawing.Point(0, -2);
-            this.dtFechaDev.Name = "dtFechaDev";
-            this.dtFechaDev.Size = new System.Drawing.Size(200, 20);
-            this.dtFechaDev.TabIndex = 10;
-            this.dtFechaDev.Visible = false;
-            // 
             // lblFechaDev
             // 
             this.lblFechaDev.AutoSize = true;
@@ -236,6 +270,7 @@
             this.cbxPago.Name = "cbxPago";
             this.cbxPago.Size = new System.Drawing.Size(318, 21);
             this.cbxPago.TabIndex = 8;
+            this.cbxPago.SelectedIndexChanged += new System.EventHandler(this.cbxPago_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -246,6 +281,43 @@
             this.label2.Size = new System.Drawing.Size(98, 15);
             this.label2.TabIndex = 7;
             this.label2.Text = "Método de Pago";
+            // 
+            // pnlPago
+            // 
+            this.pnlPago.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlPago.Location = new System.Drawing.Point(28, 78);
+            this.pnlPago.Name = "pnlPago";
+            this.pnlPago.Size = new System.Drawing.Size(318, 18);
+            this.pnlPago.TabIndex = 19;
+            this.pnlPago.Visible = false;
+            // 
+            // pnlDevolucion
+            // 
+            this.pnlDevolucion.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlDevolucion.Controls.Add(this.dtFechaDev);
+            this.pnlDevolucion.Location = new System.Drawing.Point(135, 128);
+            this.pnlDevolucion.Name = "pnlDevolucion";
+            this.pnlDevolucion.Size = new System.Drawing.Size(200, 21);
+            this.pnlDevolucion.TabIndex = 19;
+            this.pnlDevolucion.Visible = false;
+            // 
+            // dtFechaDev
+            // 
+            this.dtFechaDev.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaDev.Location = new System.Drawing.Point(0, -2);
+            this.dtFechaDev.Name = "dtFechaDev";
+            this.dtFechaDev.Size = new System.Drawing.Size(200, 20);
+            this.dtFechaDev.TabIndex = 10;
+            this.dtFechaDev.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkRed;
+            this.panel1.Location = new System.Drawing.Point(28, 129);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(100, 20);
+            this.panel1.TabIndex = 20;
+            this.panel1.Visible = false;
             // 
             // gbGenerales
             // 
@@ -314,6 +386,24 @@
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Cliente:";
             // 
+            // pnlCliente
+            // 
+            this.pnlCliente.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlCliente.Location = new System.Drawing.Point(81, 78);
+            this.pnlCliente.Name = "pnlCliente";
+            this.pnlCliente.Size = new System.Drawing.Size(257, 18);
+            this.pnlCliente.TabIndex = 18;
+            this.pnlCliente.Visible = false;
+            // 
+            // pnlPelicula
+            // 
+            this.pnlPelicula.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlPelicula.Location = new System.Drawing.Point(81, 111);
+            this.pnlPelicula.Name = "pnlPelicula";
+            this.pnlPelicula.Size = new System.Drawing.Size(257, 20);
+            this.pnlPelicula.TabIndex = 19;
+            this.pnlPelicula.Visible = false;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -348,94 +438,6 @@
             this.dgFactura.TabIndex = 5;
             this.dgFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFactura_CellContentClick);
             // 
-            // pnlCliente
-            // 
-            this.pnlCliente.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlCliente.Location = new System.Drawing.Point(81, 78);
-            this.pnlCliente.Name = "pnlCliente";
-            this.pnlCliente.Size = new System.Drawing.Size(257, 18);
-            this.pnlCliente.TabIndex = 18;
-            this.pnlCliente.Visible = false;
-            // 
-            // pnlPelicula
-            // 
-            this.pnlPelicula.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlPelicula.Location = new System.Drawing.Point(81, 111);
-            this.pnlPelicula.Name = "pnlPelicula";
-            this.pnlPelicula.Size = new System.Drawing.Size(257, 20);
-            this.pnlPelicula.TabIndex = 19;
-            this.pnlPelicula.Visible = false;
-            // 
-            // pnlPago
-            // 
-            this.pnlPago.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlPago.Location = new System.Drawing.Point(28, 78);
-            this.pnlPago.Name = "pnlPago";
-            this.pnlPago.Size = new System.Drawing.Size(318, 18);
-            this.pnlPago.TabIndex = 19;
-            this.pnlPago.Visible = false;
-            // 
-            // pnlDevolucion
-            // 
-            this.pnlDevolucion.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlDevolucion.Controls.Add(this.dtFechaDev);
-            this.pnlDevolucion.Location = new System.Drawing.Point(135, 128);
-            this.pnlDevolucion.Name = "pnlDevolucion";
-            this.pnlDevolucion.Size = new System.Drawing.Size(200, 21);
-            this.pnlDevolucion.TabIndex = 19;
-            this.pnlDevolucion.Visible = false;
-            // 
-            // lblVenta
-            // 
-            this.lblVenta.AutoSize = true;
-            this.lblVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVenta.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblVenta.Location = new System.Drawing.Point(73, 27);
-            this.lblVenta.Name = "lblVenta";
-            this.lblVenta.Size = new System.Drawing.Size(15, 20);
-            this.lblVenta.TabIndex = 20;
-            this.lblVenta.Text = "*";
-            this.lblVenta.Visible = false;
-            this.lblVenta.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // lblAlquiler
-            // 
-            this.lblAlquiler.AutoSize = true;
-            this.lblAlquiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlquiler.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblAlquiler.Location = new System.Drawing.Point(163, 27);
-            this.lblAlquiler.Name = "lblAlquiler";
-            this.lblAlquiler.Size = new System.Drawing.Size(15, 20);
-            this.lblAlquiler.TabIndex = 21;
-            this.lblAlquiler.Text = "*";
-            this.lblAlquiler.Visible = false;
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(28, 126);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
-            this.txtCantidad.TabIndex = 22;
-            // 
-            // lblCantidad
-            // 
-            this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(25, 107);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(49, 13);
-            this.lblCantidad.TabIndex = 23;
-            this.lblCantidad.Text = "Cantidad";
-            this.lblCantidad.Click += new System.EventHandler(this.label3_Click_1);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkRed;
-            this.panel1.Location = new System.Drawing.Point(28, 129);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(100, 20);
-            this.panel1.TabIndex = 20;
-            this.panel1.Visible = false;
-            // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,10 +452,10 @@
             this.pnlVenta.PerformLayout();
             this.gbCompra.ResumeLayout(false);
             this.gbCompra.PerformLayout();
+            this.pnlDevolucion.ResumeLayout(false);
             this.gbGenerales.ResumeLayout(false);
             this.gbGenerales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFactura)).EndInit();
-            this.pnlDevolucion.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -493,5 +495,6 @@
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Panel panel1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
