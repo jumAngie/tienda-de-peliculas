@@ -23,7 +23,7 @@ AS
 			WHERE  pais_Id = @pais_Id
 	END
 GO
-
+	
 -- DATOS GENERALES CLIENTES
 CREATE OR ALTER PROCEDURE Gral.Clientes_CMB
 AS
