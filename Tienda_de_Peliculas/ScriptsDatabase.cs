@@ -84,5 +84,9 @@ namespace Tienda_de_Peliculas
         public static string IniciarSesión = "Acce.UDP_IniciarSesion";
         public static string DibujarPantallas = "Acce.UDP_DibujarMenuPorRol";
         #endregion
+
+        #region Métodos De Pago
+        public static string ListarMetodosPago = "Peli.MetodosPago_CMB";
+        #endregion
     }
 }
