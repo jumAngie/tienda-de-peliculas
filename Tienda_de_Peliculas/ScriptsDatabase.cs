@@ -32,6 +32,7 @@ namespace Tienda_de_Peliculas
 
         #region Clientes
         public static string Clientes_CMB = "Gral.Clientes_CMB";
+        public static string ListarClientes = "SELECT * FROM Gral.DatosGenerales_Cliente";
         #endregion
 
         #region Empleados

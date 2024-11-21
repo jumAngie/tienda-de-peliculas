@@ -58,6 +58,6 @@ namespace Tienda_de_Peliculas
         {
             return txtEmail != null && Regex.IsMatch(txtEmail,
                 @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
-         }       
+        }       
     }
 }

@@ -20,6 +20,7 @@ namespace Tienda_de_Peliculas
         DepartamentosDAL depto = new DepartamentosDAL();
         CiudadesDAL ciudad = new CiudadesDAL();
         #endregion
+
         #region VARIABLES
         private int sexo = 0;
         private int cliente = 2;
@@ -65,7 +66,7 @@ namespace Tienda_de_Peliculas
                 dato_Direccion = txbDirE.Text,
                 cate_Id = cliente,
                 dato_FechaCreacion = DateTime.Now,
-                usua_UsuarioCreacion = 1
+                usua_UsuarioCreacion = 1 // Id por mientras, acá va el id del usuario logeado
             };
 
             string resultados = ClientesDAL.InsertarClientes(Dg);
@@ -228,7 +229,6 @@ namespace Tienda_de_Peliculas
         }
         #endregion
 
-
         #region MENSAJES
         public void MensajeAdvertencia()
         {
@@ -239,6 +239,7 @@ namespace Tienda_de_Peliculas
             lblAdvertencia.Visible = false;
         }
         #endregion
+
         #region EVENTOS DE LOS ELEMENTOS DEL FORMULARIO
         private void frmDatosGeneralesCliente_Load(object sender, EventArgs e)
         {

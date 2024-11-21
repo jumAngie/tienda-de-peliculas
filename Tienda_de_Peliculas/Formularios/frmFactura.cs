@@ -48,11 +48,11 @@ namespace Tienda_de_Peliculas.Formularios
         }
         #endregion
 
-        #region validaciones limpieza de campo 
+        #region VALIDACIONES LIMPIEZA DE CAMPO
 
         #endregion
 
-        #region crud
+        #region CRUD
         public void listado_factura()
         {
            dgFactura.DataSource=FacturaDAL.listarfactura();
@@ -97,9 +97,8 @@ namespace Tienda_de_Peliculas.Formularios
             cbxPago.Text = "Seleccione un Metodo de Pago";
             cbxPelicula.Text= "Seleccione una Pelicula.";
 
-            #endregion
 
-        # region Añadiendo el boton de eliminar al final de cada registro.
+       
             DataGridViewButtonColumn btnEliminar = new DataGridViewButtonColumn();
             btnEliminar.HeaderText = "Acciones";
             btnEliminar.Name = "btnEliminar";
@@ -112,7 +111,8 @@ namespace Tienda_de_Peliculas.Formularios
 
             LoadTheme();
         }
-          #endregion
+
+        #endregion
 
         #region VALIDACIONES Y LIMPIEZA DE CAMPOS
         public void LimpiarCampos()
@@ -140,7 +140,7 @@ namespace Tienda_de_Peliculas.Formularios
         }
         #endregion
 
-        #region Alquiler/Venta
+        #region ALQUILER /  VENTA
         private void rbAlquiler_CheckedChanged(object sender, EventArgs e)
         {
             lblFechaDev.Visible = true;
@@ -199,7 +199,7 @@ namespace Tienda_de_Peliculas.Formularios
 
         private void CargarInventarioCMB(int inve_Id)
         {
-            throw new NotImplementedException();
+            
         }
 
         private void dgFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
