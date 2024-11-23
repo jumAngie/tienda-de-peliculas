@@ -148,6 +148,7 @@
     <Compile Include="View Models\CiudadViewModel.cs" />
     <Compile Include="View Models\ClientesViewModel.cs" />
     <Compile Include="View Models\DatosUsuarioViewModel.cs" />
+    <Compile Include="View Models\DescuentoViewModel.cs" />
     <Compile Include="View Models\FacturaViewModel.cs" />
     <Compile Include="View Models\EmpleadosViewModel.cs" />
     <Compile Include="View Models\InventarioViewModel.cs" />

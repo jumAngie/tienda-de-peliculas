@@ -4,14 +4,13 @@
 CREATE OR ALTER PROCEDURE Peli.UDP_UltimoNumeroFactura
 AS
 	BEGIN
-	SELECT TOP 1 (fact_NumFactura) AS 'fact_NumFactura'
+	SELECT TOP 1 SUBSTRING (fact_NumFactura, 8, 4) AS 'UltimoNum'
 	FROM Peli.tbFacturas
 	ORDER BY fact_Id DESC
-	END
-
-	-- EDITAR EL TIPO DE DATO DE fact_NumFactura
+END
 
 GO
+
 
 -- STOCK DISPONIBLE
 CREATE OR ALTER PROCEDURE Peli.UDP_StockDisponible
@@ -22,19 +21,22 @@ AS
 	END
 
 	GO
+
 CREATE OR ALTER PROCEDURE Peli.UDP_CalcularDescuento
 @dato_ID INT
 AS
 	BEGIN
 		DECLARE @FECHA DATETIME = (SELECT dato_FechaNacimiento FROM Gral.tbDatos_Generales WHERE dato_Id = @dato_ID)
 		DECLARE @EDAD INT = (SELECT FLOOR(DATEDIFF(DAY, @FECHA, GETDATE()) / 365.25))
-		SELECT @EDAD
-
 		
+		SELECT descu_Descripcion, descu_Porcentaje 
+		FROM Peli.tbDescuentos
+		WHERE @EDAD BETWEEN descu_RangoInicio AND descu_RangoFin
+
 	END
 
-
 GO
+
 
 CREATE TABLE Peli.tbDescuentos
 (
@@ -56,6 +58,6 @@ GO
 INSERT INTO Peli.tbDescuentos(descu_Descripcion, descu_RangoInicio, descu_RangoFin, descu_Porcentaje)
 VALUES						('Descuento Tercera Edad', 60, 79, 0.25)
 GO
-INSERT INTO Peli.tbDescuentos(descu_Descripcion, descu_RangoInicio, descu_Porcentaje)
-VALUES						('Descuento Cuarta Edad', 80, 0.35)
+INSERT INTO Peli.tbDescuentos(descu_Descripcion, descu_RangoInicio, descu_RangoFin, descu_Porcentaje)
+VALUES						('Descuento Cuarta Edad', 80, 200, 0.35)
 GO

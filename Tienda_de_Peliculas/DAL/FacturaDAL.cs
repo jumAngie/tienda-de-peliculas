@@ -15,7 +15,7 @@ namespace Tienda_de_Peliculas.DAL
     public class FacturaDAL
     {
    
-        #region Cantida de Venta
+        #region CANTIDAD DE VENTA
         public static string CantidadVentasSemanaActual(DateTime fechaLunes, DateTime fechaDomingo)
         {
             string cantVentas = "0";
@@ -49,7 +49,7 @@ namespace Tienda_de_Peliculas.DAL
         }
         #endregion
 
-        #region Cantida de Alquiler
+        #region CANTIDAD DE ALQUILER
         public static string CantidadAlquileresSemanaActual(DateTime fechaLunes, DateTime fechaDomingo)
         {
             string cantAlquileres = "0";
@@ -83,7 +83,90 @@ namespace Tienda_de_Peliculas.DAL
         }
         #endregion
 
-        #region listar factura
+        #region CARGAR ÚLTIMO NUMERO, CARGAR DESCUENTO Y CARGAR PRECIO PELI
+        public static string UltimoNumeroFactura()
+        {
+            string Ultimonumero = "";
+
+            using (SqlConnection conexion = BDConexion.ObtenerConexion())
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand(ScriptsDatabase.UltimoNumFactura, conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                Ultimonumero = (string)cmd.ExecuteScalar();
+            }
+
+            return Ultimonumero;
+        }
+
+        public List<DescuentoViewModel> DescuentoPorCliente(int dato_ID)
+        {
+            List<DescuentoViewModel> lista = new List<DescuentoViewModel>();
+
+            using (SqlConnection conexion = BDConexion.ObtenerConexion())
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand(ScriptsDatabase.DescuentoPorCliente, conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@dato_ID", dato_ID);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+
+                        DescuentoViewModel descuento = new DescuentoViewModel
+                        {
+                            descu_Descripcion = reader.GetString(0),
+                            descu_Porcentaje = reader.GetDecimal(1),
+
+                        };
+
+                        lista.Add(descuento);
+                    }
+                }
+            }
+
+            return lista;
+        }
+
+        public List<InventarioViewModel> PrecioPorPeli(int inve_ID)
+        {
+            List<InventarioViewModel> lista = new List<InventarioViewModel>();
+
+            using (SqlConnection conexion = BDConexion.ObtenerConexion())
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand(ScriptsDatabase.PrecioporPelicula, conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@inve_ID", inve_ID);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+
+                        InventarioViewModel descuento = new InventarioViewModel
+                        {
+                            inve_Precio = reader.GetDecimal(0),
+                            inve_Cantidad = reader.GetInt32(1),
+
+                        };
+
+                        lista.Add(descuento);
+                    }
+                }
+            }
+
+            return lista;
+        }
+
+        #endregion
+
+        #region LISTAR
         public static List<FacturaViewModel>listarfactura()
         {
             List<FacturaViewModel> lista =new List<FacturaViewModel>();
@@ -123,7 +206,7 @@ namespace Tienda_de_Peliculas.DAL
         }
         #endregion
 
-        #region insertar
+        #region INSERTAR
         public static string InsertarFacturas(Facturas facturas)
         {
             string mensaje = "";
@@ -163,7 +246,7 @@ namespace Tienda_de_Peliculas.DAL
         }
         #endregion
 
-        #region Cargar Datos de Factura para Editar
+        #region EDITAR
         public static Facturas Editar_CargarDatos(int fact_ID)
         {
             Facturas factura = null;
@@ -206,9 +289,7 @@ namespace Tienda_de_Peliculas.DAL
 
             return factura;
         }
-        #endregion
 
-        #region Editar Factura
         public static string EditarFacturas(Facturas factura)
         {
             string mensaje = "";
@@ -247,9 +328,9 @@ namespace Tienda_de_Peliculas.DAL
 
             return mensaje;
         }
-     #endregion
+        #endregion
 
-        #region Eliminar Factura
+        #region ELIMINAR
         public static string EliminarFacturas(Facturas factura)
         {
             string mensaje = "";
@@ -278,28 +359,5 @@ namespace Tienda_de_Peliculas.DAL
             return mensaje;
         }
         #endregion
-
-        public class FacturaDal
-        {
-            public DataTable CargarFacturas()
-            {
-                DataTable dt = new DataTable();
-                    using (SqlConnection conexion = BDConexion.ObtenerConexion())
-                    {
-                        conexion.Open();
-
-                        using (SqlCommand cmd = new SqlCommand("Peli.CargarFacturas", conexion))
-                        {
-                            cmd.CommandType = CommandType.StoredProcedure;
-
-                            SqlDataAdapter da = new SqlDataAdapter(cmd);
-                            da.Fill(dt); 
-                        }
-                    }
-
-                return dt;
-            }
-
-         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlVenta = new System.Windows.Forms.Panel();
+            this.lblDesc = new System.Windows.Forms.Label();
             this.lblTotalResultado = new System.Windows.Forms.Label();
             this.txtImpuesto = new System.Windows.Forms.TextBox();
             this.txtDescuento = new System.Windows.Forms.TextBox();
@@ -38,6 +39,7 @@
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.gbCompra = new System.Windows.Forms.GroupBox();
+            this.dtFechaDev = new System.Windows.Forms.DateTimePicker();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.lblAlquiler = new System.Windows.Forms.Label();
@@ -48,9 +50,8 @@
             this.cbxPago = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlPago = new System.Windows.Forms.Panel();
-            this.pnlDevolucion = new System.Windows.Forms.Panel();
-            this.dtFechaDev = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlDevolucion = new System.Windows.Forms.Panel();
             this.gbGenerales = new System.Windows.Forms.GroupBox();
             this.lblNumFactura = new System.Windows.Forms.Label();
             this.cbxPelicula = new System.Windows.Forms.ComboBox();
@@ -63,15 +64,16 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dgFactura = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.txtStock = new System.Windows.Forms.TextBox();
             this.pnlVenta.SuspendLayout();
             this.gbCompra.SuspendLayout();
-            this.pnlDevolucion.SuspendLayout();
             this.gbGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFactura)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlVenta
             // 
+            this.pnlVenta.Controls.Add(this.lblDesc);
             this.pnlVenta.Controls.Add(this.lblTotalResultado);
             this.pnlVenta.Controls.Add(this.txtImpuesto);
             this.pnlVenta.Controls.Add(this.txtDescuento);
@@ -89,6 +91,16 @@
             this.pnlVenta.Size = new System.Drawing.Size(783, 308);
             this.pnlVenta.TabIndex = 2;
             // 
+            // lblDesc
+            // 
+            this.lblDesc.AutoSize = true;
+            this.lblDesc.Font = new System.Drawing.Font("Leelawadee", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesc.Location = new System.Drawing.Point(289, 221);
+            this.lblDesc.Name = "lblDesc";
+            this.lblDesc.Size = new System.Drawing.Size(68, 15);
+            this.lblDesc.TabIndex = 18;
+            this.lblDesc.Text = "Descuento";
+            // 
             // lblTotalResultado
             // 
             this.lblTotalResultado.AutoSize = true;
@@ -101,6 +113,7 @@
             // 
             // txtImpuesto
             // 
+            this.txtImpuesto.Enabled = false;
             this.txtImpuesto.Location = new System.Drawing.Point(148, 243);
             this.txtImpuesto.Name = "txtImpuesto";
             this.txtImpuesto.ReadOnly = true;
@@ -109,6 +122,7 @@
             // 
             // txtDescuento
             // 
+            this.txtDescuento.Enabled = false;
             this.txtDescuento.Location = new System.Drawing.Point(148, 217);
             this.txtDescuento.Name = "txtDescuento";
             this.txtDescuento.ReadOnly = true;
@@ -117,6 +131,7 @@
             // 
             // txtSubtotal
             // 
+            this.txtSubtotal.Enabled = false;
             this.txtSubtotal.Location = new System.Drawing.Point(148, 191);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.ReadOnly = true;
@@ -165,6 +180,7 @@
             // 
             // gbCompra
             // 
+            this.gbCompra.Controls.Add(this.dtFechaDev);
             this.gbCompra.Controls.Add(this.lblCantidad);
             this.gbCompra.Controls.Add(this.txtCantidad);
             this.gbCompra.Controls.Add(this.lblAlquiler);
@@ -175,14 +191,23 @@
             this.gbCompra.Controls.Add(this.cbxPago);
             this.gbCompra.Controls.Add(this.label2);
             this.gbCompra.Controls.Add(this.pnlPago);
-            this.gbCompra.Controls.Add(this.pnlDevolucion);
             this.gbCompra.Controls.Add(this.panel1);
+            this.gbCompra.Controls.Add(this.pnlDevolucion);
             this.gbCompra.Location = new System.Drawing.Point(401, 14);
             this.gbCompra.Name = "gbCompra";
             this.gbCompra.Size = new System.Drawing.Size(366, 167);
             this.gbCompra.TabIndex = 9;
             this.gbCompra.TabStop = false;
             this.gbCompra.Text = "Datos de la Compra";
+            // 
+            // dtFechaDev
+            // 
+            this.dtFechaDev.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaDev.Location = new System.Drawing.Point(134, 126);
+            this.dtFechaDev.Name = "dtFechaDev";
+            this.dtFechaDev.Size = new System.Drawing.Size(200, 20);
+            this.dtFechaDev.TabIndex = 10;
+            this.dtFechaDev.Visible = false;
             // 
             // lblCantidad
             // 
@@ -192,7 +217,7 @@
             this.lblCantidad.Size = new System.Drawing.Size(49, 13);
             this.lblCantidad.TabIndex = 23;
             this.lblCantidad.Text = "Cantidad";
-            this.lblCantidad.Click += new System.EventHandler(this.label3_Click_1);
+            this.lblCantidad.Visible = false;
             // 
             // txtCantidad
             // 
@@ -200,6 +225,7 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 20);
             this.txtCantidad.TabIndex = 22;
+            this.txtCantidad.Visible = false;
             // 
             // lblAlquiler
             // 
@@ -224,7 +250,6 @@
             this.lblVenta.TabIndex = 20;
             this.lblVenta.Text = "*";
             this.lblVenta.Visible = false;
-            this.lblVenta.Click += new System.EventHandler(this.label3_Click);
             // 
             // rbAlquiler
             // 
@@ -274,6 +299,7 @@
             this.cbxPago.Name = "cbxPago";
             this.cbxPago.Size = new System.Drawing.Size(318, 21);
             this.cbxPago.TabIndex = 8;
+            this.cbxPago.Visible = false;
             this.cbxPago.SelectedIndexChanged += new System.EventHandler(this.cbxPago_SelectedIndexChanged);
             // 
             // label2
@@ -285,6 +311,7 @@
             this.label2.Size = new System.Drawing.Size(98, 15);
             this.label2.TabIndex = 7;
             this.label2.Text = "Método de Pago";
+            this.label2.Visible = false;
             // 
             // pnlPago
             // 
@@ -295,25 +322,6 @@
             this.pnlPago.TabIndex = 19;
             this.pnlPago.Visible = false;
             // 
-            // pnlDevolucion
-            // 
-            this.pnlDevolucion.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlDevolucion.Controls.Add(this.dtFechaDev);
-            this.pnlDevolucion.Location = new System.Drawing.Point(135, 128);
-            this.pnlDevolucion.Name = "pnlDevolucion";
-            this.pnlDevolucion.Size = new System.Drawing.Size(200, 21);
-            this.pnlDevolucion.TabIndex = 19;
-            this.pnlDevolucion.Visible = false;
-            // 
-            // dtFechaDev
-            // 
-            this.dtFechaDev.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaDev.Location = new System.Drawing.Point(0, -2);
-            this.dtFechaDev.Name = "dtFechaDev";
-            this.dtFechaDev.Size = new System.Drawing.Size(200, 20);
-            this.dtFechaDev.TabIndex = 10;
-            this.dtFechaDev.Visible = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkRed;
@@ -323,15 +331,25 @@
             this.panel1.TabIndex = 20;
             this.panel1.Visible = false;
             // 
+            // pnlDevolucion
+            // 
+            this.pnlDevolucion.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlDevolucion.Location = new System.Drawing.Point(134, 129);
+            this.pnlDevolucion.Name = "pnlDevolucion";
+            this.pnlDevolucion.Size = new System.Drawing.Size(200, 21);
+            this.pnlDevolucion.TabIndex = 19;
+            this.pnlDevolucion.Visible = false;
+            // 
             // gbGenerales
             // 
+            this.gbGenerales.Controls.Add(this.txtStock);
             this.gbGenerales.Controls.Add(this.lblNumFactura);
             this.gbGenerales.Controls.Add(this.cbxPelicula);
             this.gbGenerales.Controls.Add(this.label1);
             this.gbGenerales.Controls.Add(this.cbxCliente);
             this.gbGenerales.Controls.Add(this.lblName);
-            this.gbGenerales.Controls.Add(this.pnlCliente);
             this.gbGenerales.Controls.Add(this.pnlPelicula);
+            this.gbGenerales.Controls.Add(this.pnlCliente);
             this.gbGenerales.Location = new System.Drawing.Point(17, 14);
             this.gbGenerales.Name = "gbGenerales";
             this.gbGenerales.Size = new System.Drawing.Size(366, 167);
@@ -345,19 +363,18 @@
             this.lblNumFactura.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.lblNumFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumFactura.ForeColor = System.Drawing.Color.Black;
-            this.lblNumFactura.Location = new System.Drawing.Point(127, 27);
+            this.lblNumFactura.Location = new System.Drawing.Point(114, 27);
             this.lblNumFactura.Name = "lblNumFactura";
-            this.lblNumFactura.Size = new System.Drawing.Size(117, 24);
+            this.lblNumFactura.Size = new System.Drawing.Size(87, 24);
             this.lblNumFactura.TabIndex = 6;
-            this.lblNumFactura.Text = "FAC#00001";
-            this.lblNumFactura.Click += new System.EventHandler(this.lblNumFactura_Click);
+            this.lblNumFactura.Text = "#000000";
             // 
             // cbxPelicula
             // 
             this.cbxPelicula.FormattingEnabled = true;
-            this.cbxPelicula.Location = new System.Drawing.Point(81, 107);
+            this.cbxPelicula.Location = new System.Drawing.Point(83, 67);
             this.cbxPelicula.Name = "cbxPelicula";
-            this.cbxPelicula.Size = new System.Drawing.Size(257, 21);
+            this.cbxPelicula.Size = new System.Drawing.Size(205, 21);
             this.cbxPelicula.TabIndex = 5;
             this.cbxPelicula.SelectedIndexChanged += new System.EventHandler(this.cbxPelicula_SelectedIndexChanged);
             // 
@@ -365,7 +382,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 108);
+            this.label1.Location = new System.Drawing.Point(24, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 15);
             this.label1.TabIndex = 4;
@@ -373,18 +390,19 @@
             // 
             // cbxCliente
             // 
+            this.cbxCliente.Enabled = false;
             this.cbxCliente.FormattingEnabled = true;
-            this.cbxCliente.Location = new System.Drawing.Point(81, 72);
+            this.cbxCliente.Location = new System.Drawing.Point(83, 104);
             this.cbxCliente.Name = "cbxCliente";
             this.cbxCliente.Size = new System.Drawing.Size(257, 21);
             this.cbxCliente.TabIndex = 3;
-            this.cbxCliente.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cbxCliente.SelectedIndexChanged += new System.EventHandler(this.cbxCliente_SelectedIndexChanged);
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(22, 72);
+            this.lblName.Location = new System.Drawing.Point(24, 104);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(48, 15);
             this.lblName.TabIndex = 2;
@@ -393,7 +411,7 @@
             // pnlCliente
             // 
             this.pnlCliente.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlCliente.Location = new System.Drawing.Point(81, 78);
+            this.pnlCliente.Location = new System.Drawing.Point(83, 110);
             this.pnlCliente.Name = "pnlCliente";
             this.pnlCliente.Size = new System.Drawing.Size(257, 18);
             this.pnlCliente.TabIndex = 18;
@@ -402,9 +420,9 @@
             // pnlPelicula
             // 
             this.pnlPelicula.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlPelicula.Location = new System.Drawing.Point(81, 111);
+            this.pnlPelicula.Location = new System.Drawing.Point(83, 71);
             this.pnlPelicula.Name = "pnlPelicula";
-            this.pnlPelicula.Size = new System.Drawing.Size(257, 20);
+            this.pnlPelicula.Size = new System.Drawing.Size(205, 20);
             this.pnlPelicula.TabIndex = 19;
             this.pnlPelicula.Visible = false;
             // 
@@ -430,7 +448,6 @@
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // dgFactura
             // 
@@ -442,7 +459,15 @@
             this.dgFactura.Name = "dgFactura";
             this.dgFactura.Size = new System.Drawing.Size(783, 166);
             this.dgFactura.TabIndex = 5;
-            this.dgFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFactura_CellContentClick);
+            // 
+            // txtStock
+            // 
+            this.txtStock.Enabled = false;
+            this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStock.Location = new System.Drawing.Point(295, 68);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(45, 22);
+            this.txtStock.TabIndex = 20;
             // 
             // frmFactura
             // 
@@ -458,7 +483,6 @@
             this.pnlVenta.PerformLayout();
             this.gbCompra.ResumeLayout(false);
             this.gbCompra.PerformLayout();
-            this.pnlDevolucion.ResumeLayout(false);
             this.gbGenerales.ResumeLayout(false);
             this.gbGenerales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFactura)).EndInit();
@@ -481,7 +505,6 @@
         private System.Windows.Forms.Label lblISV;
         private System.Windows.Forms.Label lblDescuento;
         private System.Windows.Forms.Label lblSubtotal;
-        private System.Windows.Forms.DateTimePicker dtFechaDev;
         private System.Windows.Forms.Label lblFechaDev;
         private System.Windows.Forms.ComboBox cbxPago;
         private System.Windows.Forms.Label label2;
@@ -502,5 +525,8 @@
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Panel panel1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.DateTimePicker dtFechaDev;
+        private System.Windows.Forms.Label lblDesc;
+        private System.Windows.Forms.TextBox txtStock;
     }
 }

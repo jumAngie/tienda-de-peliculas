@@ -15,16 +15,23 @@ namespace Tienda_de_Peliculas.Formularios
 {
     public partial class frmFactura : Form
     {
+
+        #region CLASES, IMPORTACIONES, DECLARACIONES, ETC
         FacturaDAL fac = new FacturaDAL();
         ClientesDAL clie = new ClientesDAL();
         MetodosPagoDAL meto = new MetodosPagoDAL(); 
         InventarioDAL inv = new InventarioDAL();  
 
-        public DatosUsuarioViewModel UsuarioActual { get;} 
+        public DatosUsuarioViewModel UsuarioActual { get;}
+        public DescuentoViewModel DescuentoActual { get;}
 
         private int id_filaSeleccionada;
+        private decimal Subtotal;
+        private decimal Descuento;
 
-        #region Diseño
+        #endregion
+
+        #region DISEÑO
         public frmFactura()
         {
             InitializeComponent();
@@ -45,6 +52,9 @@ namespace Tienda_de_Peliculas.Formularios
             lblNumFactura.BackColor = ThemeColor.PrimaryColor;
             lblNumFactura.ForeColor = Color.White;
 
+            lblDesc.BackColor = ThemeColor.PrimaryColor;
+            lblDesc.ForeColor = Color.White;
+
         }
         #endregion
 
@@ -53,9 +63,23 @@ namespace Tienda_de_Peliculas.Formularios
         #endregion
 
         #region CRUD
-        public void listado_factura()
+        public void Listado_Factura()
         {
            dgFactura.DataSource=FacturaDAL.listarfactura();
+        }
+
+        public void DibujarNumeroFactura()
+        {
+            string ultimoNum = FacturaDAL.UltimoNumeroFactura();
+            string Anio = DateTime.Now.Year.ToString();
+            string HollyWoodVideos = "HW";
+            
+            int numProximo = Convert.ToInt32(ultimoNum) + 1;
+            
+
+            string formatoNumeroFactura = HollyWoodVideos + Anio + "-" + numProximo.ToString("0000");
+
+            lblNumFactura.Text = formatoNumeroFactura;
         }
 
         #endregion
@@ -85,35 +109,6 @@ namespace Tienda_de_Peliculas.Formularios
         }
         #endregion
 
-        #region EVENTOS DE LOS ELEMENTOS DEL FORMULARIO
-        private void frmFactura_Load(object sender, EventArgs e)
-        {
-            LoadTheme();
-            listado_factura();
-            CargarClientesCMB();
-            CargarMetodosPagoCMB();
-            CargarInventarioCMB();
-            cbxCliente.Text = "Nombre de Cliente.";
-            cbxPago.Text = "Seleccione un Metodo de Pago";
-            cbxPelicula.Text= "Seleccione una Pelicula.";
-
-
-       
-            DataGridViewButtonColumn btnEliminar = new DataGridViewButtonColumn();
-            btnEliminar.HeaderText = "Acciones";
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseColumnTextForButtonValue = true;
-            btnEliminar.DefaultCellStyle.BackColor = Color.DarkRed;
-            btnEliminar.DefaultCellStyle.ForeColor = Color.DarkRed;
-            btnEliminar.DefaultCellStyle.Font = new Font("Nobile", 9, FontStyle.Regular);
-            dgFactura.Columns.Add(btnEliminar);
-
-            LoadTheme();
-        }
-
-        #endregion
-
         #region VALIDACIONES Y LIMPIEZA DE CAMPOS
         public void LimpiarCampos()
         {
@@ -135,66 +130,87 @@ namespace Tienda_de_Peliculas.Formularios
             lblFechaDev.Visible = false;
             dtFechaDev.Visible = false;
             dtFechaDev.Value = DateTime.Now;
+
+            txtStock.Clear();
+            cbxCliente.Enabled = false;
             
 
         }
         #endregion
 
-        #region ALQUILER /  VENTA
+        #region EVENTOS DEL FORMULARIO
+        private void frmFactura_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+            Listado_Factura();
+            CargarClientesCMB();
+            CargarMetodosPagoCMB();
+            CargarInventarioCMB();
+            DibujarNumeroFactura();
+           
+
+            DataGridViewButtonColumn btnEliminar = new DataGridViewButtonColumn();
+            btnEliminar.HeaderText = "Acciones";
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseColumnTextForButtonValue = true;
+            btnEliminar.DefaultCellStyle.BackColor = Color.DarkRed;
+            btnEliminar.DefaultCellStyle.ForeColor = Color.DarkRed;
+            btnEliminar.DefaultCellStyle.Font = new Font("Nobile", 9, FontStyle.Regular);
+            dgFactura.Columns.Add(btnEliminar);
+
+            LoadTheme();
+        }
+
         private void rbAlquiler_CheckedChanged(object sender, EventArgs e)
         {
+            cbxPago.Visible = true;
+            label2.Visible = true;
+
             lblFechaDev.Visible = true;
             dtFechaDev.Visible = true;
+            txtCantidad.Visible = false;
+            lblCantidad.Visible = false;
         }
 
         private void rbVenta_CheckedChanged(object sender, EventArgs e)
         {
-            dtFechaDev.Visible=false;
+            cbxPago.Visible = true;
+            label2.Visible = true;
+
+            lblCantidad.Visible= true;
+            dtFechaDev.Visible = false;
             lblFechaDev.Visible = false;
+            txtCantidad.Visible= true;
         }
 
-        #endregion
-
-        #region #factura
-        private void lblNumFactura_Click(object sender, EventArgs e)
+        private void cbxPelicula_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int NumFactura = 1;
-            lblNumFactura.Text = "FAC#" + NumFactura.ToString("D6");
-            NumFactura++;
+            if (cbxPelicula.SelectedValue == null || !(cbxPelicula.SelectedValue is int))
+            {
+               return;
+            }
+
+            int inve_ID = (int)cbxPelicula.SelectedValue;
+            List<InventarioViewModel> pelicula = fac.PrecioPorPeli(inve_ID);
+            if (pelicula != null && pelicula.Count > 0)
+            {
+                InventarioViewModel peli = pelicula[0];
+                Subtotal = peli.inve_Precio;
+
+                txtStock.Text = peli.inve_Cantidad.ToString();
+                txtSubtotal.Text = Subtotal.ToString("C");
+
+                cbxCliente.Enabled = true;
+            }
 
         }
-        #endregion
 
-        #region Boton de Guardar
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            
-        }
-        #endregion
-
-        #region Boton de cancelar
         private void btnCancelar_Click(object sender, EventArgs e)
         {
 
             LimpiarCampos();
 
-        }
-        #endregion
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-       
-
-        private void cbxPelicula_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbxPelicula.SelectedValue != null && cbxPelicula.SelectedValue is int)
-            {
-                cbxPelicula.Enabled = true;
-                int inve_Id = (int)cbxPelicula.SelectedValue;
-                CargarInventarioCMB(inve_Id);
-            }
         }
 
         private void CargarInventarioCMB(int inve_Id)
@@ -202,27 +218,36 @@ namespace Tienda_de_Peliculas.Formularios
             
         }
 
-        private void dgFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void cbxPago_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        
+        #endregion
+
+        private void cbxCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxCliente.SelectedValue == null || !(cbxCliente.SelectedValue is int))
+            {
+                return;
+            }
+
+            int dato_Id = (int)cbxCliente.SelectedValue;
+            List<DescuentoViewModel> descuentos = fac.DescuentoPorCliente(dato_Id);
+            if (descuentos != null && descuentos.Count > 0)
+            {
+                DescuentoViewModel descuento = descuentos[0];
+                Descuento = descuento.descu_Porcentaje * Subtotal;
+
+                lblDesc.Text = descuento.descu_Descripcion;
+                txtDescuento.Text = Descuento.ToString("C");
+            }
+            else
+            {
+                lblDesc.Text = "No hay descuento disponible";
+            }
+
+        }
     }
 
 

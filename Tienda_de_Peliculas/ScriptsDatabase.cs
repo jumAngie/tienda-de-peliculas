@@ -28,6 +28,9 @@ namespace Tienda_de_Peliculas
 
         #region Factura
         public static string InsertarFactura = "";
+        public static string UltimoNumFactura = "Peli.UDP_UltimoNumeroFactura";
+        public static string DescuentoPorCliente = "Peli.UDP_CalcularDescuento";
+        public static string PrecioporPelicula = "Peli.UDP_StockDisponible";
         #endregion
 
         #region Clientes
