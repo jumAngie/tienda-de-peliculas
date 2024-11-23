@@ -17,10 +17,9 @@ CREATE OR ALTER PROCEDURE Peli.UDP_StockDisponible
 @inve_ID INT
 AS
 	BEGIN
-		SELECT inve_Cantidad FROM Peli.tbInventario WHERE inve_ID = @inve_ID
+		SELECT inve_Precio, inve_Cantidad FROM Peli.tbInventario WHERE inve_ID = @inve_ID
 	END
-
-	GO
+GO
 
 CREATE OR ALTER PROCEDURE Peli.UDP_CalcularDescuento
 @dato_ID INT
