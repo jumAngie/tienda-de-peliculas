@@ -10,6 +10,7 @@ using Tienda_de_Peliculas.Clases;
 using Tienda_de_Peliculas.View_Models;
 using Tienda_de_Peliculas.Vistas;
 using System.Security.Cryptography.X509Certificates;
+using Tienda_de_Peliculas.Entities;
 
 namespace Tienda_de_Peliculas.DAL
 {
@@ -146,6 +147,49 @@ namespace Tienda_de_Peliculas.DAL
 
             return dt;
 
+        }
+
+        public static DatosGenerales  Editar_CargarDatos(int clien_ID)
+        {
+            DatosGenerales clientes = null;
+            try
+            {
+                using (SqlConnection conexion = BDConexion.ObtenerConexion())
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand(ScriptsDatabase.EditarClientes_CargarInformacion, conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@dato_Id", clien_ID);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            clientes = new DatosGenerales
+                            {
+                                dato_NombreCompleto = reader.GetString(0),
+                                dato_DNI = reader.GetString(1),
+                                dato_Telefono = reader.GetString(2),
+                                dato_email = reader.GetString(3),
+                                ciud_Id = reader.GetInt32(4),
+                                dato_Direccion = reader.GetString(5),
+                                dato_FechaNacimiento = reader.GetDateTime(6),
+                                sexo_Id = reader.GetInt32(7),
+                                cate_Id = reader.GetInt32(8),
+                                dept_Id = reader.GetInt32(9),
+                                pais_Id
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al cargar la información de la factura: " + ex.Message);
+            }
+
+            return clientes;
         }
     }
 }
