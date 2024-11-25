@@ -38,6 +38,7 @@ namespace Tienda_de_Peliculas
         public static string ListarClientes = "SELECT * FROM Gral.DatosGenerales_Cliente";
 
         public static string EditarClientes_CargarInformacion = "Peli.UPD_tbDatosGenerales_CargarInformacion";
+        public static string EditarClientes = "Peli.UDP_tbDatosGenerales_Editar";
         #endregion
 
         #region Empleados

@@ -241,3 +241,42 @@ AS
 			WHERE	dato_Id = @dato_Id
 	END
 GO
+
+-- EDITAR DATOS CLIENTES
+CREATE OR ALTER PROCEDURE Peli.UDP_tbDatosGenerales_Editar
+	@dato_Id				INT, 
+	@dato_NombreCompleto	NVARCHAR(500), 
+	@dato_DNI				NVARCHAR(20),
+	@dato_Telefono			NVARCHAR(20), 
+	@dato_email				NVARCHAR(150), 
+	@ciud_Id				INT, 
+	@dato_Direccion			NVARCHAR(500), 
+	@dato_FechaNacimiento	DATE, 
+	@sexo_Id				INT, 
+	@usua_UsuarioModificacion INT, 
+	@dato_FechaModificacion	  DATETIME
+AS
+	BEGIN
+		BEGIN TRY
+			UPDATE Gral.tbDatos_Generales
+			SET	   dato_NombreCompleto = @dato_NombreCompleto,
+				   dato_DNI = @dato_DNI,
+				   dato_Telefono = @dato_Telefono,
+				   dato_email = @dato_email,
+				   ciud_Id = @ciud_Id,
+				   dato_Direccion = @dato_Direccion,
+				   dato_FechaNacimiento = @dato_FechaNacimiento,
+				   sexo_Id = @sexo_Id,
+				   usua_UsuarioModificacion = @usua_UsuarioModificacion,
+				   dato_FechaModificacion = @dato_FechaModificacion
+			WHERE  dato_Id = @dato_Id
+		
+			SELECT 'Datos editados correctamente.'
+
+		END TRY
+
+		BEGIN CATCH
+			SELECT 'Error Message: '+ ERROR_MESSAGE();
+		END CATCH
+	END
+GO
