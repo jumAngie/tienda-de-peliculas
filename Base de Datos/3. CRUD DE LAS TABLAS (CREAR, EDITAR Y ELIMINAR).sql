@@ -233,10 +233,11 @@ AS
 				sexo_Id, 
 				cate_Id,
 				cd.dept_Id,
-				dp.dept_Id
+				ps.pais_Id
 			FROM	Gral.tbDatos_Generales dt INNER JOIN Gral.tbCiudades cd
 			ON		dt.ciud_Id = cd.ciud_Id	  INNER JOIN Gral.tbDepartamentos dp
-			ON		cd.dept_Id = dp.dept_Id
-			WHERE	dato_Id = 1
+			ON		cd.dept_Id = dp.dept_Id   INNER JOIN Gral.tbPaises ps
+			ON      dp.pais_Id = ps.pais_Id
+			WHERE	dato_Id = @dato_Id
 	END
 GO
