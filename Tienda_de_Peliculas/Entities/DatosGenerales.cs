@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,12 @@ namespace Tienda_de_Peliculas.Clases
         public int usua_UsuarioModificacion { get; set; }
         public DateTime dato_FechaModificacion { get; set; }
         public bool dato_Estado { get; set; }
+
+        [NotMapped]
+        public int dept_Id { get; set; }
+
+        [NotMapped]
+        public int pais_Id { get; set; }
 
     }
 }
