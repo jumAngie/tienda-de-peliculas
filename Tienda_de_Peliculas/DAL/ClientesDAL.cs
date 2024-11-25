@@ -178,15 +178,15 @@ namespace Tienda_de_Peliculas.DAL
                                 sexo_Id = reader.GetInt32(7),
                                 cate_Id = reader.GetInt32(8),
                                 dept_Id = reader.GetInt32(9),
-                                pais_Id
-                            }
+                                pais_Id = reader.GetInt32(10),
+                            };
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al cargar la información de la factura: " + ex.Message);
+                throw new Exception("Error al cargar la información de los clientes: " + ex.Message);
             }
 
             return clientes;
