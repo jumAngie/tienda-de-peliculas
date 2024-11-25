@@ -215,3 +215,28 @@ AS
 			SELECT 'Error Message: '+ ERROR_MESSAGE();
 		END CATCH
 	END
+
+GO
+-- CARGAR INFORMACION PARA DATOS GENERALES
+CREATE OR ALTER PROCEDURE Peli.UPD_tbDatosGenerales_CargarInformacion
+@dato_Id INT
+AS
+	BEGIN
+			SELECT 
+				dato_NombreCompleto, 
+				dato_DNI, 
+				dato_Telefono, 
+				dato_email, 
+				dt.ciud_Id, 
+				dato_Direccion, 
+				dato_FechaNacimiento, 
+				sexo_Id, 
+				cate_Id,
+				cd.dept_Id,
+				dp.dept_Id
+			FROM	Gral.tbDatos_Generales dt INNER JOIN Gral.tbCiudades cd
+			ON		dt.ciud_Id = cd.ciud_Id	  INNER JOIN Gral.tbDepartamentos dp
+			ON		cd.dept_Id = dp.dept_Id
+			WHERE	dato_Id = 1
+	END
+GO

@@ -28,6 +28,7 @@ namespace Tienda_de_Peliculas.Formularios
         private int id_filaSeleccionada;
         private decimal Subtotal;
         private decimal Descuento;
+        private double ISV = 0.15;
 
         #endregion
 
@@ -197,6 +198,7 @@ namespace Tienda_de_Peliculas.Formularios
             {
                 InventarioViewModel peli = pelicula[0];
                 Subtotal = peli.inve_Precio;
+               // decimal impuesto = Subtotal * ISV;
 
                 txtStock.Text = peli.inve_Cantidad.ToString();
                 txtSubtotal.Text = Subtotal.ToString("C");
