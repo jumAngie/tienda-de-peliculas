@@ -191,6 +191,43 @@ namespace Tienda_de_Peliculas.DAL
 
             return clientes;
         }
+
+        public static string EditarClientes(DatosGenerales clientes)
+        {
+            string mensaje = "";
+            try
+            {
+                using (SqlConnection conexion = BDConexion.ObtenerConexion())
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand(ScriptsDatabase.EditarClientes, conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@dato_NombreCompleto", clientes.dato_NombreCompleto);
+                    cmd.Parameters.AddWithValue("@dato_DNI", clientes.dato_DNI);
+                    cmd.Parameters.AddWithValue("@dato_Telefono", clientes.dato_Telefono);
+                    cmd.Parameters.AddWithValue("@dato_email", clientes.dato_email);
+                    cmd.Parameters.AddWithValue("@ciud_Id", clientes.ciud_Id);
+                    cmd.Parameters.AddWithValue("@dato_Direccion", clientes.dato_Direccion);
+                    cmd.Parameters.AddWithValue("@dato_FechaNacimiento", clientes.dato_FechaNacimiento);
+                    cmd.Parameters.AddWithValue("@sexo_Id", clientes.sexo_Id);
+                    cmd.Parameters.AddWithValue("@cate_Id", clientes.cate_Id);
+                    cmd.Parameters.AddWithValue("@dept_Id", clientes.dept_Id);
+                    cmd.Parameters.AddWithValue("@pais_Id", clientes.pais_Id);
+                   
+
+                    mensaje = (string)cmd.ExecuteScalar();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                mensaje = "Error: " + ex.Message;
+                throw;
+            }
+
+            return mensaje;
+        }
     }
 }
                          
