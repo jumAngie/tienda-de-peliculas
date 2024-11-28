@@ -43,3 +43,11 @@ GO
 -- Paso 4: Renombrar la columna temporal para que se llame `usua_Contrasenia`
 EXEC sp_rename 'Acce.tbUsuarios.usua_ContraseniaTemp', 'usua_Contrasenia', 'COLUMN';
 GO
+
+
+---- AÑADIR COLUMNA DE CANTIDAD DE EN FACTURA
+ALTER TABLE Peli.tbFacturas
+ADD fact_CantidadComprada INT NOT NULL DEFAULT 1
+GO
+
+-- 

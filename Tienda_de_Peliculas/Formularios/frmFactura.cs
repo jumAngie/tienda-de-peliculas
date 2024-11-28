@@ -67,10 +67,6 @@ namespace Tienda_de_Peliculas.Formularios
         }
         #endregion
 
-        #region VALIDACIONES LIMPIEZA DE CAMPO
-
-        #endregion
-
         #region CRUD
         public void Listado_Factura()
         {
@@ -204,9 +200,11 @@ namespace Tienda_de_Peliculas.Formularios
             {
                 InventarioViewModel peli = pelicula[0];
                 Subtotal = peli.inve_Precio;
+                Impuesto = (Subtotal) * (ISV / 100);
 
                 txtStock.Text = peli.inve_Cantidad.ToString();
                 txtSubtotal.Text = Subtotal.ToString("C");
+                txtImpuesto.Text = Impuesto.ToString("C");
 
                 cbxCliente.Enabled = true;
             }
@@ -235,13 +233,12 @@ namespace Tienda_de_Peliculas.Formularios
             {
                 DescuentoViewModel descuento = descuentos[0];
                
-                Impuesto = (Subtotal)  * (ISV / 100);
+               
                 Descuento = descuento.descu_Porcentaje * (Subtotal+Impuesto);
                 Total = Subtotal - Descuento + Impuesto;
 
                 lblDesc.Text = descuento.descu_Descripcion;
                 txtDescuento.Text = Descuento.ToString("C");
-                txtImpuesto.Text = Impuesto.ToString("C");
                 lblTotalResultado.Text = Total.ToString("C");
             }
             else
