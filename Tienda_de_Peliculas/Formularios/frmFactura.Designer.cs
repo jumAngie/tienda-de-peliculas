@@ -53,18 +53,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlDevolucion = new System.Windows.Forms.Panel();
             this.gbGenerales = new System.Windows.Forms.GroupBox();
+            this.txtStock = new System.Windows.Forms.TextBox();
             this.lblNumFactura = new System.Windows.Forms.Label();
             this.cbxPelicula = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxCliente = new System.Windows.Forms.ComboBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.pnlCliente = new System.Windows.Forms.Panel();
             this.pnlPelicula = new System.Windows.Forms.Panel();
+            this.pnlCliente = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dgFactura = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.txtStock = new System.Windows.Forms.TextBox();
             this.pnlVenta.SuspendLayout();
             this.gbCompra.SuspendLayout();
             this.gbGenerales.SuspendLayout();
@@ -94,10 +94,10 @@
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Font = new System.Drawing.Font("Leelawadee", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesc.Font = new System.Drawing.Font("Leelawadee", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesc.Location = new System.Drawing.Point(289, 221);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(68, 15);
+            this.lblDesc.Size = new System.Drawing.Size(63, 14);
             this.lblDesc.TabIndex = 18;
             this.lblDesc.Text = "Descuento";
             // 
@@ -300,7 +300,6 @@
             this.cbxPago.Size = new System.Drawing.Size(318, 21);
             this.cbxPago.TabIndex = 8;
             this.cbxPago.Visible = false;
-            this.cbxPago.SelectedIndexChanged += new System.EventHandler(this.cbxPago_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -357,6 +356,15 @@
             this.gbGenerales.TabStop = false;
             this.gbGenerales.Text = "Datos Generales";
             // 
+            // txtStock
+            // 
+            this.txtStock.Enabled = false;
+            this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStock.Location = new System.Drawing.Point(295, 68);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(45, 22);
+            this.txtStock.TabIndex = 20;
+            // 
             // lblNumFactura
             // 
             this.lblNumFactura.AutoSize = true;
@@ -408,15 +416,6 @@
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Cliente:";
             // 
-            // pnlCliente
-            // 
-            this.pnlCliente.BackColor = System.Drawing.Color.DarkRed;
-            this.pnlCliente.Location = new System.Drawing.Point(83, 110);
-            this.pnlCliente.Name = "pnlCliente";
-            this.pnlCliente.Size = new System.Drawing.Size(257, 18);
-            this.pnlCliente.TabIndex = 18;
-            this.pnlCliente.Visible = false;
-            // 
             // pnlPelicula
             // 
             this.pnlPelicula.BackColor = System.Drawing.Color.DarkRed;
@@ -425,6 +424,15 @@
             this.pnlPelicula.Size = new System.Drawing.Size(205, 20);
             this.pnlPelicula.TabIndex = 19;
             this.pnlPelicula.Visible = false;
+            // 
+            // pnlCliente
+            // 
+            this.pnlCliente.BackColor = System.Drawing.Color.DarkRed;
+            this.pnlCliente.Location = new System.Drawing.Point(83, 110);
+            this.pnlCliente.Name = "pnlCliente";
+            this.pnlCliente.Size = new System.Drawing.Size(257, 18);
+            this.pnlCliente.TabIndex = 18;
+            this.pnlCliente.Visible = false;
             // 
             // btnCancelar
             // 
@@ -459,15 +467,6 @@
             this.dgFactura.Name = "dgFactura";
             this.dgFactura.Size = new System.Drawing.Size(783, 166);
             this.dgFactura.TabIndex = 5;
-            // 
-            // txtStock
-            // 
-            this.txtStock.Enabled = false;
-            this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStock.Location = new System.Drawing.Point(295, 68);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(45, 22);
-            this.txtStock.TabIndex = 20;
             // 
             // frmFactura
             // 

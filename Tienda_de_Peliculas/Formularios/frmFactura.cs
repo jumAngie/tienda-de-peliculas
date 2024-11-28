@@ -28,7 +28,15 @@ namespace Tienda_de_Peliculas.Formularios
         private int id_filaSeleccionada;
         private decimal Subtotal;
         private decimal Descuento;
-        private double ISV = 0.15;
+        private decimal ISV = 15;
+        private decimal Impuesto;
+        private decimal Total;
+        
+
+        // CALCULAR IMPORTE : CANTIDAD * PRODUCTO
+        // CALULAR LOS IMPUESTOS: IMPORTE * 15 / 100
+        // CALCULAR SUBTOTAL = IMPORTA + IMPUESTO
+        // 
 
         #endregion
 
@@ -113,12 +121,6 @@ namespace Tienda_de_Peliculas.Formularios
         #region VALIDACIONES Y LIMPIEZA DE CAMPOS
         public void LimpiarCampos()
         {
-           
-            txtSubtotal.Clear();
-            txtDescuento.Clear();          
-            txtImpuesto.Clear();
-
-            
             cbxCliente.SelectedIndex = 0;
             cbxPago.SelectedIndex = 0;
             cbxPelicula.SelectedIndex = 0;
@@ -134,7 +136,11 @@ namespace Tienda_de_Peliculas.Formularios
 
             txtStock.Clear();
             cbxCliente.Enabled = false;
-            
+
+            txtSubtotal.Clear();
+            txtDescuento.Clear();
+            txtImpuesto.Clear();
+            lblTotalResultado.Text = 0.ToString("C");
 
         }
         #endregion
@@ -198,7 +204,6 @@ namespace Tienda_de_Peliculas.Formularios
             {
                 InventarioViewModel peli = pelicula[0];
                 Subtotal = peli.inve_Precio;
-               // decimal impuesto = Subtotal * ISV;
 
                 txtStock.Text = peli.inve_Cantidad.ToString();
                 txtSubtotal.Text = Subtotal.ToString("C");
@@ -215,17 +220,7 @@ namespace Tienda_de_Peliculas.Formularios
 
         }
 
-        private void CargarInventarioCMB(int inve_Id)
-        {
-            
-        }
-
-        private void cbxPago_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        #endregion
+       
 
         private void cbxCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -239,17 +234,33 @@ namespace Tienda_de_Peliculas.Formularios
             if (descuentos != null && descuentos.Count > 0)
             {
                 DescuentoViewModel descuento = descuentos[0];
-                Descuento = descuento.descu_Porcentaje * Subtotal;
+               
+                Impuesto = (Subtotal)  * (ISV / 100);
+                Descuento = descuento.descu_Porcentaje * (Subtotal+Impuesto);
+                Total = Subtotal - Descuento + Impuesto;
 
                 lblDesc.Text = descuento.descu_Descripcion;
                 txtDescuento.Text = Descuento.ToString("C");
+                txtImpuesto.Text = Impuesto.ToString("C");
+                lblTotalResultado.Text = Total.ToString("C");
             }
             else
             {
                 lblDesc.Text = "No hay descuento disponible";
+                txtDescuento.Text = 0.ToString("C");
+                Descuento = 0;
+                
+
+                Impuesto = (Subtotal) * (ISV / 100);
+                Total = Subtotal - Descuento + Impuesto;
+                txtDescuento.Text = Descuento.ToString("C");
+                txtImpuesto.Text = Impuesto.ToString("C");
+                lblTotalResultado.Text = Total.ToString("C");
             }
 
         }
+
+        #endregion
     }
 
 
