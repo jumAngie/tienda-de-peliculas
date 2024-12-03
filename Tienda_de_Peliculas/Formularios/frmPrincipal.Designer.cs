@@ -92,8 +92,9 @@
             this.panelTitleBar.Controls.Add(this.lblNombre);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1024, 75);
+            this.panelTitleBar.Size = new System.Drawing.Size(1365, 92);
             this.panelTitleBar.TabIndex = 6;
             // 
             // btnCloseChildForm
@@ -102,9 +103,10 @@
             this.btnCloseChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
             this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseChildForm.Location = new System.Drawing.Point(235, 15);
+            this.btnCloseChildForm.Location = new System.Drawing.Point(313, 18);
+            this.btnCloseChildForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCloseChildForm.Name = "btnCloseChildForm";
-            this.btnCloseChildForm.Size = new System.Drawing.Size(50, 42);
+            this.btnCloseChildForm.Size = new System.Drawing.Size(67, 52);
             this.btnCloseChildForm.TabIndex = 17;
             this.btnCloseChildForm.UseVisualStyleBackColor = true;
             this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
@@ -115,9 +117,10 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.White;
-            this.lblHora.Location = new System.Drawing.Point(303, 37);
+            this.lblHora.Location = new System.Drawing.Point(404, 46);
+            this.lblHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(66, 16);
+            this.lblHora.Size = new System.Drawing.Size(86, 20);
             this.lblHora.TabIndex = 18;
             this.lblHora.Text = "12:20 p.m.";
             // 
@@ -127,9 +130,10 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.White;
-            this.lblFecha.Location = new System.Drawing.Point(303, 22);
+            this.lblFecha.Location = new System.Drawing.Point(404, 27);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(143, 16);
+            this.lblFecha.Size = new System.Drawing.Size(183, 20);
             this.lblFecha.TabIndex = 17;
             this.lblFecha.Text = "15 de Octubre del 2025";
             // 
@@ -139,9 +143,10 @@
             this.lbltTitle.AutoSize = true;
             this.lbltTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltTitle.ForeColor = System.Drawing.Color.White;
-            this.lbltTitle.Location = new System.Drawing.Point(564, 18);
+            this.lbltTitle.Location = new System.Drawing.Point(752, 22);
+            this.lbltTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbltTitle.Name = "lbltTitle";
-            this.lbltTitle.Size = new System.Drawing.Size(110, 33);
+            this.lbltTitle.Size = new System.Drawing.Size(134, 42);
             this.lbltTitle.TabIndex = 12;
             this.lbltTitle.Text = "INICIO";
             // 
@@ -151,9 +156,10 @@
             this.pcbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pcbFoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcbFoto.Image = global::Tienda_de_Peliculas.Properties.Resources.cerrar_sesion;
-            this.pcbFoto.Location = new System.Drawing.Point(962, 12);
+            this.pcbFoto.Location = new System.Drawing.Point(1283, 15);
+            this.pcbFoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbFoto.Name = "pcbFoto";
-            this.pcbFoto.Size = new System.Drawing.Size(50, 45);
+            this.pcbFoto.Size = new System.Drawing.Size(67, 55);
             this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFoto.TabIndex = 0;
             this.pcbFoto.TabStop = false;
@@ -165,9 +171,10 @@
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.Color.White;
-            this.lblRol.Location = new System.Drawing.Point(842, 42);
+            this.lblRol.Location = new System.Drawing.Point(1123, 52);
+            this.lblRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(114, 15);
+            this.lblRol.Size = new System.Drawing.Size(133, 18);
             this.lblRol.TabIndex = 3;
             this.lblRol.Text = "role_descripcion";
             // 
@@ -177,9 +184,10 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(847, 22);
+            this.lblNombre.Location = new System.Drawing.Point(1129, 27);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(109, 18);
+            this.lblNombre.Size = new System.Drawing.Size(132, 24);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "dato_Usuario";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -200,8 +208,9 @@
             this.panelMenu.Controls.Add(this.btnRegistroClientes);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 599);
+            this.panelMenu.Size = new System.Drawing.Size(293, 737);
             this.panelMenu.TabIndex = 11;
             // 
             // btnReportes
@@ -212,11 +221,11 @@
             this.btnReportes.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnReportes.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Reportes;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 390);
-            this.btnReportes.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnReportes.Location = new System.Drawing.Point(0, 0);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(4, 6, 4, 4);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
-            this.btnReportes.Size = new System.Drawing.Size(220, 89);
+            this.btnReportes.Padding = new System.Windows.Forms.Padding(15, 2, 0, 0);
+            this.btnReportes.Size = new System.Drawing.Size(293, 110);
             this.btnReportes.TabIndex = 5;
             this.btnReportes.Text = "    Reportes";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -233,11 +242,11 @@
             this.btnInventario.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnInventario.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Inventario;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //this.btnInventario.Location = new System.Drawing.Point(0, 310);
-            this.btnInventario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnInventario.Location = new System.Drawing.Point(0, 0);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(4, 6, 4, 4);
             this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
-            this.btnInventario.Size = new System.Drawing.Size(220, 80);
+            this.btnInventario.Padding = new System.Windows.Forms.Padding(15, 2, 0, 0);
+            this.btnInventario.Size = new System.Drawing.Size(293, 98);
             this.btnInventario.TabIndex = 4;
             this.btnInventario.Text = "    Inventario";
             this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -254,11 +263,11 @@
             this.btnVentaAlquiler.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnVentaAlquiler.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Venta_Alquiler;
             this.btnVentaAlquiler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //this.btnVentaAlquiler.Location = new System.Drawing.Point(0, 231);
-            this.btnVentaAlquiler.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnVentaAlquiler.Location = new System.Drawing.Point(0, 0);
+            this.btnVentaAlquiler.Margin = new System.Windows.Forms.Padding(4, 6, 4, 4);
             this.btnVentaAlquiler.Name = "btnVentaAlquiler";
-            this.btnVentaAlquiler.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
-            this.btnVentaAlquiler.Size = new System.Drawing.Size(220, 79);
+            this.btnVentaAlquiler.Padding = new System.Windows.Forms.Padding(15, 2, 0, 0);
+            this.btnVentaAlquiler.Size = new System.Drawing.Size(293, 97);
             this.btnVentaAlquiler.TabIndex = 3;
             this.btnVentaAlquiler.Text = "    Venta / Alquiler";
             this.btnVentaAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -275,11 +284,11 @@
             this.btnRegistroEmpleados.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnRegistroEmpleados.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Empleados;
             this.btnRegistroEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //this.btnRegistroEmpleados.Location = new System.Drawing.Point(0, 144);
-            this.btnRegistroEmpleados.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnRegistroEmpleados.Location = new System.Drawing.Point(0, 0);
+            this.btnRegistroEmpleados.Margin = new System.Windows.Forms.Padding(4, 6, 4, 4);
             this.btnRegistroEmpleados.Name = "btnRegistroEmpleados";
-            this.btnRegistroEmpleados.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
-            this.btnRegistroEmpleados.Size = new System.Drawing.Size(220, 92);
+            this.btnRegistroEmpleados.Padding = new System.Windows.Forms.Padding(15, 2, 0, 0);
+            this.btnRegistroEmpleados.Size = new System.Drawing.Size(293, 113);
             this.btnRegistroEmpleados.TabIndex = 2;
             this.btnRegistroEmpleados.Text = "    Empleados\r\n";
             this.btnRegistroEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -296,11 +305,11 @@
             this.btnRegistroClientes.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnRegistroClientes.Image = global::Tienda_de_Peliculas.Properties.Resources.Icono_Registrar_Clientes;
             this.btnRegistroClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //this.btnRegistroClientes.Location = new System.Drawing.Point(0, 72);
-            this.btnRegistroClientes.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnRegistroClientes.Location = new System.Drawing.Point(0, 0);
+            this.btnRegistroClientes.Margin = new System.Windows.Forms.Padding(4, 6, 4, 4);
             this.btnRegistroClientes.Name = "btnRegistroClientes";
-            this.btnRegistroClientes.Padding = new System.Windows.Forms.Padding(11, 2, 0, 0);
-            this.btnRegistroClientes.Size = new System.Drawing.Size(220, 72);
+            this.btnRegistroClientes.Padding = new System.Windows.Forms.Padding(15, 2, 0, 0);
+            this.btnRegistroClientes.Size = new System.Drawing.Size(293, 89);
             this.btnRegistroClientes.TabIndex = 1;
             this.btnRegistroClientes.Text = "    Clientes";
             this.btnRegistroClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -316,17 +325,19 @@
             this.panelLogo.Controls.Add(this.label1);
             this.panelLogo.Controls.Add(this.pbLogo);
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 75);
+            this.panelLogo.Size = new System.Drawing.Size(293, 92);
             this.panelLogo.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cascadia Mono SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(111, 34);
+            this.label2.Location = new System.Drawing.Point(148, 42);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 20);
+            this.label2.Size = new System.Drawing.Size(111, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "V I D E O";
             // 
@@ -334,9 +345,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(112, 18);
+            this.label1.Location = new System.Drawing.Point(149, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 16);
+            this.label1.Size = new System.Drawing.Size(113, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "HOLLYWOOD";
             // 
@@ -344,9 +356,10 @@
             // 
             this.pbLogo.BackgroundImage = global::Tienda_de_Peliculas.Properties.Resources.logo;
             this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbLogo.Location = new System.Drawing.Point(12, 15);
+            this.pbLogo.Location = new System.Drawing.Point(16, 18);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(94, 42);
+            this.pbLogo.Size = new System.Drawing.Size(125, 52);
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
             // 
@@ -362,9 +375,10 @@
             this.panelDesktopPanel.Controls.Add(this.panel3);
             this.panelDesktopPanel.Controls.Add(this.panel2);
             this.panelDesktopPanel.ForeColor = System.Drawing.Color.Black;
-            this.panelDesktopPanel.Location = new System.Drawing.Point(218, 75);
+            this.panelDesktopPanel.Location = new System.Drawing.Point(291, 92);
+            this.panelDesktopPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDesktopPanel.Name = "panelDesktopPanel";
-            this.panelDesktopPanel.Size = new System.Drawing.Size(806, 524);
+            this.panelDesktopPanel.Size = new System.Drawing.Size(1075, 645);
             this.panelDesktopPanel.TabIndex = 12;
             // 
             // lblMensajeBienvenida
@@ -374,9 +388,10 @@
             this.lblMensajeBienvenida.BackColor = System.Drawing.Color.Gainsboro;
             this.lblMensajeBienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensajeBienvenida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.lblMensajeBienvenida.Location = new System.Drawing.Point(24, 21);
+            this.lblMensajeBienvenida.Location = new System.Drawing.Point(32, 26);
+            this.lblMensajeBienvenida.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMensajeBienvenida.Name = "lblMensajeBienvenida";
-            this.lblMensajeBienvenida.Size = new System.Drawing.Size(217, 25);
+            this.lblMensajeBienvenida.Size = new System.Drawing.Size(267, 31);
             this.lblMensajeBienvenida.TabIndex = 11;
             this.lblMensajeBienvenida.Text = "mensajeBienvenida";
             // 
@@ -388,18 +403,20 @@
             this.panel4.Controls.Add(this.pictureBox5);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.lblAlquileresSemanales);
-            this.panel4.Location = new System.Drawing.Point(528, 107);
+            this.panel4.Location = new System.Drawing.Point(704, 132);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(170, 82);
+            this.panel4.Size = new System.Drawing.Size(226, 100);
             this.panel4.TabIndex = 16;
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox5.Image = global::Tienda_de_Peliculas.Properties.Resources.pelicula__2_;
-            this.pictureBox5.Location = new System.Drawing.Point(16, 8);
+            this.pictureBox5.Location = new System.Drawing.Point(21, 10);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(42, 45);
+            this.pictureBox5.Size = new System.Drawing.Size(56, 55);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
@@ -409,9 +426,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(13, 56);
+            this.label10.Location = new System.Drawing.Point(17, 69);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(139, 16);
+            this.label10.Size = new System.Drawing.Size(171, 20);
             this.label10.TabIndex = 1;
             this.label10.Text = "Alquileres Semanales";
             // 
@@ -420,9 +438,10 @@
             this.lblAlquileresSemanales.AutoSize = true;
             this.lblAlquileresSemanales.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlquileresSemanales.ForeColor = System.Drawing.Color.White;
-            this.lblAlquileresSemanales.Location = new System.Drawing.Point(63, 12);
+            this.lblAlquileresSemanales.Location = new System.Drawing.Point(84, 15);
+            this.lblAlquileresSemanales.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAlquileresSemanales.Name = "lblAlquileresSemanales";
-            this.lblAlquileresSemanales.Size = new System.Drawing.Size(84, 42);
+            this.lblAlquileresSemanales.Size = new System.Drawing.Size(104, 54);
             this.lblAlquileresSemanales.TabIndex = 0;
             this.lblAlquileresSemanales.Text = "000";
             // 
@@ -431,9 +450,10 @@
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox4.Image = global::Tienda_de_Peliculas.Properties.Resources._572828_200;
-            this.pictureBox4.Location = new System.Drawing.Point(27, 69);
+            this.pictureBox4.Location = new System.Drawing.Point(36, 85);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(20, 24);
+            this.pictureBox4.Size = new System.Drawing.Size(27, 30);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
@@ -445,9 +465,10 @@
             this.label11.BackColor = System.Drawing.Color.Gainsboro;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label11.Location = new System.Drawing.Point(53, 69);
+            this.label11.Location = new System.Drawing.Point(71, 85);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(126, 25);
+            this.label11.Size = new System.Drawing.Size(156, 31);
             this.label11.TabIndex = 15;
             this.label11.Text = "Dashboard";
             // 
@@ -459,18 +480,20 @@
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.lblVentasSemanales);
-            this.panel3.Location = new System.Drawing.Point(287, 107);
+            this.panel3.Location = new System.Drawing.Point(383, 132);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(170, 82);
+            this.panel3.Size = new System.Drawing.Size(226, 100);
             this.panel3.TabIndex = 14;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox3.Image = global::Tienda_de_Peliculas.Properties.Resources.bienes;
-            this.pictureBox3.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(42, 45);
+            this.pictureBox3.Size = new System.Drawing.Size(56, 55);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
@@ -480,9 +503,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(17, 56);
+            this.label8.Location = new System.Drawing.Point(23, 69);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 16);
+            this.label8.Size = new System.Drawing.Size(149, 20);
             this.label8.TabIndex = 1;
             this.label8.Text = "Ventas Semanales";
             // 
@@ -491,9 +515,10 @@
             this.lblVentasSemanales.AutoSize = true;
             this.lblVentasSemanales.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVentasSemanales.ForeColor = System.Drawing.Color.White;
-            this.lblVentasSemanales.Location = new System.Drawing.Point(57, 12);
+            this.lblVentasSemanales.Location = new System.Drawing.Point(76, 15);
+            this.lblVentasSemanales.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVentasSemanales.Name = "lblVentasSemanales";
-            this.lblVentasSemanales.Size = new System.Drawing.Size(84, 42);
+            this.lblVentasSemanales.Size = new System.Drawing.Size(104, 54);
             this.lblVentasSemanales.TabIndex = 0;
             this.lblVentasSemanales.Text = "000";
             // 
@@ -506,18 +531,20 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.lblClientesRegistrados);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel2.Location = new System.Drawing.Point(59, 107);
+            this.panel2.Location = new System.Drawing.Point(79, 132);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(171, 82);
+            this.panel2.Size = new System.Drawing.Size(227, 100);
             this.panel2.TabIndex = 13;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Image = global::Tienda_de_Peliculas.Properties.Resources.agregar_usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 8);
+            this.pictureBox2.Location = new System.Drawing.Point(19, 10);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox2.Size = new System.Drawing.Size(60, 55);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
@@ -527,9 +554,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(24, 56);
+            this.label7.Location = new System.Drawing.Point(32, 69);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(132, 16);
+            this.label7.Size = new System.Drawing.Size(165, 20);
             this.label7.TabIndex = 1;
             this.label7.Text = "Clientes Registrados";
             // 
@@ -538,23 +566,25 @@
             this.lblClientesRegistrados.AutoSize = true;
             this.lblClientesRegistrados.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClientesRegistrados.ForeColor = System.Drawing.Color.White;
-            this.lblClientesRegistrados.Location = new System.Drawing.Point(64, 12);
+            this.lblClientesRegistrados.Location = new System.Drawing.Point(85, 15);
+            this.lblClientesRegistrados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClientesRegistrados.Name = "lblClientesRegistrados";
-            this.lblClientesRegistrados.Size = new System.Drawing.Size(84, 42);
+            this.lblClientesRegistrados.Size = new System.Drawing.Size(104, 54);
             this.lblClientesRegistrados.TabIndex = 0;
             this.lblClientesRegistrados.Text = "001";
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1024, 599);
+            this.ClientSize = new System.Drawing.Size(1365, 737);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelDesktopPanel);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";

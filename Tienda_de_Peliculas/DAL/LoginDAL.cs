@@ -16,6 +16,8 @@ namespace Tienda_de_Peliculas.DAL
     {
         public DatosUsuarioViewModel AutenticarUsuario(string Usuario, string Contrasenia)
         {
+            byte[] contraseniaEncriptada = Encriptacion.Encrip(Contrasenia);
+
             DatosUsuarioViewModel usuarioAutenticado = null;
             using (SqlConnection conexion = BDConexion.ObtenerConexion())
             {
@@ -24,7 +26,7 @@ namespace Tienda_de_Peliculas.DAL
                 {
                     comando.CommandType = CommandType.StoredProcedure;
                     comando.Parameters.AddWithValue("@usua_Usuario", Usuario);
-                    comando.Parameters.AddWithValue("@usua_Contrasenia", Contrasenia);
+                    comando.Parameters.AddWithValue("@usua_Contrasenia", contraseniaEncriptada);
 
                     conexion.Open();
                     using (SqlDataReader reader = comando.ExecuteReader())

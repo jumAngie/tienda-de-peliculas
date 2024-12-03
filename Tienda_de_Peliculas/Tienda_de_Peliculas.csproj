@@ -75,6 +75,7 @@
     <Compile Include="DAL\PagoDAL.cs" />
     <Compile Include="DAL\PaisesDAL.cs" />
     <Compile Include="DAL\ReportesDAL.cs" />
+    <Compile Include="Encriptacion.cs" />
     <Compile Include="Entities\Ciudades.cs" />
     <Compile Include="DAL\CiudadesDAL.cs" />
     <Compile Include="Entities\DatosGenerales.cs" />

@@ -5,8 +5,6 @@ CREATE OR ALTER PROCEDURE Acce.UDP_IniciarSesion
 AS
 BEGIN
     BEGIN TRY
-        DECLARE @contrasenaEncriptada VARBINARY(MAX) = HASHBYTES('SHA2_512', @usua_Contrasenia);
-       
         SELECT 
             usua.usua_Id, 
             usua.usua_Usuario, 
@@ -20,7 +18,7 @@ BEGIN
             LEFT JOIN Gral.tbDatos_Generales datos ON usua.dato_Id = datos.dato_Id
             LEFT JOIN Acce.tbRoles roles ON usua.role_Id = roles.role_Id
         WHERE usua.usua_Usuario = @usua_Usuario
-        AND usua.usua_Contrasenia = @contrasenaEncriptada;
+        AND usua.usua_Contrasenia = @usua_Contrasenia;
     END TRY
     BEGIN CATCH
         SELECT 'Error Message: ' + ERROR_MESSAGE();
@@ -80,4 +78,3 @@ DECLARE @contrasenaEncriptada_R VARBINARY(MAX) = HASHBYTES('SHA2_512', @CONTRA_R
 
 INSERT INTO Acce.tbUsuarios(usua_Usuario, usua_Contrasenia, role_Id, usua_UsuarioCreacion,usua_FechaCreacion, dato_Id)
 VALUES						('Rhonda_1999', @contrasenaEncriptada_R, 5,1, GETDATE(), 18)
-
